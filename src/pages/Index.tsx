@@ -456,70 +456,54 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <Card className="text-center">
-              <CardHeader>
-                <Icon name="Phone" size={32} className="text-primary mx-auto mb-2" />
-                <CardTitle className="text-lg">Телефон</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  <div className="space-y-2">
-                    <p className="text-muted-foreground">+7 (901) 500-00-78</p>
-                    <a 
-                      href="https://wa.me/79015000078" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center px-3 py-1 bg-green-500 text-white text-sm rounded-md hover:bg-green-600 transition-colors"
-                    >
-                      <Icon name="MessageCircle" size={16} className="mr-1" />
-                      WhatsApp
-                    </a>
-                  </div>
-                  <div className="space-y-2">
-                    <p className="text-muted-foreground">+7 (901) 500-00-87</p>
-                    <a 
-                      href="https://wa.me/79015000087" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center px-3 py-1 bg-green-500 text-white text-sm rounded-md hover:bg-green-600 transition-colors"
-                    >
-                      <Icon name="MessageCircle" size={16} className="mr-1" />
-                      WhatsApp
-                    </a>
-                  </div>
+            <div className="text-center">
+              <Icon name="Phone" size={32} className="text-primary mx-auto mb-4" />
+              <h3 className="text-lg font-semibold mb-4">Телефон</h3>
+              <div className="space-y-3">
+                <div className="space-y-2">
+                  <p className="text-muted-foreground">+7 (901) 500-00-78</p>
+                  <a 
+                    href="https://wa.me/79015000078" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-3 py-1 bg-green-500 text-white text-sm rounded-md hover:bg-green-600 transition-colors"
+                  >
+                    <Icon name="MessageCircle" size={16} className="mr-1" />
+                    WhatsApp
+                  </a>
                 </div>
-              </CardContent>
-            </Card>
+                <div className="space-y-2">
+                  <p className="text-muted-foreground">+7 (901) 500-00-87</p>
+                  <a 
+                    href="https://wa.me/79015000087" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-3 py-1 bg-green-500 text-white text-sm rounded-md hover:bg-green-600 transition-colors"
+                  >
+                    <Icon name="MessageCircle" size={16} className="mr-1" />
+                    WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
             
-            <Card className="text-center">
-              <CardHeader>
-                <Icon name="Mail" size={32} className="text-primary mx-auto mb-2" />
-                <CardTitle className="text-lg">Email</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">info@mosoblconnect.ru</p>
-              </CardContent>
-            </Card>
+            <div className="text-center">
+              <Icon name="Mail" size={32} className="text-primary mx-auto mb-4" />
+              <h3 className="text-lg font-semibold mb-4">Email</h3>
+              <p className="text-muted-foreground">info@mosoblconnect.ru</p>
+            </div>
             
-            <Card className="text-center">
-              <CardHeader>
-                <Icon name="MapPin" size={32} className="text-primary mx-auto mb-2" />
-                <CardTitle className="text-lg">Адрес</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">Москва, Партийный пер., дом 1</p>
-              </CardContent>
-            </Card>
+            <div className="text-center">
+              <Icon name="MapPin" size={32} className="text-primary mx-auto mb-4" />
+              <h3 className="text-lg font-semibold mb-4">Адрес</h3>
+              <p className="text-muted-foreground">Москва, Партийный пер., дом 1</p>
+            </div>
             
-            <Card className="text-center">
-              <CardHeader>
-                <Icon name="Clock" size={32} className="text-primary mx-auto mb-2" />
-                <CardTitle className="text-lg">Режим работы</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">24/7</p>
-              </CardContent>
-            </Card>
+            <div className="text-center">
+              <Icon name="Clock" size={32} className="text-primary mx-auto mb-4" />
+              <h3 className="text-lg font-semibold mb-4">Режим работы</h3>
+              <p className="text-muted-foreground">24/7</p>
+            </div>
           </div>
         </div>
       </section>
@@ -538,6 +522,19 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      
+      {/* Floating WhatsApp Button */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <a 
+          href="https://wa.me/79015000078" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-14 h-14 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110"
+          title="Написать в WhatsApp"
+        >
+          <Icon name="MessageCircle" size={24} />
+        </a>
+      </div>
     </div>
   );
 };
