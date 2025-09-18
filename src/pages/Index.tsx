@@ -145,7 +145,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {services.map((service, index) => (
               <Card key={index} className="hover:shadow-lg transition-all duration-300 animate-scale-in">
                 <CardHeader>
@@ -167,6 +167,24 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* How it works schema */}
+          <div className="bg-gradient-to-r from-primary/5 to-success/5 rounded-xl p-8">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold mb-4">Как работает подключение интернета в частном доме</h3>
+              <p className="text-muted-foreground max-w-3xl mx-auto">
+                Схема подключения высокоскоростного интернета через спутниковые и беспроводные технологии. 
+                Покрытие до 15 км от базовой станции обеспечивает надёжную связь в любой точке Московской области.
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <img 
+                src="https://cdn.poehali.dev/files/05c0935b-9327-4e77-9463-5ab7e91598d9.jpg" 
+                alt="Схема подключения интернета в частном доме" 
+                className="max-w-full h-auto rounded-lg shadow-lg border"
+              />
+            </div>
           </div>
         </div>
       </section>
