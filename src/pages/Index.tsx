@@ -462,9 +462,31 @@ const Index = () => {
                 <CardTitle className="text-lg">Телефон</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-1">
-                  <p className="text-muted-foreground">+7 (901) 500-00-78</p>
-                  <p className="text-muted-foreground">+7 (901) 500-00-87</p>
+                <div className="space-y-3">
+                  <div className="space-y-2">
+                    <p className="text-muted-foreground">+7 (901) 500-00-78</p>
+                    <a 
+                      href="https://wa.me/79015000078" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-3 py-1 bg-green-500 text-white text-sm rounded-md hover:bg-green-600 transition-colors"
+                    >
+                      <Icon name="MessageCircle" size={16} className="mr-1" />
+                      WhatsApp
+                    </a>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="text-muted-foreground">+7 (901) 500-00-87</p>
+                    <a 
+                      href="https://wa.me/79015000087" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-3 py-1 bg-green-500 text-white text-sm rounded-md hover:bg-green-600 transition-colors"
+                    >
+                      <Icon name="MessageCircle" size={16} className="mr-1" />
+                      WhatsApp
+                    </a>
+                  </div>
                 </div>
               </CardContent>
             </Card>
