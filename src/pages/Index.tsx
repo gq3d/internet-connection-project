@@ -152,7 +152,7 @@ const Index = () => {
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                     <Icon name={service.icon} size={24} className="text-success" />
                   </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                  <CardTitle as="h3" className="text-xl">{service.title}</CardTitle>
                   <CardDescription>{service.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -181,8 +181,11 @@ const Index = () => {
             <div className="flex justify-center">
               <img 
                 src="https://cdn.poehali.dev/files/05c0935b-9327-4e77-9463-5ab7e91598d9.jpg" 
-                alt="Схема подключения интернета в частном доме" 
+                alt="Схема подключения беспроводного интернета в частном доме: спутниковый интернет, базовая станция до 15 км, Wi-Fi роутер, покрытие по всей территории России" 
                 className="max-w-full h-auto rounded-lg shadow-lg border"
+                loading="lazy"
+                width="800"
+                height="600"
               />
             </div>
           </div>
@@ -205,7 +208,7 @@ const Index = () => {
                   </div>
                 )}
                 <CardHeader className="text-center">
-                  <CardTitle className="text-2xl">{tariff.name}</CardTitle>
+                  <CardTitle as="h3" className="text-2xl">{tariff.name}</CardTitle>
                   <div className="py-4">
                     <div className="text-4xl font-bold text-primary">{tariff.price}</div>
                     <div className="text-sm text-muted-foreground">₽/месяц</div>

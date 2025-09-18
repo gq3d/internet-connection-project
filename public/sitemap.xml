@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    <url>
+        <loc>https://netconnect.poehali.dev/</loc>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://cdn.poehali.dev/files/05c0935b-9327-4e77-9463-5ab7e91598d9.jpg</image:loc>
+            <image:title>Схема подключения беспроводного интернета в частном доме</image:title>
+            <image:caption>Схема подключения беспроводного интернета через спутниковые и беспроводные технологии с покрытием до 15 км от базовой станции</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://cdn.poehali.dev/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg</image:loc>
+            <image:title>NetConnect - провайдер интернета в Московской области</image:title>
+            <image:caption>Логотип компании NetConnect - провайдер беспроводного и спутникового интернета</image:caption>
+        </image:image>
+    </url>
+</urlset>
