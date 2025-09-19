@@ -180,7 +180,7 @@ const Index = () => {
             </div>
             <div className="flex justify-center">
               <img 
-                src="https://cdn.mosoblconnect.ru/files/7e52e40c-c747-4a72-8ff4-83d19fb149f6.jpg" 
+                src="https://cdn.mosoblconnect.ru/files/0af14e24-b33d-40ab-9db9-2fa6a3b53c79.jpg" 
                 alt="Схема подключения беспроводного интернета в частном доме: спутниковый интернет, базовая станция до 15 км, Wi-Fi роутер, покрытие по всей территории России" 
                 className="max-w-full h-auto rounded-lg shadow-lg border"
                 loading="lazy"
