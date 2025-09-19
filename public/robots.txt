@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://netconnect.poehali.dev/sitemap.xml
+Sitemap: https://mosoblconnect.ru/sitemap.xml
 
 # Main crawlers
 User-agent: Googlebot
