@@ -95,6 +95,7 @@ const Index = () => {
               <a href="#services" className="text-sm font-medium hover:text-success transition-colors">Услуги</a>
               <a href="#tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</a>
               <a href="#pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</a>
+              <a href="/engineer-pricing" className="text-sm font-medium hover:text-success transition-colors">Услуги инженера</a>
               <a href="#esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</a>
               <a href="#coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</a>
               <a href="#about" className="text-sm font-medium hover:text-success transition-colors">О компании</a>
