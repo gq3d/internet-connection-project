@@ -567,15 +567,7 @@ const Index = () => {
               </ul>
             </div>
 
-            {/* Кнопка связи */}
-            <div className="text-center mt-8">
-              <a 
-                href="tel:+74951234567" 
-                className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-              >
-                Заказать услуги инженера: +7 (495) 123-45-67
-              </a>
-            </div>
+
           </div>
         </div>
       </section>
