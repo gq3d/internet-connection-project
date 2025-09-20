@@ -527,10 +527,28 @@ const Index = () => {
                         <Badge variant="secondary" className="bg-indigo-100 text-indigo-800 font-semibold">100 ₽/шт.</Badge>
                       </div>
                     </div>
-                    <div className="p-4 hover:bg-gray-50 transition-colors">
+                    <div className="border-b border-gray-200 p-4 hover:bg-gray-50 transition-colors">
                       <div className="flex justify-between items-center">
                         <span className="text-sm">Настройка оборудования клиента</span>
                         <Badge variant="secondary" className="bg-indigo-100 text-indigo-800 font-semibold">5000 ₽</Badge>
+                      </div>
+                    </div>
+                    <div className="border-b border-gray-200 p-4 hover:bg-gray-50 transition-colors">
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm">Установка спутниковой антенны</span>
+                        <Badge variant="secondary" className="bg-indigo-100 text-indigo-800 font-semibold">8000 ₽</Badge>
+                      </div>
+                    </div>
+                    <div className="border-b border-gray-200 p-4 hover:bg-gray-50 transition-colors">
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm">Установка антенного усилителя мобильной связи</span>
+                        <Badge variant="secondary" className="bg-indigo-100 text-indigo-800 font-semibold">6000 ₽</Badge>
+                      </div>
+                    </div>
+                    <div className="p-4 hover:bg-gray-50 transition-colors">
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm">Прокладка высокочастотного кабеля</span>
+                        <Badge variant="secondary" className="bg-indigo-100 text-indigo-800 font-semibold">500 ₽/м</Badge>
                       </div>
                     </div>
                   </div>
