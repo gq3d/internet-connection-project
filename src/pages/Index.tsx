@@ -172,20 +172,19 @@ const Index = () => {
           {/* How it works schema */}
           <div className="bg-gradient-to-r from-primary/5 to-success/5 rounded-xl p-8">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold mb-4">Как работает подключение интернета в частном доме</h3>
+              <h3 className="text-2xl font-bold mb-4">Как это работает?</h3>
               <p className="text-muted-foreground max-w-3xl mx-auto">
-                Схема подключения высокоскоростного интернета через спутниковые и беспроводные технологии. 
-                Покрытие до 15 км от базовой станции обеспечивает надёжную связь в любой точке Московской области.
+                Узнайте больше о технологии загородного 4G LTE интернета
               </p>
             </div>
             <div className="flex justify-center">
               <img 
-                src="https://cdn.poehali.dev/files/7685d4e2-3efa-477b-ab79-cfd105f0e760.jpg" 
-                alt="Схема подключения беспроводного интернета в частном доме: спутниковый интернет, базовая станция до 15 км, Wi-Fi роутер, покрытие по всей территории России" 
+                src="https://cdn.poehali.dev/files/2997c079-7b43-4318-aa5d-443368a2d830.png" 
+                alt="Схема подключения 4G LTE интернета: сигнал от базовой станции оператора через антенну к встроенному LTE-модему и Wi-Fi роутеру для обеспечения интернетом всех устройств" 
                 className="max-w-full h-auto rounded-lg shadow-lg border"
                 loading="lazy"
                 width="800"
-                height="600"
+                height="400"
               />
             </div>
           </div>
