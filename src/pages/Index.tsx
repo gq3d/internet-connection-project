@@ -11,6 +11,7 @@ import { generateCitySlug } from '@/utils/citySlug';
 const Index = () => {
   const [address, setAddress] = useState('');
   const [checkingCoverage, setCheckingCoverage] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleCoverageCheck = () => {
     setCheckingCoverage(true);
@@ -92,6 +93,8 @@ const Index = () => {
               <Icon name="Satellite" size={32} className="text-primary" />
               <span className="text-2xl font-bold text-primary">NetConnect</span>
             </div>
+            
+            {/* Desktop Menu */}
             <nav className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-sm font-medium hover:text-success transition-colors">Услуги</a>
               <a href="#tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</a>
@@ -101,9 +104,93 @@ const Index = () => {
               <a href="#about" className="text-sm font-medium hover:text-success transition-colors">О компании</a>
               <a href="#contacts" className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
             </nav>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 rounded-lg hover:bg-accent transition-colors"
+              aria-label="Меню"
+            >
+              <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} />
+            </button>
           </div>
+
+          {/* Mobile Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden mt-4 py-4 border-t border-border">
+              <div className="space-y-4">
+                <a 
+                  href="#services" 
+                  className="block py-2 text-sm font-medium hover:text-success transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Услуги
+                </a>
+                <a 
+                  href="#tariffs" 
+                  className="block py-2 text-sm font-medium hover:text-success transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Тарифы
+                </a>
+                <a 
+                  href="#pricing" 
+                  className="block py-2 text-sm font-medium hover:text-success transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Стоимость
+                </a>
+                <a 
+                  href="#esim" 
+                  className="block py-2 text-sm font-medium hover:text-success transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  eSIM
+                </a>
+                <a 
+                  href="#coverage" 
+                  className="block py-2 text-sm font-medium hover:text-success transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Покрытие
+                </a>
+                <a 
+                  href="#about" 
+                  className="block py-2 text-sm font-medium hover:text-success transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  О компании
+                </a>
+                <a 
+                  href="#contacts" 
+                  className="block py-2 text-sm font-medium hover:text-success transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Контакты
+                </a>
+                <div className="pt-4 border-t border-border">
+                  <div className="flex items-center space-x-2 text-success font-semibold">
+                    <Icon name="Phone" size={16} />
+                    <a href="tel:+79015000078" className="hover:underline">+7 (901) 500-00-78</a>
+                  </div>
+                  <div className="flex items-center space-x-2 text-success font-semibold mt-2">
+                    <Icon name="Phone" size={16} />
+                    <a href="tel:+79015000087" className="hover:underline">+7 (901) 500-00-87</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </header>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div 
+          className="fixed inset-0 bg-black/20 z-40 md:hidden"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
 
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10">
