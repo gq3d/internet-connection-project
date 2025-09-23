@@ -1,5 +1,5 @@
 import { useParams, Navigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Icon from '@/components/ui/icon';
 
 interface CityData {
@@ -68,6 +68,7 @@ allCities.forEach(city => {
 const CityPage = () => {
   const { citySlug } = useParams<{ citySlug: string }>();
   const city = citySlug ? cityData[citySlug] : null;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     if (city) {
@@ -88,22 +89,80 @@ const CityPage = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="py-4 border-b bg-card">
+      <header className="py-4 border-b bg-card sticky top-0 z-40">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
             <a href="/" className="text-2xl font-bold text-primary">NetConnect</a>
-            <div className="flex items-center space-x-6">
-              <a href="/#services" className="text-muted-foreground hover:text-foreground">Услуги</a>
-              <a href="/#tariffs" className="text-muted-foreground hover:text-foreground">Тарифы</a>
-              <a href="/#coverage" className="text-muted-foreground hover:text-foreground">Покрытие</a>
+            
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center space-x-6">
+              <a href="/#services" className="text-muted-foreground hover:text-foreground transition-colors">Услуги</a>
+              <a href="/#tariffs" className="text-muted-foreground hover:text-foreground transition-colors">Тарифы</a>
+              <a href="/#coverage" className="text-muted-foreground hover:text-foreground transition-colors">Покрытие</a>
               <div className="flex items-center space-x-2 text-success font-semibold">
                 <Icon name="Phone" size={16} />
                 <span>+7 (901) 500-00-78</span>
               </div>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 rounded-lg hover:bg-accent transition-colors"
+              aria-label="Меню"
+            >
+              <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} />
+            </button>
           </div>
+
+          {/* Mobile Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden mt-4 py-4 border-t border-border">
+              <div className="space-y-4">
+                <a 
+                  href="/#services" 
+                  className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Услуги
+                </a>
+                <a 
+                  href="/#tariffs" 
+                  className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Тарифы
+                </a>
+                <a 
+                  href="/#coverage" 
+                  className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Покрытие
+                </a>
+                <div className="pt-4 border-t border-border">
+                  <div className="flex items-center space-x-2 text-success font-semibold">
+                    <Icon name="Phone" size={16} />
+                    <a href="tel:+79015000078" className="hover:underline">+7 (901) 500-00-78</a>
+                  </div>
+                  <div className="flex items-center space-x-2 text-success font-semibold mt-2">
+                    <Icon name="Phone" size={16} />
+                    <a href="tel:+79015000087" className="hover:underline">+7 (901) 500-00-87</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </header>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div 
+          className="fixed inset-0 bg-black/20 z-30 md:hidden"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
 
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-r from-primary/10 to-accent/20">
