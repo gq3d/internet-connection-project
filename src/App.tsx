@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import SitemapGenerator from "./components/SitemapGenerator";
+import CityPage from "./pages/CityPage";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/city/:citySlug" element={<CityPage />} />
           <Route path="/sitemap.xml" element={<SitemapGenerator type="sitemap" />} />
           <Route path="/robots.txt" element={<SitemapGenerator type="robots" />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

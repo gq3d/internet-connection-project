@@ -6,6 +6,26 @@ export interface SitemapUrl {
   priority?: number;
 }
 
+// Список всех городов
+const cities = [
+  'Москва', 'Подольск', 'Красногорск', 'Химки', 'Мытищи', 'Люберцы',
+  'Домодедово', 'Сергиев Посад', 'Коломна', 'Пушкино', 'Зеленоград', 'Щёлково',
+  'Видное', 'Дубна', 'Истра', 'Орехово-Зуево', 'Клин', 'Фрязино',
+  'Лобня', 'Ногинск', 'Реутов', 'Красноармейск', 'Дмитров', 'Серпухов',
+  'Егорьевск', 'Лыткарино', 'Солнечногорск', 'Жуковский', 'Старая Купавна',
+  'Бронницы', 'Чехов', 'Кашира'
+];
+
+// Функция генерации slug
+const generateCitySlug = (cityName: string): string => {
+  return cityName
+    .toLowerCase()
+    .replace(/ё/g, 'e')
+    .replace(/[^a-zA-Z0-9\u0430-\u044f]/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
+};
+
 // Список всех страниц сайта
 export const siteUrls: SitemapUrl[] = [
   {
@@ -13,7 +33,14 @@ export const siteUrls: SitemapUrl[] = [
     lastmod: new Date().toISOString().split('T')[0],
     changefreq: 'weekly',
     priority: 1.0
-  }
+  },
+  // Добавляем все городские страницы
+  ...cities.map(city => ({
+    loc: `/city/${generateCitySlug(city)}`,
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: 'monthly' as const,
+    priority: 0.8
+  }))
 ];
 
 export const generateSitemap = (baseUrl: string = 'https://mosoblconnect.ru'): string => {

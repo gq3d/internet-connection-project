@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import Icon from '@/components/ui/icon';
+import { generateCitySlug } from '@/utils/citySlug';
 
 
 const Index = () => {
@@ -294,12 +295,16 @@ const Index = () => {
                   'Егорьевск', 'Лыткарино', 'Солнечногорск', 'Жуковский', 'Старая Купавна',
                   'Бронницы', 'Чехов', 'Кашира'
                 ].map((city) => (
-                  <div key={city} className="bg-accent/30 rounded-lg p-3 border">
+                  <a
+                    key={city}
+                    href={`/city/${generateCitySlug(city)}`}
+                    className="bg-accent/30 rounded-lg p-3 border hover:bg-accent/50 transition-colors group"
+                  >
                     <div className="flex items-center justify-center">
                       <Icon name="MapPin" size={16} className="text-success mr-2" />
-                      <span className="font-medium">{city}</span>
+                      <span className="font-medium group-hover:text-primary transition-colors">{city}</span>
                     </div>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
