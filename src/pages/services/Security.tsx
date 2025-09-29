@@ -4,7 +4,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import WhatsAppButton from '@/components/WhatsAppButton';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { useSEO } from '@/hooks/useSEO';
 
 const Security = () => {
@@ -116,11 +115,6 @@ const Security = () => {
           )}
         </div>
       </header>
-
-      <Breadcrumbs items={[
-        { label: 'Услуги', href: '/#services' },
-        { label: 'Охранные системы' }
-      ]} />
 
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10">

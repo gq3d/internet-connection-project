@@ -4,7 +4,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import WhatsAppButton from '@/components/WhatsAppButton';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { useSEO } from '@/hooks/useSEO';
 
 const Internet = () => {
@@ -116,12 +115,7 @@ const Internet = () => {
         </div>
       </header>
 
-      <Breadcrumbs items={[
-        { label: 'Услуги', href: '/#services' },
-        { label: 'Беспроводной интернет' }
-      ]} />
-
-      {/* Hero Section */
+      {/* Hero Section */}
       <section className="py-16 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -402,9 +396,7 @@ const Internet = () => {
                     ))}
                   </ul>
                   
-                  <Button className="w-full" size="lg">
-                    Подключить
-                  </Button>
+
                 </CardContent>
               </Card>
             ))}
