@@ -157,7 +157,7 @@ const CityPage = () => {
       </header>
 
       <Breadcrumbs items={[
-        { label: 'Покрытие', href: '/' },
+        { label: 'Покрытие', href: '/#coverage' },
         { label: city.name }
       ]} />
 
