@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const Internet = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -429,6 +430,7 @@ const Internet = () => {
           </div>
         </div>
       </footer>
+      <WhatsAppButton />
     </div>
   );
 };

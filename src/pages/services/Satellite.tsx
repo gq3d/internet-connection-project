@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const Satellite = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -286,6 +287,7 @@ const Satellite = () => {
           </div>
         </div>
       </footer>
+      <WhatsAppButton />
     </div>
   );
 };

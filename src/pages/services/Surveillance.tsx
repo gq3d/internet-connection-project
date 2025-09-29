@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const Surveillance = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -323,6 +324,7 @@ const Surveillance = () => {
           </div>
         </div>
       </footer>
+      <WhatsAppButton />
     </div>
   );
 };
