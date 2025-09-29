@@ -252,7 +252,6 @@ const Surveillance = () => {
               </Card>
             ))}
           </div>
-          <p className="text-center text-sm text-muted-foreground mt-8">* Цена указана с установкой под ключ</p>
         </div>
       </section>
 
