@@ -402,7 +402,9 @@ const Internet = () => {
                     ))}
                   </ul>
                   
-
+                  <Button className="w-full" size="lg">
+                    Подключить
+                  </Button>
                 </CardContent>
               </Card>
             ))}
