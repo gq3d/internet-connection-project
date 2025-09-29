@@ -4,9 +4,20 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import { useSEO } from '@/hooks/useSEO';
 
 const Security = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useSEO({
+    title: 'Охранные системы и сигнализация в Московской области | NetConnect',
+    description: 'Установка охранных систем и сигнализации в Московской области. Проводные и беспроводные системы, GSM мониторинг, пультовая охрана. Комплекты от 25 000₽. ☎ +7 (901) 500-00-78',
+    keywords: 'охранная сигнализация московская область, установка сигнализации, охранная система, gsm сигнализация, пультовая охрана, беспроводная сигнализация',
+    canonical: 'https://mosoblconnect.ru/services/security',
+    ogTitle: 'Охранные системы в Московской области - установка сигнализации',
+    ogDescription: 'Профессиональная установка охранных систем. Беспроводная сигнализация, GSM мониторинг, пультовая охрана. Комплекты от 25 000₽.',
+    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg'
+  });
 
   const systems = [
     {

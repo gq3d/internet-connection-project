@@ -4,9 +4,20 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import { useSEO } from '@/hooks/useSEO';
 
 const Satellite = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useSEO({
+    title: 'Спутниковый интернет Starlink в МО - от 3990₽/мес | NetConnect',
+    description: 'Подключение спутникового интернета Starlink и классического спутникового интернета в Московской области. Скорость до 220 Мбит/с, 99.9% покрытие. ☎ +7 (901) 500-00-78',
+    keywords: 'спутниковый интернет, starlink, старлинк, интернет через спутник, интернет в любой точке, спутниковый интернет московская область',
+    canonical: 'https://mosoblconnect.ru/services/satellite',
+    ogTitle: 'Спутниковый интернет Starlink в Московской области',
+    ogDescription: 'Starlink и классический спутниковый интернет. Скорость до 220 Мбит/с, покрытие 99.9%. Тарифы от 3990₽/мес.',
+    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg'
+  });
 
   const advantages = [
     {

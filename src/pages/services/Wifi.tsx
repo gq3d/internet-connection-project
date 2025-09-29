@@ -4,9 +4,20 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import { useSEO } from '@/hooks/useSEO';
 
 const Wifi = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useSEO({
+    title: 'Wi-Fi оборудование для дома в МО - от 4500₽ | NetConnect',
+    description: 'Продажа и установка Wi-Fi оборудования в Московской области. Роутеры, mesh-систеCcы, точки доступа. Покрытие всего дома. Цены от 4500₽. ☎ +7 (901) 500-00-78',
+    keywords: 'wifi оборудование, роутер, mesh система, wifi для дома, точка доступа, усилитель wifi, wifi роутер',
+    canonical: 'https://mosoblconnect.ru/services/wifi',
+    ogTitle: 'Wi-Fi оборудование для дома в Московской области',
+    ogDescription: 'Профессиональное Wi-Fi оборудование. Mesh-системы, роутеры, точки доступа. Покрытие всего дома. От 4500₽.',
+    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg'
+  });
 
   const services = [
     {
