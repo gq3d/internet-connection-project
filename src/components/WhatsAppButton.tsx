@@ -2,7 +2,7 @@ import Icon from '@/components/ui/icon';
 
 export default function WhatsAppButton() {
   const handleClick = () => {
-    window.open('https://wa.me/79999999999', '_blank');
+    window.open('https://wa.me/79015000078', '_blank');
   };
 
   return (
