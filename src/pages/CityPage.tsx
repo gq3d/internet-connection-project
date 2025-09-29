@@ -157,11 +157,11 @@ const CityPage = () => {
       </header>
 
       <Breadcrumbs items={[
-        { label: 'Покрытие', href: '/#coverage' },
+        { label: 'Покрытие', href: '/' },
         { label: city.name }
       ]} />
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay */
       {isMobileMenuOpen && (
         <div 
           className="fixed inset-0 bg-black/20 z-30 md:hidden"
