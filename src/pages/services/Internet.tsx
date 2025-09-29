@@ -384,9 +384,7 @@ const Internet = () => {
                     ))}
                   </ul>
                   
-                  <Button className="w-full" size="lg" variant={index === 1 ? 'default' : 'outline'}>
-                    Подключить тариф
-                  </Button>
+
                 </CardContent>
               </Card>
             ))}
@@ -402,16 +400,7 @@ const Internet = () => {
             <p className="text-xl text-muted-foreground mb-8">
               Оставьте заявку и наши специалисты свяжутся с вами для подключения
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8">
-                <Icon name="Phone" size={20} className="mr-2" />
-                Оставить заявку
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8">
-                <Icon name="MessageCircle" size={20} className="mr-2" />
-                Консультация
-              </Button>
-            </div>
+
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-success font-semibold">
               <div className="flex items-center space-x-2">
                 <Icon name="Phone" size={18} />

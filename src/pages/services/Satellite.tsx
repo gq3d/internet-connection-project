@@ -192,9 +192,7 @@ const Satellite = () => {
                     ))}
                   </ul>
                   
-                  <Button className="w-full" size="lg" variant={index === 1 ? 'default' : 'outline'}>
-                    Подключить пакет
-                  </Button>
+
                 </CardContent>
               </Card>
             ))}
@@ -259,16 +257,7 @@ const Satellite = () => {
             <p className="text-xl text-muted-foreground mb-8">
               Получите доступ к высокоскоростному интернету даже в самых отдаленных районах
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8">
-                <Icon name="Phone" size={20} className="mr-2" />
-                Заказать установку
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8">
-                <Icon name="Calculator" size={20} className="mr-2" />
-                Рассчитать стоимость
-              </Button>
-            </div>
+
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-success font-semibold">
               <div className="flex items-center space-x-2">
                 <Icon name="Phone" size={18} />

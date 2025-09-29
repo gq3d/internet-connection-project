@@ -186,7 +186,7 @@ const Wifi = () => {
                       ))}
                     </ul>
                   </div>
-                  <Button className="w-full mt-6" variant="outline">Подробнее</Button>
+
                 </CardContent>
               </Card>
             ))}
@@ -233,16 +233,7 @@ const Wifi = () => {
             <p className="text-xl text-muted-foreground mb-8">
               Закажите выезд специалиста для бесплатной консультации и составления плана Wi-Fi сети
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8">
-                <Icon name="Phone" size={20} className="mr-2" />
-                Вызвать специалиста
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8">
-                <Icon name="Calculator" size={20} className="mr-2" />
-                Рассчитать стоимость
-              </Button>
-            </div>
+
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-success font-semibold">
               <div className="flex items-center space-x-2">
                 <Icon name="Phone" size={18} />

@@ -247,9 +247,7 @@ const Surveillance = () => {
                     ))}
                   </ul>
                   
-                  <Button className="w-full" size="lg" variant={index === 1 ? 'default' : 'outline'}>
-                    Заказать комплект
-                  </Button>
+
                 </CardContent>
               </Card>
             ))}
@@ -297,16 +295,7 @@ const Surveillance = () => {
             <p className="text-xl text-muted-foreground mb-8">
               Получите бесплатный выезд специалиста и расчет стоимости системы видеонаблюдения
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8">
-                <Icon name="Phone" size={20} className="mr-2" />
-                Бесплатный выезд
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8">
-                <Icon name="Calculator" size={20} className="mr-2" />
-                Онлайн-расчет
-              </Button>
-            </div>
+
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-success font-semibold">
               <div className="flex items-center space-x-2">
                 <Icon name="Phone" size={18} />
