@@ -1,6 +1,8 @@
 import { useParams, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Icon from '@/components/ui/icon';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { useSEO } from '@/hooks/useSEO';
 
 interface CityData {
   name: string;
@@ -70,17 +72,15 @@ const CityPage = () => {
   const city = citySlug ? cityData[citySlug] : null;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    if (city) {
-      document.title = city.seoTitle;
-      
-      // Обновляем meta description
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute('content', city.description);
-      }
-    }
-  }, [city]);
+  useSEO({
+    title: city?.seoTitle || 'NetConnect',
+    description: city?.description || '',
+    keywords: `интернет ${city?.name}, беспроводной интернет ${city?.name}, подключение интернета ${city?.name}, интернет на даче ${city?.name}`,
+    canonical: `https://mosoblconnect.ru/city/${citySlug}`,
+    ogTitle: city?.seoTitle || '',
+    ogDescription: city?.description || '',
+    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg'
+  });
 
   if (!city) {
     return <Navigate to="/404" replace />;
@@ -155,6 +155,11 @@ const CityPage = () => {
           )}
         </div>
       </header>
+
+      <Breadcrumbs items={[
+        { label: 'Покрытие', href: '/#coverage' },
+        { label: city.name }
+      ]} />
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
