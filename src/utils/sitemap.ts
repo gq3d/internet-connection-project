@@ -26,6 +26,16 @@ const generateCitySlug = (cityName: string): string => {
     .replace(/^-|-$/g, '');
 };
 
+// Список страниц услуг
+const servicePages = [
+  { slug: 'internet', name: 'Беспроводной интернет' },
+  { slug: 'satellite', name: 'Спутниковый интернет' },
+  { slug: 'wifi', name: 'Wi-Fi оборудование' },
+  { slug: 'security', name: 'Охранные системы' },
+  { slug: 'surveillance', name: 'Видеонаблюдение' },
+  { slug: 'cellular-booster', name: 'Усиление сотовой связи' }
+];
+
 // Список всех страниц сайта
 export const siteUrls: SitemapUrl[] = [
   {
@@ -34,12 +44,19 @@ export const siteUrls: SitemapUrl[] = [
     changefreq: 'weekly',
     priority: 1.0
   },
+  // Добавляем страницы услуг
+  ...servicePages.map(service => ({
+    loc: `/services/${service.slug}`,
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: 'monthly' as const,
+    priority: 0.9
+  })),
   // Добавляем все городские страницы
   ...cities.map(city => ({
     loc: `/city/${generateCitySlug(city)}`,
     lastmod: new Date().toISOString().split('T')[0],
     changefreq: 'monthly' as const,
-    priority: 0.8
+    priority: 0.7
   }))
 ];
 
@@ -59,8 +76,27 @@ ${urlElements}
 };
 
 export const generateRobotsTxt = (baseUrl: string = 'https://mosoblconnect.ru'): string => {
-  return `User-agent: *
-Allow: /
+  return `# mosoblconnect.ru robots.txt
 
-Sitemap: ${baseUrl}/sitemap.xml`;
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+
+# Yandex Bot
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+# Google Bot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: ${baseUrl}/sitemap.xml
+
+# Host (для Яндекса)
+Host: ${baseUrl.replace('https://', '').replace('http://', '')}`;
 };
