@@ -12,7 +12,6 @@ const CellularBooster = () => {
       icon: 'Signal',
       title: 'Репитер GSM 900/1800',
       description: 'Усиление сигнала для голосовой связи всех операторов',
-      coverage: 'до 300 м²',
       gain: '+65 дБ',
       price: 'от 18 000 ₽',
       features: ['Поддержка всех операторов', 'Автоматическая настройка', 'ЖК дисплей', 'Защита от перегрузки']
@@ -21,7 +20,6 @@ const CellularBooster = () => {
       icon: 'Wifi',
       title: 'Репитер 3G/4G',
       description: 'Усиление интернета и мобильных данных',
-      coverage: 'до 500 м²',
       gain: '+70 дБ',
       price: 'от 25 000 ₽',
       features: ['Поддержка LTE', 'Высокая скорость передачи', 'Умное управление мощностью', 'Компактный размер']
@@ -30,7 +28,6 @@ const CellularBooster = () => {
       icon: 'Antenna',
       title: 'Репитер 5G',
       description: 'Усиление сигнала мобильной связи нового поколения',
-      coverage: 'до 800 м²',
       gain: '+75 дБ',
       price: 'от 45 000 ₽',
       features: ['Поддержка 5G NR', 'Сверхвысокие скорости', 'Низкие задержки', 'Футуристичный дизайн']
@@ -39,7 +36,6 @@ const CellularBooster = () => {
       icon: 'Building',
       title: 'Промышленный репитер',
       description: 'Мощные системы для больших зданий и сооружений',
-      coverage: 'до 5000 м²',
       gain: '+80 дБ',
       price: 'от 85 000 ₽',
       features: ['Высокая мощность', 'Многополосная поддержка', 'Распределенная система', 'Мониторинг 24/7']
@@ -176,10 +172,6 @@ const CellularBooster = () => {
                       </div>
                       <p className="text-muted-foreground mb-3">{booster.description}</p>
                       <div className="flex gap-4 mb-4 text-sm">
-                        <div className="flex items-center text-secondary font-medium">
-                          <Icon name="Home" size={16} className="mr-1" />
-                          {booster.coverage}
-                        </div>
                         <div className="flex items-center text-secondary font-medium">
                           <Icon name="TrendingUp" size={16} className="mr-1" />
                           {booster.gain}
