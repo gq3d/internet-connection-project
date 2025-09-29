@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { useSEO } from '@/hooks/useSEO';
 
 const CellularBooster = () => {
@@ -133,6 +134,11 @@ const CellularBooster = () => {
           )}
         </div>
       </header>
+
+      <Breadcrumbs items={[
+        { label: 'Услуги', href: '/#services' },
+        { label: 'Усиление сотовой связи' }
+      ]} />
 
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10">
