@@ -8,6 +8,12 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import SitemapGenerator from "./components/SitemapGenerator";
 import CityPage from "./pages/CityPage";
+import Internet from "./pages/services/Internet";
+import Satellite from "./pages/services/Satellite";
+import Wifi from "./pages/services/Wifi";
+import Security from "./pages/services/Security";
+import Surveillance from "./pages/services/Surveillance";
+import CellularBooster from "./pages/services/CellularBooster";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +26,12 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/city/:citySlug" element={<CityPage />} />
+          <Route path="/services/internet" element={<Internet />} />
+          <Route path="/services/satellite" element={<Satellite />} />
+          <Route path="/services/wifi" element={<Wifi />} />
+          <Route path="/services/security" element={<Security />} />
+          <Route path="/services/surveillance" element={<Surveillance />} />
+          <Route path="/services/cellular-booster" element={<CellularBooster />} />
           <Route path="/sitemap.xml" element={<SitemapGenerator type="sitemap" />} />
           <Route path="/robots.txt" element={<SitemapGenerator type="robots" />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
