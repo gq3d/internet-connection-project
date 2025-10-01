@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function Equipment() {
   return (
@@ -45,8 +46,13 @@ export default function Equipment() {
       </nav>
       
       <main className="flex-grow">
+        {/* Breadcrumbs */}
+        <div className="pt-20 bg-background">
+          <Breadcrumbs items={[{ label: 'Оборудование' }]} />
+        </div>
+
         {/* Hero Section */}
-        <section className="pt-32 pb-16 px-4">
+        <section className="pt-8 pb-16 px-4">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-16">
               <div className="inline-block bg-gradient-to-r from-primary to-success text-white px-8 py-3 rounded-full mb-6">
