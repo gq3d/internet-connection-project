@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { useSEO } from '@/hooks/useSEO';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 const Internet = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -78,14 +79,15 @@ const Internet = () => {
             </div>
             
             {/* Desktop Menu */}
-            <nav className="hidden md:flex items-center space-x-8">
+            <nav className="hidden md:flex items-center space-x-6">
               <a href="/#services" className="text-sm font-medium hover:text-success transition-colors">Услуги</a>
               <a href="/#tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</a>
               <a href="/#pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</a>
-              <a href="/#esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</a>
               <a href="/#coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</a>
-              <a href="/#about" className="text-sm font-medium hover:text-success transition-colors">О компании</a>
-              <a href="/#contacts" className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
+              <a href="tel:+79015000078" className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium">
+                <Icon name="Phone" size={16} className="mr-2" />
+                +7 (901) 500-00-78
+              </a>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -114,6 +116,11 @@ const Internet = () => {
           )}
         </div>
       </header>
+
+      {/* Breadcrumbs */}
+      <div className="bg-background">
+        <Breadcrumbs items={[{ label: 'Интернет-подключение' }]} />
+      </div>
 
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10">
