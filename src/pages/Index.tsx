@@ -546,19 +546,20 @@ const Index = () => {
               <div className="mt-8">
                 <a 
                   href="/equipment"
-                  className="block bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 border-2 border-blue-200 hover:border-blue-400 rounded-xl p-8 transition-all duration-300 group"
+                  className="block bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 border-2 border-blue-200 hover:border-blue-400 rounded-xl p-4 sm:p-8 transition-all duration-300 group"
                 >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-6">
-                      <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <Icon name="Router" size={32} className="text-white" />
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="flex items-center space-x-3 sm:space-x-6">
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                        <Icon name="Router" size={24} className="text-white sm:w-8 sm:h-8" />
                       </div>
-                      <div>
-                        <h4 className="text-2xl font-bold text-blue-900 mb-2">Примеры устанавливаемого оборудования</h4>
-                        <p className="text-blue-700">Посмотрите антенны, роутеры и другое оборудование, которое мы используем</p>
+                      <div className="min-w-0">
+                        <h4 className="text-base sm:text-xl md:text-2xl font-bold text-blue-900 mb-1 sm:mb-2 leading-tight">Примеры устанавливаемого оборудования</h4>
+                        <p className="text-sm sm:text-base text-blue-700 hidden sm:block">Посмотрите антенны, роутеры и другое оборудование, которое мы используем</p>
+                        <p className="text-xs text-blue-700 sm:hidden">Антенны, роутеры и другое</p>
                       </div>
                     </div>
-                    <Icon name="ChevronRight" size={32} className="text-blue-500 group-hover:translate-x-2 transition-transform duration-300" />
+                    <Icon name="ChevronRight" size={24} className="text-blue-500 group-hover:translate-x-2 transition-transform duration-300 flex-shrink-0 sm:w-8 sm:h-8" />
                   </div>
                 </a>
               </div>
