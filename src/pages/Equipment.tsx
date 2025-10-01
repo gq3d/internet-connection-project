@@ -3,10 +3,19 @@ import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import SEO from '@/components/SEO';
 
 export default function Equipment() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-background via-background to-secondary/5">
+      <SEO 
+        title="Оборудование для беспроводного интернета | NetConnect - MikroTik, Ubiquiti, TP-Link"
+        description="Профессиональное оборудование для беспроводного интернета в Московской области: антенны MikroTik, Ubiquiti, TP-Link. Подбор оптимальной конфигурации для частных домов и дач. Установка и настройка под ключ. Консультация: +7 (901) 500-00-78"
+        keywords="оборудование беспроводного интернета, антенны mikrotik, ubiquiti точки доступа, tp-link wi-fi, оборудование для дачи интернет, роутер для беспроводного интернета, антенна для приема интернета, оборудование netconnect"
+        ogTitle="Оборудование для беспроводного интернета | NetConnect"
+        ogDescription="Профессиональное оборудование MikroTik, Ubiquiti, TP-Link для беспроводного интернета. Подбор под ваши условия. Установка под ключ."
+        canonical="https://mosoblconnect.ru/equipment"
+      />
       {/* Navbar */}
       <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-md border-b z-50 shadow-sm">
         <div className="container mx-auto px-4">
@@ -617,12 +626,58 @@ export default function Equipment() {
             </div>
           </div>
           <div className="border-t mt-8 pt-8 text-center text-muted-foreground text-sm">
-            <p>© 2024 NetConnect. Все права защищены.</p>
+            <p>© 2015 NetConnect. Все права защищены.</p>
           </div>
         </div>
       </footer>
       
       <WhatsAppButton />
+      
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Оборудование для беспроводного интернета NetConnect",
+          "description": "Профессиональное оборудование для беспроводного интернета: антенны, роутеры, точки доступа MikroTik, Ubiquiti, TP-Link",
+          "brand": {
+            "@type": "Brand",
+            "name": "NetConnect"
+          },
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "RUB",
+            "lowPrice": "3000",
+            "highPrice": "25000",
+            "offerCount": "3"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "1500"
+          }
+        })}
+      </script>
+      
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Главная",
+              "item": "https://mosoblconnect.ru/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Оборудование",
+              "item": "https://mosoblconnect.ru/equipment"
+            }
+          ]
+        })}
+      </script>
     </div>
   );
 }

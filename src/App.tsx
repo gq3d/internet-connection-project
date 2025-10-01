@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from 'react-helmet-async';
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import SitemapGenerator from "./components/SitemapGenerator";
@@ -19,29 +20,31 @@ import Equipment from "./pages/Equipment";
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/city/:citySlug" element={<CityPage />} />
-          <Route path="/services/internet" element={<Internet />} />
-          <Route path="/services/satellite" element={<Satellite />} />
-          <Route path="/services/wifi" element={<Wifi />} />
-          <Route path="/services/security" element={<Security />} />
-          <Route path="/services/surveillance" element={<Surveillance />} />
-          <Route path="/services/cellular-booster" element={<CellularBooster />} />
-          <Route path="/equipment" element={<Equipment />} />
-          <Route path="/sitemap.xml" element={<SitemapGenerator type="sitemap" />} />
-          <Route path="/robots.txt" element={<SitemapGenerator type="robots" />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/city/:citySlug" element={<CityPage />} />
+            <Route path="/services/internet" element={<Internet />} />
+            <Route path="/services/satellite" element={<Satellite />} />
+            <Route path="/services/wifi" element={<Wifi />} />
+            <Route path="/services/security" element={<Security />} />
+            <Route path="/services/surveillance" element={<Surveillance />} />
+            <Route path="/services/cellular-booster" element={<CellularBooster />} />
+            <Route path="/equipment" element={<Equipment />} />
+            <Route path="/sitemap.xml" element={<SitemapGenerator type="sitemap" />} />
+            <Route path="/robots.txt" element={<SitemapGenerator type="robots" />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;
