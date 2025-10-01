@@ -445,52 +445,52 @@ export default function Equipment() {
             </div>
 
             {/* Why Professional Equipment */}
-            <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-200 rounded-2xl p-10 mb-16">
-              <div className="text-center mb-10">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full mb-6">
-                  <Icon name="Award" size={40} className="text-white" />
+            <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-200 rounded-2xl p-4 sm:p-6 md:p-10 mb-16">
+              <div className="text-center mb-6 sm:mb-10">
+                <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full mb-4 sm:mb-6">
+                  <Icon name="Award" size={32} className="text-white sm:w-10 sm:h-10" />
                 </div>
-                <h2 className="text-3xl font-bold text-amber-900 mb-4">Почему важно профессиональное оборудование?</h2>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-amber-900 mb-2 sm:mb-4 px-2 leading-tight">Почему важно профессиональное оборудование?</h2>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                    <Icon name="CheckCircle" size={24} className="text-white" />
+              <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-green-500 rounded-full flex items-center justify-center">
+                    <Icon name="CheckCircle" size={20} className="text-white sm:w-6 sm:h-6" />
                   </div>
-                  <div>
-                    <h3 className="font-bold text-xl mb-3 text-amber-900">Стабильная скорость</h3>
-                    <p className="text-amber-800 text-lg">Профессиональные роутеры обеспечивают заявленную скорость даже при большой нагрузке на сеть</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
-                    <Icon name="Shield" size={24} className="text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-xl mb-3 text-amber-900">Надежность</h3>
-                    <p className="text-amber-800 text-lg">Оборудование работает без перезагрузок 24/7, выдерживает перепады температур и влажности</p>
+                  <div className="min-w-0">
+                    <h3 className="font-bold text-base sm:text-lg md:text-xl mb-2 sm:mb-3 text-amber-900">Стабильная скорость</h3>
+                    <p className="text-amber-800 text-sm sm:text-base md:text-lg">Профессиональные роутеры обеспечивают заявленную скорость даже при большой нагрузке на сеть</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
-                    <Icon name="Signal" size={24} className="text-white" />
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                    <Icon name="Shield" size={20} className="text-white sm:w-6 sm:h-6" />
                   </div>
-                  <div>
-                    <h3 className="font-bold text-xl mb-3 text-amber-900">Максимальное покрытие</h3>
-                    <p className="text-amber-800 text-lg">MIMO антенны ловят сигнал даже в сложных условиях на расстоянии до 25 км от вышки</p>
+                  <div className="min-w-0">
+                    <h3 className="font-bold text-base sm:text-lg md:text-xl mb-2 sm:mb-3 text-amber-900">Надежность</h3>
+                    <p className="text-amber-800 text-sm sm:text-base md:text-lg">Оборудование работает без перезагрузок 24/7, выдерживает перепады температур и влажности</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-red-500 rounded-full flex items-center justify-center">
-                    <Icon name="Wrench" size={24} className="text-white" />
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-purple-500 rounded-full flex items-center justify-center">
+                    <Icon name="Signal" size={20} className="text-white sm:w-6 sm:h-6" />
                   </div>
-                  <div>
-                    <h3 className="font-bold text-xl mb-3 text-amber-900">Долгий срок службы</h3>
-                    <p className="text-amber-800 text-lg">Гарантия производителя до 3 лет, реальный срок работы 5-7 лет без замены</p>
+                  <div className="min-w-0">
+                    <h3 className="font-bold text-base sm:text-lg md:text-xl mb-2 sm:mb-3 text-amber-900">Максимальное покрытие</h3>
+                    <p className="text-amber-800 text-sm sm:text-base md:text-lg">MIMO антенны ловят сигнал даже в сложных условиях на расстоянии до 25 км от вышки</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-red-500 rounded-full flex items-center justify-center">
+                    <Icon name="Wrench" size={20} className="text-white sm:w-6 sm:h-6" />
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="font-bold text-base sm:text-lg md:text-xl mb-2 sm:mb-3 text-amber-900">Долгий срок службы</h3>
+                    <p className="text-amber-800 text-sm sm:text-base md:text-lg">Гарантия производителя до 3 лет, реальный срок работы 5-7 лет без замены</p>
                   </div>
                 </div>
               </div>
