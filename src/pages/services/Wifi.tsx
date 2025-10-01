@@ -110,6 +110,13 @@ const Wifi = () => {
                 <a href="/#coverage" className="block py-2 text-sm font-medium hover:text-success transition-colors">Покрытие</a>
                 <a href="/#about" className="block py-2 text-sm font-medium hover:text-success transition-colors">О компании</a>
                 <a href="/#contacts" className="block py-2 text-sm font-medium hover:text-success transition-colors">Контакты</a>
+                <a 
+                  href="tel:+79015000078" 
+                  className="block w-full mt-4 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium text-center"
+                >
+                  <Icon name="Phone" size={16} className="inline mr-2" />
+                  +7 (901) 500-00-78
+                </a>
               </div>
             </div>
           )}

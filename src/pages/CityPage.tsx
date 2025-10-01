@@ -99,10 +99,13 @@ const CityPage = () => {
               <a href="/#services" className="text-muted-foreground hover:text-foreground transition-colors">Услуги</a>
               <a href="/#tariffs" className="text-muted-foreground hover:text-foreground transition-colors">Тарифы</a>
               <a href="/#coverage" className="text-muted-foreground hover:text-foreground transition-colors">Покрытие</a>
-              <div className="flex items-center space-x-2 text-success font-semibold">
-                <Icon name="Phone" size={16} />
-                <span>+7 (901) 500-00-78</span>
-              </div>
+              <a 
+                href="tel:+79015000078" 
+                className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
+              >
+                <Icon name="Phone" size={16} className="mr-2" />
+                +7 (901) 500-00-78
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
