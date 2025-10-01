@@ -105,15 +105,14 @@ const Index = () => {
             </div>
             
             {/* Desktop Menu */}
-            <nav className="hidden md:flex items-center space-x-6">
-              <a href="#services" className="text-sm font-medium hover:text-primary transition-colors">Услуги</a>
-              <a href="#tariffs" className="text-sm font-medium hover:text-primary transition-colors">Тарифы</a>
-              <Link to="/equipment" className="text-sm font-medium hover:text-primary transition-colors">Оборудование</Link>
-              <a href="#coverage" className="text-sm font-medium hover:text-primary transition-colors">Покрытие</a>
-              <a href="tel:+79015000078" className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium">
-                <Icon name="Phone" size={16} className="mr-2" />
-                +7 (901) 500-00-78
-              </a>
+            <nav className="hidden md:flex items-center space-x-8">
+              <a href="#services" className="text-sm font-medium hover:text-success transition-colors">Услуги</a>
+              <a href="#tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</a>
+              <a href="#pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</a>
+              <a href="#esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</a>
+              <a href="#coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</a>
+              <a href="#about" className="text-sm font-medium hover:text-success transition-colors">О компании</a>
+              <a href="#contacts" className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -129,44 +128,65 @@ const Index = () => {
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
             <div className="md:hidden mt-4 py-4 border-t border-border">
-              <div className="space-y-3">
+              <div className="space-y-4">
                 <a 
                   href="#services" 
-                  className="block py-2 text-sm font-medium hover:text-primary transition-colors"
+                  className="block py-2 text-sm font-medium hover:text-success transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Услуги
                 </a>
                 <a 
                   href="#tariffs" 
-                  className="block py-2 text-sm font-medium hover:text-primary transition-colors"
+                  className="block py-2 text-sm font-medium hover:text-success transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Тарифы
                 </a>
-                <Link
-                  to="/equipment" 
-                  className="block py-2 text-sm font-medium hover:text-primary transition-colors"
+                <a 
+                  href="#pricing" 
+                  className="block py-2 text-sm font-medium hover:text-success transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Оборудование
-                </Link>
+                  Стоимость
+                </a>
+                <a 
+                  href="#esim" 
+                  className="block py-2 text-sm font-medium hover:text-success transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  eSIM
+                </a>
                 <a 
                   href="#coverage" 
-                  className="block py-2 text-sm font-medium hover:text-primary transition-colors"
+                  className="block py-2 text-sm font-medium hover:text-success transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Покрытие
                 </a>
+                <a 
+                  href="#about" 
+                  className="block py-2 text-sm font-medium hover:text-success transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  О компании
+                </a>
+                <a 
+                  href="#contacts" 
+                  className="block py-2 text-sm font-medium hover:text-success transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Контакты
+                </a>
                 <div className="pt-4 border-t border-border">
-                  <a 
-                    href="tel:+79015000078"
-                    className="flex items-center justify-center w-full py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    <Icon name="Phone" size={18} className="mr-2" />
-                    +7 (901) 500-00-78
-                  </a>
+                  <div className="flex items-center space-x-2 text-success font-semibold">
+                    <Icon name="Phone" size={16} />
+                    <a href="tel:+79015000078" className="hover:underline">+7 (901) 500-00-78</a>
+                  </div>
+                  <div className="flex items-center space-x-2 text-success font-semibold mt-2">
+                    <Icon name="Phone" size={16} />
+                    <a href="tel:+79015000087" className="hover:underline">+7 (901) 500-00-87</a>
+                  </div>
                 </div>
               </div>
             </div>
