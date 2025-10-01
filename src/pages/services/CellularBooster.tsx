@@ -97,11 +97,14 @@ const CellularBooster = () => {
             </div>
             
             {/* Desktop Menu */}
-            <nav className="hidden md:flex items-center space-x-6">
+            <nav className="hidden md:flex items-center space-x-4">
               <a href="/#services" className="text-sm font-medium hover:text-success transition-colors">Услуги</a>
               <a href="/#tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</a>
               <a href="/#pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</a>
+              <a href="/#esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</a>
               <a href="/#coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</a>
+              <a href="/#about" className="text-sm font-medium hover:text-success transition-colors">О компании</a>
+              <a href="/#contacts" className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
               <a 
                 href="tel:+79015000078" 
                 className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
