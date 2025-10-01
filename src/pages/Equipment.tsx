@@ -55,25 +55,25 @@ export default function Equipment() {
         <section className="pt-8 pb-16 px-4">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-16">
-              <div className="inline-block bg-gradient-to-r from-primary to-success text-white px-8 py-3 rounded-full mb-6">
-                <span className="font-bold text-lg">🛠️ Профессиональное оборудование</span>
+              <div className="inline-block bg-gradient-to-r from-primary to-success text-white px-4 sm:px-8 py-3 rounded-full mb-6">
+                <span className="font-bold text-sm sm:text-lg">🛠️ Профессиональное оборудование</span>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-success to-secondary bg-clip-text text-transparent">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-success to-secondary bg-clip-text text-transparent px-4">
                 Примеры устанавливаемого оборудования
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto px-4">
                 Мы используем только проверенное оборудование от ведущих мировых производителей для стабильного и быстрого интернета
               </p>
             </div>
 
             {/* MIMO Antennas */}
             <div className="mb-20">
-              <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-t-xl p-8">
-                <div className="flex items-center justify-center">
-                  <Icon name="Antenna" size={40} className="mr-4" />
-                  <h2 className="text-3xl font-bold">Антенны MIMO для LTE/4G</h2>
+              <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-t-xl p-4 sm:p-8">
+                <div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left">
+                  <Icon name="Antenna" size={32} className="sm:mr-4 mb-2 sm:mb-0" />
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">Антенны MIMO для LTE/4G</h2>
                 </div>
-                <p className="text-center mt-3 text-blue-100 text-lg">Направленные и всенаправленные антенны для максимального качества сигнала</p>
+                <p className="text-center mt-3 text-blue-100 text-sm sm:text-base md:text-lg px-2">Направленные и всенаправленные антенны для максимального качества сигнала</p>
               </div>
               <div className="grid md:grid-cols-3 gap-8 bg-card border border-t-0 rounded-b-xl p-10">
                 <div className="group hover:scale-105 transition-transform duration-300">
@@ -164,12 +164,12 @@ export default function Equipment() {
 
             {/* LTE Routers */}
             <div className="mb-20">
-              <div className="bg-gradient-to-r from-green-600 to-emerald-700 text-white rounded-t-xl p-8">
-                <div className="flex items-center justify-center">
-                  <Icon name="Router" size={40} className="mr-4" />
-                  <h2 className="text-3xl font-bold">LTE/4G роутеры и модемы</h2>
+              <div className="bg-gradient-to-r from-green-600 to-emerald-700 text-white rounded-t-xl p-4 sm:p-8">
+                <div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left">
+                  <Icon name="Router" size={32} className="sm:mr-4 mb-2 sm:mb-0" />
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">LTE/4G роутеры и модемы</h2>
                 </div>
-                <p className="text-center mt-3 text-green-100 text-lg">Профессиональное оборудование для преобразования сигнала в Wi-Fi</p>
+                <p className="text-center mt-3 text-green-100 text-sm sm:text-base md:text-lg px-2">Профессиональное оборудование для преобразования сигнала в Wi-Fi</p>
               </div>
               <div className="grid md:grid-cols-3 gap-8 bg-card border border-t-0 rounded-b-xl p-10">
                 <div className="group hover:scale-105 transition-transform duration-300">
