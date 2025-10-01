@@ -1,11 +1,25 @@
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
+import { Button } from '@/components/ui/button';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 export default function Equipment() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-background via-background to-secondary/5">
-      <Navbar />
+      {/* Navbar */}
+      <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b z-50">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-16">
+            <Link to="/" className="flex items-center space-x-2">
+              <Icon name="Wifi" className="h-8 w-8 text-primary" />
+              <span className="text-xl font-bold">NetConnect</span>
+            </Link>
+            <Link to="/">
+              <Button variant="ghost">Главная</Button>
+            </Link>
+          </div>
+        </div>
+      </nav>
       
       <main className="flex-grow">
         {/* Hero Section */}
@@ -304,7 +318,41 @@ export default function Equipment() {
         </section>
       </main>
 
-      <Footer />
+      {/* Footer */}
+      <footer className="bg-muted/50 border-t mt-20">
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <div className="flex items-center space-x-2 mb-4">
+                <Icon name="Wifi" className="h-8 w-8 text-primary" />
+                <span className="text-xl font-bold">NetConnect</span>
+              </div>
+              <p className="text-muted-foreground">
+                Надежный беспроводной интернет в Московской области
+              </p>
+            </div>
+            <div>
+              <h3 className="font-bold mb-4">Контакты</h3>
+              <div className="space-y-2 text-muted-foreground">
+                <p>+7 (901) 500-00-78</p>
+                <p>Московская область</p>
+              </div>
+            </div>
+            <div>
+              <h3 className="font-bold mb-4">Навигация</h3>
+              <div className="space-y-2">
+                <Link to="/" className="block text-muted-foreground hover:text-primary">Главная</Link>
+                <Link to="/equipment" className="block text-muted-foreground hover:text-primary">Оборудование</Link>
+              </div>
+            </div>
+          </div>
+          <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
+            <p>© 2024 NetConnect. Все права защищены.</p>
+          </div>
+        </div>
+      </footer>
+      
+      <WhatsAppButton />
     </div>
   );
 }
