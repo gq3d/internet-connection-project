@@ -164,7 +164,7 @@ export default function Equipment() {
                   <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 h-full border-2 border-purple-200 hover:border-purple-400 transition-colors">
                     <div className="aspect-square bg-white rounded-lg mb-4 overflow-hidden shadow-lg">
                       <img 
-                        src="/img/1df3afaa-b915-4f88-af94-9f4b80b2ad20.jpg" 
+                        src="/img/9a11cbc2-a0c5-453b-8a95-3a39781f5d59.jpg" 
                         alt="Панельная MIMO антенна"
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
@@ -192,7 +192,7 @@ export default function Equipment() {
                   <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-6 h-full border-2 border-teal-200 hover:border-teal-400 transition-colors">
                     <div className="aspect-square bg-white rounded-lg mb-4 overflow-hidden shadow-lg">
                       <img 
-                        src="/img/20a5c8b2-9fd0-47f2-a678-f813b6b23c30.jpg" 
+                        src="/img/d968e880-92f2-4798-8edf-d20af6da290f.jpg" 
                         alt="Yagi MIMO антенна"
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
@@ -220,7 +220,7 @@ export default function Equipment() {
                   <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 h-full border-2 border-orange-200 hover:border-orange-400 transition-colors">
                     <div className="aspect-square bg-white rounded-lg mb-4 overflow-hidden shadow-lg">
                       <img 
-                        src="/img/fc1f839a-e663-4701-89c0-35b836c59c99.jpg" 
+                        src="/img/d9df5deb-9f8e-4400-8067-623c5507de4f.jpg" 
                         alt="Всенаправленная MIMO антенна"
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
@@ -353,7 +353,7 @@ export default function Equipment() {
                   <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 h-full border-2 border-purple-200 hover:border-purple-400 transition-colors">
                     <div className="aspect-square bg-white rounded-lg mb-4 overflow-hidden shadow-lg">
                       <img 
-                        src="/img/3322b870-367a-4774-992a-82f2d3840a3c.jpg" 
+                        src="/img/c09917e1-d13f-4d48-b12e-d163abc9f528.jpg" 
                         alt="Mikrotik LTE роутер"
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
@@ -384,7 +384,7 @@ export default function Equipment() {
                   <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-6 h-full border-2 border-teal-200 hover:border-teal-400 transition-colors">
                     <div className="aspect-square bg-white rounded-lg mb-4 overflow-hidden shadow-lg">
                       <img 
-                        src="/img/8324dfb5-8278-4070-893f-c6753227a566.jpg" 
+                        src="/img/6f959ded-245f-48d6-8d35-5debcdf9496d.jpg" 
                         alt="Netgear LTE роутер"
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
@@ -415,7 +415,7 @@ export default function Equipment() {
                   <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 h-full border-2 border-orange-200 hover:border-orange-400 transition-colors">
                     <div className="aspect-square bg-white rounded-lg mb-4 overflow-hidden shadow-lg">
                       <img 
-                        src="/img/98e7d6a2-f1ce-40d6-944b-ca439925b607.jpg" 
+                        src="/img/3a3bd3f7-51ce-4a57-8111-d4521c2c786e.jpg" 
                         alt="D-Link LTE роутер"
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
