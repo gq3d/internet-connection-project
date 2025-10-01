@@ -45,7 +45,7 @@ export default function TariffsSection() {
               <CardHeader className="text-center">
                 <CardTitle as="h3" className="text-2xl">{tariff.name}</CardTitle>
                 <div className="py-4">
-                  <div className="text-4xl font-bold text-primary">{tariff.price}</div>
+                  <div className="text-4xl font-bold text-primary">от {tariff.price}</div>
                   <div className="text-sm text-muted-foreground">₽/месяц</div>
                 </div>
                 <div className="flex items-center justify-center mb-4">
