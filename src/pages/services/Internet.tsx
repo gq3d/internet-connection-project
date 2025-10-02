@@ -434,7 +434,7 @@ const Internet = () => {
               <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="relative">
                   <img 
-                    src="/img/d33fd77f-8d17-42f6-9dc1-9447ee1598b0.jpg" 
+                    src="https://cdn.poehali.dev/files/648b0a23-c36e-412a-af45-8f16220c67e5.png" 
                     alt="Установка MIMO антенны на частном доме" 
                     className="w-full h-64 object-cover"
                   />
