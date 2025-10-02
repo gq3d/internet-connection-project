@@ -474,7 +474,7 @@ const Internet = () => {
               <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="relative">
                   <img 
-                    src="/img/6706ad23-9bba-460a-97cb-bd83a764d90a.jpg" 
+                    src="https://cdn.poehali.dev/files/167a8eb4-3e8a-4755-a9a9-c85560b118f3.png" 
                     alt="Настройка роутера в частном доме" 
                     className="w-full h-64 object-cover"
                   />
