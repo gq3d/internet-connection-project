@@ -452,7 +452,7 @@ const Surveillance = () => {
               <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="relative">
                   <img 
-                    src="/img/58957c31-4c20-4366-a255-bab52f692932.jpg" 
+                    src="https://cdn.poehali.dev/files/5acc45ef-cca8-4d38-bd8b-c51a3d147548.png" 
                     alt="Система мониторинга дома" 
                     className="w-full h-64 object-cover"
                   />
