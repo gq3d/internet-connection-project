@@ -62,7 +62,7 @@ const Wifi = () => {
     {
       type: 'Профессиональные точки',
       models: ['Ubiquiti UniFi', 'Mikrotik cAP', 'Aruba Instant On'],
-      price: 'от 12 000 ₽',
+      price: 'от 26 000 ₽',
       description: 'Корпоративное оборудование для офисов и предприятий'
     }
   ];
