@@ -251,6 +251,149 @@ const Wifi = () => {
         </div>
       </section>
 
+      {/* Installation Examples Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-4">Примеры усиления Wi-Fi в загородных домах</h2>
+            <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+              Профессиональная установка Wi-Fi оборудования для полного покрытия участка и дома
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Example 1: Outdoor TP-Link */}
+              <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div className="relative">
+                  <img 
+                    src="https://cdn.poehali.dev/files/bdc92972-868c-4116-8dc6-32712c0b3ebe.png" 
+                    alt="Уличная Wi-Fi точка доступа TP-Link" 
+                    className="w-full h-64 object-cover"
+                  />
+                  <Badge className="absolute top-4 right-4 bg-success/90 text-white">
+                    Уличное оборудование
+                  </Badge>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-3">Покрытие всего участка</h3>
+                  <div className="space-y-2 text-sm text-muted-foreground mb-4">
+                    <div className="flex items-center">
+                      <Icon name="CheckCircle" size={16} className="text-success mr-2" />
+                      <span>Уличная точка TP-Link</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Icon name="CheckCircle" size={16} className="text-success mr-2" />
+                      <span>Радиус покрытия до 200м</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Icon name="CheckCircle" size={16} className="text-success mr-2" />
+                      <span>Защита от влаги IP65</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Установка уличного Wi-Fi оборудования на фасаде для покрытия двора, сада и беседки
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Example 2: Wall Mounted */}
+              <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div className="relative">
+                  <img 
+                    src="https://cdn.poehali.dev/files/c0e2520c-f57b-445e-9706-7781bf7b230e.png" 
+                    alt="Настенная Wi-Fi точка доступа" 
+                    className="w-full h-64 object-cover"
+                  />
+                  <Badge className="absolute top-4 right-4 bg-primary/90 text-white">
+                    Mesh система
+                  </Badge>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-3">Mesh сеть для дома</h3>
+                  <div className="space-y-2 text-sm text-muted-foreground mb-4">
+                    <div className="flex items-center">
+                      <Icon name="CheckCircle" size={16} className="text-success mr-2" />
+                      <span>Бесшовное покрытие</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Icon name="CheckCircle" size={16} className="text-success mr-2" />
+                      <span>Настенный монтаж</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Icon name="CheckCircle" size={16} className="text-success mr-2" />
+                      <span>Скорость до 1200 Мбит/с</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Компактная точка доступа на кирпичном фасаде обеспечивает стабильное покрытие всех комнат
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Example 3: Indoor Setup */}
+              <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div className="relative">
+                  <img 
+                    src="https://cdn.poehali.dev/files/dc28b1d8-f743-43c6-be30-d7bcca2650db.png" 
+                    alt="Внутренняя установка Wi-Fi роутеров D-Link" 
+                    className="w-full h-64 object-cover"
+                  />
+                  <Badge className="absolute top-4 right-4 bg-secondary/90 text-white">
+                    Профессиональное оборудование
+                  </Badge>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-3">Центральная точка доступа</h3>
+                  <div className="space-y-2 text-sm text-muted-foreground mb-4">
+                    <div className="flex items-center">
+                      <Icon name="CheckCircle" size={16} className="text-success mr-2" />
+                      <span>Роутеры D-Link</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Icon name="CheckCircle" size={16} className="text-success mr-2" />
+                      <span>Аккуратная прокладка кабелей</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Icon name="CheckCircle" size={16} className="text-success mr-2" />
+                      <span>Настройка и тестирование</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Профессиональная установка нескольких роутеров в техническом помещении с настройкой единой сети
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="mt-12 text-center">
+              <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
+                <CardContent className="p-8">
+                  <Icon name="Radio" size={48} className="text-primary mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold mb-3">Комплексные решения для загородных домов</h3>
+                  <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                    Проектируем и устанавливаем Wi-Fi сети любой сложности: от небольших коттеджей до больших усадеб 
+                    с несколькими строениями. Гарантируем стабильное покрытие во всех зонах
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-6 text-sm">
+                    <div className="flex items-center">
+                      <Icon name="Check" size={18} className="text-success mr-2" />
+                      <span>Бесплатная диагностика</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Icon name="Check" size={18} className="text-success mr-2" />
+                      <span>Профессиональное оборудование</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Icon name="Check" size={18} className="text-success mr-2" />
+                      <span>Гарантия 2 года</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="container mx-auto px-4">
