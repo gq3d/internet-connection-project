@@ -405,7 +405,7 @@ const CellularBooster = () => {
               <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="relative">
                   <img 
-                    src="/img/16db1527-7217-4fe1-8433-1fcd592a4db5.jpg" 
+                    src="https://cdn.poehali.dev/files/9fe4c1c3-d855-4aff-b72f-3371f7240d32.png" 
                     alt="Репитер в доме" 
                     className="w-full h-64 object-cover"
                   />
