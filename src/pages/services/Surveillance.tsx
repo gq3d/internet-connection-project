@@ -412,7 +412,7 @@ const Surveillance = () => {
               <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="relative">
                   <img 
-                    src="/img/344f1e11-fb60-4429-b027-661455fec430.jpg" 
+                    src="https://cdn.poehali.dev/files/c0507610-bf80-4943-a2cd-f4b2fd8e2294.png" 
                     alt="Камеры на даче" 
                     className="w-full h-64 object-cover"
                   />
