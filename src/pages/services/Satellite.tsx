@@ -275,6 +275,149 @@ const Satellite = () => {
         </div>
       </section>
 
+      {/* Installation Examples Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-4">Примеры установки</h2>
+            <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+              Профессиональная установка спутниковых антенн в частных домах и коттеджах Московской области
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Example 1: Gazprom Installation */}
+              <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div className="relative">
+                  <img 
+                    src="https://cdn.poehali.dev/files/28745a89-08ff-47fb-bc74-ce917505fc77.png" 
+                    alt="Установка спутникового интернета Газпром" 
+                    className="w-full h-64 object-cover"
+                  />
+                  <Badge className="absolute top-4 right-4 bg-success/90 text-white">
+                    Профессиональная установка
+                  </Badge>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-3">Дом в лесной зоне</h3>
+                  <div className="space-y-2 text-sm text-muted-foreground mb-4">
+                    <div className="flex items-center">
+                      <Icon name="CheckCircle" size={16} className="text-success mr-2" />
+                      <span>Спутниковая антенна Газпром</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Icon name="CheckCircle" size={16} className="text-success mr-2" />
+                      <span>Скорость до 50 Мбит/с</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Icon name="CheckCircle" size={16} className="text-success mr-2" />
+                      <span>Установка на опоре</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Надежное подключение в отдаленном районе с использованием профессионального оборудования
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Example 2: Cottage Installation */}
+              <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div className="relative">
+                  <img 
+                    src="https://cdn.poehali.dev/files/83a1b0e9-db7d-452a-8c86-d23a6aab4f87.png" 
+                    alt="Установка спутникового интернета на коттедже" 
+                    className="w-full h-64 object-cover"
+                  />
+                  <Badge className="absolute top-4 right-4 bg-primary/90 text-white">
+                    Фасадный монтаж
+                  </Badge>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-3">Загородный коттедж</h3>
+                  <div className="space-y-2 text-sm text-muted-foreground mb-4">
+                    <div className="flex items-center">
+                      <Icon name="CheckCircle" size={16} className="text-success mr-2" />
+                      <span>Монтаж на стену дома</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Icon name="CheckCircle" size={16} className="text-success mr-2" />
+                      <span>Оптимальный угол установки</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Icon name="CheckCircle" size={16} className="text-success mr-2" />
+                      <span>Скорость до 100 Мбит/с</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Установка на деревянном доме с учетом ландшафта и оптимального направления на спутник
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Example 3: Roof Installation */}
+              <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div className="relative">
+                  <img 
+                    src="https://cdn.poehali.dev/files/0fca8872-0b4f-4613-ae6c-f9c2727b5a67.png" 
+                    alt="Установка спутникового интернета на крыше" 
+                    className="w-full h-64 object-cover"
+                  />
+                  <Badge className="absolute top-4 right-4 bg-secondary/90 text-white">
+                    Кровельная установка
+                  </Badge>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-3">Частный дом</h3>
+                  <div className="space-y-2 text-sm text-muted-foreground mb-4">
+                    <div className="flex items-center">
+                      <Icon name="CheckCircle" size={16} className="text-success mr-2" />
+                      <span>Монтаж на крыше</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Icon name="CheckCircle" size={16} className="text-success mr-2" />
+                      <span>Максимальный уровень сигнала</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Icon name="CheckCircle" size={16} className="text-success mr-2" />
+                      <span>Защита от препятствий</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Кровельная установка обеспечивает лучший обзор неба и стабильный прием сигнала в любое время
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="mt-12 text-center">
+              <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
+                <CardContent className="p-8">
+                  <Icon name="Wrench" size={48} className="text-primary mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold mb-3">Профессиональная установка под ключ</h3>
+                  <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                    Наши специалисты выполнят установку спутниковой антенны с учетом особенностей вашего участка, 
+                    настроят оборудование и проверят качество сигнала
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-6 text-sm">
+                    <div className="flex items-center">
+                      <Icon name="Check" size={18} className="text-success mr-2" />
+                      <span>Выезд в день заявки</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Icon name="Check" size={18} className="text-success mr-2" />
+                      <span>Гарантия 2 года</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Icon name="Check" size={18} className="text-success mr-2" />
+                      <span>Настройка оборудования</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="container mx-auto px-4">
