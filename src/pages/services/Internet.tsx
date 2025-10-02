@@ -434,7 +434,7 @@ const Internet = () => {
               <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="relative">
                   <img 
-                    src="/img/34c83b73-706a-4005-a37a-3b50f65723eb.jpg" 
+                    src="/img/d33fd77f-8d17-42f6-9dc1-9447ee1598b0.jpg" 
                     alt="Установка MIMO антенны на частном доме" 
                     className="w-full h-64 object-cover"
                   />
@@ -474,7 +474,7 @@ const Internet = () => {
               <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="relative">
                   <img 
-                    src="/img/4d10b162-9b8a-4cfe-85f4-d76e9881be4b.jpg" 
+                    src="/img/6706ad23-9bba-460a-97cb-bd83a764d90a.jpg" 
                     alt="Настройка роутера в частном доме" 
                     className="w-full h-64 object-cover"
                   />
@@ -514,7 +514,7 @@ const Internet = () => {
               <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="relative">
                   <img 
-                    src="/img/834781c9-2445-4936-9347-55c047b390c9.jpg" 
+                    src="/img/102eda94-e864-48d8-aed5-6fb66f7025e4.jpg" 
                     alt="Интернет на даче" 
                     className="w-full h-64 object-cover"
                   />
