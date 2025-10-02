@@ -33,6 +33,18 @@ export default function AboutSection() {
               <div className="text-muted-foreground">время безотказной работы</div>
             </div>
           </div>
+
+          <div className="mt-8 text-center">
+            <a 
+              href="/reviews" 
+              className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium"
+            >
+              Читать отзывы наших клиентов
+              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
