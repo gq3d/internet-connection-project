@@ -349,6 +349,185 @@ const CellularBooster = () => {
         </div>
       </section>
 
+      {/* Installation Examples */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Примеры установки усилителей связи</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Реальные проекты усиления сотовой связи в частных домах и на дачах Московской области
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Example 1: Cottage Installation */}
+              <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div className="relative">
+                  <img 
+                    src="/img/eb3b266b-14bb-4874-a6c5-701a3bc4b9b2.jpg" 
+                    alt="Усиление связи в коттедже" 
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="absolute top-4 right-4">
+                    <Badge className="bg-success text-white border-0">+65 дБ</Badge>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-3">Коттедж в Красногорском районе</h3>
+                  <div className="space-y-3 mb-4">
+                    <div className="flex items-start space-x-2">
+                      <Icon name="MapPin" size={16} className="text-primary mt-1 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">Деревня Ангелово</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <Icon name="Antenna" size={16} className="text-primary mt-1 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">Направленная антенна на крыше</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <Icon name="Signal" size={16} className="text-success mt-1 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">Репитер GSM 900/1800 + 4G LTE</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <Icon name="Users" size={16} className="text-primary mt-1 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">Покрытие всего дома 250 м²</span>
+                    </div>
+                  </div>
+                  <div className="pt-4 border-t">
+                    <p className="text-sm italic text-muted-foreground">
+                      "Раньше связь ловила только у окна. Теперь полный сигнал во всех комнатах, включая подвал"
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Example 2: Indoor Unit */}
+              <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div className="relative">
+                  <img 
+                    src="/img/16db1527-7217-4fe1-8433-1fcd592a4db5.jpg" 
+                    alt="Репитер в доме" 
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="absolute top-4 right-4">
+                    <Badge className="bg-secondary text-white border-0">+70 дБ</Badge>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-3">Дом в Ленинском районе</h3>
+                  <div className="space-y-3 mb-4">
+                    <div className="flex items-start space-x-2">
+                      <Icon name="MapPin" size={16} className="text-primary mt-1 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">Поселок Сосенки</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <Icon name="Wifi" size={16} className="text-primary mt-1 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">Трехдиапазонный репитер 3G/4G/5G</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <Icon name="Zap" size={16} className="text-success mt-1 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">Скорость интернета выросла в 10 раз</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <Icon name="Smartphone" size={16} className="text-primary mt-1 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">Поддержка всех операторов</span>
+                    </div>
+                  </div>
+                  <div className="pt-4 border-t">
+                    <p className="text-sm italic text-muted-foreground">
+                      "Работаю удаленно, видеозвонки теперь без обрывов. Дети спокойно играют онлайн"
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Example 3: Dacha Installation */}
+              <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div className="relative">
+                  <img 
+                    src="/img/9b933355-b998-4a75-ab34-987eb0b4418a.jpg" 
+                    alt="Усилитель на даче" 
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="absolute top-4 right-4">
+                    <Badge className="bg-primary text-white border-0">+60 дБ</Badge>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-3">Дача в Можайском районе</h3>
+                  <div className="space-y-3 mb-4">
+                    <div className="flex items-start space-x-2">
+                      <Icon name="MapPin" size={16} className="text-primary mt-1 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">СНТ "Лесное"</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <Icon name="Antenna" size={16} className="text-primary mt-1 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">Компактная антенна на фронтоне</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <Icon name="Signal" size={16} className="text-success mt-1 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">Репитер GSM для МТС и Билайн</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <Icon name="Battery" size={16} className="text-primary mt-1 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">Телефон разряжается в 2 раза медленнее</span>
+                    </div>
+                  </div>
+                  <div className="pt-4 border-t">
+                    <p className="text-sm italic text-muted-foreground">
+                      "Наконец-то можно спокойно звонить с дачи. Раньше приходилось выходить на улицу"
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Additional Info */}
+            <Card className="mt-12 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
+              <CardContent className="p-8">
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold mb-4">Подберем оптимальное решение для вашего дома</h3>
+                  <p className="text-muted-foreground mb-6 max-w-3xl mx-auto">
+                    Проведем замеры уровня сигнала, определим лучшее расположение антенны и установим 
+                    репитер с гарантией качественной связи.
+                  </p>
+                  <div className="grid md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                    <div className="flex flex-col items-center">
+                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-2">
+                        <Icon name="Activity" size={24} className="text-primary" />
+                      </div>
+                      <h4 className="font-semibold text-sm mb-1">Замер сигнала</h4>
+                      <p className="text-xs text-muted-foreground">Бесплатно</p>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <div className="w-12 h-12 bg-success/10 rounded-full flex items-center justify-center mb-2">
+                        <Icon name="Settings" size={24} className="text-success" />
+                      </div>
+                      <h4 className="font-semibold text-sm mb-1">Подбор системы</h4>
+                      <p className="text-xs text-muted-foreground">Под ваши нужды</p>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-2">
+                        <Icon name="Wrench" size={24} className="text-secondary" />
+                      </div>
+                      <h4 className="font-semibold text-sm mb-1">Монтаж</h4>
+                      <p className="text-xs text-muted-foreground">За 2-4 часа</p>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-2">
+                        <Icon name="CheckCircle" size={24} className="text-primary" />
+                      </div>
+                      <h4 className="font-semibold text-sm mb-1">Гарантия</h4>
+                      <p className="text-xs text-muted-foreground">24 месяца</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="container mx-auto px-4">
