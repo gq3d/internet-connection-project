@@ -119,6 +119,11 @@ export default function ServicesSection() {
                           <Icon name="Wifi" size={32} className="text-white" />
                         </div>
                         
+                        {/* Tooltip */}
+                        <div className="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-success text-white text-xs px-3 py-1 rounded-lg whitespace-nowrap shadow-lg z-50">
+                          Домашний роутер Wi-Fi
+                        </div>
+                        
                         {/* Пульсирующие волны Wi-Fi */}
                         <div className="absolute inset-0 flex items-center justify-center">
                           <div className="w-20 h-20 border-2 border-success/30 rounded-full animate-ping"></div>
@@ -133,7 +138,7 @@ export default function ServicesSection() {
                     </div>
                     
                     {/* Антенна снаружи */}
-                    <div className="absolute -top-2 right-4 flex flex-col items-center">
+                    <div className="absolute -top-2 right-4 flex flex-col items-center group">
                       <div className="relative">
                         <div className="w-14 h-14 bg-gradient-to-br from-secondary via-secondary to-secondary/80 rounded-xl flex items-center justify-center shadow-2xl border-2 border-white/30 transform hover:scale-110 transition-transform">
                           <Icon name="Antenna" size={28} className="text-white" />
@@ -141,11 +146,16 @@ export default function ServicesSection() {
                         {/* Индикатор сигнала */}
                         <div className="absolute -top-1 -right-1 w-4 h-4 bg-success rounded-full border-2 border-white shadow-lg animate-pulse"></div>
                         
+                        {/* Tooltip */}
+                        <div className="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-secondary text-white text-xs px-3 py-1 rounded-lg whitespace-nowrap shadow-lg">
+                          Приём сигнала LTE
+                        </div>
+                        
                         {/* Анимация передачи данных от антенны к роутеру */}
                         <div className="absolute top-12 left-1/2 -translate-x-1/2">
-                          <div className="w-2 h-2 bg-secondary rounded-full animate-data-transfer"></div>
-                          <div className="w-2 h-2 bg-secondary rounded-full animate-data-transfer" style={{ animationDelay: '0.5s' }}></div>
-                          <div className="w-2 h-2 bg-secondary rounded-full animate-data-transfer" style={{ animationDelay: '1s' }}></div>
+                          <div className="w-2 h-2 bg-secondary rounded-full animate-data-transfer shadow-lg"></div>
+                          <div className="w-2 h-2 bg-secondary rounded-full animate-data-transfer shadow-lg" style={{ animationDelay: '0.5s' }}></div>
+                          <div className="w-2 h-2 bg-secondary rounded-full animate-data-transfer shadow-lg" style={{ animationDelay: '1s' }}></div>
                         </div>
                       </div>
                     </div>
@@ -166,6 +176,10 @@ export default function ServicesSection() {
                               <Icon name="Wifi" size={14} className="text-success" />
                             </div>
                           </div>
+                          {/* Tooltip */}
+                          <div className="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-foreground text-background text-xs px-3 py-1 rounded-lg whitespace-nowrap shadow-lg z-50">
+                            Wi-Fi подключен
+                          </div>
                         </div>
                         <p className="text-xs font-medium text-muted-foreground">Ноутбук</p>
                       </div>
@@ -180,6 +194,10 @@ export default function ServicesSection() {
                             <div className="w-6 h-6 bg-success/20 rounded-full flex items-center justify-center animate-pulse" style={{ animationDelay: '0.3s' }}>
                               <Icon name="Wifi" size={14} className="text-success" />
                             </div>
+                          </div>
+                          {/* Tooltip */}
+                          <div className="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-foreground text-background text-xs px-3 py-1 rounded-lg whitespace-nowrap shadow-lg z-50">
+                            Wi-Fi подключен
                           </div>
                         </div>
                         <p className="text-xs font-medium text-muted-foreground">Смартфон</p>
@@ -196,6 +214,10 @@ export default function ServicesSection() {
                               <Icon name="Wifi" size={14} className="text-success" />
                             </div>
                           </div>
+                          {/* Tooltip */}
+                          <div className="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-foreground text-background text-xs px-3 py-1 rounded-lg whitespace-nowrap shadow-lg z-50">
+                            Wi-Fi подключен
+                          </div>
                         </div>
                         <p className="text-xs font-medium text-muted-foreground">Smart TV</p>
                       </div>
@@ -206,16 +228,6 @@ export default function ServicesSection() {
 
               {/* Базовая станция справа */}
               <div className="relative flex flex-col items-center lg:items-start">
-                {/* Анимация передачи данных от базовой станции */}
-                <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16">
-                  <div className="relative w-20 h-1">
-                    <div className="absolute right-0 w-3 h-3 bg-primary rounded-full animate-signal-flow"></div>
-                    <div className="absolute right-0 w-3 h-3 bg-primary rounded-full animate-signal-flow" style={{ animationDelay: '0.5s' }}></div>
-                    <div className="absolute right-0 w-3 h-3 bg-primary rounded-full animate-signal-flow" style={{ animationDelay: '1s' }}></div>
-                    <div className="absolute right-0 w-2 h-2 bg-primary/50 rounded-full animate-signal-flow" style={{ animationDelay: '0.25s' }}></div>
-                    <div className="absolute right-0 w-2 h-2 bg-primary/50 rounded-full animate-signal-flow" style={{ animationDelay: '0.75s' }}></div>
-                  </div>
-                </div>
 
                 {/* Вышка */}
                 <div className="relative">
@@ -229,8 +241,33 @@ export default function ServicesSection() {
                   
                   {/* Антенна вышки */}
                   <div className="flex flex-col items-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center shadow-2xl border-4 border-white/20 relative z-10">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center shadow-2xl border-4 border-white/20 relative z-10 group">
                       <Icon name="Radio" size={32} className="text-white" />
+                      
+                      {/* Tooltip */}
+                      <div className="absolute -top-16 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-primary text-white text-xs px-3 py-1 rounded-lg whitespace-nowrap shadow-lg z-50">
+                        Базовая станция 4G LTE
+                      </div>
+                      
+                      {/* Анимация передачи сигнала от вышки к антенне */}
+                      <div className="absolute top-0 left-0">
+                        <div className="w-4 h-4 bg-primary rounded-full shadow-lg animate-signal-flow"></div>
+                      </div>
+                      <div className="absolute top-0 left-0">
+                        <div className="w-3 h-3 bg-primary/80 rounded-full shadow-lg animate-signal-flow" style={{ animationDelay: '0.5s' }}></div>
+                      </div>
+                      <div className="absolute top-0 left-0">
+                        <div className="w-4 h-4 bg-primary rounded-full shadow-lg animate-signal-flow" style={{ animationDelay: '1s' }}></div>
+                      </div>
+                      <div className="absolute top-0 left-0">
+                        <div className="w-3 h-3 bg-primary/60 rounded-full shadow-lg animate-signal-flow" style={{ animationDelay: '1.5s' }}></div>
+                      </div>
+                      <div className="absolute top-0 left-0">
+                        <div className="w-2 h-2 bg-primary/80 rounded-full shadow-lg animate-signal-flow" style={{ animationDelay: '0.25s' }}></div>
+                      </div>
+                      <div className="absolute top-0 left-0">
+                        <div className="w-2 h-2 bg-primary/60 rounded-full shadow-lg animate-signal-flow" style={{ animationDelay: '0.75s' }}></div>
+                      </div>
                     </div>
                     
                     {/* Мачта */}
