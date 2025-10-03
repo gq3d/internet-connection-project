@@ -68,23 +68,15 @@ const SecurityCTA = () => {
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a 
-                  href="tel:+79015000078"
+                  href="tel:+79857608347"
                   className="group flex items-center space-x-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 w-full sm:w-auto justify-center"
                 >
                   <Icon name="Phone" size={24} className="group-hover:rotate-12 transition-transform" />
-                  <span>+7 (901) 500-00-78</span>
+                  <span>+7 (985) 760-83-47</span>
                 </a>
 
                 <a 
-                  href="tel:+79015000087"
-                  className="group flex items-center space-x-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 w-full sm:w-auto justify-center"
-                >
-                  <Icon name="Phone" size={24} className="group-hover:rotate-12 transition-transform" />
-                  <span>+7 (901) 500-00-87</span>
-                </a>
-
-                <a 
-                  href="https://wa.me/79015000078"
+                  href="https://wa.me/79857608347"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center space-x-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 w-full sm:w-auto justify-center"
