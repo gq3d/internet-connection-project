@@ -103,7 +103,7 @@ export default function ServicesSection() {
               <div className="relative bg-gradient-to-br from-card via-card to-muted/30 backdrop-blur rounded-2xl p-10 border-2 border-primary/10 shadow-xl overflow-hidden">
                 
                 {/* Мобильная версия: горизонтальная схема */}
-                <div className="lg:hidden flex items-center justify-between gap-6">
+                <div className="lg:hidden flex items-center justify-between gap-3">
                   {/* Вышка слева */}
                   <div className="relative flex-shrink-0">
                     <div className="flex flex-col items-center">
