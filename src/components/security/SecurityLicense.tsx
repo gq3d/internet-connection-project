@@ -25,7 +25,8 @@ const SecurityLicense = () => {
                 <img 
                   src="https://cdn.poehali.dev/files/70ef45ba-7179-4d37-ae04-17c04f362309.png" 
                   alt="Лицензия МВД РФ на осуществление частной охранной деятельности" 
-                  className="w-full h-auto"
+                  className="w-full h-auto pointer-events-none select-none"
+                  draggable="false"
                 />
               </CardContent>
             </Card>
