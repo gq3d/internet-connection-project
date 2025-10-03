@@ -20,13 +20,12 @@ const SecurityLicense = () => {
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* License Image */}
-            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-primary/20">
+            <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 border-2 border-primary/20">
               <CardContent className="p-0">
                 <img 
                   src="https://cdn.poehali.dev/files/70ef45ba-7179-4d37-ae04-17c04f362309.png" 
                   alt="Лицензия МВД РФ на осуществление частной охранной деятельности" 
-                  className="w-full h-auto cursor-pointer hover:scale-105 transition-transform duration-300"
-                  onClick={() => window.open('https://cdn.poehali.dev/files/70ef45ba-7179-4d37-ae04-17c04f362309.png', '_blank')}
+                  className="w-full h-auto"
                 />
               </CardContent>
             </Card>
