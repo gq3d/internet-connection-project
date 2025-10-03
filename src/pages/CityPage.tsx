@@ -311,6 +311,75 @@ const CityPage = () => {
               </div>
             </div>
 
+            {/* Additional Services Section */}
+            <div className="mb-16">
+              <h3 className="text-2xl font-bold mb-8 text-center">
+                Дополнительные услуги в {city.name}
+              </h3>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a 
+                  href="/services/satellite" 
+                  className="bg-card border rounded-lg p-6 hover:border-primary transition-all duration-300 hover:shadow-lg group"
+                >
+                  <div className="bg-primary/10 p-3 rounded-lg mb-4 w-fit group-hover:bg-primary/20 transition-colors">
+                    <Icon name="Satellite" size={28} className="text-primary" />
+                  </div>
+                  <h4 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                    Спутниковый интернет
+                  </h4>
+                  <p className="text-muted-foreground text-sm">
+                    Подключение интернета через спутник в любой точке {city.name}. Работаем там, где нет других способов связи.
+                  </p>
+                </a>
+
+                <a 
+                  href="/services/wifi" 
+                  className="bg-card border rounded-lg p-6 hover:border-primary transition-all duration-300 hover:shadow-lg group"
+                >
+                  <div className="bg-primary/10 p-3 rounded-lg mb-4 w-fit group-hover:bg-primary/20 transition-colors">
+                    <Icon name="Wifi" size={28} className="text-primary" />
+                  </div>
+                  <h4 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                    Усиление Wi-Fi
+                  </h4>
+                  <p className="text-muted-foreground text-sm">
+                    Профессиональное усиление Wi-Fi сигнала. Стабильное покрытие по всему дому или участку.
+                  </p>
+                </a>
+
+                <a 
+                  href="/services/cellular-booster" 
+                  className="bg-card border rounded-lg p-6 hover:border-primary transition-all duration-300 hover:shadow-lg group"
+                >
+                  <div className="bg-primary/10 p-3 rounded-lg mb-4 w-fit group-hover:bg-primary/20 transition-colors">
+                    <Icon name="Signal" size={28} className="text-primary" />
+                  </div>
+                  <h4 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                    Усиление сотовой связи
+                  </h4>
+                  <p className="text-muted-foreground text-sm">
+                    Усиление сигнала мобильной связи. Уверенный прием для всех операторов в {city.name}.
+                  </p>
+                </a>
+
+                <a 
+                  href="/services/surveillance" 
+                  className="bg-card border rounded-lg p-6 hover:border-primary transition-all duration-300 hover:shadow-lg group"
+                >
+                  <div className="bg-primary/10 p-3 rounded-lg mb-4 w-fit group-hover:bg-primary/20 transition-colors">
+                    <Icon name="Video" size={28} className="text-primary" />
+                  </div>
+                  <h4 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                    Охрана и видеонаблюдение
+                  </h4>
+                  <p className="text-muted-foreground text-sm">
+                    Установка систем видеонаблюдения и охранных систем. Защита вашей недвижимости в {city.name}.
+                  </p>
+                </a>
+              </div>
+            </div>
+
             {/* CTA Section */}
             <div className="bg-primary/10 border-2 border-primary/20 rounded-lg p-8 text-center">
               <h3 className="text-2xl font-bold mb-4">
