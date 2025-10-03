@@ -12,6 +12,45 @@ export default function HeroSection() {
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Подключение к сети интернет для частных лиц и бизнеса через беспроводные каналы связи, включая спутниковый интернет
           </p>
+
+          {/* Services Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-3xl mx-auto">
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-primary/10 hover:shadow-lg transition-all duration-300">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-2">
+                  <Icon name="Video" size={24} className="text-primary" />
+                </div>
+                <p className="text-sm font-semibold text-foreground">Видеонаблюдение</p>
+              </div>
+            </div>
+            
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-primary/10 hover:shadow-lg transition-all duration-300">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-12 h-12 bg-success/10 rounded-full flex items-center justify-center mb-2">
+                  <Icon name="Shield" size={24} className="text-success" />
+                </div>
+                <p className="text-sm font-semibold text-foreground">Системы охраны</p>
+              </div>
+            </div>
+            
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-primary/10 hover:shadow-lg transition-all duration-300">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-2">
+                  <Icon name="Signal" size={24} className="text-secondary" />
+                </div>
+                <p className="text-sm font-semibold text-foreground">Усиление сотовой связи</p>
+              </div>
+            </div>
+            
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-primary/10 hover:shadow-lg transition-all duration-300">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-2">
+                  <Icon name="Wifi" size={24} className="text-primary" />
+                </div>
+                <p className="text-sm font-semibold text-foreground">Усиление Wi-Fi</p>
+              </div>
+            </div>
+          </div>
           
           <div className="flex flex-wrap justify-center gap-4">
             <Badge variant="secondary" className="px-4 py-2 bg-success/10 text-success border-success/20">
