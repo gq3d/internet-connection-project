@@ -63,15 +63,24 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <div className="mt-8 text-center">
+          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/reviews" 
-              className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium"
+              className="inline-flex items-center justify-center px-6 py-3 bg-white text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition-all font-semibold shadow-md hover:shadow-lg"
             >
               Читать отзывы наших клиентов
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
+            </a>
+            <a 
+              href="/faq" 
+              className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all font-semibold shadow-md hover:shadow-lg"
+            >
+              <svg className="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Часто задаваемые вопросы
             </a>
           </div>
           </div>
