@@ -54,7 +54,7 @@ export default function ServicesSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Наши услуги</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Полный спектр телекоммуникационных услуг для дома и бизнеса
+            Полный спектр телекоммуникационных и охранных услуг для дома и бизнеса
           </p>
         </div>
         
