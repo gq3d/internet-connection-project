@@ -180,7 +180,7 @@ export default function ServicesSection() {
                           <p className="text-[10px] mt-1">Телефон</p>
                         </div>
                         <div className="flex flex-col items-center">
-                          <div className="w-10 h-10 bg-gradient-to-br from-accent to-accent/80 rounded-lg flex items-center justify-center shadow-lg">
+                          <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center shadow-lg">
                             <Icon name="Tv" size={20} className="text-white" />
                           </div>
                           <p className="text-[10px] mt-1">Smart TV</p>
@@ -322,8 +322,8 @@ export default function ServicesSection() {
                 </div>
               </div>
 
-              {/* Базовая станция справа */}
-              <div className="relative flex flex-col items-center lg:items-start">
+              {/* Базовая станция справа - только для десктопа */}
+              <div className="hidden lg:flex relative flex-col items-center lg:items-start">
 
                 {/* Вышка */}
                 <div className="relative">
