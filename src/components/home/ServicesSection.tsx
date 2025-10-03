@@ -11,11 +11,11 @@ const services = [
     url: '/services/internet'
   },
   {
-    icon: 'Satellite',
-    title: 'Спутниковый интернет',
-    description: 'Надежное покрытие в отдаленных районах Московской области',
-    features: ['Покрытие 99%', 'Низкая задержка', 'Защита от помех'],
-    url: '/services/satellite'
+    icon: 'Shield',
+    title: 'Системы охраны',
+    description: 'Автоматизированные системы безопасности и контроля доступа',
+    features: ['Датчики движения', 'Контроль доступа', 'Уведомления в реальном времени'],
+    url: '/services/security'
   },
   {
     icon: 'Router',
@@ -32,11 +32,11 @@ const services = [
     url: '/services/surveillance'
   },
   {
-    icon: 'Shield',
-    title: 'Системы охраны',
-    description: 'Автоматизированные системы безопасности и контроля доступа',
-    features: ['Датчики движения', 'Контроль доступа', 'Уведомления в реальном времени'],
-    url: '/services/security'
+    icon: 'Satellite',
+    title: 'Спутниковый интернет',
+    description: 'Надежное покрытие в отдаленных районах Московской области',
+    features: ['Покрытие 99%', 'Низкая задержка', 'Защита от помех'],
+    url: '/services/satellite'
   },
   {
     icon: 'Signal',
