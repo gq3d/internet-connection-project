@@ -9,24 +9,26 @@ export default function HeroSection() {
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Беспроводной интернет в Московской области
           </h1>
+
+          {/* Mobile only: Large Internet card above description */}
+          <div className="md:hidden mb-6">
+            <div className="bg-gradient-to-br from-primary/20 to-primary/5 backdrop-blur-sm rounded-2xl p-6 border-2 border-primary/30 shadow-xl">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-3">
+                  <Icon name="Wifi" size={32} className="text-primary" />
+                </div>
+                <p className="text-lg font-bold text-foreground mb-1">Подключение к интернет</p>
+                <p className="text-sm text-muted-foreground">До 250 Мбит/с</p>
+              </div>
+            </div>
+          </div>
+
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Подключение к сети интернет для частных лиц и бизнеса через беспроводные каналы связи, включая спутниковый интернет
           </p>
 
           {/* Services Grid - Mobile: Featured Internet card + 2x2 grid */}
           <div className="mb-8 max-w-4xl mx-auto">
-            {/* Mobile: Large Internet card */}
-            <div className="md:hidden mb-4">
-              <div className="bg-gradient-to-br from-primary/20 to-primary/5 backdrop-blur-sm rounded-2xl p-6 border-2 border-primary/30 shadow-xl">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-3">
-                    <Icon name="Wifi" size={32} className="text-primary" />
-                  </div>
-                  <p className="text-lg font-bold text-foreground mb-1">Подключение к интернету</p>
-                  <p className="text-sm text-muted-foreground">До 250 Мбит/с</p>
-                </div>
-              </div>
-            </div>
 
             {/* Desktop & Mobile: Grid with all services */}
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
@@ -36,7 +38,7 @@ export default function HeroSection() {
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-2">
                     <Icon name="Wifi" size={24} className="text-primary" />
                   </div>
-                  <p className="text-sm font-semibold text-foreground">Подключение к интернету</p>
+                  <p className="text-sm font-semibold text-foreground">Подключение к интернет</p>
                 </div>
               </div>
 
