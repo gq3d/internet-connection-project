@@ -39,7 +39,7 @@ export default function ContactsSection() {
             </div>
           </div>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mb-12">
           <div className="bg-white rounded-xl shadow-md border border-blue-100 p-6 hover:shadow-lg transition-shadow">
             <Icon name="Phone" size={32} className="text-blue-600 mx-auto mb-4" />
             <h3 className="text-lg font-semibold mb-4 text-gray-900">Телефон</h3>
@@ -87,6 +87,23 @@ export default function ContactsSection() {
             <Icon name="Clock" size={32} className="text-blue-600 mx-auto mb-4" />
             <h3 className="text-lg font-semibold mb-4 text-gray-900">Режим работы</h3>
             <p className="text-muted-foreground font-semibold text-lg">24/7</p>
+          </div>
+        </div>
+
+        {/* Яндекс карта */}
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-lg border-2 border-blue-100 p-4 md:p-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Мы на карте</h3>
+            <div className="w-full overflow-hidden rounded-xl">
+              <iframe 
+                src="https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=46026566706" 
+                width="100%" 
+                height="400" 
+                frameBorder="0"
+                className="w-full"
+                title="Карта офиса"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
