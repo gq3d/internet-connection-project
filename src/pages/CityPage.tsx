@@ -317,7 +317,7 @@ const CityPage = () => {
                 Дополнительные услуги в {city.name}
               </h3>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
                 <a 
                   href="/services/satellite" 
                   className="bg-card border rounded-lg p-6 hover:border-primary transition-all duration-300 hover:shadow-lg group"
@@ -375,6 +375,21 @@ const CityPage = () => {
                   </h4>
                   <p className="text-muted-foreground text-sm">
                     Установка систем видеонаблюдения и охранных систем. Защита вашей недвижимости в {city.name}.
+                  </p>
+                </a>
+
+                <a 
+                  href="/services/security" 
+                  className="bg-card border rounded-lg p-6 hover:border-primary transition-all duration-300 hover:shadow-lg group"
+                >
+                  <div className="bg-primary/10 p-3 rounded-lg mb-4 w-fit group-hover:bg-primary/20 transition-colors">
+                    <Icon name="ShieldCheck" size={28} className="text-primary" />
+                  </div>
+                  <h4 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                    Системы безопасности
+                  </h4>
+                  <p className="text-muted-foreground text-sm">
+                    Комплексные решения безопасности для вашего дома. Сигнализация, контроль доступа, пожарная безопасность.
                   </p>
                 </a>
               </div>
