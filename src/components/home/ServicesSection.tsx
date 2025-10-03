@@ -11,11 +11,11 @@ const services = [
     url: '/services/internet'
   },
   {
-    icon: 'Shield',
-    title: 'Системы охраны',
-    description: 'Комплексная безопасность: автоматизированные системы, физическая охрана домов и посёлков',
-    features: ['Физическая охрана', 'Охрана посёлков', 'Системы контроля доступа'],
-    url: '/services/security'
+    icon: 'Video',
+    title: 'Видеонаблюдение',
+    description: 'Системы безопасности с удаленным доступом и записью',
+    features: ['HD качество', 'Облачное хранение', 'Мобильное приложение'],
+    url: '/services/surveillance'
   },
   {
     icon: 'Router',
@@ -25,11 +25,11 @@ const services = [
     url: '/services/wifi'
   },
   {
-    icon: 'Video',
-    title: 'Видеонаблюдение',
-    description: 'Системы безопасности с удаленным доступом и записью',
-    features: ['HD качество', 'Облачное хранение', 'Мобильное приложение'],
-    url: '/services/surveillance'
+    icon: 'Shield',
+    title: 'Системы охраны',
+    description: 'Комплексная безопасность: автоматизированные системы, физическая охрана домов и посёлков',
+    features: ['Физическая охрана', 'Охрана посёлков', 'Системы контроля доступа'],
+    url: '/services/security'
   },
   {
     icon: 'Satellite',
