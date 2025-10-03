@@ -100,80 +100,97 @@ export default function ServicesSection() {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Схема слева */}
-              <div className="relative bg-card/80 backdrop-blur rounded-xl p-8 border-2 border-primary/20">
+              <div className="relative bg-gradient-to-br from-card via-card to-muted/30 backdrop-blur rounded-2xl p-10 border-2 border-primary/10 shadow-xl">
                 {/* Домик */}
                 <div className="relative">
-                  {/* Крыша */}
-                  <div className="w-0 h-0 mx-auto mb-2
-                    border-l-[120px] border-l-transparent
-                    border-b-[80px] border-b-foreground/10
-                    border-r-[120px] border-r-transparent">
+                  {/* Крыша с роутером внутри */}
+                  <div className="relative mx-auto mb-2 w-fit">
+                    <div className="w-0 h-0
+                      border-l-[140px] border-l-transparent
+                      border-b-[90px] border-b-muted
+                      border-r-[140px] border-r-transparent
+                      filter drop-shadow-md">
+                    </div>
+                    
+                    {/* Роутер внутри крыши */}
+                    <div className="absolute top-8 left-1/2 -translate-x-1/2 flex flex-col items-center z-10">
+                      <div className="relative group">
+                        <div className="w-16 h-16 bg-gradient-to-br from-success via-success to-success/80 rounded-xl flex items-center justify-center shadow-2xl border-2 border-white/30 transform hover:scale-110 transition-transform">
+                          <Icon name="Wifi" size={32} className="text-white" />
+                        </div>
+                        
+                        {/* Пульсирующие волны Wi-Fi */}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-20 h-20 border-2 border-success/30 rounded-full animate-ping"></div>
+                        </div>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-24 h-24 border-2 border-success/20 rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                        </div>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-28 h-28 border-2 border-success/10 rounded-full animate-ping" style={{ animationDelay: '1s' }}></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Антенна снаружи */}
+                    <div className="absolute -top-2 right-4 flex flex-col items-center">
+                      <div className="relative">
+                        <div className="w-14 h-14 bg-gradient-to-br from-secondary via-secondary to-secondary/80 rounded-xl flex items-center justify-center shadow-2xl border-2 border-white/30 transform hover:scale-110 transition-transform">
+                          <Icon name="Antenna" size={28} className="text-white" />
+                        </div>
+                        {/* Индикатор сигнала */}
+                        <div className="absolute -top-1 -right-1 w-4 h-4 bg-success rounded-full border-2 border-white shadow-lg animate-pulse"></div>
+                      </div>
+                    </div>
                   </div>
                   
                   {/* Стены дома */}
-                  <div className="border-4 border-foreground/10 p-6 rounded-b-lg relative bg-card">
-                    {/* Антенна снаружи */}
-                    <div className="absolute -top-12 right-8 flex flex-col items-center">
-                      <div className="relative">
-                        <div className="w-12 h-12 bg-gradient-to-br from-secondary to-secondary/80 rounded-lg flex items-center justify-center shadow-xl border-2 border-white/20">
-                          <Icon name="Antenna" size={24} className="text-white" />
-                        </div>
-                        <div className="absolute -top-1 -right-1 w-3 h-3 bg-success rounded-full"></div>
-                        <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-semibold whitespace-nowrap bg-secondary/10 px-2 py-1 rounded-md">①</span>
-                      </div>
-                    </div>
-
+                  <div className="border-4 border-muted p-8 rounded-b-2xl relative bg-gradient-to-b from-card to-muted/20 shadow-inner">
                     {/* Устройства внутри дома */}
-                    <div className="grid grid-cols-2 gap-4">
-                      {/* Роутер */}
-                      <div className="flex flex-col items-center">
-                        <div className="relative mb-2">
-                          <div className="w-14 h-14 bg-gradient-to-br from-success to-success/80 rounded-lg flex items-center justify-center shadow-lg">
-                            <Icon name="Wifi" size={28} className="text-white" />
-                          </div>
-                          {/* Волны Wi-Fi */}
-                          <div className="absolute -top-1 -left-1 w-4 h-4">
-                            <div className="absolute inset-0 border-2 border-success/40 rounded-full animate-ping"></div>
-                          </div>
-                          <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-semibold bg-success/10 px-2 py-1 rounded-md">②</span>
-                        </div>
-                        <p className="text-xs text-muted-foreground text-center">Роутер</p>
-                      </div>
-
+                    <div className="grid grid-cols-3 gap-6 mt-2">
                       {/* Ноутбук */}
-                      <div className="flex flex-col items-center">
-                        <div className="relative mb-2">
-                          <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center shadow-lg">
-                            <Icon name="Laptop" size={28} className="text-white" />
+                      <div className="flex flex-col items-center group">
+                        <div className="relative mb-3">
+                          <div className="w-16 h-16 bg-gradient-to-br from-primary via-primary to-primary/80 rounded-xl flex items-center justify-center shadow-xl transform group-hover:scale-110 transition-transform border border-primary/20">
+                            <Icon name="Laptop" size={32} className="text-white" />
                           </div>
-                          <Icon name="Wifi" size={12} className="absolute -top-2 -right-2 text-success" />
-                          <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-semibold bg-primary/10 px-2 py-1 rounded-md">③</span>
+                          <div className="absolute -top-2 -right-2">
+                            <div className="w-6 h-6 bg-success/20 rounded-full flex items-center justify-center animate-pulse">
+                              <Icon name="Wifi" size={14} className="text-success" />
+                            </div>
+                          </div>
                         </div>
-                        <p className="text-xs text-muted-foreground text-center">Ноутбук</p>
+                        <p className="text-xs font-medium text-muted-foreground">Ноутбук</p>
                       </div>
 
                       {/* Смартфон */}
-                      <div className="flex flex-col items-center">
-                        <div className="relative mb-2">
-                          <div className="w-14 h-14 bg-gradient-to-br from-secondary to-secondary/80 rounded-lg flex items-center justify-center shadow-lg">
-                            <Icon name="Smartphone" size={28} className="text-white" />
+                      <div className="flex flex-col items-center group">
+                        <div className="relative mb-3">
+                          <div className="w-16 h-16 bg-gradient-to-br from-secondary via-secondary to-secondary/80 rounded-xl flex items-center justify-center shadow-xl transform group-hover:scale-110 transition-transform border border-secondary/20">
+                            <Icon name="Smartphone" size={32} className="text-white" />
                           </div>
-                          <Icon name="Wifi" size={12} className="absolute -top-2 -right-2 text-success" />
-                          <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-semibold bg-secondary/10 px-2 py-1 rounded-md">④</span>
+                          <div className="absolute -top-2 -right-2">
+                            <div className="w-6 h-6 bg-success/20 rounded-full flex items-center justify-center animate-pulse" style={{ animationDelay: '0.3s' }}>
+                              <Icon name="Wifi" size={14} className="text-success" />
+                            </div>
+                          </div>
                         </div>
-                        <p className="text-xs text-muted-foreground text-center">Смартфон</p>
+                        <p className="text-xs font-medium text-muted-foreground">Смартфон</p>
                       </div>
 
                       {/* ТВ */}
-                      <div className="flex flex-col items-center">
-                        <div className="relative mb-2">
-                          <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center shadow-lg">
-                            <Icon name="Tv" size={28} className="text-white" />
+                      <div className="flex flex-col items-center group">
+                        <div className="relative mb-3">
+                          <div className="w-16 h-16 bg-gradient-to-br from-primary via-primary to-primary/80 rounded-xl flex items-center justify-center shadow-xl transform group-hover:scale-110 transition-transform border border-primary/20">
+                            <Icon name="Tv" size={32} className="text-white" />
                           </div>
-                          <Icon name="Wifi" size={12} className="absolute -top-2 -right-2 text-success" />
-                          <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-semibold bg-primary/10 px-2 py-1 rounded-md">⑤</span>
+                          <div className="absolute -top-2 -right-2">
+                            <div className="w-6 h-6 bg-success/20 rounded-full flex items-center justify-center animate-pulse" style={{ animationDelay: '0.6s' }}>
+                              <Icon name="Wifi" size={14} className="text-success" />
+                            </div>
+                          </div>
                         </div>
-                        <p className="text-xs text-muted-foreground text-center">Smart TV</p>
+                        <p className="text-xs font-medium text-muted-foreground">Smart TV</p>
                       </div>
                     </div>
                   </div>
