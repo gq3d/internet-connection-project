@@ -152,10 +152,17 @@ export default function ServicesSection() {
                         </div>
                         
                         {/* Анимация передачи данных от антенны к роутеру */}
-                        <div className="absolute top-12 left-1/2 -translate-x-1/2">
-                          <div className="w-2 h-2 bg-secondary rounded-full animate-data-transfer shadow-lg"></div>
-                          <div className="w-2 h-2 bg-secondary rounded-full animate-data-transfer shadow-lg" style={{ animationDelay: '0.5s' }}></div>
-                          <div className="w-2 h-2 bg-secondary rounded-full animate-data-transfer shadow-lg" style={{ animationDelay: '1s' }}></div>
+                        <div className="absolute top-0 left-0">
+                          <div className="w-3 h-3 bg-secondary rounded-full animate-data-transfer shadow-lg"></div>
+                        </div>
+                        <div className="absolute top-0 left-0">
+                          <div className="w-2.5 h-2.5 bg-secondary/80 rounded-full animate-data-transfer shadow-lg" style={{ animationDelay: '0.6s' }}></div>
+                        </div>
+                        <div className="absolute top-0 left-0">
+                          <div className="w-3 h-3 bg-secondary rounded-full animate-data-transfer shadow-lg" style={{ animationDelay: '1.2s' }}></div>
+                        </div>
+                        <div className="absolute top-0 left-0">
+                          <div className="w-2 h-2 bg-secondary/60 rounded-full animate-data-transfer shadow-lg" style={{ animationDelay: '0.3s' }}></div>
                         </div>
                       </div>
                     </div>
