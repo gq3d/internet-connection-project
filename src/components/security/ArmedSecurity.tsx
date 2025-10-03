@@ -219,25 +219,6 @@ const ArmedSecurity = () => {
             </Card>
           </div>
 
-          <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
-            <CardContent className="p-8 text-center">
-              <h3 className="text-2xl font-bold mb-4">Получите консультацию специалиста по безопасности</h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Мы проведем анализ объекта, оценим риски и разработаем индивидуальный план защиты. 
-                Конфиденциальность гарантирована.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <div className="flex items-center space-x-2 text-success font-semibold text-lg">
-                  <Icon name="Phone" size={20} />
-                  <a href="tel:+79015000078" className="hover:underline">+7 (901) 500-00-78</a>
-                </div>
-                <div className="flex items-center space-x-2 text-success font-semibold text-lg">
-                  <Icon name="Phone" size={20} />
-                  <a href="tel:+79015000087" className="hover:underline">+7 (901) 500-00-87</a>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
