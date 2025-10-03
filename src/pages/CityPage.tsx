@@ -71,6 +71,31 @@ const CityPage = () => {
   const { citySlug } = useParams<{ citySlug: string }>();
   const city = citySlug ? cityData[citySlug] : null;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesVisible, setIsServicesVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsServicesVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const servicesSection = document.getElementById('additional-services');
+    if (servicesSection) {
+      observer.observe(servicesSection);
+    }
+
+    return () => {
+      if (servicesSection) {
+        observer.unobserve(servicesSection);
+      }
+    };
+  }, []);
 
   useSEO({
     title: city?.seoTitle || 'NetConnect',
@@ -312,7 +337,7 @@ const CityPage = () => {
             </div>
 
             {/* Additional Services Section */}
-            <div className="mb-16">
+            <div id="additional-services" className="mb-16">
               <h3 className="text-2xl font-bold mb-8 text-center">
                 Дополнительные услуги в {city.name}
               </h3>
@@ -320,7 +345,10 @@ const CityPage = () => {
               <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
                 <a 
                   href="/services/satellite" 
-                  className="bg-card border rounded-lg p-6 hover:border-primary transition-all duration-300 hover:shadow-lg group"
+                  className={`bg-card border rounded-lg p-6 hover:border-primary transition-all duration-500 hover:shadow-lg group ${
+                    isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                  }`}
+                  style={{ transitionDelay: '0ms' }}
                 >
                   <div className="bg-primary/10 p-3 rounded-lg mb-4 w-fit group-hover:bg-primary/20 transition-colors">
                     <Icon name="Satellite" size={28} className="text-primary" />
@@ -335,7 +363,10 @@ const CityPage = () => {
 
                 <a 
                   href="/services/wifi" 
-                  className="bg-card border rounded-lg p-6 hover:border-primary transition-all duration-300 hover:shadow-lg group"
+                  className={`bg-card border rounded-lg p-6 hover:border-primary transition-all duration-500 hover:shadow-lg group ${
+                    isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                  }`}
+                  style={{ transitionDelay: '100ms' }}
                 >
                   <div className="bg-primary/10 p-3 rounded-lg mb-4 w-fit group-hover:bg-primary/20 transition-colors">
                     <Icon name="Wifi" size={28} className="text-primary" />
@@ -350,7 +381,10 @@ const CityPage = () => {
 
                 <a 
                   href="/services/cellular-booster" 
-                  className="bg-card border rounded-lg p-6 hover:border-primary transition-all duration-300 hover:shadow-lg group"
+                  className={`bg-card border rounded-lg p-6 hover:border-primary transition-all duration-500 hover:shadow-lg group ${
+                    isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                  }`}
+                  style={{ transitionDelay: '200ms' }}
                 >
                   <div className="bg-primary/10 p-3 rounded-lg mb-4 w-fit group-hover:bg-primary/20 transition-colors">
                     <Icon name="Signal" size={28} className="text-primary" />
@@ -365,7 +399,10 @@ const CityPage = () => {
 
                 <a 
                   href="/services/surveillance" 
-                  className="bg-card border rounded-lg p-6 hover:border-primary transition-all duration-300 hover:shadow-lg group"
+                  className={`bg-card border rounded-lg p-6 hover:border-primary transition-all duration-500 hover:shadow-lg group ${
+                    isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                  }`}
+                  style={{ transitionDelay: '300ms' }}
                 >
                   <div className="bg-primary/10 p-3 rounded-lg mb-4 w-fit group-hover:bg-primary/20 transition-colors">
                     <Icon name="Video" size={28} className="text-primary" />
@@ -380,7 +417,10 @@ const CityPage = () => {
 
                 <a 
                   href="/services/security" 
-                  className="bg-card border rounded-lg p-6 hover:border-primary transition-all duration-300 hover:shadow-lg group"
+                  className={`bg-card border rounded-lg p-6 hover:border-primary transition-all duration-500 hover:shadow-lg group ${
+                    isServicesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                  }`}
+                  style={{ transitionDelay: '400ms' }}
                 >
                   <div className="bg-primary/10 p-3 rounded-lg mb-4 w-fit group-hover:bg-primary/20 transition-colors">
                     <Icon name="ShieldCheck" size={28} className="text-primary" />
