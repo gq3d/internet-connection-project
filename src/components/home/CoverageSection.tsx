@@ -49,16 +49,16 @@ export default function CoverageSection() {
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Мы предоставляем доступ к <span className="font-semibold text-foreground">беспроводному</span> и <span className="font-semibold text-foreground">высокоскоростному</span> интернету в различных районах Московской области, включая крупные города, пригороды, дачи и удалённые населённые пункты.
           </p>
-          <div className="flex justify-center gap-3 mt-8">
-            <div className="inline-flex items-center px-4 py-2 bg-success/10 rounded-lg">
+          <div className="flex justify-center gap-3 mt-8 flex-wrap">
+            <div className="inline-flex items-center px-4 py-2 bg-success/10 rounded-lg animate-pulse hover:animate-none hover:scale-105 transition-transform cursor-default">
               <Icon name="Wifi" size={18} className="text-success mr-2" />
               <span className="text-sm font-medium">Беспроводной интернет</span>
             </div>
-            <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-lg">
+            <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-lg animate-pulse hover:animate-none hover:scale-105 transition-transform cursor-default" style={{ animationDelay: '150ms' }}>
               <Icon name="Zap" size={18} className="text-primary mr-2" />
               <span className="text-sm font-medium">Высокая скорость</span>
             </div>
-            <div className="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-lg">
+            <div className="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-lg animate-pulse hover:animate-none hover:scale-105 transition-transform cursor-default" style={{ animationDelay: '300ms' }}>
               <Icon name="MapPin" size={18} className="text-secondary mr-2" />
               <span className="text-sm font-medium">Вся область</span>
             </div>
