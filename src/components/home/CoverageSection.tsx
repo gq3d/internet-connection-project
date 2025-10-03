@@ -43,7 +43,7 @@ export default function CoverageSection() {
             <Icon name="MapPin" size={20} className="text-primary mr-2" />
             <span className="text-sm font-semibold text-primary uppercase tracking-wide">Зона покрытия</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">
             Карта покрытия интернета<br />в Московской области
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
