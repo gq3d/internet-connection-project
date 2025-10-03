@@ -15,10 +15,30 @@ export default function CoverageSection() {
     <section id="coverage" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Карта покрытия интернета в Московской области</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Мы предоставляем доступ к беспроводному и высокоскоростному доступу к интернет в различных районах Московской области, включая крупные города, пригороды, дачи и удалённые населённые пункты.
+          <div className="inline-flex items-center justify-center px-4 py-2 bg-primary/10 rounded-full mb-6">
+            <Icon name="MapPin" size={20} className="text-primary mr-2" />
+            <span className="text-sm font-semibold text-primary uppercase tracking-wide">Зона покрытия</span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            Карта покрытия интернета в Московской области
+          </h2>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Мы предоставляем доступ к <span className="font-semibold text-foreground">беспроводному</span> и <span className="font-semibold text-foreground">высокоскоростному</span> интернету в различных районах Московской области, включая крупные города, пригороды, дачи и удалённые населённые пункты.
           </p>
+          <div className="flex justify-center gap-3 mt-8">
+            <div className="inline-flex items-center px-4 py-2 bg-success/10 rounded-lg">
+              <Icon name="Wifi" size={18} className="text-success mr-2" />
+              <span className="text-sm font-medium">Беспроводной интернет</span>
+            </div>
+            <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-lg">
+              <Icon name="Zap" size={18} className="text-primary mr-2" />
+              <span className="text-sm font-medium">Высокая скорость</span>
+            </div>
+            <div className="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-lg">
+              <Icon name="MapPin" size={18} className="text-secondary mr-2" />
+              <span className="text-sm font-medium">Вся область</span>
+            </div>
+          </div>
         </div>
         
         <div className="max-w-6xl mx-auto space-y-8">
