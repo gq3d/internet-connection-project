@@ -12,19 +12,21 @@ export default function HeroSection() {
 
           {/* Mobile only: Large Internet card above description */}
           <div className="md:hidden mb-6">
-            <div className="bg-gradient-to-br from-primary/20 to-primary/5 backdrop-blur-sm rounded-2xl p-6 border-2 border-primary/30 shadow-xl">
-              <div className="flex flex-col items-center text-center">
-                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-3">
-                  <Icon name="Wifi" size={32} className="text-primary" />
+            <a href="/services/internet" className="block">
+              <div className="bg-gradient-to-br from-primary/20 to-primary/5 backdrop-blur-sm rounded-2xl p-6 border-2 border-primary/30 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-3">
+                    <Icon name="Wifi" size={32} className="text-primary" />
+                  </div>
+                  <p className="text-lg font-bold text-foreground mb-1">Подключение к интернет</p>
+                  <p className="text-sm text-muted-foreground">До 250 Мбит/с</p>
                 </div>
-                <p className="text-lg font-bold text-foreground mb-1">Подключение к интернет</p>
-                <p className="text-sm text-muted-foreground">До 250 Мбит/с</p>
               </div>
-            </div>
+            </a>
           </div>
 
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Подключение к сети интернет для частных лиц и бизнеса через беспроводные каналы связи, включая спутниковый интернет
+          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            Подключение к сети интернет для частных лиц и бизнеса через беспроводные каналы связи, включая спутниковый интернет. Усиление сотовой связи и Wi-Fi сигнала. Системы видеонаблюдения и охраны объектов.
           </p>
 
           {/* Services Grid - Mobile: Featured Internet card + 2x2 grid */}
@@ -33,50 +35,60 @@ export default function HeroSection() {
             {/* Desktop & Mobile: Grid with all services */}
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
               {/* Desktop only: Internet card (same size as others) */}
-              <div className="hidden md:block bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-primary/10 hover:shadow-lg transition-all duration-300">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-2">
-                    <Icon name="Wifi" size={24} className="text-primary" />
+              <a href="/services/internet" className="hidden md:block">
+                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-primary/10 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer h-full">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-2">
+                      <Icon name="Wifi" size={24} className="text-primary" />
+                    </div>
+                    <p className="text-sm font-semibold text-foreground">Подключение к интернет</p>
                   </div>
-                  <p className="text-sm font-semibold text-foreground">Подключение к интернет</p>
                 </div>
-              </div>
+              </a>
 
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-primary/10 hover:shadow-lg transition-all duration-300">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-2">
-                    <Icon name="Video" size={24} className="text-primary" />
+              <a href="/services/surveillance">
+                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-primary/10 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer h-full">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-2">
+                      <Icon name="Video" size={24} className="text-primary" />
+                    </div>
+                    <p className="text-sm font-semibold text-foreground">Видеонаблюдение</p>
                   </div>
-                  <p className="text-sm font-semibold text-foreground">Видеонаблюдение</p>
                 </div>
-              </div>
+              </a>
               
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-primary/10 hover:shadow-lg transition-all duration-300">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 bg-success/10 rounded-full flex items-center justify-center mb-2">
-                    <Icon name="Shield" size={24} className="text-success" />
+              <a href="/services/security">
+                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-primary/10 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer h-full">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-12 h-12 bg-success/10 rounded-full flex items-center justify-center mb-2">
+                      <Icon name="Shield" size={24} className="text-success" />
+                    </div>
+                    <p className="text-sm font-semibold text-foreground">Системы охраны</p>
                   </div>
-                  <p className="text-sm font-semibold text-foreground">Системы охраны</p>
                 </div>
-              </div>
+              </a>
               
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-primary/10 hover:shadow-lg transition-all duration-300">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-2">
-                    <Icon name="Signal" size={24} className="text-secondary" />
+              <a href="/services/cellular-booster">
+                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-primary/10 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer h-full">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-2">
+                      <Icon name="Signal" size={24} className="text-secondary" />
+                    </div>
+                    <p className="text-sm font-semibold text-foreground">Усиление сотовой связи</p>
                   </div>
-                  <p className="text-sm font-semibold text-foreground">Усиление сотовой связи</p>
                 </div>
-              </div>
+              </a>
               
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-primary/10 hover:shadow-lg transition-all duration-300">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-2">
-                    <Icon name="Wifi" size={24} className="text-primary" />
+              <a href="/services/wifi">
+                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-primary/10 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer h-full">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-2">
+                      <Icon name="Wifi" size={24} className="text-primary" />
+                    </div>
+                    <p className="text-sm font-semibold text-foreground">Усиление Wi-Fi</p>
                   </div>
-                  <p className="text-sm font-semibold text-foreground">Усиление Wi-Fi</p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
           
