@@ -2,19 +2,47 @@ import Icon from '@/components/ui/icon';
 
 export default function ContactsSection() {
   return (
-    <section id="contacts" className="py-20">
+    <section id="contacts" className="py-20 bg-gradient-to-br from-blue-50/50 via-white to-indigo-50/50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Контакты</h2>
           <p className="text-xl text-muted-foreground">
             Свяжитесь с нами для подключения или консультации
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
-          <div className="text-center">
-            <Icon name="Phone" size={32} className="text-primary mx-auto mb-4" />
-            <h3 className="text-lg font-semibold mb-4">Телефон</h3>
+        <div className="max-w-5xl mx-auto mb-12">
+          <div className="bg-white rounded-2xl shadow-lg border-2 border-blue-100 p-8">
+            <div className="flex flex-col md:flex-row items-start gap-6">
+              <div className="flex-shrink-0">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-blue-900 mb-3">ООО "ЧОО "СБ ЗВИ"</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <div>
+                      <p className="font-semibold text-gray-900 mb-1">Юридический адрес:</p>
+                      <p className="text-muted-foreground">115093, г. Москва, пер. Партийный, д. 1</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <div className="bg-white rounded-xl shadow-md border border-blue-100 p-6 hover:shadow-lg transition-shadow">
+            <Icon name="Phone" size={32} className="text-blue-600 mx-auto mb-4" />
+            <h3 className="text-lg font-semibold mb-4 text-gray-900">Телефон</h3>
             <div className="space-y-3">
               <div className="space-y-2">
                 <p className="text-muted-foreground">+7 (901) 500-00-78</p>
@@ -43,22 +71,22 @@ export default function ContactsSection() {
             </div>
           </div>
           
-          <div className="text-center">
-            <Icon name="Mail" size={32} className="text-primary mx-auto mb-4" />
-            <h3 className="text-lg font-semibold mb-4">Email</h3>
-            <p className="text-muted-foreground">info@mosoblconnect.ru</p>
+          <div className="bg-white rounded-xl shadow-md border border-blue-100 p-6 hover:shadow-lg transition-shadow text-center">
+            <Icon name="Mail" size={32} className="text-blue-600 mx-auto mb-4" />
+            <h3 className="text-lg font-semibold mb-4 text-gray-900">Email</h3>
+            <p className="text-muted-foreground break-words">info@mosoblconnect.ru</p>
           </div>
           
-          <div className="text-center">
-            <Icon name="MapPin" size={32} className="text-primary mx-auto mb-4" />
-            <h3 className="text-lg font-semibold mb-4">Адрес</h3>
-            <p className="text-muted-foreground">Москва, Партийный пер., дом 1</p>
+          <div className="bg-white rounded-xl shadow-md border border-blue-100 p-6 hover:shadow-lg transition-shadow">
+            <Icon name="MapPin" size={32} className="text-blue-600 mx-auto mb-4" />
+            <h3 className="text-lg font-semibold mb-3 text-gray-900">Офис</h3>
+            <p className="text-muted-foreground text-sm leading-relaxed">Москва,<br/>Партийный пер., д. 1</p>
           </div>
           
-          <div className="text-center">
-            <Icon name="Clock" size={32} className="text-primary mx-auto mb-4" />
-            <h3 className="text-lg font-semibold mb-4">Режим работы</h3>
-            <p className="text-muted-foreground">24/7</p>
+          <div className="bg-white rounded-xl shadow-md border border-blue-100 p-6 hover:shadow-lg transition-shadow text-center">
+            <Icon name="Clock" size={32} className="text-blue-600 mx-auto mb-4" />
+            <h3 className="text-lg font-semibold mb-4 text-gray-900">Режим работы</h3>
+            <p className="text-muted-foreground font-semibold text-lg">24/7</p>
           </div>
         </div>
       </div>
