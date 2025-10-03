@@ -6,6 +6,7 @@ import SecuritySystems from '@/components/security/SecuritySystems';
 import SecurityPackages from '@/components/security/SecurityPackages';
 import SecurityFeatures from '@/components/security/SecurityFeatures';
 import ArmedSecurity from '@/components/security/ArmedSecurity';
+import SecurityLicense from '@/components/security/SecurityLicense';
 import SecurityCTA from '@/components/security/SecurityCTA';
 import SecurityFooter from '@/components/security/SecurityFooter';
 
@@ -28,6 +29,7 @@ const Security = () => {
       <SecurityPackages />
       <SecurityFeatures />
       <ArmedSecurity />
+      <SecurityLicense />
       <SecurityCTA />
       <SecurityFooter />
       <WhatsAppButton />
