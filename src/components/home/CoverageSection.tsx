@@ -44,7 +44,7 @@ export default function CoverageSection() {
             <span className="text-sm font-semibold text-primary uppercase tracking-wide">Зона покрытия</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Карта покрытия интернета в Московской области
+            Карта покрытия интернета<br />в Московской области
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Мы предоставляем доступ к <span className="font-semibold text-foreground">беспроводному</span> и <span className="font-semibold text-foreground">высокоскоростному</span> интернету в различных районах Московской области, включая крупные города, пригороды, дачи и удалённые населённые пункты.
