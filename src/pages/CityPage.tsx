@@ -97,6 +97,11 @@ const CityPage = () => {
     };
   }, []);
 
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, anchor: string) => {
+    e.preventDefault();
+    window.location.href = `/${anchor}`;
+  };
+
   useSEO({
     title: city?.seoTitle || 'NetConnect',
     description: city?.description || '',
@@ -121,9 +126,9 @@ const CityPage = () => {
             
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-6">
-              <a href="/#services" className="text-muted-foreground hover:text-foreground transition-colors">Услуги</a>
-              <a href="/#tariffs" className="text-muted-foreground hover:text-foreground transition-colors">Тарифы</a>
-              <a href="/#coverage" className="text-muted-foreground hover:text-foreground transition-colors">Покрытие</a>
+              <a href="/#services" onClick={(e) => handleAnchorClick(e, '#services')} className="text-muted-foreground hover:text-foreground transition-colors">Услуги</a>
+              <a href="/#tariffs" onClick={(e) => handleAnchorClick(e, '#tariffs')} className="text-muted-foreground hover:text-foreground transition-colors">Тарифы</a>
+              <a href="/#coverage" onClick={(e) => handleAnchorClick(e, '#coverage')} className="text-muted-foreground hover:text-foreground transition-colors">Покрытие</a>
               <a 
                 href="tel:+79015000078" 
                 className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
@@ -150,21 +155,21 @@ const CityPage = () => {
                 <a 
                   href="/#services" 
                   className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => { handleAnchorClick(e, '#services'); setIsMobileMenuOpen(false); }}
                 >
                   Услуги
                 </a>
                 <a 
                   href="/#tariffs" 
                   className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => { handleAnchorClick(e, '#tariffs'); setIsMobileMenuOpen(false); }}
                 >
                   Тарифы
                 </a>
                 <a 
                   href="/#coverage" 
                   className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => { handleAnchorClick(e, '#coverage'); setIsMobileMenuOpen(false); }}
                 >
                   Покрытие
                 </a>
