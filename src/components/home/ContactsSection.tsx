@@ -104,6 +104,17 @@ export default function ContactsSection() {
                 title="Карта офиса"
               ></iframe>
             </div>
+            <div className="mt-6 text-center">
+              <a 
+                href="https://yandex.ru/maps/org/choo_sb_zvi/46026566706/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all shadow-md hover:shadow-lg"
+              >
+                <Icon name="Navigation" size={20} className="mr-2" />
+                Построить маршрут
+              </a>
+            </div>
           </div>
         </div>
       </div>
