@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import Icon from '@/components/ui/icon';
 import { generateCitySlug } from '@/utils/citySlug';
 
@@ -11,8 +12,31 @@ const cities = [
 ];
 
 export default function CoverageSection() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
   return (
-    <section id="coverage" className="py-20">
+    <section id="coverage" className="py-20" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center px-4 py-2 bg-primary/10 rounded-full mb-6">
@@ -46,14 +70,19 @@ export default function CoverageSection() {
             <h3 className="text-2xl font-semibold mb-6 text-center">Основные регионы и города <span className="text-muted-foreground text-lg">(список минимальный, для примера)</span></h3>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center">
-              {cities.map((city) => (
+              {cities.map((city, index) => (
                 <a
                   key={city}
                   href={`/city/${generateCitySlug(city)}`}
-                  className="bg-accent/30 rounded-lg p-3 border hover:bg-accent/50 transition-colors group"
+                  className={`bg-accent/30 rounded-lg p-3 border hover:bg-accent/50 transition-all duration-500 group ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                  }`}
+                  style={{
+                    transitionDelay: `${index * 30}ms`
+                  }}
                 >
                   <div className="flex items-center justify-center">
-                    <Icon name="MapPin" size={16} className="text-success mr-2" />
+                    <Icon name="MapPin" size={16} className="text-success mr-2 group-hover:scale-110 transition-transform" />
                     <span className="font-medium group-hover:text-primary transition-colors">{city}</span>
                   </div>
                 </a>
