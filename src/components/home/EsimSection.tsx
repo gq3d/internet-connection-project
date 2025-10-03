@@ -146,7 +146,7 @@ export default function EsimSection() {
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
             <div className="relative z-10">
               <div className="flex items-center justify-center mb-4">
-                <div className="bg-white/20 p-3 rounded-full backdrop-blur-sm">
+                <div className="bg-white/20 p-3 rounded-full backdrop-blur-sm animate-float">
                   <Icon name="Plane" size={32} className="text-white" />
                 </div>
               </div>
