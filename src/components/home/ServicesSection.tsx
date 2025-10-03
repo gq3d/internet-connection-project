@@ -100,9 +100,98 @@ export default function ServicesSection() {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Схема слева */}
-              <div className="relative bg-gradient-to-br from-card via-card to-muted/30 backdrop-blur rounded-2xl p-10 border-2 border-primary/10 shadow-xl">
-                {/* Домик */}
-                <div className="relative">
+              <div className="relative bg-gradient-to-br from-card via-card to-muted/30 backdrop-blur rounded-2xl p-10 border-2 border-primary/10 shadow-xl overflow-hidden">
+                
+                {/* Мобильная версия: горизонтальная схема */}
+                <div className="lg:hidden flex items-center justify-between gap-6">
+                  {/* Вышка слева */}
+                  <div className="relative flex-shrink-0">
+                    <div className="flex flex-col items-center">
+                      <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center shadow-2xl border-4 border-white/20 relative z-10 group">
+                        <Icon name="Radio" size={28} className="text-white" />
+                        
+                        {/* Волны сигнала */}
+                        <div className="absolute inset-0 -z-10">
+                          <div className="w-24 h-24 border-4 border-primary/20 rounded-full animate-ping"></div>
+                        </div>
+                        
+                        {/* Анимация к антенне горизонтально */}
+                        <div className="absolute top-0 left-0">
+                          <div className="w-3 h-3 bg-primary rounded-full shadow-lg" style={{animation: 'signal-flow-mobile 2s linear infinite'}}></div>
+                        </div>
+                        <div className="absolute top-0 left-0">
+                          <div className="w-2.5 h-2.5 bg-primary/80 rounded-full shadow-lg" style={{animation: 'signal-flow-mobile 2s linear infinite', animationDelay: '0.5s'}}></div>
+                        </div>
+                        <div className="absolute top-0 left-0">
+                          <div className="w-3 h-3 bg-primary rounded-full shadow-lg" style={{animation: 'signal-flow-mobile 2s linear infinite', animationDelay: '1s'}}></div>
+                        </div>
+                      </div>
+                      <div className="w-1 h-16 bg-gradient-to-b from-foreground/30 to-foreground/10 mt-1"></div>
+                      <div className="w-0 h-0 border-l-[20px] border-l-transparent border-b-[30px] border-b-foreground/10 border-r-[20px] border-r-transparent"></div>
+                    </div>
+                    <p className="text-xs text-center mt-2 font-semibold">Базовая<br/>станция</p>
+                  </div>
+
+                  {/* Домик справа */}
+                  <div className="relative flex-1">
+                    <div className="relative mx-auto w-fit">
+                      <div className="w-0 h-0 border-l-[80px] border-l-transparent border-b-[50px] border-b-muted border-r-[80px] border-r-transparent filter drop-shadow-md"></div>
+                      
+                      {/* Антенна */}
+                      <div className="absolute -top-1 right-2 z-20">
+                        <div className="w-10 h-10 bg-gradient-to-br from-secondary to-secondary/80 rounded-lg flex items-center justify-center shadow-xl border-2 border-white/30">
+                          <Icon name="Antenna" size={20} className="text-white" />
+                        </div>
+                        <div className="absolute -top-1 -right-1 w-3 h-3 bg-success rounded-full border-2 border-white shadow-lg animate-pulse"></div>
+                        
+                        {/* Анимация к роутеру вертикально */}
+                        <div className="absolute top-0 left-0">
+                          <div className="w-2 h-2 bg-secondary rounded-full shadow-lg" style={{animation: 'data-transfer-mobile 1.5s linear infinite'}}></div>
+                        </div>
+                        <div className="absolute top-0 left-0">
+                          <div className="w-2 h-2 bg-secondary/80 rounded-full shadow-lg" style={{animation: 'data-transfer-mobile 1.5s linear infinite', animationDelay: '0.5s'}}></div>
+                        </div>
+                      </div>
+                      
+                      {/* Роутер */}
+                      <div className="absolute top-6 left-1/2 -translate-x-1/2 z-10">
+                        <div className="w-12 h-12 bg-gradient-to-br from-success to-success/80 rounded-lg flex items-center justify-center shadow-xl border-2 border-white/30">
+                          <Icon name="Wifi" size={24} className="text-white" />
+                        </div>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-16 h-16 border-2 border-success/30 rounded-full animate-ping"></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Стены */}
+                    <div className="border-4 border-muted p-4 rounded-b-xl bg-gradient-to-b from-card to-muted/20">
+                      <div className="grid grid-cols-3 gap-3 mt-1">
+                        <div className="flex flex-col items-center">
+                          <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center shadow-lg">
+                            <Icon name="Laptop" size={20} className="text-white" />
+                          </div>
+                          <p className="text-[10px] mt-1">Ноутбук</p>
+                        </div>
+                        <div className="flex flex-col items-center">
+                          <div className="w-10 h-10 bg-gradient-to-br from-secondary to-secondary/80 rounded-lg flex items-center justify-center shadow-lg">
+                            <Icon name="Smartphone" size={20} className="text-white" />
+                          </div>
+                          <p className="text-[10px] mt-1">Телефон</p>
+                        </div>
+                        <div className="flex flex-col items-center">
+                          <div className="w-10 h-10 bg-gradient-to-br from-accent to-accent/80 rounded-lg flex items-center justify-center shadow-lg">
+                            <Icon name="Tv" size={20} className="text-white" />
+                          </div>
+                          <p className="text-[10px] mt-1">Smart TV</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Десктопная версия: вертикальная схема */}
+                <div className="hidden lg:block relative">
                   {/* Крыша с роутером внутри */}
                   <div className="relative mx-auto mb-2 w-fit">
                     <div className="w-0 h-0
