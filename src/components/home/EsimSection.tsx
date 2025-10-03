@@ -1,6 +1,33 @@
+import { useEffect, useState } from 'react';
 import Icon from '@/components/ui/icon';
 
 export default function EsimSection() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const section = document.getElementById('esim');
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
+
   return (
     <section id="esim" className="py-20 bg-muted/50">
       <div className="container mx-auto px-4">
@@ -22,7 +49,9 @@ export default function EsimSection() {
         
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/20 rounded-xl p-8">
+            <div className={`bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/20 rounded-xl p-8 transition-all duration-700 ${
+              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
+            }`}>
               <h3 className="text-2xl font-bold mb-8 text-center">Что мы предлагаем:</h3>
               <div className="space-y-6">
                 <div className="flex items-start bg-card rounded-lg p-4 hover:shadow-md transition-shadow">
@@ -57,7 +86,9 @@ export default function EsimSection() {
               </div>
             </div>
             
-            <div className="bg-card border-2 border-secondary/30 rounded-xl p-8 shadow-lg">
+            <div className={`bg-card border-2 border-secondary/30 rounded-xl p-8 shadow-lg transition-all duration-700 delay-200 ${
+              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
+            }`}>
               <div className="flex items-center justify-center mb-6">
                 <div className="bg-secondary/10 p-2 rounded-lg">
                   <Icon name="Sparkles" size={24} className="text-secondary" />
@@ -108,7 +139,9 @@ export default function EsimSection() {
             </div>
           </div>
           
-          <div className="relative overflow-hidden bg-gradient-to-br from-primary via-secondary to-success text-white rounded-2xl p-10 text-center shadow-2xl">
+          <div className={`relative overflow-hidden bg-gradient-to-br from-primary via-secondary to-success text-white rounded-2xl p-10 text-center shadow-2xl transition-all duration-700 delay-500 ${
+            isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+          }`}>
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
             <div className="relative z-10">
