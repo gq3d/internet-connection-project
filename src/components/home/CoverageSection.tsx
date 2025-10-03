@@ -116,7 +116,7 @@ export default function CoverageSection() {
                 <div className="bg-card border rounded-lg p-4 flex items-center space-x-3">
                   <Icon name="Phone" size={24} className="text-success" />
                   <div className="text-left">
-                    <a href="tel:+79015000078" className="font-semibold text-lg hover:text-primary transition-colors">+7 (901) 500-00-78</a>
+                    <a href="tel:+79015000078" className="font-semibold text-lg hover:text-primary transition-colors whitespace-nowrap">+7 (901) 500-00-78</a>
                     <div className="text-sm text-muted-foreground">Основная линия</div>
                   </div>
                   <a 
@@ -134,7 +134,7 @@ export default function CoverageSection() {
                 <div className="bg-card border rounded-lg p-4 flex items-center space-x-3">
                   <Icon name="Phone" size={24} className="text-success" />
                   <div className="text-left">
-                    <a href="tel:+79015000087" className="font-semibold text-lg hover:text-primary transition-colors">+7 (901) 500-00-87</a>
+                    <a href="tel:+79015000087" className="font-semibold text-lg hover:text-primary transition-colors whitespace-nowrap">+7 (901) 500-00-87</a>
                     <div className="text-sm text-muted-foreground">Дополнительная линия</div>
                   </div>
                   <a 
