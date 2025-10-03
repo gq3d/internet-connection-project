@@ -1,4 +1,3 @@
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { useSEO } from '@/hooks/useSEO';
 import SecurityHeader from '@/components/security/SecurityHeader';
 import SecurityHero from '@/components/security/SecurityHero';
@@ -32,7 +31,6 @@ const Security = () => {
       <SecurityLicense />
       <SecurityCTA />
       <SecurityFooter />
-      <WhatsAppButton />
     </div>
   );
 };
