@@ -140,6 +140,13 @@ export default function ServicesSection() {
                         </div>
                         {/* Индикатор сигнала */}
                         <div className="absolute -top-1 -right-1 w-4 h-4 bg-success rounded-full border-2 border-white shadow-lg animate-pulse"></div>
+                        
+                        {/* Анимация передачи данных от антенны к роутеру */}
+                        <div className="absolute top-12 left-1/2 -translate-x-1/2">
+                          <div className="w-2 h-2 bg-secondary rounded-full animate-data-transfer"></div>
+                          <div className="w-2 h-2 bg-secondary rounded-full animate-data-transfer" style={{ animationDelay: '0.5s' }}></div>
+                          <div className="w-2 h-2 bg-secondary rounded-full animate-data-transfer" style={{ animationDelay: '1s' }}></div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -199,12 +206,14 @@ export default function ServicesSection() {
 
               {/* Базовая станция справа */}
               <div className="relative flex flex-col items-center lg:items-start">
-                {/* Стрелки сигнала */}
-                <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 -translate-x-20">
-                  <div className="flex gap-1">
-                    <Icon name="MoveLeft" size={24} className="text-primary animate-pulse" style={{ animationDelay: '0ms' }} />
-                    <Icon name="MoveLeft" size={24} className="text-primary animate-pulse" style={{ animationDelay: '200ms' }} />
-                    <Icon name="MoveLeft" size={24} className="text-primary animate-pulse" style={{ animationDelay: '400ms' }} />
+                {/* Анимация передачи данных от базовой станции */}
+                <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16">
+                  <div className="relative w-20 h-1">
+                    <div className="absolute right-0 w-3 h-3 bg-primary rounded-full animate-signal-flow"></div>
+                    <div className="absolute right-0 w-3 h-3 bg-primary rounded-full animate-signal-flow" style={{ animationDelay: '0.5s' }}></div>
+                    <div className="absolute right-0 w-3 h-3 bg-primary rounded-full animate-signal-flow" style={{ animationDelay: '1s' }}></div>
+                    <div className="absolute right-0 w-2 h-2 bg-primary/50 rounded-full animate-signal-flow" style={{ animationDelay: '0.25s' }}></div>
+                    <div className="absolute right-0 w-2 h-2 bg-primary/50 rounded-full animate-signal-flow" style={{ animationDelay: '0.75s' }}></div>
                   </div>
                 </div>
 

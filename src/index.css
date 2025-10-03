@@ -120,4 +120,40 @@
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
+
+  @keyframes signal-flow {
+    0% {
+      transform: translateX(0) scale(1);
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateX(-100px) scale(0.5);
+      opacity: 0;
+    }
+  }
+
+  .animate-signal-flow {
+    animation: signal-flow 2s ease-in-out infinite;
+  }
+
+  @keyframes data-transfer {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateY(40px) scale(0.8);
+      opacity: 0;
+    }
+  }
+
+  .animate-data-transfer {
+    animation: data-transfer 1.5s ease-in-out infinite;
+  }
 }
