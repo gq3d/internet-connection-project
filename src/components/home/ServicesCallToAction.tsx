@@ -6,7 +6,7 @@ export default function ServicesCallToAction() {
     <section className="py-16 bg-gradient-to-br from-primary/5 via-secondary/5 to-success/5">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 md:p-12 shadow-2xl text-white relative overflow-hidden">
+          <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl text-white relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
             
@@ -17,11 +17,11 @@ export default function ServicesCallToAction() {
                 </div>
               </div>
               
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 leading-tight px-2">
                 Полный спектр телекоммуникационных услуг
               </h2>
               
-              <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-2">
                 Интернет, видеонаблюдение, Wi-Fi оборудование, охранные системы и многое другое
               </p>
               
