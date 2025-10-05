@@ -154,16 +154,48 @@ export default function YandexCoverageMap() {
         </div>
       </div>
 
-      <div className="mt-4 bg-muted/50 rounded-lg p-4 border">
-        <div className="flex items-start gap-3">
-          <Icon name="Info" size={20} className="text-primary flex-shrink-0 mt-0.5" />
-          <div className="text-sm text-muted-foreground">
-            <p>
-              <strong className="text-foreground">Обратите внимание:</strong> карта показывает общую зону покрытия. Качество сигнала и доступные тарифы могут варьироваться в зависимости от конкретного местоположения.
-            </p>
-            <p className="mt-2">
-              Для точной проверки покрытия на вашем объекте звоните <a href="tel:+79015000078" className="text-primary hover:underline font-semibold">+7 (901) 500-00-78</a>
-            </p>
+      <div className="mt-4 relative overflow-hidden bg-gradient-to-br from-primary/20 via-primary/10 to-transparent rounded-2xl p-6 border-2 border-primary/30">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-24 h-24 bg-primary/5 rounded-full blur-2xl"></div>
+        
+        <div className="relative z-10">
+          <div className="flex items-start gap-4 mb-4">
+            <div className="p-3 bg-primary/20 rounded-xl">
+              <Icon name="Radar" size={24} className="text-primary" />
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-1 flex items-center gap-2">
+                Точная проверка покрытия
+                <Icon name="Sparkles" size={18} className="text-primary" />
+              </h4>
+              <p className="text-sm text-muted-foreground">
+                Карта показывает общую зону покрытия. Качество сигнала может варьироваться в зависимости от вашего местоположения.
+              </p>
+            </div>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row items-center gap-4 p-4 bg-card/80 backdrop-blur-sm rounded-xl border border-primary/20">
+            <div className="flex items-center gap-3 flex-1">
+              <div className="p-2 bg-primary/10 rounded-lg">
+                <Icon name="Phone" size={20} className="text-primary" />
+              </div>
+              <div>
+                <p className="text-xs text-muted-foreground mb-0.5">Узнайте точное покрытие</p>
+                <a 
+                  href="tel:+79015000078" 
+                  className="text-xl font-bold text-primary hover:text-primary/80 transition-colors"
+                >
+                  +7 (901) 500-00-78
+                </a>
+              </div>
+            </div>
+            <a
+              href="tel:+79015000078"
+              className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all hover:scale-105 flex items-center gap-2 shadow-lg shadow-primary/25"
+            >
+              <Icon name="PhoneCall" size={18} />
+              Позвонить сейчас
+            </a>
           </div>
         </div>
       </div>
