@@ -116,7 +116,9 @@ export default function HeroSection() {
               </a>
             </div>
 
-            <p className="text-lg md:text-xl text-muted-foreground mt-6 max-w-3xl mx-auto">
+            <p className={`text-lg md:text-xl text-muted-foreground mt-6 max-w-3xl mx-auto transition-all duration-1000 delay-500 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}>
               Подключение к сети интернет для частных лиц и бизнеса через беспроводные каналы связи, включая спутниковый интернет. Усиление сотовой связи и Wi-Fi сигнала. Системы видеонаблюдения и охраны объектов.
             </p>
           </div>
