@@ -70,6 +70,10 @@ export default function CoverageSection() {
         
         <div className="max-w-6xl mx-auto space-y-8">
           <YandexCoverageMap />
+
+          <div className="mb-8">
+            <SpeedTest />
+          </div>
           
           <div className="bg-card border rounded-lg p-8">
             <h3 className="text-2xl font-semibold mb-6 text-center">Основные регионы и города <span className="text-muted-foreground text-lg">(список минимальный, для примера)</span></h3>
@@ -107,10 +111,6 @@ export default function CoverageSection() {
                 </p>
               </div>
             </div>
-          </div>
-
-          <div className="mb-8">
-            <SpeedTest />
           </div>
 
           <div className="bg-primary/10 border-2 border-primary/20 rounded-lg p-8">
