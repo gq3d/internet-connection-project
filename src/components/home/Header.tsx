@@ -18,8 +18,7 @@ export default function Header() {
             {/* Desktop Menu */}
             <nav className="hidden md:flex items-center space-x-4">
               <Link to="/services" className="text-sm font-medium hover:text-success transition-colors">Услуги</Link>
-              <a href="/#tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</a>
-              <a href="/#pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</a>
+              <Link to="/tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</Link>
               <a href="/#esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</a>
               <a href="/#coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</a>
               <a href="/#about" className="text-sm font-medium hover:text-success transition-colors">О компании</a>
@@ -55,20 +54,13 @@ export default function Header() {
                 >
                   Услуги
                 </Link>
-                <a 
-                  href="/#tariffs" 
+                <Link 
+                  to="/tariffs" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Тарифы
-                </a>
-                <a 
-                  href="/#pricing" 
-                  className="block py-2 text-sm font-medium hover:text-success transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Стоимость
-                </a>
+                </Link>
                 <a 
                   href="/#esim" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
