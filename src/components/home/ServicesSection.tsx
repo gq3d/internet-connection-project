@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
+import SpeedTest from '@/components/SpeedTest';
 
 const services = [
   {
@@ -415,6 +416,11 @@ export default function ServicesSection() {
                   <p className="text-sm text-muted-foreground">Покрытие по всей территории</p>
                 </div>
               </div>
+            </div>
+
+            {/* Speed Test */}
+            <div className="mt-12">
+              <SpeedTest />
             </div>
           </div>
         </div>
