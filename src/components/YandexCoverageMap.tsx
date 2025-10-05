@@ -19,7 +19,7 @@ export default function YandexCoverageMap() {
     }
 
     const script = document.createElement('script');
-    script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&suggest_apikey=';
+    script.src = 'https://api-maps.yandex.ru/2.1/?apikey=eadb1145-91ad-4f73-97f5-f1f000aa7fae&lang=ru_RU';
     script.async = true;
     script.onload = () => {
       window.ymaps.ready(() => {
