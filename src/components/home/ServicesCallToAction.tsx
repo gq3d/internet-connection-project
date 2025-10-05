@@ -42,25 +42,6 @@ export default function ServicesCallToAction() {
                   Связаться с нами
                 </a>
               </div>
-
-              <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <Icon name="Wifi" size={24} className="text-white mx-auto mb-2" />
-                  <p className="text-sm font-medium">Интернет</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <Icon name="Video" size={24} className="text-white mx-auto mb-2" />
-                  <p className="text-sm font-medium">Видеонаблюдение</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <Icon name="Shield" size={24} className="text-white mx-auto mb-2" />
-                  <p className="text-sm font-medium">Охрана</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <Icon name="Satellite" size={24} className="text-white mx-auto mb-2" />
-                  <p className="text-sm font-medium">Спутниковый</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
