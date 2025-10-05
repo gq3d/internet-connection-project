@@ -26,7 +26,7 @@ export default function SpeedTest() {
       }
     }, updateInterval);
 
-    const imageUrl = `https://picsum.photos/5000/5000?random=${Date.now()}`;
+    const imageUrl = `https://picsum.photos/50000/50000?random=${Date.now()}`;
     const startTime = performance.now();
     
     try {
@@ -47,18 +47,14 @@ export default function SpeedTest() {
       const pingTime = performance.now() - pingStart;
 
       setResult({
-        download: Math.min(speedMbps, 250),
-        upload: Math.min(speedMbps * 0.4, 100),
-        ping: Math.max(pingTime, 10)
+        download: speedMbps,
+        upload: speedMbps * 0.4,
+        ping: pingTime
       });
     } catch (error) {
       console.error('Speed test error:', error);
-      setResult({
-        download: Math.random() * 50 + 20,
-        upload: Math.random() * 20 + 10,
-        ping: Math.random() * 40 + 20
-      });
     } finally {
+      clearInterval(progressInterval);
       setTesting(false);
     }
   };
