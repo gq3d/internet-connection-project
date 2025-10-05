@@ -13,9 +13,12 @@ export default function PricingSection() {
               <Icon name="Banknote" size={20} className="text-success mr-2" />
               <span className="text-sm font-semibold text-success uppercase tracking-wide">Прозрачные цены</span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Стоимость подключения</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <h1 className="text-3xl md:text-5xl font-bold mb-6">Стоимость подключения</h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-3">
               Профессиональное оборудование с установкой «под ключ»
+            </p>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Прозрачные цены на оборудование, установку и дополнительные работы
             </p>
           </div>
 

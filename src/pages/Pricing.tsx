@@ -91,19 +91,6 @@ export default function Pricing() {
         <Header />
         
         <div className="pt-20">
-          <div className="bg-gradient-to-br from-primary/10 via-secondary/10 to-success/10 py-12">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto text-center">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                  Стоимость подключения и услуг
-                </h1>
-                <p className="text-xl text-muted-foreground">
-                  Прозрачные цены на оборудование, установку и дополнительные работы
-                </p>
-              </div>
-            </div>
-          </div>
-
           <PricingSection />
           <EngineerPricingSection />
         </div>
