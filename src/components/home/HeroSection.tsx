@@ -54,10 +54,6 @@ export default function HeroSection() {
             </a>
           </div>
 
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Подключение к сети интернет для частных лиц и бизнеса через беспроводные каналы связи, включая спутниковый интернет. Усиление сотовой связи и Wi-Fi сигнала. Системы видеонаблюдения и охраны объектов.
-          </p>
-
           {/* Services Grid - Mobile: Featured Internet card + 2x2 grid */}
           <div className="mb-8 max-w-4xl mx-auto">
 
@@ -119,6 +115,10 @@ export default function HeroSection() {
                 </div>
               </a>
             </div>
+
+            <p className="text-lg md:text-xl text-muted-foreground mt-6 max-w-3xl mx-auto">
+              Подключение к сети интернет для частных лиц и бизнеса через беспроводные каналы связи, включая спутниковый интернет. Усиление сотовой связи и Wi-Fi сигнала. Системы видеонаблюдения и охраны объектов.
+            </p>
           </div>
           
           <div className="flex flex-wrap justify-center gap-4">
