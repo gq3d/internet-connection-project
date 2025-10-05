@@ -7,16 +7,24 @@ import EngineerPricingSection from '@/components/home/EngineerPricingSection';
 
 export default function Pricing() {
   useEffect(() => {
-    document.title = 'Стоимость подключения и услуг NetConnect - Прайс-лист';
+    document.title = 'Стоимость подключения интернета NetConnect - от 16 800₽ | Цены на оборудование и установку';
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <>
       <Helmet>
-        <title>Стоимость подключения и услуг NetConnect - Прайс-лист</title>
-        <meta name="description" content="Стоимость подключения беспроводного интернета NetConnect. Цены на оборудование, установку и дополнительные услуги инженера." />
-        <link rel="canonical" href="https://netconnect.ru/pricing" />
+        <title>Стоимость подключения интернета NetConnect - от 16 800₽ | Цены на оборудование и установку</title>
+        <meta name="description" content="Стоимость подключения беспроводного интернета от 16 800₽. В пакет: Wi-Fi роутер, 4G LTE антенна, установка и настройка под ключ. Прайс на услуги инженера. Прозрачные цены без скрытых платежей. ☎️ +7 (901) 500-00-78" />
+        <meta name="keywords" content="стоимость подключения интернета, цены на интернет мо, сколько стоит подключить интернет, цена установки интернета, прайс лист интернет, стоимость оборудования для интернета, цены на услуги инженера, установка антенны цена, настройка роутера цена, подключение интернета на даче цена" />
+        <link rel="canonical" href="https://mosoblconnect.ru/pricing" />
+        
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Стоимость подключения интернета - от 16 800₽" />
+        <meta property="og:description" content="Пакет подключения: оборудование + установка + настройка. Прозрачные цены на все услуги" />
+        <meta property="og:url" content="https://mosoblconnect.ru/pricing" />
+        <meta property="og:image" content="https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg" />
       </Helmet>
       
       <div className="min-h-screen bg-background">
