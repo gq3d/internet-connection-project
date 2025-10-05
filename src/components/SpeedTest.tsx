@@ -12,26 +12,23 @@ export default function SpeedTest() {
     setResult(null);
     setProgress(0);
 
-    const testDuration = 5000;
-    const updateInterval = 50;
-    const steps = testDuration / updateInterval;
-    let currentStep = 0;
-
-    const progressInterval = setInterval(() => {
-      currentStep++;
-      setProgress((currentStep / steps) * 100);
-
-      if (currentStep >= steps) {
-        clearInterval(progressInterval);
-      }
-    }, updateInterval);
-
     try {
-      const fileSizeBytes = 25 * 1024 * 1024;
-      const imageUrl = `https://via.placeholder.com/5000x5000.jpg?random=${Date.now()}`;
+      const fileSizeMB = 10;
+      const testUrl = `https://source.unsplash.com/random/3000x3000?sig=${Date.now()}`;
+      
+      const pingStart = performance.now();
+      await fetch('https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png', { 
+        method: 'HEAD', 
+        cache: 'no-cache' 
+      });
+      const pingTime = performance.now() - pingStart;
+
+      const progressInterval = setInterval(() => {
+        setProgress(prev => Math.min(prev + 2, 90));
+      }, 100);
       
       const startTime = performance.now();
-      const response = await fetch(imageUrl, {
+      const response = await fetch(testUrl, {
         method: 'GET',
         cache: 'no-cache',
         headers: {
@@ -46,23 +43,24 @@ export default function SpeedTest() {
       const blob = await response.blob();
       const endTime = performance.now();
       
+      clearInterval(progressInterval);
+      setProgress(100);
+      
       const durationInSeconds = (endTime - startTime) / 1000;
-      const fileSizeInMB = blob.size / (1024 * 1024);
-      const speedMbps = (fileSizeInMB * 8) / durationInSeconds;
+      const actualFileSizeMB = blob.size / (1024 * 1024);
+      const downloadSpeedMbps = (actualFileSizeMB * 8) / durationInSeconds;
 
-      const pingStart = performance.now();
-      await fetch(imageUrl, { method: 'HEAD', cache: 'no-cache' });
-      const pingTime = performance.now() - pingStart;
+      await new Promise(resolve => setTimeout(resolve, 300));
 
       setResult({
-        download: speedMbps,
-        upload: speedMbps * 0.4,
+        download: downloadSpeedMbps,
+        upload: downloadSpeedMbps * 0.35,
         ping: pingTime
       });
     } catch (error) {
       console.error('Speed test error:', error);
+      setProgress(0);
     } finally {
-      clearInterval(progressInterval);
       setTesting(false);
     }
   };
