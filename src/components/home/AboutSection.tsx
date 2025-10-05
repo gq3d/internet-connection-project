@@ -1,8 +1,38 @@
+import { useEffect, useRef, useState } from 'react';
+
 export default function AboutSection() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-blue-50/50 via-white to-purple-50/50">
+    <section ref={sectionRef} id="about" className="py-20 bg-gradient-to-br from-blue-50/50 via-white to-purple-50/50">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
+        <div className={`max-w-5xl mx-auto transition-all duration-1000 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">О компании NetConnect</h2>
           
           <div className="bg-white rounded-2xl shadow-lg border-2 border-blue-100 p-8 mb-8">

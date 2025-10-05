@@ -1,11 +1,40 @@
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import { useEffect, useRef, useState } from 'react';
 
 export default function HeroSection() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <section className="py-20 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10">
+    <section ref={sectionRef} className="py-20 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center animate-fade-in">
+        <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Беспроводной интернет в Московской области
           </h1>
