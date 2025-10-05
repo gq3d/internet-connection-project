@@ -10,9 +10,7 @@ declare global {
 export default function YandexCoverageMap() {
   const mapRef = useRef<HTMLDivElement>(null);
   const [mapLoaded, setMapLoaded] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
   const mapInstanceRef = useRef<any>(null);
-  const searchMarkersRef = useRef<any[]>([]);
 
   useEffect(() => {
     if (typeof window.ymaps !== 'undefined') {
@@ -44,7 +42,7 @@ export default function YandexCoverageMap() {
       const map = new window.ymaps.Map(mapRef.current, {
         center: [55.751244, 37.618423],
         zoom: 7,
-        controls: ['zoomControl', 'fullscreenControl', 'geolocationControl']
+        controls: ['zoomControl', 'fullscreenControl', 'geolocationControl', 'searchControl']
       });
 
       const coverageCircle = new window.ymaps.Circle(
@@ -99,71 +97,6 @@ export default function YandexCoverageMap() {
     });
   }, [mapLoaded]);
 
-  const handleSearch = () => {
-    if (!searchQuery.trim()) {
-      return;
-    }
-
-    if (!mapLoaded || !window.ymaps || !mapInstanceRef.current) {
-      console.error('Карта еще не загружена');
-      return;
-    }
-
-    if (searchMarkersRef.current && searchMarkersRef.current.length > 0) {
-      searchMarkersRef.current.forEach((marker) => {
-        if (mapInstanceRef.current) {
-          mapInstanceRef.current.geoObjects.remove(marker);
-        }
-      });
-      searchMarkersRef.current = [];
-    }
-
-    window.ymaps.ready(() => {
-      window.ymaps.geocode(searchQuery, {
-        results: 1
-      }).then((res: any) => {
-        const firstGeoObject = res.geoObjects.get(0);
-        if (firstGeoObject) {
-          const coords = firstGeoObject.geometry.getCoordinates();
-          const addressLine = firstGeoObject.getAddressLine();
-          
-          if (mapInstanceRef.current) {
-            mapInstanceRef.current.setCenter(coords, 12, {
-              duration: 300
-            });
-            
-            const placemark = new window.ymaps.Placemark(
-              coords,
-              {
-                balloonContent: `<strong>Найдено:</strong><br/>${addressLine}`,
-                hintContent: addressLine
-              },
-              { 
-                preset: 'islands#blueCircleDotIcon',
-                iconColor: '#3b82f6'
-              }
-            );
-            
-            mapInstanceRef.current.geoObjects.add(placemark);
-            
-            if (!searchMarkersRef.current) {
-              searchMarkersRef.current = [];
-            }
-            searchMarkersRef.current.push(placemark);
-            
-            setTimeout(() => {
-              if (placemark && placemark.balloon) {
-                placemark.balloon.open();
-              }
-            }, 400);
-          }
-        }
-      }).catch((error: any) => {
-        console.error('Ошибка геокодирования:', error);
-      });
-    });
-  };
-
   return (
     <div className="bg-card border rounded-lg p-6 md:p-8">
       <div className="mb-6">
@@ -171,33 +104,9 @@ export default function YandexCoverageMap() {
           <Icon name="Map" size={28} className="text-primary" />
           Карта покрытия интернета
         </h3>
-        <p className="text-muted-foreground mb-4">
+        <p className="text-muted-foreground">
           Зона покрытия — Москва, Московская область и соседние регионы
         </p>
-
-        <div className="mb-4">
-          <div className="flex gap-2">
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Введите адрес для поиска..."
-              className="flex-1 px-4 py-2 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-              onKeyDown={(e) => {
-                if (e.key === 'Enter') {
-                  handleSearch();
-                }
-              }}
-            />
-            <button
-              onClick={handleSearch}
-              className="px-6 py-2 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center gap-2"
-            >
-              <Icon name="Search" size={18} />
-              Найти
-            </button>
-          </div>
-        </div>
       </div>
 
       <div 
@@ -236,7 +145,7 @@ export default function YandexCoverageMap() {
         <div className="bg-primary/10 rounded-lg p-4 border border-primary/20">
           <Icon name="Lightbulb" size={20} className="text-primary mb-2" />
           <p className="text-sm text-muted-foreground">
-            <strong className="text-foreground">Совет:</strong> Используйте поиск по адресу выше, чтобы проверить доступность интернета в вашем районе. Фиолетовая зона — доступно подключение.
+            <strong className="text-foreground">Совет:</strong> Используйте поиск на карте (верхняя панель), чтобы найти ваш адрес. Фиолетовая зона — доступно подключение.
           </p>
         </div>
       </div>
