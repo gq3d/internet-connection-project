@@ -155,10 +155,6 @@ export default function YandexCoverageMap() {
               <div className="w-6 h-6 rounded-full bg-violet-500/25 border-2 border-violet-500"></div>
               <span>Расширенная зона покрытия</span>
             </div>
-            <div className="flex items-center gap-3">
-              <Icon name="MapPin" size={20} className="text-violet-500" />
-              <span>Основные города</span>
-            </div>
           </div>
         </div>
 
