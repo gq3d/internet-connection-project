@@ -21,6 +21,92 @@ export default function SignalBoost() {
         <meta property="og:description" content="Решения для усиления 4G/LTE сигнала: антенны, репитеры, уличные роутеры. Стабильный интернет даже при слабом сигнале. Установка в МО" />
         <meta property="og:url" content="https://mosoblconnect.ru/signal-boost" />
         <meta property="og:image" content="https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Усиление 4G/LTE сигнала",
+            "description": "Профессиональные решения для усиления 4G/LTE сигнала: антенны, репитеры, уличные роутеры для дачи и загородного дома",
+            "provider": {
+              "@type": "Organization",
+              "name": "NetConnect",
+              "telephone": "+7-901-500-00-78",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Москва",
+                "addressRegion": "Московская область",
+                "addressCountry": "RU"
+              }
+            },
+            "areaServed": {
+              "@type": "State",
+              "name": "Московская область"
+            },
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "Антенна + Роутер",
+                "description": "Пассивное усиление 4G/LTE сигнала для максимальной скорости",
+                "price": "16800",
+                "priceCurrency": "RUB"
+              },
+              {
+                "@type": "Offer",
+                "name": "Репитер 4G/LTE",
+                "description": "Активное усиление сигнала для всех устройств",
+                "price": "18000",
+                "priceCurrency": "RUB"
+              },
+              {
+                "@type": "Offer",
+                "name": "Уличный роутер",
+                "description": "Антенна со встроенным роутером для максимальной стабильности",
+                "price": "45000",
+                "priceCurrency": "RUB"
+              }
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Что лучше: антенна или репитер?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Для максимальной скорости интернета — антенна + роутер с MIMO. Для комплексного решения (интернет + голосовая связь для многих пользователей) — репитер."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Можно ли усилить сигнал нескольких операторов?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Да, для этого нужен многодиапазонный репитер (800/900/1800/2100/2600 МГц). Антенна + роутер работает только с одним оператором."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Как узнать уровень сигнала на моём участке?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Используйте приложения для Android: «Сотовые вышки, локатор» или «ДалСВЯЗЬ — замер сигнала». Или позвоните нам — мы проведём замер."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Сколько стоит установка?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Стоимость установки зависит от сложности монтажа и высоты. Обычно от 8 000 ₽. При покупке оборудования у нас — скидка на установку."
+                }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-background">
