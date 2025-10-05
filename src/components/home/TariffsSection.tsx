@@ -91,62 +91,62 @@ export default function TariffsSection() {
           {tariffs.map((tariff, index) => (
             <Card 
               key={index} 
-              className={`relative hover:shadow-2xl transition-all duration-300 overflow-hidden ${
-                tariff.popular ? 'border-2 border-primary shadow-xl md:scale-105 md:-translate-y-4' : 'border-2'
-              } ${tariff.borderColor}`}
+              className={`relative hover:shadow-2xl transition-all duration-300 overflow-hidden bg-white ${
+                tariff.popular ? 'border-4 border-primary shadow-xl md:scale-105 md:-translate-y-4' : 'border-2 border-gray-200'
+              }`}
             >
               {tariff.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                  <Badge className="px-6 py-2 text-sm font-bold bg-gradient-to-r from-primary to-secondary shadow-lg">
+                  <Badge className="px-6 py-2 text-sm font-bold bg-gradient-to-r from-primary to-secondary text-white shadow-lg">
                     ⭐ Популярный
                   </Badge>
                 </div>
               )}
               
-              {/* Декоративный градиент */}
-              <div className={`absolute top-0 left-0 right-0 h-2 bg-gradient-to-r ${tariff.gradient}`}></div>
-              
-              <CardHeader className="text-center pt-8 pb-6 bg-white">
-                <div className={`w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${tariff.gradient} flex items-center justify-center shadow-lg`}>
+              <div className={`pt-10 pb-6 text-center bg-gradient-to-br ${tariff.gradient}`}>
+                <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-lg">
                   <Icon name={tariff.icon} size={40} className="text-white" />
                 </div>
-                <CardTitle className="text-3xl mb-2 text-foreground">{tariff.name}</CardTitle>
-                <div className="py-4">
+                <h3 className="text-3xl font-bold mb-2 text-white">{tariff.name}</h3>
+              </div>
+              
+              <CardHeader className="text-center pb-4 pt-6 bg-white">
+                <div className="mb-4">
                   <div className="flex items-baseline justify-center gap-2">
-                    <span className="text-sm text-muted-foreground">от</span>
-                    <span className="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    <span className="text-sm text-gray-500">от</span>
+                    <span className={`text-5xl font-bold bg-gradient-to-r ${tariff.gradient} bg-clip-text text-transparent`}>
                       {tariff.price}
                     </span>
-                    <span className="text-sm text-muted-foreground">₽/мес</span>
+                    <span className="text-sm text-gray-500">₽/мес</span>
                   </div>
                 </div>
-                <div className="flex items-center justify-center gap-2 mb-4 px-4 py-2 bg-success/10 rounded-full">
-                  <Icon name="Wifi" size={20} className="text-success" />
-                  <span className="font-bold text-success">до {tariff.speed}</span>
+                <div className="flex items-center justify-center gap-2 mb-4 px-4 py-2 bg-green-50 rounded-full mx-auto w-fit">
+                  <Icon name="Wifi" size={20} className="text-green-600" />
+                  <span className="font-bold text-green-600">до {tariff.speed}</span>
                 </div>
-                <CardDescription className="text-base leading-relaxed px-2">
+                <CardDescription className="text-base leading-relaxed px-2 text-gray-600">
                   {tariff.description}
                 </CardDescription>
               </CardHeader>
               
-              <CardContent className="pt-6 pb-8">
-                <ul className="space-y-4">
+              <CardContent className="pt-6 pb-8 bg-white">
+                <ul className="space-y-4 mb-6">
                   {tariff.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <div className="w-6 h-6 rounded-full bg-success/10 flex items-center justify-center flex-shrink-0 mr-3">
-                        <Icon name="Check" size={16} className="text-success" />
+                      <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mr-3">
+                        <Icon name="Check" size={16} className="text-green-600" />
                       </div>
-                      <span className="text-sm leading-relaxed">{feature}</span>
+                      <span className="text-sm leading-relaxed text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 
                 <a 
                   href="tel:+79015000078"
-                  className={`mt-8 w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     tariff.popular 
                       ? 'bg-gradient-to-r from-primary to-secondary text-white hover:shadow-lg hover:scale-105' 
-                      : 'bg-muted hover:bg-muted/80 text-foreground'
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                   }`}
                 >
                   Подключить
