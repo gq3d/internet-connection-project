@@ -101,7 +101,7 @@ export default function Services() {
           {/* SEO Content Section */}
           <div className="mt-24 max-w-5xl mx-auto">
             <div className="bg-gradient-to-br from-primary/5 to-success/5 rounded-2xl p-8 md:p-12 border border-primary/10">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Профессиональные телекоммуникационные решения</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Профессиональные телеком-решения</h2>
               
               <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
                 <p className="leading-relaxed">
