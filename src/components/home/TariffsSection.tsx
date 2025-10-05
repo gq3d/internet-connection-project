@@ -110,7 +110,7 @@ export default function TariffsSection() {
                 <div className={`w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${tariff.gradient} flex items-center justify-center shadow-lg`}>
                   <Icon name={tariff.icon} size={40} className="text-white" />
                 </div>
-                <CardTitle className="text-3xl mb-2">{tariff.name}</CardTitle>
+                <CardTitle className="text-3xl mb-2 text-foreground">{tariff.name}</CardTitle>
                 <div className="py-4">
                   <div className="flex items-baseline justify-center gap-2">
                     <span className="text-sm text-muted-foreground">от</span>
