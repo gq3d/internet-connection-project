@@ -48,8 +48,8 @@ export default function YandexCoverageMap() {
       const outerCoverageCircle = new window.ymaps.Circle(
         [[55.751244, 37.618423], 180000],
         {
-          hintContent: 'Зона покрытия NetConnect',
-          balloonContent: '<strong>Зона покрытия интернета</strong><br/>Москва и Московская область + соседние регионы'
+          hintContent: 'Галактический охват',
+          balloonContent: '<strong>Галактический охват</strong><br/>Интернет доступен даже в самых отдалённых точках'
         },
         {
           fillColor: '#8b5cf6',
@@ -64,8 +64,8 @@ export default function YandexCoverageMap() {
       const innerCoverageCircle = new window.ymaps.Circle(
         [[55.751244, 37.618423], 68000],
         {
-          hintContent: 'Зона приоритетного покрытия',
-          balloonContent: '<strong>Зона приоритетного покрытия</strong><br/>Центральная зона с максимальной скоростью'
+          hintContent: 'Орбитальное покрытие',
+          balloonContent: '<strong>Орбитальное покрытие</strong><br/>Высокая скорость и стабильность'
         },
         {
           fillColor: '#10b981',
@@ -80,8 +80,8 @@ export default function YandexCoverageMap() {
       const blueCoverageCircle = new window.ymaps.Circle(
         [[55.751244, 37.618423], 34000],
         {
-          hintContent: 'Центральная зона',
-          balloonContent: '<strong>Центральная зона</strong><br/>Зона с максимальной скоростью подключения'
+          hintContent: 'Космическая скорость',
+          balloonContent: '<strong>Космическая скорость</strong><br/>Молниеносное подключение без задержек'
         },
         {
           fillColor: '#3b82f6',
@@ -133,15 +133,15 @@ export default function YandexCoverageMap() {
           <div className="space-y-2 text-sm">
             <div className="flex items-center gap-3">
               <div className="w-6 h-6 rounded-full bg-blue-500/40 border-2 border-blue-500"></div>
-              <span>Центральная зона</span>
+              <span>Космическая скорость</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-6 h-6 rounded-full bg-emerald-500/35 border-2 border-emerald-500"></div>
-              <span>Зона приоритетного покрытия</span>
+              <span>Орбитальное покрытие</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-6 h-6 rounded-full bg-violet-500/25 border-2 border-violet-500"></div>
-              <span>Расширенная зона покрытия</span>
+              <span>Галактический охват</span>
             </div>
           </div>
         </div>
@@ -149,7 +149,7 @@ export default function YandexCoverageMap() {
         <div className="bg-primary/10 rounded-lg p-4 border border-primary/20">
           <Icon name="Lightbulb" size={20} className="text-primary mb-2" />
           <p className="text-sm text-muted-foreground">
-            <strong className="text-foreground">Совет:</strong> Используйте масштабирование и перемещение карты для навигации. Фиолетовая зона — доступно подключение.
+            <strong className="text-foreground">Совет:</strong> Используйте масштабирование и перемещение карты для навигации. Чем ближе к центру — тем выше скорость!
           </p>
         </div>
       </div>
