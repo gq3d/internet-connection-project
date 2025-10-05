@@ -57,7 +57,7 @@ export default function Header() {
               <Link to="/tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</Link>
               <Link to="/pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</Link>
               <Link to="/coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</Link>
-              <Link to="/signal-boost" className="text-sm font-medium hover:text-success transition-colors">Усиление сигнала</Link>
+              <Link to="/signal-boost" className="text-sm font-medium hover:text-success transition-colors">Усиление 4G/LTE</Link>
               <Link to="/esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</Link>
               <a href="/#about" className="text-sm font-medium hover:text-success transition-colors">О компании</a>
               <Link to="/faq" className="text-sm font-medium hover:text-success transition-colors">FAQ</Link>
@@ -109,7 +109,7 @@ export default function Header() {
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Усиление сигнала
+                  Усиление 4G/LTE
                 </Link>
                 <Link 
                   to="/esim" 

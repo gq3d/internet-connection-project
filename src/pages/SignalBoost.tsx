@@ -12,21 +12,21 @@ export default function SignalBoost() {
   return (
     <>
       <Helmet>
-        <title>Усиление 4G/LTE сигнала в МО - от 16800₽ | Антенны, репитеры, роутеры</title>
-        <meta name="description" content="Профессиональное усиление 4G/LTE сигнала для дачи и загородного дома в Московской области. Антенны от 16800₽, репитеры от 18000₽, уличные роутеры от 45000₽. Установка от 8000₽. Бесплатная консультация ☎ +7 (901) 500-00-78" />
-        <meta name="keywords" content="усилитель 4g сигнала московская область, репитер 4g lte, антенна для интернета на даче, усиление сигнала загородный дом, уличный 4g роутер, усилитель lte для дачи, купить репитер 4g мо" />
+        <title>Усиление 4G/LTE интернета в МО - от 16800₽ | Антенны и роутеры для интернета</title>
+        <meta name="description" content="Усиление 4G/LTE интернета для дачи и загородного дома в Московской области. Антенны с роутерами от 16800₽, уличные 4G роутеры от 45000₽. Решения именно для мобильного интернета, не для голосовой связи. Установка от 8000₽ ☎ +7 (901) 500-00-78" />
+        <meta name="keywords" content="усилитель 4g интернета московская область, антенна 4g lte для интернета, усиление мобильного интернета на даче, уличный 4g роутер, антенна для 4g модема, усилитель lte интернета для дачи" />
         <link rel="canonical" href="https://mosoblconnect.ru/signal-boost" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Усиление 4G/LTE сигнала для дачи и дома - от 16800₽" />
-        <meta property="og:description" content="Решения для усиления 4G/LTE сигнала: антенны, репитеры, уличные роутеры. Стабильный интернет даже при слабом сигнале. Установка в МО" />
+        <meta property="og:title" content="Усиление 4G/LTE интернета для дачи и дома - от 16800₽" />
+        <meta property="og:description" content="Решения для усиления 4G/LTE интернета: антенны с роутерами, уличные 4G роутеры. Стабильный мобильный интернет даже при слабом сигнале. Установка в МО" />
         <meta property="og:url" content="https://mosoblconnect.ru/signal-boost" />
         <meta property="og:image" content="https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "name": "Усиление 4G/LTE сигнала",
-            "description": "Профессиональные решения для усиления 4G/LTE сигнала: антенны, репитеры, уличные роутеры для дачи и загородного дома",
+            "name": "Усиление 4G/LTE интернета",
+            "description": "Профессиональные решения для усиления 4G/LTE интернета: антенны с роутерами, уличные 4G роутеры для дачи и загородного дома. Не для голосовой связи, только для интернета",
             "provider": {
               "@type": "Organization",
               "name": "NetConnect",
@@ -122,11 +122,15 @@ export default function SignalBoost() {
                   <span className="text-sm font-semibold text-primary uppercase tracking-wide">Технические решения</span>
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  Решения для усиления 4G/LTE сигнала
+                  Усиление 4G/LTE интернета
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Стабильный интернет даже при слабом сигнале базовой станции
+                  Решения для ускорения мобильного интернета. Антенны и роутеры для стабильного 4G/LTE соединения на даче и в загородном доме
                 </p>
+                <div className="mt-6 inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-6 py-3">
+                  <Icon name="Info" size={20} className="text-blue-600" />
+                  <span className="text-sm font-medium text-blue-900">Для усиления голосовой связи и звонков смотрите раздел <a href="/services/cellular-booster" className="underline hover:text-primary">Усиление сотовой связи</a></span>
+                </div>
               </div>
 
               <div className="grid md:grid-cols-3 gap-6 mb-16">

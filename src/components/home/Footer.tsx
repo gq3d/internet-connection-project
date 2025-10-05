@@ -37,7 +37,7 @@ export default function Footer() {
                 <Link to="/tariffs" className="block text-muted-foreground hover:text-primary transition-colors">Тарифы</Link>
                 <Link to="/pricing" className="block text-muted-foreground hover:text-primary transition-colors">Стоимость</Link>
                 <Link to="/coverage" className="block text-muted-foreground hover:text-primary transition-colors">Покрытие</Link>
-                <Link to="/signal-boost" className="block text-muted-foreground hover:text-primary transition-colors">Усиление сигнала</Link>
+                <Link to="/signal-boost" className="block text-muted-foreground hover:text-primary transition-colors">Усиление 4G/LTE</Link>
                 <Link to="/esim" className="block text-muted-foreground hover:text-primary transition-colors">eSIM</Link>
                 <a href="/#about" className="block text-muted-foreground hover:text-primary transition-colors">О компании</a>
                 <Link to="/faq" className="block text-muted-foreground hover:text-primary transition-colors">FAQ</Link>
