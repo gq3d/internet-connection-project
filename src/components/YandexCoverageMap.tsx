@@ -12,6 +12,7 @@ export default function YandexCoverageMap() {
   const [mapLoaded, setMapLoaded] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const mapInstanceRef = useRef<any>(null);
+  const searchMarkersRef = useRef<any[]>([]);
 
   useEffect(() => {
     if (typeof window.ymaps !== 'undefined') {
@@ -99,23 +100,52 @@ export default function YandexCoverageMap() {
   }, [mapLoaded]);
 
   const handleSearch = () => {
-    if (mapInstanceRef.current && searchQuery) {
-      window.ymaps.geocode(searchQuery).then((res: any) => {
-        const firstGeoObject = res.geoObjects.get(0);
-        if (firstGeoObject) {
-          const coords = firstGeoObject.geometry.getCoordinates();
-          mapInstanceRef.current.setCenter(coords, 14, { duration: 300 });
-          const placemark = new window.ymaps.Placemark(
-            coords,
-            {
-              balloonContent: `<strong>Найдено:</strong><br/>${firstGeoObject.getAddressLine()}`
-            },
-            { preset: 'islands#blueDotIcon' }
-          );
-          mapInstanceRef.current.geoObjects.add(placemark);
-        }
-      });
+    if (!mapLoaded || !window.ymaps || !mapInstanceRef.current || !searchQuery.trim()) {
+      return;
     }
+
+    searchMarkersRef.current.forEach((marker) => {
+      mapInstanceRef.current.geoObjects.remove(marker);
+    });
+    searchMarkersRef.current = [];
+
+    window.ymaps.geocode(searchQuery, {
+      results: 1
+    }).then((res: any) => {
+      const firstGeoObject = res.geoObjects.get(0);
+      if (firstGeoObject) {
+        const coords = firstGeoObject.geometry.getCoordinates();
+        const addressLine = firstGeoObject.getAddressLine();
+        
+        mapInstanceRef.current.setCenter(coords, 12, {
+          duration: 300
+        });
+        
+        const placemark = new window.ymaps.Placemark(
+          coords,
+          {
+            balloonContent: `<strong>Найдено:</strong><br/>${addressLine}`,
+            hintContent: addressLine
+          },
+          { 
+            preset: 'islands#blueCircleDotIcon',
+            iconColor: '#3b82f6'
+          }
+        );
+        
+        mapInstanceRef.current.geoObjects.add(placemark);
+        searchMarkersRef.current.push(placemark);
+        
+        setTimeout(() => {
+          placemark.balloon.open();
+        }, 400);
+      } else {
+        alert('Адрес не найден. Попробуйте уточнить запрос.');
+      }
+    }).catch((error: any) => {
+      console.error('Ошибка поиска:', error);
+      alert('Ошибка поиска. Попробуйте еще раз.');
+    });
   };
 
   return (
