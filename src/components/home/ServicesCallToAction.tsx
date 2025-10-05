@@ -54,52 +54,60 @@ export default function ServicesCallToAction() {
                 Интернет, видеонаблюдение, Wi-Fi оборудование, охранные системы и многое другое
               </p>
               
-              <div className="flex flex-col gap-4 items-center">
+              <div className="flex flex-col gap-6 items-center">
                 <Link 
                   to="/services"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary rounded-xl font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all"
+                  className="inline-flex items-center justify-center px-10 py-4 bg-white text-primary rounded-2xl font-bold text-lg hover:shadow-2xl transform hover:scale-105 transition-all hover:-translate-y-1"
                 >
                   Все наши услуги
                   <Icon name="ArrowRight" size={20} className="ml-2" />
                 </Link>
                 
-                <div className="flex flex-wrap gap-3 justify-center">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 w-full max-w-2xl px-2">
                   <Link 
                     to="/pricing"
-                    className="inline-flex items-center justify-center px-5 py-2.5 bg-white/20 backdrop-blur-sm text-white border-2 border-white/50 rounded-lg font-medium text-sm hover:bg-white/30 hover:border-white transition-all"
+                    className="group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-xl"
                   >
-                    <Icon name="DollarSign" size={16} className="mr-1.5" />
-                    Тарифы
+                    <div className="w-10 h-10 mb-2 bg-white/20 group-hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors">
+                      <Icon name="DollarSign" size={20} className="group-hover:text-primary transition-colors" />
+                    </div>
+                    <span className="font-semibold">Тарифы</span>
                   </Link>
                   
                   <Link 
                     to="/pricing"
-                    className="inline-flex items-center justify-center px-5 py-2.5 bg-white/20 backdrop-blur-sm text-white border-2 border-white/50 rounded-lg font-medium text-sm hover:bg-white/30 hover:border-white transition-all"
+                    className="group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-xl"
                   >
-                    <Icon name="Calculator" size={16} className="mr-1.5" />
-                    Стоимость
+                    <div className="w-10 h-10 mb-2 bg-white/20 group-hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors">
+                      <Icon name="Calculator" size={20} className="group-hover:text-primary transition-colors" />
+                    </div>
+                    <span className="font-semibold">Стоимость</span>
                   </Link>
                   
                   <Link 
                     to="/coverage"
-                    className="inline-flex items-center justify-center px-5 py-2.5 bg-white/20 backdrop-blur-sm text-white border-2 border-white/50 rounded-lg font-medium text-sm hover:bg-white/30 hover:border-white transition-all"
+                    className="group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-xl"
                   >
-                    <Icon name="MapPin" size={16} className="mr-1.5" />
-                    Покрытие
+                    <div className="w-10 h-10 mb-2 bg-white/20 group-hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors">
+                      <Icon name="MapPin" size={20} className="group-hover:text-primary transition-colors" />
+                    </div>
+                    <span className="font-semibold">Покрытие</span>
                   </Link>
                   
                   <Link 
                     to="/esim"
-                    className="inline-flex items-center justify-center px-5 py-2.5 bg-white/20 backdrop-blur-sm text-white border-2 border-white/50 rounded-lg font-medium text-sm hover:bg-white/30 hover:border-white transition-all"
+                    className="group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-xl"
                   >
-                    <Icon name="Smartphone" size={16} className="mr-1.5" />
-                    eSIM
+                    <div className="w-10 h-10 mb-2 bg-white/20 group-hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors">
+                      <Icon name="Smartphone" size={20} className="group-hover:text-primary transition-colors" />
+                    </div>
+                    <span className="font-semibold">eSIM</span>
                   </Link>
                 </div>
                 
                 <a 
                   href="#contacts"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white/20 backdrop-blur-sm text-white border-2 border-white rounded-xl font-semibold text-lg hover:bg-white/30 transition-all"
+                  className="inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-white/25 to-white/15 backdrop-blur-md text-white border-2 border-white/60 rounded-2xl font-bold text-lg hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-1"
                 >
                   <Icon name="Phone" size={20} className="mr-2" />
                   Связаться с нами
