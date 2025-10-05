@@ -62,7 +62,7 @@ export default function YandexCoverageMap() {
       map.geoObjects.add(outerCoverageCircle);
 
       const innerCoverageCircle = new window.ymaps.Circle(
-        [[55.751244, 37.618423], 34000],
+        [[55.751244, 37.618423], 68000],
         {
           hintContent: 'Зона приоритетного покрытия',
           balloonContent: '<strong>Зона приоритетного покрытия</strong><br/>Центральная зона с максимальной скоростью'
