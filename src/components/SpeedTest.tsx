@@ -148,12 +148,6 @@ export default function SpeedTest() {
               Повторить тест
             </button>
           </div>
-
-          <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
-            <p className="text-sm text-center text-muted-foreground">
-              💡 С NetConnect вы получите скорость до <strong className="text-primary">250 Мбит/с</strong>!
-            </p>
-          </div>
         </div>
       )}
     </Card>
