@@ -12,8 +12,8 @@ export default function SignalBoost() {
   return (
     <>
       <Helmet>
-        <title>Усиление 3G/4G сигнала для дачи и загородного дома | NetConnect</title>
-        <meta name="description" content="Решения для усиления 3G/4G сигнала в Московской области. Антенны, репитеры, роутеры. Стабильный интернет даже при слабом сигнале. ☎️ +7 (901) 500-00-78" />
+        <title>Усиление 4G/LTE сигнала для дачи и загородного дома | NetConnect</title>
+        <meta name="description" content="Решения для усиления 4G/LTE сигнала в Московской области. Антенны, репитеры, роутеры. Стабильный интернет даже при слабом сигнале. ☎️ +7 (901) 500-00-78" />
         <meta name="keywords" content="усилитель 4g сигнала, усилитель 3g, антенна для интернета, репитер 4g, усиление сигнала на даче, усилитель интернета для дачи" />
       </Helmet>
 
@@ -30,7 +30,7 @@ export default function SignalBoost() {
                   <span className="text-sm font-semibold text-primary uppercase tracking-wide">Технические решения</span>
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  Решения для усиления 3G/4G сигнала
+                  Решения для усиления 4G/LTE сигнала
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                   Стабильный интернет даже при слабом сигнале базовой станции
@@ -44,7 +44,7 @@ export default function SignalBoost() {
                   </div>
                   <h3 className="text-xl font-bold mb-2">Антенна + Роутер</h3>
                   <p className="text-sm text-muted-foreground mb-3">Пассивное усиление для максимальной скорости</p>
-                  <div className="text-2xl font-bold text-primary">от 6 000 ₽</div>
+                  <div className="text-2xl font-bold text-primary">от 16 800 ₽</div>
                 </div>
 
                 <div className="bg-gradient-to-br from-secondary/10 to-secondary/5 rounded-2xl p-6 border-2 border-secondary/20">
@@ -53,7 +53,7 @@ export default function SignalBoost() {
                   </div>
                   <h3 className="text-xl font-bold mb-2">Репитер</h3>
                   <p className="text-sm text-muted-foreground mb-3">Активное усиление для всех устройств</p>
-                  <div className="text-2xl font-bold text-secondary">от 15 000 ₽</div>
+                  <div className="text-2xl font-bold text-secondary">от 18 000 ₽</div>
                 </div>
 
                 <div className="bg-gradient-to-br from-success/10 to-success/5 rounded-2xl p-6 border-2 border-success/20">
@@ -62,7 +62,7 @@ export default function SignalBoost() {
                   </div>
                   <h3 className="text-xl font-bold mb-2">Уличный роутер</h3>
                   <p className="text-sm text-muted-foreground mb-3">Антенна со встроенным роутером</p>
-                  <div className="text-2xl font-bold text-success">от 9 000 ₽</div>
+                  <div className="text-2xl font-bold text-success">от 45 000 ₽</div>
                 </div>
               </div>
 
@@ -108,7 +108,7 @@ export default function SignalBoost() {
                           </h4>
                           <ul className="space-y-2 text-sm text-muted-foreground">
                             <li>✓ Максимальная скорость интернета (поддержка MIMO)</li>
-                            <li>✓ Низкая стоимость (6 000 - 15 000 ₽)</li>
+                            <li>✓ Доступная стоимость (от 16 800 ₽)</li>
                             <li>✓ Простая установка</li>
                             <li>✓ Подключение нескольких устройств</li>
                             <li>✓ Долговечность</li>
@@ -168,7 +168,7 @@ export default function SignalBoost() {
                             Недостатки
                           </h4>
                           <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li>• Высокая стоимость (15 000 - 50 000 ₽)</li>
+                            <li>• Стоимость от 18 000 ₽</li>
                             <li>• Сложная установка</li>
                             <li>• Не поддерживает MIMO</li>
                             <li>• Скорость ниже на 30-50%</li>
@@ -220,7 +220,7 @@ export default function SignalBoost() {
                             <li>• Требуется SIM-карта</li>
                             <li>• Не усиливает голосовую связь</li>
                             <li>• Работает с одним оператором</li>
-                            <li>• Стоимость 9 000 - 15 000 ₽</li>
+                            <li>• Стоимость от 45 000 ₽</li>
                           </ul>
                         </div>
                       </div>
