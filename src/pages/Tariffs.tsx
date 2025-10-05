@@ -2,19 +2,19 @@ import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/home/Header';
 import Footer from '@/components/home/Footer';
-import PricingSection from '@/components/home/PricingSection';
+import TariffsSection from '@/components/home/TariffsSection';
 
 export default function Tariffs() {
   useEffect(() => {
-    document.title = 'Тарифная политика NetConnect - Стоимость подключения и оборудования';
+    document.title = 'Тарифная политика NetConnect - Тарифы на интернет';
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <>
       <Helmet>
-        <title>Тарифная политика NetConnect - Стоимость подключения и оборудования</title>
-        <meta name="description" content="Тарифная политика NetConnect. Узнайте стоимость подключения беспроводного интернета, пакеты оборудования и дополнительные опции." />
+        <title>Тарифная политика NetConnect - Тарифы на интернет</title>
+        <meta name="description" content="Тарифные планы NetConnect для подключения беспроводного и спутникового интернета в Московской области. Выберите оптимальный тариф для вашего дома или дачи." />
         <link rel="canonical" href="https://netconnect.ru/tariffs" />
       </Helmet>
       
@@ -26,16 +26,16 @@ export default function Tariffs() {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                  Тарифная политика NetConnect
+                  Тарифные планы NetConnect
                 </h1>
                 <p className="text-xl text-muted-foreground">
-                  Прозрачные цены на подключение и профессиональное оборудование
+                  Выберите оптимальный тариф для вашего дома или дачи
                 </p>
               </div>
             </div>
           </div>
 
-          <PricingSection />
+          <TariffsSection />
         </div>
 
         <Footer />
