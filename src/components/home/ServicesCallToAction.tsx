@@ -54,7 +54,7 @@ export default function ServicesCallToAction() {
                 Интернет, видеонаблюдение, Wi-Fi оборудование, охранные системы и многое другое
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col gap-4 items-center">
                 <Link 
                   to="/services"
                   className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary rounded-xl font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all"
@@ -62,6 +62,40 @@ export default function ServicesCallToAction() {
                   Все наши услуги
                   <Icon name="ArrowRight" size={20} className="ml-2" />
                 </Link>
+                
+                <div className="flex flex-wrap gap-3 justify-center">
+                  <Link 
+                    to="/pricing"
+                    className="inline-flex items-center justify-center px-5 py-2.5 bg-white/20 backdrop-blur-sm text-white border-2 border-white/50 rounded-lg font-medium text-sm hover:bg-white/30 hover:border-white transition-all"
+                  >
+                    <Icon name="DollarSign" size={16} className="mr-1.5" />
+                    Тарифы
+                  </Link>
+                  
+                  <Link 
+                    to="/pricing"
+                    className="inline-flex items-center justify-center px-5 py-2.5 bg-white/20 backdrop-blur-sm text-white border-2 border-white/50 rounded-lg font-medium text-sm hover:bg-white/30 hover:border-white transition-all"
+                  >
+                    <Icon name="Calculator" size={16} className="mr-1.5" />
+                    Стоимость
+                  </Link>
+                  
+                  <Link 
+                    to="/coverage"
+                    className="inline-flex items-center justify-center px-5 py-2.5 bg-white/20 backdrop-blur-sm text-white border-2 border-white/50 rounded-lg font-medium text-sm hover:bg-white/30 hover:border-white transition-all"
+                  >
+                    <Icon name="MapPin" size={16} className="mr-1.5" />
+                    Покрытие
+                  </Link>
+                  
+                  <Link 
+                    to="/esim"
+                    className="inline-flex items-center justify-center px-5 py-2.5 bg-white/20 backdrop-blur-sm text-white border-2 border-white/50 rounded-lg font-medium text-sm hover:bg-white/30 hover:border-white transition-all"
+                  >
+                    <Icon name="Smartphone" size={16} className="mr-1.5" />
+                    eSIM
+                  </Link>
+                </div>
                 
                 <a 
                   href="#contacts"
