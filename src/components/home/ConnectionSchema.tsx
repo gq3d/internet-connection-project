@@ -338,7 +338,7 @@ export default function ConnectionSchema() {
                 </div>
                 <div>
                   <h5 className="font-bold mb-1 text-lg">Быстрая установка</h5>
-                  <p className="text-sm text-muted-foreground">Подключение за 1 день</p>
+                  <p className="text-sm text-muted-foreground">Быстрое подключение</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 bg-gradient-to-br from-success/10 to-success/5 rounded-xl p-5 border border-success/20 hover:shadow-lg transition-shadow">
