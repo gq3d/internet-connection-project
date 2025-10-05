@@ -24,6 +24,7 @@ import Tariffs from "./pages/Tariffs";
 import Pricing from "./pages/Pricing";
 import Coverage from "./pages/Coverage";
 import Esim from "./pages/Esim";
+import SignalBoost from "./pages/SignalBoost";
 
 const queryClient = new QueryClient();
 
@@ -52,6 +53,7 @@ const App = () => (
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/coverage" element={<Coverage />} />
             <Route path="/esim" element={<Esim />} />
+            <Route path="/signal-boost" element={<SignalBoost />} />
             <Route path="/sitemap.xml" element={<SitemapGenerator type="sitemap" />} />
             <Route path="/robots.txt" element={<SitemapGenerator type="robots" />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
