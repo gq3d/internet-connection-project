@@ -33,6 +33,24 @@ export default function Header() {
               <span className="text-2xl font-bold text-primary">NetConnect</span>
             </Link>
             
+            {/* Mobile Quick Actions */}
+            <div className="flex md:hidden items-center gap-2">
+              <a 
+                href="tel:+79015000078" 
+                className="flex items-center justify-center w-10 h-10 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+                aria-label="Позвонить"
+              >
+                <Icon name="Phone" size={20} />
+              </a>
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="flex items-center justify-center w-10 h-10 rounded-lg hover:bg-accent transition-colors"
+                aria-label="Меню"
+              >
+                <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} />
+              </button>
+            </div>
+
             {/* Desktop Menu */}
             <nav className="hidden md:flex items-center space-x-4">
               <Link to="/services" className="text-sm font-medium hover:text-success transition-colors">Услуги</Link>
@@ -51,15 +69,6 @@ export default function Header() {
                 +7 (901) 500-00-78
               </a>
             </nav>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg hover:bg-accent transition-colors"
-              aria-label="Меню"
-            >
-              <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} />
-            </button>
           </div>
 
           {/* Mobile Menu */}
