@@ -77,6 +77,22 @@ export default function YandexCoverageMap() {
       );
       map.geoObjects.add(innerCoverageCircle);
 
+      const blueCoverageCircle = new window.ymaps.Circle(
+        [[55.751244, 37.618423], 34000],
+        {
+          hintContent: 'Центральная зона',
+          balloonContent: '<strong>Центральная зона</strong><br/>Зона с максимальной скоростью подключения'
+        },
+        {
+          fillColor: '#3b82f6',
+          fillOpacity: 0.4,
+          strokeColor: '#3b82f6',
+          strokeOpacity: 0.8,
+          strokeWidth: 3
+        }
+      );
+      map.geoObjects.add(blueCoverageCircle);
+
       mapInstanceRef.current = map;
     });
   }, [mapLoaded]);
@@ -115,6 +131,10 @@ export default function YandexCoverageMap() {
             Легенда
           </h4>
           <div className="space-y-2 text-sm">
+            <div className="flex items-center gap-3">
+              <div className="w-6 h-6 rounded-full bg-blue-500/40 border-2 border-blue-500"></div>
+              <span>Центральная зона</span>
+            </div>
             <div className="flex items-center gap-3">
               <div className="w-6 h-6 rounded-full bg-emerald-500/35 border-2 border-emerald-500"></div>
               <span>Зона приоритетного покрытия</span>
