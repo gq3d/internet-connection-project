@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import Icon from '@/components/ui/icon';
 import { generateCitySlug } from '@/utils/citySlug';
 import SpeedTest from '@/components/SpeedTest';
-import InteractiveCoverageMap from '@/components/InteractiveCoverageMap';
 
 const cities = [
   'Москва', 'Подольск', 'Красногорск', 'Химки', 'Мытищи', 'Люберцы',
@@ -69,8 +68,6 @@ export default function CoverageSection() {
         </div>
         
         <div className="max-w-6xl mx-auto space-y-8">
-          <InteractiveCoverageMap />
-          
           <div className="bg-card border rounded-lg p-8">
             <h3 className="text-2xl font-semibold mb-6 text-center">Основные регионы и города <span className="text-muted-foreground text-lg">(список минимальный, для примера)</span></h3>
             
