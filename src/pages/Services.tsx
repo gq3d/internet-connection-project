@@ -97,6 +97,61 @@ export default function Services() {
               </Link>
             ))}
           </div>
+
+          {/* SEO Content Section */}
+          <div className="mt-24 max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-primary/5 to-success/5 rounded-2xl p-8 md:p-12 border border-primary/10">
+              <h2 className="text-3xl font-bold mb-6 text-center">Профессиональные телекоммуникационные решения</h2>
+              
+              <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
+                <p className="leading-relaxed">
+                  <span className="font-semibold text-foreground">NetConnect</span> — ведущий поставщик телекоммуникационных и охранных услуг в Московской области. 
+                  Мы специализируемся на предоставлении высокоскоростного интернета, систем видеонаблюдения и комплексных решений безопасности для частных домов, коттеджных поселков и бизнеса.
+                </p>
+
+                <div className="grid md:grid-cols-2 gap-6 my-8">
+                  <div className="bg-card rounded-xl p-6 border border-border">
+                    <Icon name="Award" size={32} className="text-success mb-3" />
+                    <h3 className="text-xl font-semibold mb-2 text-foreground">Опыт и надежность</h3>
+                    <p className="text-sm">
+                      Более 15 лет успешной работы на рынке телекоммуникаций. Тысячи довольных клиентов в Московской области доверяют нам свою связь и безопасность.
+                    </p>
+                  </div>
+
+                  <div className="bg-card rounded-xl p-6 border border-border">
+                    <Icon name="Headphones" size={32} className="text-success mb-3" />
+                    <h3 className="text-xl font-semibold mb-2 text-foreground">Поддержка 24/7</h3>
+                    <p className="text-sm">
+                      Наша служба технической поддержки работает круглосуточно. Мы оперативно решаем любые технические вопросы и гарантируем стабильность сервиса.
+                    </p>
+                  </div>
+                </div>
+
+                <p className="leading-relaxed">
+                  Наши услуги включают беспроводной интернет со скоростью до 250 Мбит/с, профессиональные системы видеонаблюдения с облачным хранением, 
+                  настройку Wi-Fi сетей любой сложности, физическую охрану объектов, спутниковый интернет для отдаленных районов и усиление сотовой связи.
+                </p>
+
+                <div className="bg-success/10 border border-success/20 rounded-xl p-6 mt-8">
+                  <div className="flex items-start gap-4">
+                    <Icon name="Sparkles" size={28} className="text-success flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2 text-foreground">Индивидуальный подход</h3>
+                      <p className="text-sm">
+                        Мы разрабатываем решения под конкретные потребности каждого клиента. От подключения одного дома до создания комплексной инфраструктуры 
+                        для целого коттеджного поселка — наши специалисты найдут оптимальное решение для любой задачи.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="leading-relaxed">
+                  Выбирая NetConnect, вы получаете не просто услугу, а надежного партнера в сфере телекоммуникаций и безопасности. 
+                  Современное оборудование, квалифицированные специалисты и прозрачные условия сотрудничества — всё это делает нас лучшим выбором для вашего дома или бизнеса.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
