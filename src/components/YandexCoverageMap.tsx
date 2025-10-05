@@ -74,6 +74,24 @@ export default function YandexCoverageMap() {
         [[54.0, 36.5], [54.0, 37.5], [53.6, 37.5], [53.6, 36.5]],
       ];
 
+      const remainingCoveragePolygons = [
+        [[54.1, 35.5], [54.1, 36.5], [53.7, 36.5], [53.7, 35.5]],
+        [[54.5, 35.0], [54.5, 35.8], [54.1, 35.8], [54.1, 35.0]],
+        [[55.0, 35.0], [55.0, 35.5], [54.5, 35.5], [54.5, 35.0]],
+        [[56.8, 35.5], [56.8, 36.5], [56.4, 36.5], [56.4, 35.5]],
+        [[57.2, 36.0], [57.2, 37.0], [56.8, 37.0], [56.8, 36.0]],
+        [[57.0, 37.5], [57.0, 38.5], [56.6, 38.5], [56.6, 37.5]],
+        [[56.8, 38.8], [56.8, 39.5], [56.4, 39.5], [56.4, 38.8]],
+        [[56.0, 39.2], [56.0, 40.0], [55.6, 40.0], [55.6, 39.2]],
+        [[55.5, 39.5], [55.5, 40.2], [55.1, 40.2], [55.1, 39.5]],
+        [[54.8, 39.2], [54.8, 40.0], [54.4, 40.0], [54.4, 39.2]],
+        [[54.0, 38.5], [54.0, 39.5], [53.6, 39.5], [53.6, 38.5]],
+        [[53.7, 37.5], [53.7, 38.5], [53.3, 38.5], [53.3, 37.5]],
+        [[53.5, 36.5], [53.5, 37.5], [53.1, 37.5], [53.1, 36.5]],
+        [[57.0, 35.0], [57.0, 36.0], [56.6, 36.0], [56.6, 35.0]],
+        [[54.8, 34.8], [54.8, 35.5], [54.4, 35.5], [54.4, 34.8]],
+      ];
+
       const gapPolygons = [
         [[55.7, 36.9], [55.7, 37.0], [55.65, 37.0], [55.65, 36.9]],
         [[54.9, 38.0], [54.9, 38.1], [54.85, 38.1], [54.85, 38.0]],
@@ -119,6 +137,23 @@ export default function YandexCoverageMap() {
             fillOpacity: 0.3,
             strokeColor: '#8b5cf6',
             strokeOpacity: 0.5,
+            strokeWidth: 2
+          }
+        );
+        map.geoObjects.add(polygon);
+      });
+
+      remainingCoveragePolygons.forEach((coords) => {
+        const polygon = new window.ymaps.Polygon(
+          [coords],
+          {
+            hintContent: 'Зона покрытия 2G/3G'
+          },
+          {
+            fillColor: '#3b82f6',
+            fillOpacity: 0.25,
+            strokeColor: '#3b82f6',
+            strokeOpacity: 0.4,
             strokeWidth: 2
           }
         );
@@ -318,11 +353,15 @@ export default function YandexCoverageMap() {
           <div className="space-y-2 text-sm">
             <div className="flex items-center gap-3">
               <div className="w-6 h-6 rounded bg-green-500/40 border-2 border-green-500"></div>
-              <span>Зона покрытия 4G/LTE (98%)</span>
+              <span>Зона покрытия 4G/LTE</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-6 h-6 rounded bg-violet-500/30 border-2 border-violet-500"></div>
               <span>Расширенная зона 3G/4G</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-6 h-6 rounded bg-blue-500/25 border-2 border-blue-500"></div>
+              <span>Зона покрытия 2G/3G</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-6 h-6 rounded bg-red-500/20 border border-red-500"></div>
@@ -338,7 +377,7 @@ export default function YandexCoverageMap() {
         <div className="bg-primary/10 rounded-lg p-4 border border-primary/20">
           <Icon name="Lightbulb" size={20} className="text-primary mb-2" />
           <p className="text-sm text-muted-foreground">
-            <strong className="text-foreground">Совет:</strong> Используйте поиск по адресу выше или увеличьте масштаб карты. Зелёные зоны — стабильное 4G покрытие, фиолетовые — расширенная зона 3G/4G, красные — слабый сигнал.
+            <strong className="text-foreground">Совет:</strong> Используйте поиск по адресу выше или увеличьте масштаб карты. Зелёные зоны — стабильное 4G покрытие, фиолетовые — расширенная зона 3G/4G, синие — базовое покрытие 2G/3G, красные — слабый сигнал.
           </p>
         </div>
       </div>
