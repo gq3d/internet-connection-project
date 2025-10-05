@@ -17,8 +17,10 @@ export default function Header() {
 
   return (
     <>
-      <header className={`border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'shadow-lg' : ''
+      <header className={`border-b sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-white shadow-2xl border-primary/20' 
+          : 'bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60'
       }`}>
         <div className={`container mx-auto px-4 transition-all duration-300 ${
           isScrolled ? 'py-2' : 'py-4'
