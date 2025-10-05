@@ -26,7 +26,7 @@ const SecurityCTA = () => {
                     <Icon name="CheckCircle2" size={24} className="text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-1">Бесплатный выезд инженера</h3>
+                    <h3 className="font-semibold text-lg mb-1">Выезд инженера</h3>
                     <p className="text-muted-foreground">Оценим объект и составим план размещения оборудования</p>
                   </div>
                 </div>
