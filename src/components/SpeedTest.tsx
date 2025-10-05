@@ -16,11 +16,11 @@ export default function SpeedTest() {
 
       <div className="flex justify-center">
         <iframe 
-          src="https://yandex.ru/internet" 
-          height="700px" 
+          src="https://openspeedtest.com/selfhosted" 
+          height="600px" 
           width="100%" 
-          className="max-w-[900px] border-0 rounded-lg"
-          title="Яндекс Интернетометр"
+          className="max-w-[900px] border-0 rounded-lg shadow-lg"
+          title="Тест скорости интернета"
         />
       </div>
     </Card>
