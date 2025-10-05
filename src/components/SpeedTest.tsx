@@ -16,11 +16,11 @@ export default function SpeedTest() {
 
       <div className="flex justify-center">
         <iframe 
-          src="https://librespeed.org" 
-          height="600px" 
+          src="https://2ip.ru/speed/" 
+          height="700px" 
           width="100%" 
           className="max-w-[900px] border-0 rounded-lg"
-          title="LibreSpeed - тест скорости интернета"
+          title="2ip.ru - тест скорости интернета"
         />
       </div>
     </Card>
