@@ -160,24 +160,46 @@ export default function PricingSection() {
             </CardContent>
           </Card>
 
-          {/* Ссылка на оборудование */}
-          <a 
-            href="/equipment"
-            className="block bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 border-2 border-blue-200 hover:border-blue-400 rounded-xl p-6 transition-all duration-300 group shadow-md hover:shadow-xl"
-          >
-            <div className="flex items-center justify-between gap-4">
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Icon name="Router" size={28} className="text-white" />
+          {/* Дополнительные ссылки */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Ссылка на тарифы */}
+            <a 
+              href="/tariffs"
+              className="block bg-gradient-to-r from-emerald-50 to-teal-50 hover:from-emerald-100 hover:to-teal-100 border-2 border-emerald-200 hover:border-emerald-400 rounded-xl p-6 transition-all duration-300 group shadow-md hover:shadow-xl"
+            >
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Icon name="Zap" size={28} className="text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-emerald-900 mb-1">Тарифные планы</h4>
+                    <p className="text-sm text-emerald-700">Выберите подходящую скорость</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-xl font-bold text-blue-900 mb-1">Примеры устанавливаемого оборудования</h4>
-                  <p className="text-sm text-blue-700">Посмотрите антенны, роутеры и другое оборудование</p>
-                </div>
+                <Icon name="ChevronRight" size={28} className="text-emerald-500 group-hover:translate-x-2 transition-transform duration-300 flex-shrink-0" />
               </div>
-              <Icon name="ChevronRight" size={28} className="text-blue-500 group-hover:translate-x-2 transition-transform duration-300 flex-shrink-0" />
-            </div>
-          </a>
+            </a>
+
+            {/* Ссылка на оборудование */}
+            <a 
+              href="/equipment"
+              className="block bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 border-2 border-blue-200 hover:border-blue-400 rounded-xl p-6 transition-all duration-300 group shadow-md hover:shadow-xl"
+            >
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Icon name="Router" size={28} className="text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-blue-900 mb-1">Оборудование</h4>
+                    <p className="text-sm text-blue-700">Антенны, роутеры и прочее</p>
+                  </div>
+                </div>
+                <Icon name="ChevronRight" size={28} className="text-blue-500 group-hover:translate-x-2 transition-transform duration-300 flex-shrink-0" />
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </section>
