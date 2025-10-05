@@ -19,6 +19,7 @@ export default function CityHeader({ onAnchorClick }: CityHeaderProps) {
               <a href="/#services" onClick={(e) => onAnchorClick(e, '#services')} className="text-muted-foreground hover:text-foreground transition-colors">Услуги</a>
               <a href="/#tariffs" onClick={(e) => onAnchorClick(e, '#tariffs')} className="text-muted-foreground hover:text-foreground transition-colors">Тарифы</a>
               <a href="/#coverage" onClick={(e) => onAnchorClick(e, '#coverage')} className="text-muted-foreground hover:text-foreground transition-colors">Покрытие</a>
+              <a href="/signal-boost" className="text-muted-foreground hover:text-foreground transition-colors">Усиление 4G/LTE</a>
               <a 
                 href="tel:+79015000078" 
                 className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
@@ -60,6 +61,13 @@ export default function CityHeader({ onAnchorClick }: CityHeaderProps) {
                   onClick={(e) => { onAnchorClick(e, '#coverage'); setIsMobileMenuOpen(false); }}
                 >
                   Покрытие
+                </a>
+                <a 
+                  href="/signal-boost" 
+                  className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Усиление 4G/LTE
                 </a>
                 <div className="pt-4 border-t border-border">
                   <div className="flex items-center space-x-2 text-success font-semibold">

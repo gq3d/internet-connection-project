@@ -19,8 +19,9 @@ export const CellularHeader = () => {
             <a href="/#services" className="text-sm font-medium hover:text-success transition-colors">Услуги</a>
             <a href="/#tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</a>
             <a href="/#pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</a>
-            <a href="/#esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</a>
             <a href="/#coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</a>
+            <a href="/signal-boost" className="text-sm font-medium hover:text-success transition-colors">Усиление 4G/LTE</a>
+            <a href="/#esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</a>
             <a href="/#about" className="text-sm font-medium hover:text-success transition-colors">О компании</a>
             <a href="/#contacts" className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
             <a 
@@ -47,8 +48,9 @@ export const CellularHeader = () => {
               <a href="/#services" className="block py-2 text-sm font-medium hover:text-success transition-colors">Услуги</a>
               <a href="/#tariffs" className="block py-2 text-sm font-medium hover:text-success transition-colors">Тарифы</a>
               <a href="/#pricing" className="block py-2 text-sm font-medium hover:text-success transition-colors">Стоимость</a>
-              <a href="/#esim" className="block py-2 text-sm font-medium hover:text-success transition-colors">eSIM</a>
               <a href="/#coverage" className="block py-2 text-sm font-medium hover:text-success transition-colors">Покрытие</a>
+              <a href="/signal-boost" className="block py-2 text-sm font-medium hover:text-success transition-colors">Усиление 4G/LTE</a>
+              <a href="/#esim" className="block py-2 text-sm font-medium hover:text-success transition-colors">eSIM</a>
               <a href="/#about" className="block py-2 text-sm font-medium hover:text-success transition-colors">О компании</a>
               <a href="/#contacts" className="block py-2 text-sm font-medium hover:text-success transition-colors">Контакты</a>
               <a 
