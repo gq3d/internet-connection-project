@@ -77,8 +77,12 @@ export const CellularHero = () => (
           Усиление сотовой связи
         </h1>
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Репитеры и усилители сигнала для стабильной мобильной связи всех операторов
+          Репитеры и усилители сигнала для стабильной мобильной связи и голосовых звонков всех операторов
         </p>
+        <div className="mb-6 inline-flex items-center gap-2 bg-orange-50 border border-orange-200 rounded-full px-6 py-3">
+          <Icon name="Info" size={20} className="text-orange-600" />
+          <span className="text-sm font-medium text-orange-900">Нужно усилить только интернет 4G/LTE? Смотрите раздел <a href="/signal-boost" className="underline hover:text-primary">Усиление 4G/LTE интернета</a></span>
+        </div>
         <div className="flex flex-wrap justify-center gap-4">
           <Badge variant="secondary" className="px-4 py-2 bg-success/10 text-success border-success/20">
             <Icon name="Signal" size={16} className="mr-2" />
