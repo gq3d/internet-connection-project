@@ -361,6 +361,34 @@ export default function ConnectionSchema() {
               </div>
             </div>
 
+            {/* Стильная ссылка на тест скорости */}
+            <div className="mt-12">
+              <a 
+                href="/coverage#speed-test"
+                className="block bg-gradient-to-r from-primary/5 via-secondary/5 to-primary/5 hover:from-primary/10 hover:via-secondary/10 hover:to-primary/10 border-2 border-primary/20 hover:border-primary/40 rounded-2xl p-8 transition-all duration-300 group shadow-lg hover:shadow-2xl"
+              >
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                  <div className="flex items-center gap-6">
+                    <div className="relative">
+                      <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl">
+                        <Icon name="Gauge" size={40} className="text-white" />
+                      </div>
+                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-success rounded-full flex items-center justify-center border-4 border-background shadow-lg animate-pulse">
+                        <Icon name="Zap" size={16} className="text-white" />
+                      </div>
+                    </div>
+                    <div className="text-center md:text-left">
+                      <h4 className="text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Проверьте скорость интернета</h4>
+                      <p className="text-muted-foreground text-base md:text-lg">Узнайте реальную скорость вашего подключения прямо сейчас</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-primary font-semibold">Перейти к тесту</span>
+                    <Icon name="ArrowRight" size={28} className="text-primary group-hover:translate-x-2 transition-transform duration-300" />
+                  </div>
+                </div>
+              </a>
+            </div>
 
           </div>
         </div>
