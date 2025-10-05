@@ -19,6 +19,8 @@ import Surveillance from "./pages/services/Surveillance";
 import CellularBooster from "./pages/services/CellularBooster";
 import Equipment from "./pages/Equipment";
 import Reviews from "./pages/Reviews";
+import Tariffs from "./pages/Tariffs";
+import Pricing from "./pages/Pricing";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +44,8 @@ const App = () => (
             <Route path="/services/cellular-booster" element={<CellularBooster />} />
             <Route path="/equipment" element={<Equipment />} />
             <Route path="/reviews" element={<Reviews />} />
+            <Route path="/tariffs" element={<Tariffs />} />
+            <Route path="/pricing" element={<Pricing />} />
             <Route path="/sitemap.xml" element={<SitemapGenerator type="sitemap" />} />
             <Route path="/robots.txt" element={<SitemapGenerator type="robots" />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
