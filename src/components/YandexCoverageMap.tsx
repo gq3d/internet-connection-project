@@ -77,38 +77,6 @@ export default function YandexCoverageMap() {
       );
       map.geoObjects.add(innerCoverageCircle);
 
-      const cities = [
-        { name: 'Москва', coords: [55.751244, 37.618423] },
-        { name: 'Тула', coords: [54.193122, 37.617348] },
-        { name: 'Владимир', coords: [56.129042, 40.406635] },
-        { name: 'Ржев', coords: [56.263333, 34.328056] },
-        { name: 'Тверь', coords: [56.858917, 35.911789] },
-        { name: 'Подольск', coords: [55.424740, 37.554622] },
-        { name: 'Красногорск', coords: [55.820682, 37.330389] },
-        { name: 'Химки', coords: [55.889050, 37.429680] },
-        { name: 'Мытищи', coords: [55.911255, 37.730578] },
-        { name: 'Люберцы', coords: [55.677544, 37.893933] },
-        { name: 'Домодедово', coords: [55.443422, 37.751665] },
-        { name: 'Сергиев Посад', coords: [56.300133, 38.137556] },
-        { name: 'Коломна', coords: [55.078744, 38.778289] },
-        { name: 'Зеленоград', coords: [55.991933, 37.211622] },
-      ];
-
-      cities.forEach((city) => {
-        const placemark = new window.ymaps.Placemark(
-          city.coords,
-          {
-            balloonContent: `<strong>${city.name}</strong><br/>Покрытие интернета доступно`,
-            hintContent: city.name
-          },
-          {
-            preset: 'islands#violetDotIcon',
-            iconColor: '#8b5cf6'
-          }
-        );
-        map.geoObjects.add(placemark);
-      });
-
       mapInstanceRef.current = map;
     });
   }, [mapLoaded]);
