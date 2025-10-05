@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import Index from "./pages/Index";
 import FAQ from "./pages/FAQ";
+import Services from "./pages/Services";
 import NotFound from "./pages/NotFound";
 import SitemapGenerator from "./components/SitemapGenerator";
 import CityPage from "./pages/CityPage";
@@ -31,6 +32,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/services" element={<Services />} />
             <Route path="/city/:citySlug" element={<CityPage />} />
             <Route path="/services/internet" element={<Internet />} />
             <Route path="/services/satellite" element={<Satellite />} />
