@@ -1,12 +1,41 @@
 import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
+import { useEffect, useRef, useState } from 'react';
 
 export default function ServicesCallToAction() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <section className="py-16 bg-gradient-to-br from-primary/5 via-secondary/5 to-success/5">
+    <section ref={sectionRef} className="py-16 bg-gradient-to-br from-primary/5 via-secondary/5 to-success/5">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl text-white relative overflow-hidden">
+          <div className={`bg-gradient-to-r from-primary to-secondary rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl text-white relative overflow-hidden transform transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}>
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
             
