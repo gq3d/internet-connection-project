@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 
 export default function Header() {
@@ -9,21 +10,21 @@ export default function Header() {
       <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-2">
               <Icon name="Satellite" size={32} className="text-primary" />
               <span className="text-2xl font-bold text-primary">NetConnect</span>
-            </div>
+            </Link>
             
             {/* Desktop Menu */}
             <nav className="hidden md:flex items-center space-x-4">
-              <a href="#services" className="text-sm font-medium hover:text-success transition-colors">Услуги</a>
-              <a href="#tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</a>
-              <a href="#pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</a>
-              <a href="#esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</a>
-              <a href="#coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</a>
-              <a href="#about" className="text-sm font-medium hover:text-success transition-colors">О компании</a>
-              <a href="/faq" className="text-sm font-medium hover:text-success transition-colors">FAQ</a>
-              <a href="#contacts" className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
+              <Link to="/services" className="text-sm font-medium hover:text-success transition-colors">Услуги</Link>
+              <a href="/#tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</a>
+              <a href="/#pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</a>
+              <a href="/#esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</a>
+              <a href="/#coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</a>
+              <a href="/#about" className="text-sm font-medium hover:text-success transition-colors">О компании</a>
+              <Link to="/faq" className="text-sm font-medium hover:text-success transition-colors">FAQ</Link>
+              <a href="/#contacts" className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
               <a 
                 href="tel:+79015000078" 
                 className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
@@ -47,57 +48,57 @@ export default function Header() {
           {isMobileMenuOpen && (
             <div className="md:hidden mt-4 py-4 border-t border-border">
               <div className="space-y-4">
-                <a 
-                  href="#services" 
+                <Link 
+                  to="/services" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Услуги
-                </a>
+                </Link>
                 <a 
-                  href="#tariffs" 
+                  href="/#tariffs" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Тарифы
                 </a>
                 <a 
-                  href="#pricing" 
+                  href="/#pricing" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Стоимость
                 </a>
                 <a 
-                  href="#esim" 
+                  href="/#esim" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   eSIM
                 </a>
                 <a 
-                  href="#coverage" 
+                  href="/#coverage" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Покрытие
                 </a>
                 <a 
-                  href="#about" 
+                  href="/#about" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   О компании
                 </a>
-                <a 
-                  href="/faq" 
+                <Link 
+                  to="/faq" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   FAQ
-                </a>
+                </Link>
                 <a 
-                  href="#contacts" 
+                  href="/#contacts" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
