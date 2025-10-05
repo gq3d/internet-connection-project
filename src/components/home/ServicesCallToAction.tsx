@@ -17,11 +17,11 @@ export default function ServicesCallToAction() {
                 </div>
               </div>
               
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight">
                 Полный спектр телекоммуникационных услуг
               </h2>
               
-              <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
                 Интернет, видеонаблюдение, Wi-Fi оборудование, охранные системы и многое другое
               </p>
               
