@@ -57,7 +57,10 @@ export default function ServicesCallToAction() {
               <div className="flex flex-col gap-6 items-center">
                 <Link 
                   to="/services"
-                  className="inline-flex items-center justify-center px-10 py-4 bg-white text-primary rounded-2xl font-bold text-lg hover:shadow-2xl transform hover:scale-105 transition-all hover:-translate-y-1"
+                  className={`inline-flex items-center justify-center px-10 py-4 bg-white text-primary rounded-2xl font-bold text-lg hover:shadow-2xl transform hover:scale-105 transition-all hover:-translate-y-1 duration-500 ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                  }`}
+                  style={{ transitionDelay: isVisible ? '200ms' : '0ms' }}
                 >
                   Все наши услуги
                   <Icon name="ArrowRight" size={20} className="ml-2" />
@@ -66,7 +69,10 @@ export default function ServicesCallToAction() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 w-full max-w-2xl px-2">
                   <Link 
                     to="/pricing"
-                    className="group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                    className={`group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-500 hover:scale-105 hover:shadow-xl ${
+                      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                    }`}
+                    style={{ transitionDelay: isVisible ? '400ms' : '0ms' }}
                   >
                     <div className="w-10 h-10 mb-2 bg-white/20 group-hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors">
                       <Icon name="DollarSign" size={20} className="group-hover:text-primary transition-colors" />
@@ -76,7 +82,10 @@ export default function ServicesCallToAction() {
                   
                   <Link 
                     to="/pricing"
-                    className="group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                    className={`group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-500 hover:scale-105 hover:shadow-xl ${
+                      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                    }`}
+                    style={{ transitionDelay: isVisible ? '500ms' : '0ms' }}
                   >
                     <div className="w-10 h-10 mb-2 bg-white/20 group-hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors">
                       <Icon name="Calculator" size={20} className="group-hover:text-primary transition-colors" />
@@ -86,7 +95,10 @@ export default function ServicesCallToAction() {
                   
                   <Link 
                     to="/coverage"
-                    className="group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                    className={`group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-500 hover:scale-105 hover:shadow-xl ${
+                      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                    }`}
+                    style={{ transitionDelay: isVisible ? '600ms' : '0ms' }}
                   >
                     <div className="w-10 h-10 mb-2 bg-white/20 group-hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors">
                       <Icon name="MapPin" size={20} className="group-hover:text-primary transition-colors" />
@@ -96,7 +108,10 @@ export default function ServicesCallToAction() {
                   
                   <Link 
                     to="/esim"
-                    className="group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                    className={`group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-500 hover:scale-105 hover:shadow-xl ${
+                      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                    }`}
+                    style={{ transitionDelay: isVisible ? '700ms' : '0ms' }}
                   >
                     <div className="w-10 h-10 mb-2 bg-white/20 group-hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors">
                       <Icon name="Smartphone" size={20} className="group-hover:text-primary transition-colors" />
@@ -107,7 +122,10 @@ export default function ServicesCallToAction() {
                 
                 <a 
                   href="#contacts"
-                  className="inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-white/25 to-white/15 backdrop-blur-md text-white border-2 border-white/60 rounded-2xl font-bold text-lg hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-1"
+                  className={`inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-white/25 to-white/15 backdrop-blur-md text-white border-2 border-white/60 rounded-2xl font-bold text-lg hover:bg-white hover:text-primary transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-1 ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                  }`}
+                  style={{ transitionDelay: isVisible ? '800ms' : '0ms' }}
                 >
                   <Icon name="Phone" size={20} className="mr-2" />
                   Связаться с нами
