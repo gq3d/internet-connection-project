@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -104,13 +105,15 @@ export default function Header() {
                 >
                   Покрытие
                 </Link>
-                <Link 
-                  to="/signal-boost" 
-                  className="block py-2 text-sm font-medium hover:text-success transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Усиление 4G/LTE
-                </Link>
+                {location.pathname !== '/signal-boost' && (
+                  <Link 
+                    to="/signal-boost" 
+                    className="block py-2 text-sm font-medium hover:text-success transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Усиление 4G/LTE
+                  </Link>
+                )}
                 <Link 
                   to="/esim" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
