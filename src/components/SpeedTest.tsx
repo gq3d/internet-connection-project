@@ -16,10 +16,10 @@ export default function SpeedTest() {
 
       <div className="flex justify-center">
         <iframe 
-          src="https://2ip.ru/speed/" 
-          height="700px" 
+          src="https://2ip.ru/speed-widget/?id=1132" 
+          height="550px" 
           width="100%" 
-          className="max-w-[900px] border-0 rounded-lg"
+          className="max-w-[550px] border-0 rounded-lg"
           title="2ip.ru - тест скорости интернета"
         />
       </div>
