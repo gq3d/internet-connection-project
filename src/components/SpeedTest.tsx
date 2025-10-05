@@ -25,8 +25,8 @@ export default function SpeedTest() {
   };
 
   const testDownloadSpeed = async (): Promise<number> => {
-    const fileSizeInBytes = 10 * 1024 * 1024;
-    const testUrl = `https://speed.cloudflare.com/__down?bytes=${fileSizeInBytes}`;
+    const fileSizeInMB = 10;
+    const testUrl = `https://functions.poehali.dev/2de5f6a5-bfff-42da-bcb5-c6634b4357c5?size=${fileSizeInMB}`;
     
     const start = performance.now();
     try {
@@ -61,22 +61,25 @@ export default function SpeedTest() {
   };
 
   const testUploadSpeed = async (): Promise<number> => {
-    const fileSize = 1 * 1024 * 1024;
+    const fileSize = 5 * 1024 * 1024;
     const data = new Blob([new ArrayBuffer(fileSize)], { type: 'application/octet-stream' });
     
     const start = performance.now();
     try {
-      await fetch('https://httpbin.org/post', {
+      const response = await fetch('https://functions.poehali.dev/2de5f6a5-bfff-42da-bcb5-c6634b4357c5', {
         method: 'POST',
         body: data,
         cache: 'no-cache'
       });
-      const end = performance.now();
       
+      if (!response.ok) throw new Error('Upload failed');
+      
+      const end = performance.now();
       const durationInSeconds = (end - start) / 1000;
       const speedInMbps = (fileSize * 8) / (durationInSeconds * 1000000);
       return Math.round(speedInMbps * 100) / 100;
-    } catch {
+    } catch (error) {
+      console.error('Upload test error:', error);
       return 0;
     }
   };

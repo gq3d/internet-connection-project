@@ -1,0 +1,22 @@
+{
+  "tests": [
+    {
+      "name": "Download test file",
+      "method": "GET",
+      "path": "/?size=1",
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Upload test",
+      "method": "POST",
+      "path": "/",
+      "body": "test data",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
