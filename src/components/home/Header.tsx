@@ -1,16 +1,32 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
-      <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
+      <header className={`border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'shadow-lg' : ''
+      }`}>
+        <div className={`container mx-auto px-4 transition-all duration-300 ${
+          isScrolled ? 'py-2' : 'py-4'
+        }`}>
           <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center space-x-2">
+            <Link to="/" className={`flex items-center space-x-2 transition-all duration-300 ${
+              isScrolled ? 'scale-90' : 'scale-100'
+            }`}>
               <Icon name="Satellite" size={32} className="text-primary" />
               <span className="text-2xl font-bold text-primary">NetConnect</span>
             </Link>
