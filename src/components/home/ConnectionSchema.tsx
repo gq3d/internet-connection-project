@@ -361,32 +361,54 @@ export default function ConnectionSchema() {
               </div>
             </div>
 
-            {/* Стильная ссылка на тест скорости */}
-            <div className={`mt-12 transition-all duration-1000 ${
+            {/* Стильные ссылки */}
+            <div className={`mt-12 grid md:grid-cols-2 gap-6 transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
               <a 
                 href="/coverage#speed-test"
-                className="block bg-gradient-to-r from-primary/5 via-secondary/5 to-primary/5 hover:from-primary/10 hover:via-secondary/10 hover:to-primary/10 border-2 border-primary/20 hover:border-primary/40 rounded-2xl p-8 transition-all duration-300 group shadow-lg hover:shadow-2xl"
+                className="block bg-gradient-to-r from-primary/5 via-secondary/5 to-primary/5 hover:from-primary/10 hover:via-secondary/10 hover:to-primary/10 border-2 border-primary/20 hover:border-primary/40 rounded-2xl p-6 transition-all duration-300 group shadow-lg hover:shadow-2xl"
               >
-                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                  <div className="flex items-center gap-6">
-                    <div className="relative">
-                      <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl">
-                        <Icon name="Gauge" size={40} className="text-white" />
-                      </div>
-                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-success rounded-full flex items-center justify-center border-4 border-background shadow-lg animate-pulse">
-                        <Icon name="Zap" size={16} className="text-white" />
-                      </div>
+                <div className="flex flex-col items-center gap-4">
+                  <div className="relative">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl">
+                      <Icon name="Gauge" size={32} className="text-white" />
                     </div>
-                    <div className="text-center md:text-left">
-                      <h4 className="text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Проверьте скорость интернета</h4>
-                      <p className="text-muted-foreground text-base md:text-lg">Узнайте реальную скорость вашего подключения прямо сейчас</p>
+                    <div className="absolute -top-2 -right-2 w-7 h-7 bg-success rounded-full flex items-center justify-center border-4 border-background shadow-lg animate-pulse">
+                      <Icon name="Zap" size={14} className="text-white" />
                     </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <span className="text-primary font-semibold">Перейти к тесту</span>
-                    <Icon name="ArrowRight" size={28} className="text-primary group-hover:translate-x-2 transition-transform duration-300" />
+                  <div className="text-center">
+                    <h4 className="text-xl font-bold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Тест скорости</h4>
+                    <p className="text-muted-foreground text-sm">Проверьте скорость интернета</p>
+                  </div>
+                  <div className="flex items-center gap-2 text-primary font-semibold">
+                    <span>Перейти к тесту</span>
+                    <Icon name="ArrowRight" size={20} className="group-hover:translate-x-2 transition-transform duration-300" />
+                  </div>
+                </div>
+              </a>
+
+              <a 
+                href="/coverage#coverage-map"
+                className="block bg-gradient-to-r from-violet-500/5 via-purple-500/5 to-violet-500/5 hover:from-violet-500/10 hover:via-purple-500/10 hover:to-violet-500/10 border-2 border-violet-500/20 hover:border-violet-500/40 rounded-2xl p-6 transition-all duration-300 group shadow-lg hover:shadow-2xl"
+              >
+                <div className="flex flex-col items-center gap-4">
+                  <div className="relative">
+                    <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl">
+                      <Icon name="Map" size={32} className="text-white" />
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-7 h-7 bg-green-500 rounded-full flex items-center justify-center border-4 border-background shadow-lg">
+                      <Icon name="MapPin" size={14} className="text-white" />
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <h4 className="text-xl font-bold mb-2 bg-gradient-to-r from-violet-500 to-purple-600 bg-clip-text text-transparent">Карта покрытия</h4>
+                    <p className="text-muted-foreground text-sm">Посмотрите зоны покрытия</p>
+                  </div>
+                  <div className="flex items-center gap-2 text-violet-500 font-semibold">
+                    <span>Открыть карту</span>
+                    <Icon name="ArrowRight" size={20} className="group-hover:translate-x-2 transition-transform duration-300" />
                   </div>
                 </div>
               </a>
