@@ -98,7 +98,7 @@ export default function YandexCoverageMap() {
   }, [mapLoaded]);
 
   return (
-    <div className="bg-card border rounded-lg p-6 md:p-8">
+    <div id="coverage-map" className="bg-card border rounded-lg p-6 md:p-8 scroll-mt-20">
       <div className="mb-6">
         <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
           <Icon name="Map" size={28} className="text-primary" />
