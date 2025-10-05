@@ -100,51 +100,67 @@ export default function YandexCoverageMap() {
   }, [mapLoaded]);
 
   const handleSearch = () => {
-    if (!mapLoaded || !window.ymaps || !mapInstanceRef.current || !searchQuery.trim()) {
+    if (!searchQuery.trim()) {
       return;
     }
 
-    searchMarkersRef.current.forEach((marker) => {
-      mapInstanceRef.current.geoObjects.remove(marker);
-    });
-    searchMarkersRef.current = [];
+    if (!mapLoaded || !window.ymaps || !mapInstanceRef.current) {
+      console.error('Карта еще не загружена');
+      return;
+    }
 
-    window.ymaps.geocode(searchQuery, {
-      results: 1
-    }).then((res: any) => {
-      const firstGeoObject = res.geoObjects.get(0);
-      if (firstGeoObject) {
-        const coords = firstGeoObject.geometry.getCoordinates();
-        const addressLine = firstGeoObject.getAddressLine();
-        
-        mapInstanceRef.current.setCenter(coords, 12, {
-          duration: 300
-        });
-        
-        const placemark = new window.ymaps.Placemark(
-          coords,
-          {
-            balloonContent: `<strong>Найдено:</strong><br/>${addressLine}`,
-            hintContent: addressLine
-          },
-          { 
-            preset: 'islands#blueCircleDotIcon',
-            iconColor: '#3b82f6'
+    if (searchMarkersRef.current && searchMarkersRef.current.length > 0) {
+      searchMarkersRef.current.forEach((marker) => {
+        if (mapInstanceRef.current) {
+          mapInstanceRef.current.geoObjects.remove(marker);
+        }
+      });
+      searchMarkersRef.current = [];
+    }
+
+    window.ymaps.ready(() => {
+      window.ymaps.geocode(searchQuery, {
+        results: 1
+      }).then((res: any) => {
+        const firstGeoObject = res.geoObjects.get(0);
+        if (firstGeoObject) {
+          const coords = firstGeoObject.geometry.getCoordinates();
+          const addressLine = firstGeoObject.getAddressLine();
+          
+          if (mapInstanceRef.current) {
+            mapInstanceRef.current.setCenter(coords, 12, {
+              duration: 300
+            });
+            
+            const placemark = new window.ymaps.Placemark(
+              coords,
+              {
+                balloonContent: `<strong>Найдено:</strong><br/>${addressLine}`,
+                hintContent: addressLine
+              },
+              { 
+                preset: 'islands#blueCircleDotIcon',
+                iconColor: '#3b82f6'
+              }
+            );
+            
+            mapInstanceRef.current.geoObjects.add(placemark);
+            
+            if (!searchMarkersRef.current) {
+              searchMarkersRef.current = [];
+            }
+            searchMarkersRef.current.push(placemark);
+            
+            setTimeout(() => {
+              if (placemark && placemark.balloon) {
+                placemark.balloon.open();
+              }
+            }, 400);
           }
-        );
-        
-        mapInstanceRef.current.geoObjects.add(placemark);
-        searchMarkersRef.current.push(placemark);
-        
-        setTimeout(() => {
-          placemark.balloon.open();
-        }, 400);
-      } else {
-        alert('Адрес не найден. Попробуйте уточнить запрос.');
-      }
-    }).catch((error: any) => {
-      console.error('Ошибка поиска:', error);
-      alert('Ошибка поиска. Попробуйте еще раз.');
+        }
+      }).catch((error: any) => {
+        console.error('Ошибка геокодирования:', error);
+      });
     });
   };
 
