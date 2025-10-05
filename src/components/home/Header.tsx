@@ -20,8 +20,8 @@ export default function Header() {
               <Link to="/services" className="text-sm font-medium hover:text-success transition-colors">Услуги</Link>
               <Link to="/tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</Link>
               <Link to="/pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</Link>
+              <Link to="/coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</Link>
               <a href="/#esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</a>
-              <a href="/#coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</a>
               <a href="/#about" className="text-sm font-medium hover:text-success transition-colors">О компании</a>
               <Link to="/faq" className="text-sm font-medium hover:text-success transition-colors">FAQ</Link>
               <a href="/#contacts" className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
@@ -69,19 +69,19 @@ export default function Header() {
                 >
                   Стоимость
                 </Link>
+                <Link 
+                  to="/coverage" 
+                  className="block py-2 text-sm font-medium hover:text-success transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Покрытие
+                </Link>
                 <a 
                   href="/#esim" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   eSIM
-                </a>
-                <a 
-                  href="/#coverage" 
-                  className="block py-2 text-sm font-medium hover:text-success transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Покрытие
                 </a>
                 <a 
                   href="/#about" 
