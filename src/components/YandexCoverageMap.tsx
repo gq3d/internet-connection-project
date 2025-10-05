@@ -19,7 +19,7 @@ export default function YandexCoverageMap() {
     }
 
     const script = document.createElement('script');
-    script.src = 'https://api-maps.yandex.ru/2.1/?apikey=eadb1145-91ad-4f73-97f5-f1f000aa7fae&lang=ru_RU';
+    script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
     script.async = true;
     script.onload = () => {
       window.ymaps.ready(() => {
@@ -42,7 +42,7 @@ export default function YandexCoverageMap() {
       const map = new window.ymaps.Map(mapRef.current, {
         center: [55.751244, 37.618423],
         zoom: 7,
-        controls: ['zoomControl', 'fullscreenControl', 'geolocationControl', 'searchControl']
+        controls: ['zoomControl', 'fullscreenControl', 'geolocationControl']
       });
 
       const coverageCircle = new window.ymaps.Circle(
@@ -145,7 +145,7 @@ export default function YandexCoverageMap() {
         <div className="bg-primary/10 rounded-lg p-4 border border-primary/20">
           <Icon name="Lightbulb" size={20} className="text-primary mb-2" />
           <p className="text-sm text-muted-foreground">
-            <strong className="text-foreground">Совет:</strong> Используйте поиск на карте (верхняя панель), чтобы найти ваш адрес. Фиолетовая зона — доступно подключение.
+            <strong className="text-foreground">Совет:</strong> Используйте масштабирование и перемещение карты для навигации. Фиолетовая зона — доступно подключение.
           </p>
         </div>
       </div>
