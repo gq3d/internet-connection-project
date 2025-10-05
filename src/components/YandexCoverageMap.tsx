@@ -175,15 +175,15 @@ export default function YandexCoverageMap() {
           </div>
           
           <div className="flex flex-col sm:flex-row items-center gap-4 p-4 bg-card/80 backdrop-blur-sm rounded-xl border border-primary/20">
-            <div className="flex items-center gap-3 flex-1">
-              <div className="p-2 bg-primary/10 rounded-lg">
+            <div className="flex items-center gap-3 flex-1 w-full sm:w-auto">
+              <div className="p-2 bg-primary/10 rounded-lg flex-shrink-0">
                 <Icon name="Phone" size={20} className="text-primary" />
               </div>
-              <div>
+              <div className="flex-1 min-w-0">
                 <p className="text-xs text-muted-foreground mb-0.5">Узнайте точное покрытие</p>
                 <a 
                   href="tel:+79015000078" 
-                  className="text-xl font-bold text-primary hover:text-primary/80 transition-colors"
+                  className="text-lg sm:text-xl font-bold text-primary hover:text-primary/80 transition-colors whitespace-nowrap"
                 >
                   +7 (901) 500-00-78
                 </a>
