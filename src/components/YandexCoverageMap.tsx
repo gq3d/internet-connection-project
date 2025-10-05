@@ -45,7 +45,7 @@ export default function YandexCoverageMap() {
         controls: ['zoomControl', 'fullscreenControl', 'geolocationControl']
       });
 
-      const coverageCircle = new window.ymaps.Circle(
+      const outerCoverageCircle = new window.ymaps.Circle(
         [[55.751244, 37.618423], 180000],
         {
           hintContent: 'Зона покрытия NetConnect',
@@ -59,7 +59,23 @@ export default function YandexCoverageMap() {
           strokeWidth: 3
         }
       );
-      map.geoObjects.add(coverageCircle);
+      map.geoObjects.add(outerCoverageCircle);
+
+      const innerCoverageCircle = new window.ymaps.Circle(
+        [[55.751244, 37.618423], 34000],
+        {
+          hintContent: 'Зона приоритетного покрытия',
+          balloonContent: '<strong>Зона приоритетного покрытия</strong><br/>Центральная зона с максимальной скоростью'
+        },
+        {
+          fillColor: '#10b981',
+          fillOpacity: 0.35,
+          strokeColor: '#10b981',
+          strokeOpacity: 0.7,
+          strokeWidth: 3
+        }
+      );
+      map.geoObjects.add(innerCoverageCircle);
 
       const cities = [
         { name: 'Москва', coords: [55.751244, 37.618423] },
@@ -132,8 +148,12 @@ export default function YandexCoverageMap() {
           </h4>
           <div className="space-y-2 text-sm">
             <div className="flex items-center gap-3">
+              <div className="w-6 h-6 rounded-full bg-emerald-500/35 border-2 border-emerald-500"></div>
+              <span>Зона приоритетного покрытия</span>
+            </div>
+            <div className="flex items-center gap-3">
               <div className="w-6 h-6 rounded-full bg-violet-500/25 border-2 border-violet-500"></div>
-              <span>Зона покрытия интернета</span>
+              <span>Расширенная зона покрытия</span>
             </div>
             <div className="flex items-center gap-3">
               <Icon name="MapPin" size={20} className="text-violet-500" />
