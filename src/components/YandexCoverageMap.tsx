@@ -11,6 +11,8 @@ export default function YandexCoverageMap() {
   const mapRef = useRef<HTMLDivElement>(null);
   const [mapLoaded, setMapLoaded] = useState(false);
   const [selectedOperator, setSelectedOperator] = useState<'all' | 'mts' | 'megafon' | 'beeline' | 'tele2'>('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const mapInstanceRef = useRef<any>(null);
 
   useEffect(() => {
     if (typeof window.ymaps !== 'undefined') {
@@ -57,6 +59,21 @@ export default function YandexCoverageMap() {
         [[54.4, 36.8], [54.4, 37.8], [54.1, 37.8], [54.1, 36.8]],
       ];
 
+      const extendedCoveragePolygons = [
+        [[55.9, 35.8], [55.9, 36.5], [55.5, 36.5], [55.5, 35.8]],
+        [[56.3, 35.5], [56.3, 36.5], [55.9, 36.5], [55.9, 35.5]],
+        [[55.5, 35.5], [55.5, 36.8], [55.1, 36.8], [55.1, 35.5]],
+        [[55.8, 38.3], [55.8, 39.2], [55.4, 39.2], [55.4, 38.3]],
+        [[55.4, 38.8], [55.4, 39.5], [55.0, 39.5], [55.0, 38.8]],
+        [[56.6, 37.5], [56.6, 38.5], [56.2, 38.5], [56.2, 37.5]],
+        [[56.8, 38.0], [56.8, 38.8], [56.4, 38.8], [56.4, 38.0]],
+        [[54.3, 37.2], [54.3, 38.2], [53.9, 38.2], [53.9, 37.2]],
+        [[54.7, 36.5], [54.7, 37.5], [54.3, 37.5], [54.3, 36.5]],
+        [[56.5, 36.0], [56.5, 37.0], [56.1, 37.0], [56.1, 36.0]],
+        [[55.1, 39.0], [55.1, 39.8], [54.7, 39.8], [54.7, 39.0]],
+        [[54.0, 36.5], [54.0, 37.5], [53.6, 37.5], [53.6, 36.5]],
+      ];
+
       const gapPolygons = [
         [[55.7, 36.9], [55.7, 37.0], [55.65, 37.0], [55.65, 36.9]],
         [[54.9, 38.0], [54.9, 38.1], [54.85, 38.1], [54.85, 38.0]],
@@ -85,6 +102,23 @@ export default function YandexCoverageMap() {
             fillOpacity: 0.35,
             strokeColor: currentColor,
             strokeOpacity: 0.6,
+            strokeWidth: 2
+          }
+        );
+        map.geoObjects.add(polygon);
+      });
+
+      extendedCoveragePolygons.forEach((coords) => {
+        const polygon = new window.ymaps.Polygon(
+          [coords],
+          {
+            hintContent: 'Расширенная зона покрытия 3G/4G'
+          },
+          {
+            fillColor: '#8b5cf6',
+            fillOpacity: 0.3,
+            strokeColor: '#8b5cf6',
+            strokeOpacity: 0.5,
             strokeWidth: 2
           }
         );
@@ -124,32 +158,39 @@ export default function YandexCoverageMap() {
       map.geoObjects.add(moscowCircle);
 
       const cities = [
-        { name: 'Москва', coords: [55.751244, 37.618423] },
-        { name: 'Подольск', coords: [55.424740, 37.554622] },
-        { name: 'Красногорск', coords: [55.820682, 37.330389] },
-        { name: 'Химки', coords: [55.889050, 37.429680] },
-        { name: 'Мытищи', coords: [55.911255, 37.730578] },
-        { name: 'Люберцы', coords: [55.677544, 37.893933] },
-        { name: 'Домодедово', coords: [55.443422, 37.751665] },
-        { name: 'Сергиев Посад', coords: [56.300133, 38.137556] },
-        { name: 'Коломна', coords: [55.078744, 38.778289] },
-        { name: 'Зеленоград', coords: [55.991933, 37.211622] },
+        { name: 'Москва', coords: [55.751244, 37.618423], extended: false },
+        { name: 'Подольск', coords: [55.424740, 37.554622], extended: false },
+        { name: 'Красногорск', coords: [55.820682, 37.330389], extended: false },
+        { name: 'Химки', coords: [55.889050, 37.429680], extended: false },
+        { name: 'Мытищи', coords: [55.911255, 37.730578], extended: false },
+        { name: 'Люберцы', coords: [55.677544, 37.893933], extended: false },
+        { name: 'Домодедово', coords: [55.443422, 37.751665], extended: false },
+        { name: 'Сергиев Посад', coords: [56.300133, 38.137556], extended: true },
+        { name: 'Коломна', coords: [55.078744, 38.778289], extended: false },
+        { name: 'Зеленоград', coords: [55.991933, 37.211622], extended: false },
+        { name: 'Руза', coords: [55.699444, 36.196111], extended: true },
+        { name: 'Волоколамск', coords: [56.033333, 35.95], extended: true },
+        { name: 'Можайск', coords: [55.502778, 36.025556], extended: true },
+        { name: 'Воскресенск', coords: [55.317778, 38.656389], extended: true },
+        { name: 'Орехово-Зуево', coords: [55.807778, 38.961667], extended: true },
       ];
 
       cities.forEach((city) => {
         const placemark = new window.ymaps.Placemark(
           city.coords,
           {
-            balloonContent: `<strong>${city.name}</strong><br/>Покрытие 4G/LTE доступно`,
+            balloonContent: `<strong>${city.name}</strong><br/>Покрытие ${city.extended ? '3G/4G' : '4G/LTE'} доступно`,
             hintContent: city.name
           },
           {
-            preset: 'islands#greenDotIcon',
-            iconColor: currentColor
+            preset: city.extended ? 'islands#violetDotIcon' : 'islands#greenDotIcon',
+            iconColor: city.extended ? '#8b5cf6' : currentColor
           }
         );
         map.geoObjects.add(placemark);
       });
+
+      mapInstanceRef.current = map;
     });
   }, [mapLoaded, selectedOperator]);
 
@@ -171,6 +212,62 @@ export default function YandexCoverageMap() {
         <p className="text-muted-foreground mb-4">
           Зона покрытия 4G/LTE — 98% территории Москвы и Московской области
         </p>
+
+        <div className="mb-4">
+          <div className="flex gap-2">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Введите адрес для поиска..."
+              className="flex-1 px-4 py-2 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && mapInstanceRef.current && searchQuery) {
+                  window.ymaps.geocode(searchQuery).then((res: any) => {
+                    const firstGeoObject = res.geoObjects.get(0);
+                    if (firstGeoObject) {
+                      const coords = firstGeoObject.geometry.getCoordinates();
+                      mapInstanceRef.current.setCenter(coords, 14, { duration: 300 });
+                      const placemark = new window.ymaps.Placemark(
+                        coords,
+                        {
+                          balloonContent: `<strong>Найдено:</strong><br/>${firstGeoObject.getAddressLine()}`
+                        },
+                        { preset: 'islands#blueDotIcon' }
+                      );
+                      mapInstanceRef.current.geoObjects.add(placemark);
+                    }
+                  });
+                }
+              }}
+            />
+            <button
+              onClick={() => {
+                if (mapInstanceRef.current && searchQuery) {
+                  window.ymaps.geocode(searchQuery).then((res: any) => {
+                    const firstGeoObject = res.geoObjects.get(0);
+                    if (firstGeoObject) {
+                      const coords = firstGeoObject.geometry.getCoordinates();
+                      mapInstanceRef.current.setCenter(coords, 14, { duration: 300 });
+                      const placemark = new window.ymaps.Placemark(
+                        coords,
+                        {
+                          balloonContent: `<strong>Найдено:</strong><br/>${firstGeoObject.getAddressLine()}`
+                        },
+                        { preset: 'islands#blueDotIcon' }
+                      );
+                      mapInstanceRef.current.geoObjects.add(placemark);
+                    }
+                  });
+                }
+              }}
+              className="px-6 py-2 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center gap-2"
+            >
+              <Icon name="Search" size={18} />
+              Найти
+            </button>
+          </div>
+        </div>
 
         <div className="flex flex-wrap gap-2 mb-6">
           {operators.map((op) => (
@@ -224,12 +321,16 @@ export default function YandexCoverageMap() {
               <span>Зона покрытия 4G/LTE (98%)</span>
             </div>
             <div className="flex items-center gap-3">
+              <div className="w-6 h-6 rounded bg-violet-500/30 border-2 border-violet-500"></div>
+              <span>Расширенная зона 3G/4G</span>
+            </div>
+            <div className="flex items-center gap-3">
               <div className="w-6 h-6 rounded bg-red-500/20 border border-red-500"></div>
               <span>Слабое покрытие (2%)</span>
             </div>
             <div className="flex items-center gap-3">
               <Icon name="MapPin" size={20} className="text-green-500" />
-              <span>Основные города с покрытием</span>
+              <span>Основные города</span>
             </div>
           </div>
         </div>
@@ -237,7 +338,7 @@ export default function YandexCoverageMap() {
         <div className="bg-primary/10 rounded-lg p-4 border border-primary/20">
           <Icon name="Lightbulb" size={20} className="text-primary mb-2" />
           <p className="text-sm text-muted-foreground">
-            <strong className="text-foreground">Совет:</strong> Увеличьте масштаб карты, чтобы увидеть детали покрытия в вашем районе. Зелёные зоны — стабильное 4G покрытие, красные — возможны слабые сигналы.
+            <strong className="text-foreground">Совет:</strong> Используйте поиск по адресу выше или увеличьте масштаб карты. Зелёные зоны — стабильное 4G покрытие, фиолетовые — расширенная зона 3G/4G, красные — слабый сигнал.
           </p>
         </div>
       </div>
