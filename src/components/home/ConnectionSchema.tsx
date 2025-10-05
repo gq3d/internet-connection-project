@@ -362,7 +362,9 @@ export default function ConnectionSchema() {
             </div>
 
             {/* Стильная ссылка на тест скорости */}
-            <div className="mt-12">
+            <div className={`mt-12 transition-all duration-1000 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
               <a 
                 href="/coverage#speed-test"
                 className="block bg-gradient-to-r from-primary/5 via-secondary/5 to-primary/5 hover:from-primary/10 hover:via-secondary/10 hover:to-primary/10 border-2 border-primary/20 hover:border-primary/40 rounded-2xl p-8 transition-all duration-300 group shadow-lg hover:shadow-2xl"
