@@ -12,9 +12,15 @@ export default function SignalBoost() {
   return (
     <>
       <Helmet>
-        <title>Усиление 4G/LTE сигнала для дачи и загородного дома | NetConnect</title>
-        <meta name="description" content="Решения для усиления 4G/LTE сигнала в Московской области. Антенны, репитеры, роутеры. Стабильный интернет даже при слабом сигнале. ☎️ +7 (901) 500-00-78" />
-        <meta name="keywords" content="усилитель 4g сигнала, усилитель 3g, антенна для интернета, репитер 4g, усиление сигнала на даче, усилитель интернета для дачи" />
+        <title>Усиление 4G/LTE сигнала в МО - от 16800₽ | Антенны, репитеры, роутеры</title>
+        <meta name="description" content="Профессиональное усиление 4G/LTE сигнала для дачи и загородного дома в Московской области. Антенны от 16800₽, репитеры от 18000₽, уличные роутеры от 45000₽. Установка от 8000₽. Бесплатная консультация ☎ +7 (901) 500-00-78" />
+        <meta name="keywords" content="усилитель 4g сигнала московская область, репитер 4g lte, антенна для интернета на даче, усиление сигнала загородный дом, уличный 4g роутер, усилитель lte для дачи, купить репитер 4g мо" />
+        <link rel="canonical" href="https://mosoblconnect.ru/signal-boost" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Усиление 4G/LTE сигнала для дачи и дома - от 16800₽" />
+        <meta property="og:description" content="Решения для усиления 4G/LTE сигнала: антенны, репитеры, уличные роутеры. Стабильный интернет даже при слабом сигнале. Установка в МО" />
+        <meta property="og:url" content="https://mosoblconnect.ru/signal-boost" />
+        <meta property="og:image" content="https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg" />
       </Helmet>
 
       <div className="min-h-screen bg-background">
