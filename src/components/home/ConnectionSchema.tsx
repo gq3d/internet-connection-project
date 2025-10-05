@@ -1,5 +1,4 @@
 import Icon from '@/components/ui/icon';
-import SpeedTest from '@/components/SpeedTest';
 import { useEffect, useRef, useState } from 'react';
 
 export default function ConnectionSchema() {
@@ -362,10 +361,7 @@ export default function ConnectionSchema() {
               </div>
             </div>
 
-            {/* Speed Test */}
-            <div className="mt-12">
-              <SpeedTest />
-            </div>
+
           </div>
         </div>
       </div>

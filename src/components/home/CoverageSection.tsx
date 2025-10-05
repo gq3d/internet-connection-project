@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Icon from '@/components/ui/icon';
 import { generateCitySlug } from '@/utils/citySlug';
+import SpeedTest from '@/components/SpeedTest';
 
 const cities = [
   'Москва', 'Подольск', 'Красногорск', 'Химки', 'Мытищи', 'Люберцы',
@@ -103,6 +104,10 @@ export default function CoverageSection() {
                 </p>
               </div>
             </div>
+          </div>
+
+          <div className="mb-8">
+            <SpeedTest />
           </div>
 
           <div className="bg-primary/10 border-2 border-primary/20 rounded-lg p-8">
