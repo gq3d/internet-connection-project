@@ -106,7 +106,7 @@ export default function TariffsSection() {
               {/* Декоративный градиент */}
               <div className={`absolute top-0 left-0 right-0 h-2 bg-gradient-to-r ${tariff.gradient}`}></div>
               
-              <CardHeader className={`text-center pt-8 pb-6 bg-gradient-to-br ${tariff.bgGradient}`}>
+              <CardHeader className="text-center pt-8 pb-6 bg-white">
                 <div className={`w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${tariff.gradient} flex items-center justify-center shadow-lg`}>
                   <Icon name={tariff.icon} size={40} className="text-white" />
                 </div>
