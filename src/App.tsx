@@ -22,6 +22,7 @@ import Reviews from "./pages/Reviews";
 import Tariffs from "./pages/Tariffs";
 import Pricing from "./pages/Pricing";
 import Coverage from "./pages/Coverage";
+import Esim from "./pages/Esim";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,7 @@ const App = () => (
             <Route path="/tariffs" element={<Tariffs />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/coverage" element={<Coverage />} />
+            <Route path="/esim" element={<Esim />} />
             <Route path="/sitemap.xml" element={<SitemapGenerator type="sitemap" />} />
             <Route path="/robots.txt" element={<SitemapGenerator type="robots" />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

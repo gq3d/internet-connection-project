@@ -21,7 +21,7 @@ export default function Header() {
               <Link to="/tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</Link>
               <Link to="/pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</Link>
               <Link to="/coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</Link>
-              <a href="/#esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</a>
+              <Link to="/esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</Link>
               <a href="/#about" className="text-sm font-medium hover:text-success transition-colors">О компании</a>
               <Link to="/faq" className="text-sm font-medium hover:text-success transition-colors">FAQ</Link>
               <a href="/#contacts" className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
@@ -76,13 +76,13 @@ export default function Header() {
                 >
                   Покрытие
                 </Link>
-                <a 
-                  href="/#esim" 
+                <Link 
+                  to="/esim" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   eSIM
-                </a>
+                </Link>
                 <a 
                   href="/#about" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
