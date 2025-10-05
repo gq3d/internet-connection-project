@@ -26,14 +26,22 @@ export default function SpeedTest() {
       }
     }, updateInterval);
 
-    const imageUrl = `https://picsum.photos/50000/50000?random=${Date.now()}`;
-    const startTime = performance.now();
-    
     try {
+      const fileSizeBytes = 25 * 1024 * 1024;
+      const imageUrl = `https://via.placeholder.com/5000x5000.jpg?random=${Date.now()}`;
+      
+      const startTime = performance.now();
       const response = await fetch(imageUrl, {
         method: 'GET',
         cache: 'no-cache',
+        headers: {
+          'Cache-Control': 'no-cache',
+        }
       });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
       
       const blob = await response.blob();
       const endTime = performance.now();
@@ -43,7 +51,7 @@ export default function SpeedTest() {
       const speedMbps = (fileSizeInMB * 8) / durationInSeconds;
 
       const pingStart = performance.now();
-      await fetch('https://www.google.com/favicon.ico', { method: 'HEAD', cache: 'no-cache' });
+      await fetch(imageUrl, { method: 'HEAD', cache: 'no-cache' });
       const pingTime = performance.now() - pingStart;
 
       setResult({
