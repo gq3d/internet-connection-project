@@ -25,19 +25,37 @@ export default function SpeedTest() {
   };
 
   const testDownloadSpeed = async (): Promise<number> => {
-    const fileSize = 3 * 1024 * 1024;
-    const testUrl = `https://via.placeholder.com/2000x1500.jpg?timestamp=${Date.now()}`;
+    const fileSizeInBytes = 10 * 1024 * 1024;
+    const testUrl = `https://speed.cloudflare.com/__down?bytes=${fileSizeInBytes}`;
     
     const start = performance.now();
     try {
-      const response = await fetch(testUrl, { cache: 'no-cache' });
-      await response.blob();
-      const end = performance.now();
+      const response = await fetch(testUrl, { 
+        cache: 'no-cache',
+        headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache'
+        }
+      });
       
+      if (!response.ok) throw new Error('Download failed');
+      
+      const reader = response.body?.getReader();
+      if (!reader) throw new Error('No reader');
+      
+      let receivedBytes = 0;
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        receivedBytes += value.length;
+      }
+      
+      const end = performance.now();
       const durationInSeconds = (end - start) / 1000;
-      const speedInMbps = (fileSize * 8) / (durationInSeconds * 1000000);
+      const speedInMbps = (receivedBytes * 8) / (durationInSeconds * 1000000);
       return Math.round(speedInMbps * 100) / 100;
-    } catch {
+    } catch (error) {
+      console.error('Download test error:', error);
       return 0;
     }
   };
