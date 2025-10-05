@@ -23,6 +23,68 @@ export default function Pricing() {
         <meta property="og:description" content="Пакет подключения: оборудование + установка + настройка. Прозрачные цены на все услуги" />
         <meta property="og:url" content="https://mosoblconnect.ru/pricing" />
         <meta property="og:image" content="https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Подключение беспроводного интернета NetConnect",
+            "description": "Полный пакет подключения: Wi-Fi роутер, 4G LTE антенна, установка и настройка под ключ",
+            "brand": {
+              "@type": "Organization",
+              "name": "NetConnect",
+              "telephone": "+7-901-500-00-78",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Московская область",
+                "addressCountry": "RU"
+              }
+            },
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "RUB",
+              "lowPrice": "16800",
+              "highPrice": "29800",
+              "offerCount": "3",
+              "availability": "https://schema.org/InStock",
+              "priceValidUntil": "2025-12-31",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "name": "Базовый пакет",
+                  "price": "16800",
+                  "priceCurrency": "RUB",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Базовый пакет подключения",
+                    "description": "Wi-Fi роутер + 4G LTE антенна + установка"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Расширенный пакет",
+                  "price": "22800",
+                  "priceCurrency": "RUB",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Расширенный пакет подключения",
+                    "description": "Wi-Fi роутер + Усиленная LTE антенна + установка"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Премиум пакет",
+                  "price": "29800",
+                  "priceCurrency": "RUB",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Премиум пакет подключения",
+                    "description": "Профессиональное оборудование + установка на высоте"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
       </Helmet>
       
       <div className="min-h-screen bg-background">

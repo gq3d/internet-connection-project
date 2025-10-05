@@ -22,6 +22,94 @@ export default function Tariffs() {
         <meta property="og:description" content="Безлимитный интернет для дома и дачи. 3 тарифа: 100, 150, 240 Мбит/с. Спутниковый интернет для удалённых объектов" />
         <meta property="og:url" content="https://mosoblconnect.ru/tariffs" />
         <meta property="og:image" content="https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Тарифы на интернет NetConnect",
+            "description": "Тарифные планы беспроводного интернета для Московской области",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "position": 1,
+                "name": "Старт",
+                "description": "Базовый тариф для комфортного интернета",
+                "price": "1490",
+                "priceCurrency": "RUB",
+                "priceValidUntil": "2025-12-31",
+                "availability": "https://schema.org/InStock",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Интернет Старт 100 Мбит/с",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "NetConnect",
+                    "telephone": "+7-901-500-00-78",
+                    "areaServed": "Московская область"
+                  },
+                  "category": "Интернет-провайдер",
+                  "offers": {
+                    "@type": "Offer",
+                    "price": "1490",
+                    "priceCurrency": "RUB"
+                  }
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 2,
+                "name": "Продвинутый",
+                "description": "Оптимальный тариф для семьи",
+                "price": "1990",
+                "priceCurrency": "RUB",
+                "priceValidUntil": "2025-12-31",
+                "availability": "https://schema.org/InStock",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Интернет Продвинутый 150 Мбит/с",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "NetConnect",
+                    "telephone": "+7-901-500-00-78",
+                    "areaServed": "Московская область"
+                  },
+                  "category": "Интернет-провайдер",
+                  "offers": {
+                    "@type": "Offer",
+                    "price": "1990",
+                    "priceCurrency": "RUB"
+                  }
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 3,
+                "name": "Премиум",
+                "description": "Максимальная скорость для требовательных пользователей",
+                "price": "2590",
+                "priceCurrency": "RUB",
+                "priceValidUntil": "2025-12-31",
+                "availability": "https://schema.org/InStock",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Интернет Премиум 240 Мбит/с",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "NetConnect",
+                    "telephone": "+7-901-500-00-78",
+                    "areaServed": "Московская область"
+                  },
+                  "category": "Интернет-провайдер",
+                  "offers": {
+                    "@type": "Offer",
+                    "price": "2590",
+                    "priceCurrency": "RUB"
+                  }
+                }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
       
       <div className="min-h-screen bg-background">
