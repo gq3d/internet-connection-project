@@ -1,6 +1,3 @@
-# Netlify/Cloudflare Pages redirects
-# Все существующие файлы возвращаются как есть
-/*    /index.html   200
-
-# Но для несуществующих путей возвращаем 404
-# (это правило обрабатывается через React Router с кодом 404)
+# Cloudflare Pages / Netlify redirects
+# Несуществующие страницы возвращают 404
+/*    /404.html   404

@@ -6,10 +6,12 @@
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   
-  # Перенаправляем все остальные запросы на index.html
-  # React Router обработает маршрутизацию и вернёт 404 если нужно
-  RewriteRule . /index.html [L]
+  # Для несуществующих страниц возвращаем 404.html с кодом 404
+  RewriteRule . /404.html [L,R=404]
 </IfModule>
+
+# Настройка ErrorDocument для возврата правильного кода 404
+ErrorDocument 404 /404.html
 
 # Кэширование статических ресурсов
 <IfModule mod_expires.c>

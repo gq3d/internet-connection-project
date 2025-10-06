@@ -1,8 +1,16 @@
+# SPA режим - существующие файлы отдаём как есть
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
   force = false
+  conditions = {file_exists = true}
+
+# Несуществующие страницы - возвращаем 404
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
 
 [[headers]]
   for = "/*"
