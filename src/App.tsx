@@ -9,7 +9,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import FAQ from "./pages/FAQ";
 import Services from "./pages/Services";
-import NotFound from "./pages/NotFound";
+import NotFoundPage from "./pages/NotFoundPage";
 import SitemapGenerator from "./components/SitemapGenerator";
 import CityPage from "./pages/CityPage";
 import Internet from "./pages/services/Internet";
@@ -57,7 +57,7 @@ const App = () => (
             <Route path="/sitemap.xml" element={<SitemapGenerator type="sitemap" />} />
             <Route path="/robots.txt" element={<SitemapGenerator type="robots" />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
