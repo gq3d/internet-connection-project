@@ -46,47 +46,31 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "TelecommunicationsProvider",
+      "@type": "LocalBusiness",
+      "@id": "https://mosoblconnect.ru/#organization",
       "name": "NetConnect",
       "description": "Провайдер беспроводного и спутникового интернета в Московской области",
       "url": "https://mosoblconnect.ru/",
-      "logo": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
+        "width": 4800,
+        "height": 2520
+      },
+      "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
       "areaServed": {
         "@type": "State",
         "name": "Московская область",
         "addressCountry": "RU"
       },
-      "serviceType": [
-        "Беспроводной интернет",
-        "Спутниковый интернет",
-        "Wi-Fi оборудование",
-        "Видеонаблюдение",
-        "Системы охраны",
-        "Усиление сотовой связи"
-      ],
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "Тариф Старт",
-          "price": "1490",
-          "priceCurrency": "RUB",
-          "description": "Интернет 100 Мбит/с"
-        },
-        {
-          "@type": "Offer",
-          "name": "Тариф Продвинутый",
-          "price": "1990",
-          "priceCurrency": "RUB",
-          "description": "Интернет 150 Мбит/с"
-        },
-        {
-          "@type": "Offer",
-          "name": "Тариф Премиум",
-          "price": "2590",
-          "priceCurrency": "RUB",
-          "description": "Интернет 240 Мбит/с"
-        }
-      ],
+      "telephone": "+79015000078",
+      "priceRange": "1490-2590 ₽",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
       "contactPoint": [
         {
           "@type": "ContactPoint",
@@ -94,8 +78,7 @@
           "contactType": "customer service",
           "availableLanguage": "ru",
           "areaServed": "RU",
-          "hoursAvailable": "Mo-Su 00:00-23:59",
-          "contactOption": ["TollFree", "HearingImpairedSupported"]
+          "contactOption": "TollFree"
         },
         {
           "@type": "ContactPoint",
@@ -103,8 +86,7 @@
           "contactType": "sales",
           "availableLanguage": "ru",
           "areaServed": "RU",
-          "hoursAvailable": "Mo-Su 00:00-23:59",
-          "contactOption": ["TollFree"]
+          "contactOption": "TollFree"
         }
       ],
       "aggregateRating": {
@@ -114,11 +96,6 @@
         "bestRating": "5",
         "worstRating": "1"
       },
-      "priceRange": "1490-2590 RUB",
-      "openingHours": "Mo-Su 00:00-23:59",
-      "sameAs": [
-        "https://mosoblconnect.ru"
-      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Интернет услуги",
@@ -127,22 +104,31 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Беспроводной интернет 100 Мбит/с"
-            }
+              "name": "Беспроводной интернет 100 Мбит/с",
+              "description": "Тариф Старт"
+            },
+            "price": "1490",
+            "priceCurrency": "RUB"
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Беспроводной интернет 150 Мбит/с"
-            }
+              "name": "Беспроводной интернет 150 Мбит/с",
+              "description": "Тариф Продвинутый"
+            },
+            "price": "1990",
+            "priceCurrency": "RUB"
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Беспроводной интернет 240 Мбит/с"
-            }
+              "name": "Беспроводной интернет 240 Мбит/с",
+              "description": "Тариф Премиум"
+            },
+            "price": "2590",
+            "priceCurrency": "RUB"
           }
         ]
       }
@@ -228,11 +214,18 @@
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
+      "@id": "https://mosoblconnect.ru/#website",
       "url": "https://mosoblconnect.ru/",
       "name": "NetConnect",
+      "publisher": {
+        "@id": "https://mosoblconnect.ru/#organization"
+      },
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://mosoblconnect.ru/?s={search_term_string}",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://mosoblconnect.ru/?s={search_term_string}"
+        },
         "query-input": "required name=search_term_string"
       }
     }
@@ -300,121 +293,139 @@
       "description": "Полный спектр услуг интернет-провайдера в Московской области",
       "itemListElement": [
         {
-          "@type": "Service",
+          "@type": "ListItem",
           "position": 1,
-          "name": "Беспроводной интернет",
-          "description": "Высокоскоростной беспроводной интернет до 240 Мбит/с в Московской области. Подключение за 1-3 дня без проводов и кабелей.",
-          "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
-          "url": "https://mosoblconnect.ru/services/internet",
-          "provider": {
-            "@type": "Organization",
-            "name": "NetConnect"
-          },
-          "areaServed": "Московская область",
-          "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "RUB",
-            "lowPrice": "1490",
-            "highPrice": "2590",
-            "offerCount": "3"
+          "item": {
+            "@type": "Service",
+            "name": "Беспроводной интернет",
+            "description": "Высокоскоростной беспроводной интернет до 240 Мбит/с в Московской области. Подключение за 1-3 дня без проводов и кабелей.",
+            "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
+            "url": "https://mosoblconnect.ru/services/internet",
+            "provider": {
+              "@type": "Organization",
+              "name": "NetConnect"
+            },
+            "areaServed": "Московская область",
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "RUB",
+              "lowPrice": "1490",
+              "highPrice": "2590",
+              "offerCount": "3"
+            }
           }
         },
         {
-          "@type": "Service",
+          "@type": "ListItem",
           "position": 2,
-          "name": "Спутниковый интернет",
-          "description": "Спутниковый интернет для отдаленных районов. Покрытие 99%, скорость до 100 Мбит/с. Работает в любых условиях.",
-          "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
-          "url": "https://mosoblconnect.ru/services/satellite",
-          "provider": {
-            "@type": "Organization",
-            "name": "NetConnect"
-          },
-          "areaServed": "Московская область",
-          "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "RUB",
-            "lowPrice": "1890",
-            "highPrice": "4290",
-            "offerCount": "3"
+          "item": {
+            "@type": "Service",
+            "name": "Спутниковый интернет",
+            "description": "Спутниковый интернет для отдаленных районов. Покрытие 99%, скорость до 100 Мбит/с. Работает в любых условиях.",
+            "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
+            "url": "https://mosoblconnect.ru/services/satellite",
+            "provider": {
+              "@type": "Organization",
+              "name": "NetConnect"
+            },
+            "areaServed": "Московская область",
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "RUB",
+              "lowPrice": "1890",
+              "highPrice": "4290",
+              "offerCount": "3"
+            }
           }
         },
         {
-          "@type": "Service",
+          "@type": "ListItem",
           "position": 3,
-          "name": "Wi-Fi оборудование",
-          "description": "Профессиональное Wi-Fi оборудование для дома и офиса. MikroTik, Ubiquiti, TP-Link. Установка и настройка под ключ.",
-          "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
-          "url": "https://mosoblconnect.ru/services/wifi",
-          "provider": {
-            "@type": "Organization",
-            "name": "NetConnect"
-          },
-          "areaServed": "Московская область",
-          "offers": {
-            "@type": "Offer",
-            "priceCurrency": "RUB",
-            "price": "4990"
+          "item": {
+            "@type": "Service",
+            "name": "Wi-Fi оборудование",
+            "description": "Профессиональное Wi-Fi оборудование для дома и офиса. MikroTik, Ubiquiti, TP-Link. Установка и настройка под ключ.",
+            "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
+            "url": "https://mosoblconnect.ru/services/wifi",
+            "provider": {
+              "@type": "Organization",
+              "name": "NetConnect"
+            },
+            "areaServed": "Московская область",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "RUB",
+              "price": "4990"
+            }
           }
         },
         {
-          "@type": "Service",
+          "@type": "ListItem",
           "position": 4,
-          "name": "Видеонаблюдение",
-          "description": "Установка систем видеонаблюдения для дома и бизнеса. IP-камеры, облачное хранение, доступ через интернет 24/7.",
-          "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
-          "url": "https://mosoblconnect.ru/services/surveillance",
-          "provider": {
-            "@type": "Organization",
-            "name": "NetConnect"
-          },
-          "areaServed": "Московская область",
-          "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "RUB",
-            "lowPrice": "12990",
-            "highPrice": "34990",
-            "offerCount": "3"
+          "item": {
+            "@type": "Service",
+            "name": "Видеонаблюдение",
+            "description": "Установка систем видеонаблюдения для дома и бизнеса. IP-камеры, облачное хранение, доступ через интернет 24/7.",
+            "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
+            "url": "https://mosoblconnect.ru/services/surveillance",
+            "provider": {
+              "@type": "Organization",
+              "name": "NetConnect"
+            },
+            "areaServed": "Московская область",
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "RUB",
+              "lowPrice": "12990",
+              "highPrice": "34990",
+              "offerCount": "3"
+            }
           }
         },
         {
-          "@type": "Service",
+          "@type": "ListItem",
           "position": 5,
-          "name": "Системы охраны",
-          "description": "Охранные системы с датчиками движения, проникновения, пожарной безопасности. Интеграция с умным домом.",
-          "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
-          "url": "https://mosoblconnect.ru/services/security",
-          "provider": {
-            "@type": "Organization",
-            "name": "NetConnect"
-          },
-          "areaServed": "Московская область",
-          "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "RUB",
-            "lowPrice": "8990",
-            "highPrice": "29990",
-            "offerCount": "3"
+          "item": {
+            "@type": "Service",
+            "name": "Системы охраны",
+            "description": "Охранные системы с датчиками движения, проникновения, пожарной безопасности. Интеграция с умным домом.",
+            "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
+            "url": "https://mosoblconnect.ru/services/security",
+            "provider": {
+              "@type": "Organization",
+              "name": "NetConnect"
+            },
+            "areaServed": "Московская область",
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "RUB",
+              "lowPrice": "8990",
+              "highPrice": "29990",
+              "offerCount": "3"
+            }
           }
         },
         {
-          "@type": "Service",
+          "@type": "ListItem",
           "position": 6,
-          "name": "Усиление сотовой связи",
-          "description": "Усиление сигнала мобильной связи и 4G/5G интернета. Репитеры для дома, дачи, офиса. Стабильный сигнал в любой точке.",
-          "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
-          "url": "https://mosoblconnect.ru/services/cellular-booster",
-          "provider": {
-            "@type": "Organization",
-            "name": "NetConnect"
-          },
-          "areaServed": "Московская область",
-          "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "RUB",
-            "lowPrice": "9990",
-            "highPrice": "39990",
-            "offerCount": "3"
+          "item": {
+            "@type": "Service",
+            "name": "Усиление сотовой связи",
+            "description": "Усиление сигнала мобильной связи и 4G/5G интернета. Репитеры для дома, дачи, офиса. Стабильный сигнал в любой точке.",
+            "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
+            "url": "https://mosoblconnect.ru/services/cellular-booster",
+            "provider": {
+              "@type": "Organization",
+              "name": "NetConnect"
+            },
+            "areaServed": "Московская область",
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "RUB",
+              "lowPrice": "9990",
+              "highPrice": "39990",
+              "offerCount": "3"
+            }
           }
         }
       ]
