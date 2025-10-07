@@ -60,8 +60,12 @@
       "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
       "areaServed": {
         "@type": "State",
-        "name": "Московская область",
-        "addressCountry": "RU"
+        "name": "Московская область"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "RU",
+        "addressRegion": "Московская область"
       },
       "telephone": "+79015000078",
       "priceRange": "1490-2590 ₽",
@@ -225,8 +229,7 @@
         "target": {
           "@type": "EntryPoint",
           "urlTemplate": "https://mosoblconnect.ru/?s={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
+        }
       }
     }
     </script>
