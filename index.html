@@ -435,11 +435,100 @@
     }
     </script>
     
+    <!-- Product/Service Schema для тарифов -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Беспроводной интернет NetConnect",
+      "description": "Высокоскоростной беспроводной интернет для частных домов и дач в Московской области",
+      "brand": {
+        "@type": "Brand",
+        "name": "NetConnect"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "RUB",
+        "lowPrice": "1490",
+        "highPrice": "2590",
+        "offerCount": "3",
+        "availability": "https://schema.org/InStock",
+        "priceValidUntil": "2025-12-31",
+        "url": "https://mosoblconnect.ru/"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "1500",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+
+    <!-- HowTo Schema - Как подключить интернет -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Как подключить беспроводной интернет NetConnect",
+      "description": "Пошаговая инструкция подключения беспроводного интернета в частном доме или на даче",
+      "totalTime": "PT3D",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "RUB",
+        "value": "1490"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Оставить заявку",
+          "text": "Позвоните по телефону +7 (901) 500-00-78 или оставьте заявку на сайте",
+          "url": "https://mosoblconnect.ru/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Проверка покрытия",
+          "text": "Специалист проверит наличие покрытия в вашем районе и подберет оптимальный тариф"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Установка оборудования",
+          "text": "Мастер приедет в удобное время и установит антенну и Wi-Fi роутер за 1-3 дня"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Готово",
+          "text": "Интернет работает! Подключайте устройства и наслаждайтесь высокой скоростью"
+        }
+      ]
+    }
+    </script>
+
+    <!-- VideoObject Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "Как работает беспроводной интернет NetConnect",
+      "description": "Видео о том, как работает беспроводной 4G LTE интернет в Московской области",
+      "thumbnailUrl": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
+      "uploadDate": "2024-01-15T00:00:00Z",
+      "contentUrl": "https://mosoblconnect.ru/",
+      "embedUrl": "https://mosoblconnect.ru/"
+    }
+    </script>
+
     <!-- Отзывы клиентов для Яндекса -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://mosoblconnect.ru/#organization",
       "name": "NetConnect",
       "review": [
         {
