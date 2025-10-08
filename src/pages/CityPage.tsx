@@ -1,5 +1,6 @@
 import { useParams, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { useSEO } from '@/hooks/useSEO';
 import { cityData } from '@/data/cityData';
@@ -61,6 +62,84 @@ const CityPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": `NetConnect - Беспроводной интернет в ${city.name}`,
+            "description": `Подключение беспроводного интернета в ${city.name}, ${city.district}`,
+            "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
+            "url": `https://mosoblconnect.ru/city/${citySlug}`,
+            "telephone": ["+7 (901) 500-00-78", "+7 (901) 500-00-87"],
+            "priceRange": "1490₽ - 2590₽",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": city.name,
+              "addressRegion": city.district,
+              "addressCountry": "RU"
+            },
+            "geo": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "addressLocality": city.name,
+                "addressRegion": city.district
+              },
+              "geoRadius": "50000"
+            },
+            "areaServed": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "addressLocality": city.name,
+                "addressRegion": city.district
+              },
+              "geoRadius": "50000"
+            },
+            "openingHours": "Mo-Su 00:00-24:00",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Тарифы беспроводного интернета",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Стартовый тариф"
+                  },
+                  "price": "1490",
+                  "priceCurrency": "RUB"
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Оптимальный тариф"
+                  },
+                  "price": "1990",
+                  "priceCurrency": "RUB"
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Максимальный тариф"
+                  },
+                  "price": "2590",
+                  "priceCurrency": "RUB"
+                }
+              ]
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "1500"
+            }
+          })}
+        </script>
+      </Helmet>
+
       <CityHeader onAnchorClick={handleAnchorClick} />
 
       <Breadcrumbs items={[
