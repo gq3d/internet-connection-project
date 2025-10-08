@@ -135,12 +135,23 @@ export default function ServicesCallToAction() {
           </div>
           
           {/* Описание под баннером */}
-          <div className={`mt-8 text-center transition-all duration-1000 ${
+          <div className={`mt-6 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`} style={{ transitionDelay: isVisible ? '900ms' : '0ms' }}>
-            <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-              Подключение к сети интернет для частных лиц и бизнеса через беспроводные каналы связи, включая спутниковый интернет. Усиление сотовой связи и Wi-Fi сигнала. Системы видеонаблюдения и охраны объектов.
-            </p>
+            <div className="bg-gradient-to-br from-white/60 via-white/70 to-white/60 backdrop-blur-md rounded-xl p-6 md:p-8 shadow-lg border border-primary/10">
+              <div className="flex items-start gap-4">
+                <div className="hidden md:flex flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full items-center justify-center">
+                  <Icon name="Info" size={24} className="text-primary" />
+                </div>
+                <div className="flex-1">
+                  <p className="text-base md:text-lg text-foreground/80 leading-relaxed text-center md:text-left">
+                    <span className="font-semibold text-primary">Подключение к сети интернет</span> для частных лиц и бизнеса через беспроводные каналы связи, включая спутниковый интернет. 
+                    <span className="font-semibold text-secondary"> Усиление сотовой связи и Wi-Fi сигнала.</span> 
+                    <span className="font-semibold text-success"> Системы видеонаблюдения и охраны объектов.</span>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
