@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
-import { useAnchorScroll } from '@/hooks/useAnchorScroll';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
-  const { handleAnchorClick } = useAnchorScroll();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,7 +16,27 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleContactsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      const contactsSection = document.getElementById('contacts');
+      if (contactsSection) {
+        contactsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    setIsMobileMenuOpen(false);
+  };
 
+  const handleAboutClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      const aboutSection = document.getElementById('about');
+      if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <>
@@ -58,15 +76,15 @@ export default function Header() {
 
             {/* Desktop Menu */}
             <nav className="hidden md:flex items-center space-x-4">
-              <a href="/#services" onClick={(e) => handleAnchorClick(e, 'services')} className="text-sm font-medium hover:text-success transition-colors">Услуги</a>
-              <a href="/#tariffs" onClick={(e) => handleAnchorClick(e, 'tariffs')} className="text-sm font-medium hover:text-success transition-colors">Тарифы</a>
-              <a href="/#pricing" onClick={(e) => handleAnchorClick(e, 'pricing')} className="text-sm font-medium hover:text-success transition-colors">Стоимость</a>
-              <a href="/#coverage" onClick={(e) => handleAnchorClick(e, 'coverage')} className="text-sm font-medium hover:text-success transition-colors">Покрытие</a>
+              <Link to="/services" className="text-sm font-medium hover:text-success transition-colors">Услуги</Link>
+              <Link to="/tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</Link>
+              <Link to="/pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</Link>
+              <Link to="/coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</Link>
               <Link to="/signal-boost" className="text-sm font-medium hover:text-success transition-colors">Усиление 4G/LTE</Link>
-              <a href="/#esim" onClick={(e) => handleAnchorClick(e, 'esim')} className="text-sm font-medium hover:text-success transition-colors">eSIM</a>
-              <a href="/#about" onClick={(e) => handleAnchorClick(e, 'about')} className="text-sm font-medium hover:text-success transition-colors">О компании</a>
+              <Link to="/esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</Link>
+              <a href="/#about" onClick={handleAboutClick} className="text-sm font-medium hover:text-success transition-colors">О компании</a>
               <Link to="/faq" className="text-sm font-medium hover:text-success transition-colors">FAQ</Link>
-              <a href="/#contacts" onClick={(e) => handleAnchorClick(e, 'contacts')} className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
+              <a href="/#contacts" onClick={handleContactsClick} className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
               <a 
                 href="tel:+79015000078" 
                 className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
@@ -81,34 +99,34 @@ export default function Header() {
           {isMobileMenuOpen && (
             <div className="md:hidden mt-4 py-4 border-t border-border">
               <div className="space-y-4">
-                <a 
-                  href="/#services" 
+                <Link 
+                  to="/services" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
-                  onClick={(e) => { handleAnchorClick(e, 'services'); setIsMobileMenuOpen(false); }}
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Услуги
-                </a>
-                <a 
-                  href="/#tariffs" 
+                </Link>
+                <Link 
+                  to="/tariffs" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
-                  onClick={(e) => { handleAnchorClick(e, 'tariffs'); setIsMobileMenuOpen(false); }}
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Тарифы
-                </a>
-                <a 
-                  href="/#pricing" 
+                </Link>
+                <Link 
+                  to="/pricing" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
-                  onClick={(e) => { handleAnchorClick(e, 'pricing'); setIsMobileMenuOpen(false); }}
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Стоимость
-                </a>
-                <a 
-                  href="/#coverage" 
+                </Link>
+                <Link 
+                  to="/coverage" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
-                  onClick={(e) => { handleAnchorClick(e, 'coverage'); setIsMobileMenuOpen(false); }}
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Покрытие
-                </a>
+                </Link>
                 {location.pathname !== '/signal-boost' && (
                   <Link 
                     to="/signal-boost" 
@@ -118,17 +136,17 @@ export default function Header() {
                     Усиление 4G/LTE
                   </Link>
                 )}
-                <a 
-                  href="/#esim" 
+                <Link 
+                  to="/esim" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
-                  onClick={(e) => { handleAnchorClick(e, 'esim'); setIsMobileMenuOpen(false); }}
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   eSIM
-                </a>
+                </Link>
                 <a 
                   href="/#about" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
-                  onClick={(e) => { handleAnchorClick(e, 'about'); setIsMobileMenuOpen(false); }}
+                  onClick={handleAboutClick}
                 >
                   О компании
                 </a>
@@ -142,7 +160,7 @@ export default function Header() {
                 <a 
                   href="/#contacts" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
-                  onClick={(e) => { handleAnchorClick(e, 'contacts'); setIsMobileMenuOpen(false); }}
+                  onClick={handleContactsClick}
                 >
                   Контакты
                 </a>
