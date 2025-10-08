@@ -242,11 +242,11 @@ const Reviews = () => {
             
             {/* Desktop Menu */}
             <nav className="hidden md:flex items-center space-x-4">
-              <a href="/#services" className="text-sm font-medium hover:text-success transition-colors">Услуги</a>
-              <a href="/#tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</a>
-              <a href="/#pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</a>
-              <a href="/#esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</a>
-              <a href="/#coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</a>
+              <a href="/services" className="text-sm font-medium hover:text-success transition-colors">Услуги</a>
+              <a href="/tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</a>
+              <a href="/pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</a>
+              <a href="/esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</a>
+              <a href="/coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</a>
               <a href="/#about" className="text-sm font-medium hover:text-success transition-colors">О компании</a>
               <a href="/#contacts" className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
               <a 
@@ -272,11 +272,11 @@ const Reviews = () => {
           {isMobileMenuOpen && (
             <div className="md:hidden mt-4 py-4 border-t border-border">
               <div className="space-y-4">
-                <a href="/#services" className="block py-2 text-sm font-medium hover:text-success transition-colors">Услуги</a>
-                <a href="/#tariffs" className="block py-2 text-sm font-medium hover:text-success transition-colors">Тарифы</a>
-                <a href="/#pricing" className="block py-2 text-sm font-medium hover:text-success transition-colors">Стоимость</a>
-                <a href="/#esim" className="block py-2 text-sm font-medium hover:text-success transition-colors">eSIM</a>
-                <a href="/#coverage" className="block py-2 text-sm font-medium hover:text-success transition-colors">Покрытие</a>
+                <a href="/services" className="block py-2 text-sm font-medium hover:text-success transition-colors">Услуги</a>
+                <a href="/tariffs" className="block py-2 text-sm font-medium hover:text-success transition-colors">Тарифы</a>
+                <a href="/pricing" className="block py-2 text-sm font-medium hover:text-success transition-colors">Стоимость</a>
+                <a href="/esim" className="block py-2 text-sm font-medium hover:text-success transition-colors">eSIM</a>
+                <a href="/coverage" className="block py-2 text-sm font-medium hover:text-success transition-colors">Покрытие</a>
                 <a href="/#about" className="block py-2 text-sm font-medium hover:text-success transition-colors">О компании</a>
                 <a href="/#contacts" className="block py-2 text-sm font-medium hover:text-success transition-colors">Контакты</a>
                 <a 
