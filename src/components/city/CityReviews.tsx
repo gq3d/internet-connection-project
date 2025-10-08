@@ -229,7 +229,7 @@ export default function CityReviews({ cityName }: CityReviewsProps) {
             href="/reviews" 
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
           >
-            Читать все отзывы
+            Другие отзывы
             <Icon name="ArrowRight" size={20} className="ml-2" />
           </a>
         </div>
