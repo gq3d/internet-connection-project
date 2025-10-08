@@ -16,6 +16,28 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleContactsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      const contactsSection = document.getElementById('contacts');
+      if (contactsSection) {
+        contactsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleAboutClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      const aboutSection = document.getElementById('about');
+      if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <>
       <header className={`border-b sticky top-0 z-50 transition-all duration-300 ${
@@ -60,9 +82,9 @@ export default function Header() {
               <Link to="/coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</Link>
               <Link to="/signal-boost" className="text-sm font-medium hover:text-success transition-colors">Усиление 4G/LTE</Link>
               <Link to="/esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</Link>
-              <a href="/#about" className="text-sm font-medium hover:text-success transition-colors">О компании</a>
+              <a href="/#about" onClick={handleAboutClick} className="text-sm font-medium hover:text-success transition-colors">О компании</a>
               <Link to="/faq" className="text-sm font-medium hover:text-success transition-colors">FAQ</Link>
-              <a href="/#contacts" className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
+              <a href="/#contacts" onClick={handleContactsClick} className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
               <a 
                 href="tel:+79015000078" 
                 className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
@@ -124,7 +146,7 @@ export default function Header() {
                 <a 
                   href="/#about" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={handleAboutClick}
                 >
                   О компании
                 </a>
@@ -138,7 +160,7 @@ export default function Header() {
                 <a 
                   href="/#contacts" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={handleContactsClick}
                 >
                   Контакты
                 </a>
