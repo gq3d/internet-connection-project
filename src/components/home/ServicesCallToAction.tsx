@@ -134,21 +134,55 @@ export default function ServicesCallToAction() {
             </div>
           </div>
           
-          {/* Описание под баннером */}
+          {/* Анимированная карточка с описанием */}
           <div className={`mt-6 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`} style={{ transitionDelay: isVisible ? '900ms' : '0ms' }}>
-            <div className="bg-gradient-to-br from-white/60 via-white/70 to-white/60 backdrop-blur-md rounded-xl p-6 md:p-8 shadow-lg border border-primary/10">
-              <div className="flex items-start gap-4">
-                <div className="hidden md:flex flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full items-center justify-center">
-                  <Icon name="Info" size={24} className="text-primary" />
-                </div>
-                <div className="flex-1">
-                  <p className="text-base md:text-lg text-foreground/80 leading-relaxed text-center md:text-left">
-                    <span className="font-semibold text-primary">Подключение к сети интернет</span> для частных лиц и бизнеса через беспроводные каналы связи, включая спутниковый интернет. 
-                    <span className="font-semibold text-secondary"> Усиление сотовой связи и Wi-Fi сигнала.</span> 
-                    <span className="font-semibold text-success"> Системы видеонаблюдения и охраны объектов.</span>
-                  </p>
+            <div className="relative group">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-secondary to-success rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-500 animate-pulse"></div>
+              <div className="relative bg-white rounded-2xl p-6 md:p-8 shadow-xl">
+                <div className="grid md:grid-cols-3 gap-6">
+                  {/* Интернет */}
+                  <div className="group/item hover:scale-105 transition-all duration-300">
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform">
+                        <Icon name="Wifi" size={20} className="text-primary" />
+                      </div>
+                      <div>
+                        <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
+                          <span className="font-semibold text-primary">Интернет</span> для частных лиц и бизнеса, включая спутниковый
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Усиление связи */}
+                  <div className="group/item hover:scale-105 transition-all duration-300">
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform">
+                        <Icon name="Signal" size={20} className="text-secondary" />
+                      </div>
+                      <div>
+                        <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
+                          <span className="font-semibold text-secondary">Усиление</span> сотовой связи и Wi-Fi сигнала
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Охрана и видеонаблюдение */}
+                  <div className="group/item hover:scale-105 transition-all duration-300">
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-success/20 to-success/10 rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform">
+                        <Icon name="Shield" size={20} className="text-success" />
+                      </div>
+                      <div>
+                        <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
+                          <span className="font-semibold text-success">Охрана</span> и видеонаблюдение объектов
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
