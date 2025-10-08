@@ -4,6 +4,16 @@ export const useAnchorScroll = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const scrollToSection = (anchorId: string, retries = 0) => {
+    const section = document.getElementById(anchorId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    } else if (retries < 10) {
+      // Retry up to 10 times (1 second total) if element not found yet
+      setTimeout(() => scrollToSection(anchorId, retries + 1), 100);
+    }
+  };
+
   const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, anchorId: string) => {
     e.preventDefault();
     
@@ -12,19 +22,11 @@ export const useAnchorScroll = () => {
     
     if (location.pathname === '/') {
       // Already on homepage - just scroll
-      const section = document.getElementById(cleanAnchor);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
+      scrollToSection(cleanAnchor);
     } else {
       // Navigate to homepage first, then scroll
-      navigate('/');
-      setTimeout(() => {
-        const section = document.getElementById(cleanAnchor);
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
+      navigate('/', { state: { scrollTo: cleanAnchor } });
+      setTimeout(() => scrollToSection(cleanAnchor), 300);
     }
   };
 
