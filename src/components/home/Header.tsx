@@ -18,28 +18,34 @@ export default function Header() {
 
   const handleContactsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
+    setIsMobileMenuOpen(false);
+    
     if (location.pathname === '/') {
-      const contactsSection = document.getElementById('contacts');
-      if (contactsSection) {
-        contactsSection.scrollIntoView({ behavior: 'smooth' });
-      }
+      setTimeout(() => {
+        const contactsSection = document.getElementById('contacts');
+        if (contactsSection) {
+          contactsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
     } else {
       window.location.href = '/#contacts';
     }
-    setIsMobileMenuOpen(false);
   };
 
   const handleAboutClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
+    setIsMobileMenuOpen(false);
+    
     if (location.pathname === '/') {
-      const aboutSection = document.getElementById('about');
-      if (aboutSection) {
-        aboutSection.scrollIntoView({ behavior: 'smooth' });
-      }
+      setTimeout(() => {
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) {
+          aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
     } else {
       window.location.href = '/#about';
     }
-    setIsMobileMenuOpen(false);
   };
 
   return (
