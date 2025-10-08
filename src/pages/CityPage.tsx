@@ -44,13 +44,13 @@ const CityPage = () => {
   }, []);
 
   useSEO({
-    title: `Интернет в ${city?.name} от 1490₽/мес | NetConnect`,
-    description: `Подключаем беспроводной интернет в ${city?.name} за 1-3 дня. Тарифы от 1490₽/мес, скорость до 240 Мбит/с. ${city?.district ? city.district + '. ' : ''}Звоните: +7 (901) 500-00-78`,
+    title: `Интернет в ${city?.name} от 1490₽/мес — подключение за 1-3 дня | NetConnect`,
+    description: `Беспроводной интернет в ${city?.name} и окрестностях: скорость до 250 Мбит/с, установка за 1-3 дня. Подключаем частные дома, дачи, коттеджные посёлки и СНТ${city?.district ? '. ' + city.district : ''}. Бесплатный выезд инженера. Звоните: +7 (901) 500-00-78`,
     canonical: `https://mosoblconnect.ru/city/${citySlug}`,
     ogTitle: `Беспроводной интернет в ${city?.name} от 1490₽/мес`,
-    ogDescription: `Подключаем интернет до 240 Мбит/с за 1-3 дня. Покрытие 99% МО. Работаем с дачами и частными домами в ${city?.name}`,
+    ogDescription: `Подключаем интернет до 250 Мбит/с за 1-3 дня в ${city?.name}. Покрытие частных домов, дач, коттеджных посёлков и СНТ. Бесплатная установка оборудования.`,
     ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
-    ogImageAlt: `Беспроводной интернет NetConnect в ${city?.name}`
+    ogImageAlt: `Подключение беспроводного интернета NetConnect в ${city?.name}`
   });
 
   if (!city) {
@@ -64,8 +64,9 @@ const CityPage = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": `NetConnect - Беспроводной интернет в ${city.name}`,
-            "description": `Подключение беспроводного интернета в ${city.name}, ${city.district}`,
+            "name": `NetConnect`,
+            "alternateName": `NetConnect - Беспроводной интернет в ${city.name}`,
+            "description": `Подключение беспроводного интернета в ${city.name}, ${city.district}. Обслуживаем частные дома, дачи, коттеджные посёлки и СНТ. Скорость до 250 Мбит/с, установка за 1-3 дня.`,
             "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
             "url": `https://mosoblconnect.ru/city/${citySlug}`,
             "telephone": ["+7 (901) 500-00-78", "+7 (901) 500-00-87"],
@@ -131,8 +132,13 @@ const CityPage = () => {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.8",
-              "reviewCount": "1500"
-            }
+              "reviewCount": "1500",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "sameAs": [
+              "https://t.me/+QgiLIa1gFRY4Y2Iy"
+            ]
           })}
         </script>
       </Helmet>
