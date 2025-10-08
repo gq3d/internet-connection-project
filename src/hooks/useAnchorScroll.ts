@@ -24,9 +24,8 @@ export const useAnchorScroll = () => {
       // Already on homepage - just scroll
       scrollToSection(cleanAnchor);
     } else {
-      // Navigate to homepage first, then scroll
+      // Navigate to homepage first, Index.tsx will handle scrolling via useEffect
       navigate('/', { state: { scrollTo: cleanAnchor } });
-      setTimeout(() => scrollToSection(cleanAnchor), 300);
     }
   };
 
