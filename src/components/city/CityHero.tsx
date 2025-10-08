@@ -2,13 +2,20 @@ import Icon from '@/components/ui/icon';
 
 interface CityHeroProps {
   cityName: string;
+  district?: string;
 }
 
-export default function CityHero({ cityName }: CityHeroProps) {
+export default function CityHero({ cityName, district }: CityHeroProps) {
   return (
     <section className="py-16 bg-gradient-to-r from-primary/10 to-accent/20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
+          {district && (
+            <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-4">
+              <Icon name="MapPin" size={16} className="text-primary mr-2" />
+              <span className="text-sm font-medium text-primary">{district}</span>
+            </div>
+          )}
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Беспроводной интернет в {cityName}
           </h1>

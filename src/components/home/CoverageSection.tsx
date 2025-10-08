@@ -104,24 +104,21 @@ export default function CoverageSection() {
           <div className="bg-card border rounded-lg p-8">
             <h3 className="text-2xl font-semibold mb-6 text-center">Основные регионы и города <span className="text-muted-foreground text-lg">(список минимальный, для примера)</span></h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center">
               {cities.map((city, index) => (
                 <a
                   key={city.name}
                   href={`/city/${generateCitySlug(city.name)}`}
-                  className={`bg-accent/30 rounded-lg p-4 border hover:bg-accent/50 transition-all duration-500 group ${
+                  className={`bg-accent/30 rounded-lg p-3 border hover:bg-accent/50 transition-all duration-500 group ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                   }`}
                   style={{
                     transitionDelay: `${index * 30}ms`
                   }}
                 >
-                  <div className="flex items-start space-x-3">
-                    <Icon name="MapPin" size={18} className="text-success flex-shrink-0 mt-1 group-hover:scale-110 transition-transform" />
-                    <div className="text-left">
-                      <div className="font-semibold text-lg group-hover:text-primary transition-colors mb-1">{city.name}</div>
-                      <div className="text-sm text-muted-foreground">{city.district}</div>
-                    </div>
+                  <div className="flex items-center justify-center">
+                    <Icon name="MapPin" size={16} className="text-success mr-2 group-hover:scale-110 transition-transform" />
+                    <span className="font-medium group-hover:text-primary transition-colors">{city.name}</span>
                   </div>
                 </a>
               ))}

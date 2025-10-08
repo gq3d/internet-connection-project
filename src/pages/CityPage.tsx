@@ -68,7 +68,7 @@ const CityPage = () => {
         { label: city.name }
       ]} />
 
-      <CityHero cityName={city.name} />
+      <CityHero cityName={city.name} district={city.district} />
 
       <section className="py-16">
         <div className="container mx-auto px-4">
