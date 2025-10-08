@@ -133,6 +133,15 @@ export default function ServicesCallToAction() {
               </div>
             </div>
           </div>
+          
+          {/* Описание под баннером */}
+          <div className={`mt-8 text-center transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`} style={{ transitionDelay: isVisible ? '900ms' : '0ms' }}>
+            <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
+              Подключение к сети интернет для частных лиц и бизнеса через беспроводные каналы связи, включая спутниковый интернет. Усиление сотовой связи и Wi-Fi сигнала. Системы видеонаблюдения и охраны объектов.
+            </p>
+          </div>
         </div>
       </div>
     </section>
