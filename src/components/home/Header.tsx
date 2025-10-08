@@ -17,23 +17,27 @@ export default function Header() {
   }, []);
 
   const handleContactsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
     if (location.pathname === '/') {
-      e.preventDefault();
       const contactsSection = document.getElementById('contacts');
       if (contactsSection) {
         contactsSection.scrollIntoView({ behavior: 'smooth' });
       }
+    } else {
+      window.location.href = '/#contacts';
     }
     setIsMobileMenuOpen(false);
   };
 
   const handleAboutClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
     if (location.pathname === '/') {
-      e.preventDefault();
       const aboutSection = document.getElementById('about');
       if (aboutSection) {
         aboutSection.scrollIntoView({ behavior: 'smooth' });
       }
+    } else {
+      window.location.href = '/#about';
     }
     setIsMobileMenuOpen(false);
   };
