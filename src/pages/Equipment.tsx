@@ -30,13 +30,13 @@ export default function Equipment() {
                 <Button variant="ghost" className="font-medium">Главная</Button>
               </Link>
               <a 
-                href="/#services"
+                href="/services"
                 className="hidden md:block text-sm font-medium hover:text-primary transition-colors"
               >
                 Услуги
               </a>
               <a 
-                href="/#tariffs"
+                href="/tariffs"
                 className="hidden md:block text-sm font-medium hover:text-primary transition-colors"
               >
                 Тарифы
@@ -588,17 +588,17 @@ export default function Equipment() {
             <div>
               <h3 className="font-bold mb-4">Услуги</h3>
               <div className="space-y-2 text-sm">
-                <a href="/#services" className="block text-muted-foreground hover:text-primary transition-colors">Интернет-подключение</a>
-                <a href="/#services" className="block text-muted-foreground hover:text-primary transition-colors">Спутниковый интернет</a>
-                <a href="/#services" className="block text-muted-foreground hover:text-primary transition-colors">Видеонаблюдение</a>
+                <a href="/services" className="block text-muted-foreground hover:text-primary transition-colors">Интернет-подключение</a>
+                <a href="/services" className="block text-muted-foreground hover:text-primary transition-colors">Спутниковый интернет</a>
+                <a href="/services" className="block text-muted-foreground hover:text-primary transition-colors">Видеонаблюдение</a>
                 <Link to="/equipment" className="block text-muted-foreground hover:text-primary transition-colors">Оборудование</Link>
               </div>
             </div>
             <div>
               <h3 className="font-bold mb-4">Информация</h3>
               <div className="space-y-2 text-sm">
-                <a href="/#tariffs" className="block text-muted-foreground hover:text-primary transition-colors">Тарифы</a>
-                <a href="/#coverage" className="block text-muted-foreground hover:text-primary transition-colors">Покрытие</a>
+                <a href="/tariffs" className="block text-muted-foreground hover:text-primary transition-colors">Тарифы</a>
+                <a href="/coverage" className="block text-muted-foreground hover:text-primary transition-colors">Покрытие</a>
                 <Link to="/" className="block text-muted-foreground hover:text-primary transition-colors">Главная</Link>
               </div>
             </div>
