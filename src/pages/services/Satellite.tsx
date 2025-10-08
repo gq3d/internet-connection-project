@@ -10,13 +10,13 @@ const Satellite = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useSEO({
-    title: 'Спутниковый интернет Starlink в МО - от 3990₽/мес | NetConnect',
-    description: 'Подключение спутникового интернета Starlink и классического спутникового интернета в Московской области. Скорость до 220 Мбит/с, 99.9% покрытие. ☎ +7 (901) 500-00-78',
-    keywords: 'спутниковый интернет, starlink, старлинк, интернет через спутник, интернет в любой точке, спутниковый интернет московская область',
+    title: 'Спутниковый интернет в МО от 1890₽ | NetConnect',
+    description: 'Покрытие 99% МО, скорость до 100 Мбит/с. Starlink и классические системы. Звоните: +7 (901) 500-00-78',
     canonical: 'https://mosoblconnect.ru/services/satellite',
-    ogTitle: 'Спутниковый интернет Starlink в Московской области',
-    ogDescription: 'Starlink и классический спутниковый интернет. Скорость до 220 Мбит/с, покрытие 99.9%. Тарифы от 3990₽/мес.',
-    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg'
+    ogTitle: 'Спутниковый интернет Starlink в МО от 1890₽',
+    ogDescription: 'Starlink и классический спутниковый интернет. Скорость до 100 Мбит/с, покрытие 99%. Тарифы от 1890₽/мес.',
+    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
+    ogImageAlt: 'Спутниковый интернет NetConnect в Московской области'
   });
 
   const advantages = [

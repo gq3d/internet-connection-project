@@ -43,13 +43,13 @@ const CityPage = () => {
   }, []);
 
   useSEO({
-    title: city?.seoTitle || 'NetConnect',
-    description: city?.description || '',
-    keywords: `интернет ${city?.name}, беспроводной интернет ${city?.name}, подключение интернета ${city?.name}, интернет на даче ${city?.name}, ${city?.district}, интернет ${city?.district}`,
+    title: `Интернет в ${city?.name} от 1490₽/мес | NetConnect`,
+    description: `Подключаем беспроводной интернет в ${city?.name} за 1-3 дня. Тарифы от 1490₽/мес, скорость до 240 Мбит/с. ${city?.district ? city.district + '. ' : ''}Звоните: +7 (901) 500-00-78`,
     canonical: `https://mosoblconnect.ru/city/${citySlug}`,
-    ogTitle: city?.seoTitle || '',
-    ogDescription: `${city?.description} ${city?.district ? `Район: ${city.district}.` : ''}`,
-    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg'
+    ogTitle: `Беспроводной интернет в ${city?.name} от 1490₽/мес`,
+    ogDescription: `Подключаем интернет до 240 Мбит/с за 1-3 дня. Покрытие 99% МО. Работаем с дачами и частными домами в ${city?.name}`,
+    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
+    ogImageAlt: `Беспроводной интернет NetConnect в ${city?.name}`
   });
 
   if (!city) {
