@@ -13,6 +13,11 @@ const Index = () => {
 
   useEffect(() => {
     document.title = 'NetConnect - Беспроводной интернет в Московской области | Спутниковый интернет до 250 Мбит/с';
+    console.log('[INDEX PAGE] Loaded - Build version: 2025-10-09-v2', {
+      isMobile: /iPhone|iPad|iPod|Android/i.test(navigator.userAgent),
+      userAgent: navigator.userAgent,
+      timestamp: new Date().toISOString()
+    });
   }, []);
 
   useEffect(() => {
