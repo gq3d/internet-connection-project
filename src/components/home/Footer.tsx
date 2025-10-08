@@ -1,7 +1,29 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 
 export default function Footer() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, anchor: string) => {
+    e.preventDefault();
+    
+    if (location.pathname === '/') {
+      const section = document.getElementById(anchor);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        const section = document.getElementById(anchor);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  };
+
   return (
     <>
       <footer className="bg-muted/50 border-t mt-20">
@@ -39,7 +61,7 @@ export default function Footer() {
                 <Link to="/coverage" className="block text-muted-foreground hover:text-primary transition-colors">Покрытие</Link>
                 <Link to="/signal-boost" className="block text-muted-foreground hover:text-primary transition-colors">Усиление 4G/LTE</Link>
                 <Link to="/esim" className="block text-muted-foreground hover:text-primary transition-colors">eSIM</Link>
-                <a href="/#about" className="block text-muted-foreground hover:text-primary transition-colors">О компании</a>
+                <a href="/#about" onClick={(e) => handleAnchorClick(e, 'about')} className="block text-muted-foreground hover:text-primary transition-colors">О компании</a>
                 <Link to="/faq" className="block text-muted-foreground hover:text-primary transition-colors">FAQ</Link>
                 <Link to="/reviews" className="block text-muted-foreground hover:text-primary transition-colors">Отзывы</Link>
               </div>
