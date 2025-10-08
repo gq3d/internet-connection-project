@@ -3,38 +3,47 @@ import { useEffect } from 'react';
 interface SEOProps {
   title?: string;
   description?: string;
-  keywords?: string;
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
+  ogImageAlt?: string;
   canonical?: string;
   structuredData?: object;
+  noindex?: boolean;
 }
 
 export const useSEO = ({
   title,
   description,
-  keywords,
   ogTitle,
   ogDescription,
   ogImage,
+  ogImageAlt,
   canonical,
-  structuredData
+  structuredData,
+  noindex = false
 }: SEOProps) => {
   useEffect(() => {
     if (title) {
       document.title = title;
     }
 
+    const robotsContent = noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+    
     const metaTags: { [key: string]: string } = {
       description: description || '',
-      keywords: keywords || '',
+      robots: robotsContent,
+      'og:type': 'website',
       'og:title': ogTitle || title || '',
       'og:description': ogDescription || description || '',
       'og:image': ogImage || '',
+      'og:image:alt': ogImageAlt || title || '',
+      'og:locale': 'ru_RU',
+      'twitter:card': 'summary_large_image',
       'twitter:title': ogTitle || title || '',
       'twitter:description': ogDescription || description || '',
-      'twitter:image': ogImage || ''
+      'twitter:image': ogImage || '',
+      'twitter:image:alt': ogImageAlt || title || ''
     };
 
     Object.entries(metaTags).forEach(([name, content]) => {
@@ -78,5 +87,5 @@ export const useSEO = ({
       
       script.textContent = JSON.stringify(structuredData);
     }
-  }, [title, description, keywords, ogTitle, ogDescription, ogImage, canonical, structuredData]);
+  }, [title, description, ogTitle, ogDescription, ogImage, ogImageAlt, canonical, structuredData, noindex]);
 };
