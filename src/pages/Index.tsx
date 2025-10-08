@@ -2,6 +2,11 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from '@/components/home/Header';
 import HeroSection from '@/components/home/HeroSection';
+import ServicesSection from '@/components/home/ServicesSection';
+import TariffsSection from '@/components/home/TariffsSection';
+import PricingSection from '@/components/home/PricingSection';
+import CoverageSection from '@/components/home/CoverageSection';
+import EsimSection from '@/components/home/EsimSection';
 import ServicesCallToAction from '@/components/home/ServicesCallToAction';
 import ConnectionSchema from '@/components/home/ConnectionSchema';
 import AboutSection from '@/components/home/AboutSection';
@@ -36,6 +41,11 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <HeroSection />
+      <ServicesSection />
+      <TariffsSection />
+      <PricingSection />
+      <CoverageSection />
+      <EsimSection />
       <ServicesCallToAction />
       <ConnectionSchema />
       <AboutSection />

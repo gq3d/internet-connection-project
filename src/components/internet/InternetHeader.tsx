@@ -23,6 +23,7 @@ const InternetHeader = () => {
             <a href="/signal-boost" className="text-sm font-medium hover:text-success transition-colors">Усиление 4G/LTE</a>
             <a href="/#esim" onClick={(e) => handleAnchorClick(e, 'esim')} className="text-sm font-medium hover:text-success transition-colors">eSIM</a>
             <a href="/#about" onClick={(e) => handleAnchorClick(e, 'about')} className="text-sm font-medium hover:text-success transition-colors">О компании</a>
+            <a href="/faq" className="text-sm font-medium hover:text-success transition-colors">FAQ</a>
             <a href="/#contacts" onClick={(e) => handleAnchorClick(e, 'contacts')} className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
             <a 
               href="tel:+79015000078" 
@@ -52,6 +53,7 @@ const InternetHeader = () => {
               <a href="/signal-boost" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-medium hover:text-success transition-colors">Усиление 4G/LTE</a>
               <a href="/#esim" onClick={(e) => { handleAnchorClick(e, 'esim'); setIsMobileMenuOpen(false); }} className="block py-2 text-sm font-medium hover:text-success transition-colors">eSIM</a>
               <a href="/#about" onClick={(e) => { handleAnchorClick(e, 'about'); setIsMobileMenuOpen(false); }} className="block py-2 text-sm font-medium hover:text-success transition-colors">О компании</a>
+              <a href="/faq" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-medium hover:text-success transition-colors">FAQ</a>
               <a href="/#contacts" onClick={(e) => { handleAnchorClick(e, 'contacts'); setIsMobileMenuOpen(false); }} className="block py-2 text-sm font-medium hover:text-success transition-colors">Контакты</a>
               <a 
                 href="tel:+79015000078" 

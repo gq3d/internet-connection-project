@@ -17,9 +17,10 @@ export default function CityHeader() {
             <div className="hidden md:flex items-center space-x-4">
               <a href="/#services" onClick={(e) => handleAnchorClick(e, 'services')} className="text-sm font-medium hover:text-success transition-colors">Услуги</a>
               <a href="/#tariffs" onClick={(e) => handleAnchorClick(e, 'tariffs')} className="text-sm font-medium hover:text-success transition-colors">Тарифы</a>
-              <Link to="/pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</Link>
-              <Link to="/coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</Link>
+              <a href="/#pricing" onClick={(e) => handleAnchorClick(e, 'pricing')} className="text-sm font-medium hover:text-success transition-colors">Стоимость</a>
+              <a href="/#coverage" onClick={(e) => handleAnchorClick(e, 'coverage')} className="text-sm font-medium hover:text-success transition-colors">Покрытие</a>
               <Link to="/signal-boost" className="text-sm font-medium hover:text-success transition-colors">Усиление 4G/LTE</Link>
+              <a href="/#esim" onClick={(e) => handleAnchorClick(e, 'esim')} className="text-sm font-medium hover:text-success transition-colors">eSIM</a>
               <a href="/#about" onClick={(e) => handleAnchorClick(e, 'about')} className="text-sm font-medium hover:text-success transition-colors">О компании</a>
               <Link to="/faq" className="text-sm font-medium hover:text-success transition-colors">FAQ</Link>
               <a href="/#contacts" onClick={(e) => handleAnchorClick(e, 'contacts')} className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
@@ -58,20 +59,20 @@ export default function CityHeader() {
                 >
                   Тарифы
                 </a>
-                <Link 
-                  to="/pricing" 
+                <a 
+                  href="/#pricing" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => { handleAnchorClick(e, 'pricing'); setIsMobileMenuOpen(false); }}
                 >
                   Стоимость
-                </Link>
-                <Link 
-                  to="/coverage" 
+                </a>
+                <a 
+                  href="/#coverage" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => { handleAnchorClick(e, 'coverage'); setIsMobileMenuOpen(false); }}
                 >
                   Покрытие
-                </Link>
+                </a>
                 <Link 
                   to="/signal-boost" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
@@ -79,13 +80,13 @@ export default function CityHeader() {
                 >
                   Усиление 4G/LTE
                 </Link>
-                <Link 
-                  to="/esim" 
+                <a 
+                  href="/#esim" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => { handleAnchorClick(e, 'esim'); setIsMobileMenuOpen(false); }}
                 >
                   eSIM
-                </Link>
+                </a>
                 <a 
                   href="/#about" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
