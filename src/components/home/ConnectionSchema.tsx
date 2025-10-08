@@ -29,7 +29,7 @@ export default function ConnectionSchema() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-10">
+    <section ref={sectionRef} className="py-20">
       <div className="container mx-auto px-4">
         <div className="bg-gradient-to-br from-primary/5 via-secondary/5 to-success/5 rounded-2xl p-8 md:p-12">
           <div className={`text-center mb-12 transition-all duration-1000 ${

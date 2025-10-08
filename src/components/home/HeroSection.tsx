@@ -30,7 +30,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-12 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10">
+    <section ref={sectionRef} className="py-20 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10">
       <div className="container mx-auto px-4">
         <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -115,6 +115,12 @@ export default function HeroSection() {
                 </div>
               </a>
             </div>
+
+            <p className={`text-lg md:text-xl text-muted-foreground mt-6 max-w-3xl mx-auto transition-all duration-1000 delay-500 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}>
+              Подключение к сети интернет для частных лиц и бизнеса через беспроводные каналы связи, включая спутниковый интернет. Усиление сотовой связи и Wi-Fi сигнала. Системы видеонаблюдения и охраны объектов.
+            </p>
           </div>
           
           <div className="flex flex-wrap justify-center gap-4">

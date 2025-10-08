@@ -28,7 +28,7 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="about" className="py-10 bg-gradient-to-br from-blue-50/50 via-white to-purple-50/50">
+    <section ref={sectionRef} id="about" className="py-20 bg-gradient-to-br from-blue-50/50 via-white to-purple-50/50">
       <div className="container mx-auto px-4">
         <div className={`max-w-5xl mx-auto transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'

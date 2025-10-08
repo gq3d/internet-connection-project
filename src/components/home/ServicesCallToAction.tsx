@@ -30,7 +30,7 @@ export default function ServicesCallToAction() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-10 bg-gradient-to-br from-primary/5 via-secondary/5 to-success/5">
+    <section ref={sectionRef} className="py-16 bg-gradient-to-br from-primary/5 via-secondary/5 to-success/5">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className={`bg-gradient-to-r from-primary to-secondary rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl text-white relative overflow-hidden transform transition-all duration-1000 ${
@@ -130,20 +130,6 @@ export default function ServicesCallToAction() {
                   <Icon name="Phone" size={20} className="mr-2" />
                   Связаться с нами
                 </a>
-              </div>
-            </div>
-          </div>
-          
-          {/* Анимированная карточка с описанием */}
-          <div className={`mt-6 transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`} style={{ transitionDelay: isVisible ? '900ms' : '0ms' }}>
-            <div className="relative group">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-secondary to-success rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-500 animate-pulse"></div>
-              <div className="relative bg-white rounded-2xl p-6 md:p-8 shadow-xl text-center">
-                <p className="text-base md:text-lg text-foreground/80 leading-relaxed max-w-4xl mx-auto">
-                  Подключение к сети интернет для частных лиц и бизнеса через беспроводные каналы связи, включая спутниковый интернет. Усиление сотовой связи и Wi-Fi сигнала. Системы видеонаблюдения и охраны объектов.
-                </p>
               </div>
             </div>
           </div>

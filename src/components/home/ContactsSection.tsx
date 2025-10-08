@@ -29,7 +29,7 @@ export default function ContactsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="contacts" className="py-10 bg-gradient-to-br from-blue-50/50 via-white to-indigo-50/50">
+    <section ref={sectionRef} id="contacts" className="py-20 bg-gradient-to-br from-blue-50/50 via-white to-indigo-50/50">
       <div className="container mx-auto px-4">
         <div className={`text-center mb-12 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
