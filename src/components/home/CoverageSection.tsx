@@ -5,12 +5,38 @@ import SpeedTest from '@/components/SpeedTest';
 import YandexCoverageMap from '@/components/YandexCoverageMap';
 
 const cities = [
-  'Москва', 'Подольск', 'Красногорск', 'Химки', 'Мытищи', 'Люберцы',
-  'Домодедово', 'Сергиев Посад', 'Коломна', 'Пушкино', 'Зеленоград', 'Щёлково',
-  'Видное', 'Дубна', 'Истра', 'Орехово-Зуево', 'Клин', 'Фрязино',
-  'Лобня', 'Ногинск', 'Реутов', 'Красноармейск', 'Дмитров', 'Серпухов',
-  'Егорьевск', 'Лыткарино', 'Солнечногорск', 'Жуковский', 'Старая Купавна',
-  'Бронницы', 'Чехов', 'Кашира'
+  { name: 'Москва', district: 'Город федерального значения' },
+  { name: 'Подольск', district: 'Городской округ Подольск' },
+  { name: 'Красногорск', district: 'Красногорский городской округ' },
+  { name: 'Химки', district: 'Городской округ Химки' },
+  { name: 'Мытищи', district: 'Городской округ Мытищи' },
+  { name: 'Люберцы', district: 'Люберецкий городской округ' },
+  { name: 'Домодедово', district: 'Городской округ Домодедово' },
+  { name: 'Сергиев Посад', district: 'Сергиево-Посадский городской округ' },
+  { name: 'Коломна', district: 'Городской округ Коломна' },
+  { name: 'Пушкино', district: 'Пушкинский городской округ' },
+  { name: 'Зеленоград', district: 'Зеленоградский административный округ Москвы' },
+  { name: 'Щёлково', district: 'Щёлковский городской округ' },
+  { name: 'Видное', district: 'Ленинский городской округ' },
+  { name: 'Дубна', district: 'Городской округ Дубна' },
+  { name: 'Истра', district: 'Истринский городской округ' },
+  { name: 'Орехово-Зуево', district: 'Орехово-Зуевский городской округ' },
+  { name: 'Клин', district: 'Клинский городской округ' },
+  { name: 'Фрязино', district: 'Городской округ Фрязино' },
+  { name: 'Лобня', district: 'Городской округ Лобня' },
+  { name: 'Ногинск', district: 'Богородский городской округ' },
+  { name: 'Реутов', district: 'Городской округ Реутов' },
+  { name: 'Красноармейск', district: 'Городской округ Красноармейск' },
+  { name: 'Дмитров', district: 'Дмитровский городской округ' },
+  { name: 'Серпухов', district: 'Городской округ Серпухов' },
+  { name: 'Егорьевск', district: 'Егорьевский городской округ' },
+  { name: 'Лыткарино', district: 'Городской округ Лыткарино' },
+  { name: 'Солнечногорск', district: 'Солнечногорский городской округ' },
+  { name: 'Жуковский', district: 'Городской округ Жуковский' },
+  { name: 'Старая Купавна', district: 'Городской округ Павловский Посад' },
+  { name: 'Бронницы', district: 'Городской округ Бронницы' },
+  { name: 'Чехов', district: 'Чеховский городской округ' },
+  { name: 'Кашира', district: 'Городской округ Кашира' }
 ];
 
 export default function CoverageSection() {
@@ -78,21 +104,24 @@ export default function CoverageSection() {
           <div className="bg-card border rounded-lg p-8">
             <h3 className="text-2xl font-semibold mb-6 text-center">Основные регионы и города <span className="text-muted-foreground text-lg">(список минимальный, для примера)</span></h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {cities.map((city, index) => (
                 <a
-                  key={city}
-                  href={`/city/${generateCitySlug(city)}`}
-                  className={`bg-accent/30 rounded-lg p-3 border hover:bg-accent/50 transition-all duration-500 group ${
+                  key={city.name}
+                  href={`/city/${generateCitySlug(city.name)}`}
+                  className={`bg-accent/30 rounded-lg p-4 border hover:bg-accent/50 transition-all duration-500 group ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                   }`}
                   style={{
                     transitionDelay: `${index * 30}ms`
                   }}
                 >
-                  <div className="flex items-center justify-center">
-                    <Icon name="MapPin" size={16} className="text-success mr-2 group-hover:scale-110 transition-transform" />
-                    <span className="font-medium group-hover:text-primary transition-colors">{city}</span>
+                  <div className="flex items-start space-x-3">
+                    <Icon name="MapPin" size={18} className="text-success flex-shrink-0 mt-1 group-hover:scale-110 transition-transform" />
+                    <div className="text-left">
+                      <div className="font-semibold text-lg group-hover:text-primary transition-colors mb-1">{city.name}</div>
+                      <div className="text-sm text-muted-foreground">{city.district}</div>
+                    </div>
                   </div>
                 </a>
               ))}
