@@ -789,6 +789,374 @@ const CitySEOText = ({ cityName }: CitySEOTextProps) => {
         `
       };
     }
+
+    if (cityName === 'Щёлково') {
+      return {
+        title: 'Подключение интернета в Щёлковском районе',
+        content: `
+          <p class="mb-4">
+            NetConnect предоставляет услуги беспроводного интернета в городе Щёлково и всех населённых пунктах Щёлковского городского округа Московской области.
+          </p>
+          
+          <h3 class="text-xl font-semibold mb-3 mt-6">Населённые пункты с нашим покрытием:</h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <p class="font-medium mb-2">Посёлки и деревни:</p>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+                <li>Фряново</li>
+                <li>Монино</li>
+                <li>Свердловский</li>
+                <li>Загорянский</li>
+                <li>Биокомбината</li>
+                <li>Чкаловский</li>
+                <li>Огуднево</li>
+                <li>Трубино</li>
+              </ul>
+            </div>
+            
+            <div>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground mt-7">
+                <li>Анискино</li>
+                <li>Гребнево</li>
+                <li>Медвежьи Озёра</li>
+                <li>Супонево</li>
+                <li>Образцово</li>
+                <li>Жегалово</li>
+                <li>Серково</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Коттеджные посёлки Щёлково:</h3>
+          <div class="grid md:grid-cols-3 gap-3 mb-4">
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Щёлковские хутора</li>
+              <li>Медвежьи озёра парк</li>
+              <li>Монино парк</li>
+              <li>Фряново парк</li>
+              <li>Свердловский парк</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Загорянка парк</li>
+              <li>Гребнево усадьба</li>
+              <li>Анискино парк</li>
+              <li>Лесное озеро</li>
+              <li>Зелёная роща</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Чкаловский парк</li>
+              <li>Огуднево парк</li>
+              <li>Трубино парк</li>
+              <li>Образцово парк</li>
+            </ul>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Наши услуги в Щёлково:</h3>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Беспроводной интернет до 250 Мбит/с</strong> — надёжное подключение для частных домов</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Установка оборудования</strong> — профессиональный монтаж антенны</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Подключение дачных посёлков</strong> — работаем с СНТ и коттеджными посёлками</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Техподдержка 24/7</strong> — оперативная помощь в любое время</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Расширение покрытия</strong> — усиление сигнала для больших участков</span>
+            </li>
+          </ul>
+
+          <p class="mt-4 text-muted-foreground">
+            Подключаем беспроводной интернет в Щёлково и районе, обеспечивая качественную связь там, где кабельный интернет недоступен.
+          </p>
+        `
+      };
+    }
+
+    if (cityName === 'Пушкино') {
+      return {
+        title: 'Подключение интернета в Пушкинском районе',
+        content: `
+          <p class="mb-4">
+            NetConnect обеспечивает беспроводным интернетом город Пушкино и все населённые пункты Пушкинского городского округа Московской области.
+          </p>
+          
+          <h3 class="text-xl font-semibold mb-3 mt-6">Населённые пункты с нашим покрытием:</h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <p class="font-medium mb-2">Посёлки и деревни:</p>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+                <li>Правдинский</li>
+                <li>Лесной</li>
+                <li>Софрино</li>
+                <li>Ашукино</li>
+                <li>Зеленоградский</li>
+                <li>Черкизово</li>
+                <li>Звягино</li>
+                <li>Клязьма</li>
+              </ul>
+            </div>
+            
+            <div>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground mt-7">
+                <li>Тарасовка</li>
+                <li>Лесные Поляны</li>
+                <li>Талицы</li>
+                <li>Барково</li>
+                <li>Царёво</li>
+                <li>Мамонтовка</li>
+                <li>Красноармейск</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Коттеджные посёлки Пушкино:</h3>
+          <div class="grid md:grid-cols-3 gap-3 mb-4">
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Пушкино парк</li>
+              <li>Клязьма резиденс</li>
+              <li>Софрино парк</li>
+              <li>Ашукинский лес</li>
+              <li>Лесные дачи</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Правдинский парк</li>
+              <li>Тарасовка парк</li>
+              <li>Черкизово парк</li>
+              <li>Звягино парк</li>
+              <li>Талицы парк</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Барково парк</li>
+              <li>Царёво парк</li>
+              <li>Мамонтовка парк</li>
+              <li>Зеленоградский лес</li>
+            </ul>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Наши услуги в Пушкино:</h3>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Беспроводной интернет до 250 Мбит/с</strong> — стабильное подключение для дач</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Профессиональная установка</strong> — монтаж и настройка оборудования</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Подключение коттеджных посёлков</strong> — опыт работы с жилыми комплексами</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Техподдержка 24/7</strong> — круглосуточная поддержка</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Усиление сигнала</strong> — покрытие больших территорий</span>
+            </li>
+          </ul>
+
+          <p class="mt-4 text-muted-foreground">
+            Подключаем беспроводной интернет в Пушкино и районе, обеспечивая качественную связь для загородных домов и дач.
+          </p>
+        `
+      };
+    }
+
+    if (cityName === 'Дмитров') {
+      return {
+        title: 'Подключение интернета в Дмитровском районе',
+        content: `
+          <p class="mb-4">
+            NetConnect предоставляет услуги беспроводного интернета в городе Дмитров и всех населённых пунктах Дмитровского городского округа Московской области.
+          </p>
+          
+          <h3 class="text-xl font-semibold mb-3 mt-6">Населённые пункты с нашим покрытием:</h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <p class="font-medium mb-2">Посёлки и деревни:</p>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+                <li>Деденево</li>
+                <li>Яхрома</li>
+                <li>Икша</li>
+                <li>Вербилки</li>
+                <li>Новосиньково</li>
+                <li>Синьково</li>
+                <li>Орудьево</li>
+                <li>Подосинки</li>
+              </ul>
+            </div>
+            
+            <div>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground mt-7">
+                <li>Горки</li>
+                <li>Курово</li>
+                <li>Ольявидово</li>
+                <li>Белый Раст</li>
+                <li>Костино</li>
+                <li>Рогачёво</li>
+                <li>Подъячево</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Коттеджные посёлки Дмитрова:</h3>
+          <div class="grid md:grid-cols-3 gap-3 mb-4">
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Дмитровские горы</li>
+              <li>Яхрома парк</li>
+              <li>Деденево парк</li>
+              <li>Икша парк</li>
+              <li>Вербилки парк</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Синьковский лес</li>
+              <li>Орудьевский парк</li>
+              <li>Горки парк</li>
+              <li>Куровские дачи</li>
+              <li>Белый Раст парк</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Костино парк</li>
+              <li>Рогачёвский лес</li>
+              <li>Подъячево парк</li>
+              <li>Дмитровский лес</li>
+            </ul>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Наши услуги в Дмитрове:</h3>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Беспроводной интернет до 250 Мбит/с</strong> — быстрое подключение для домов и дач</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Установка оборудования</strong> — профессиональный монтаж антенны</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Подключение СНТ и посёлков</strong> — работаем с садовыми товариществами</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Техподдержка 24/7</strong> — оперативное решение вопросов</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Усиление сигнала</strong> — покрытие больших участков</span>
+            </li>
+          </ul>
+
+          <p class="mt-4 text-muted-foreground">
+            Подключаем беспроводной интернет в Дмитрове и районе, обеспечивая стабильную связь для загородных объектов.
+          </p>
+        `
+      };
+    }
+
+    if (cityName === 'Сергиев Посад') {
+      return {
+        title: 'Подключение интернета в Сергиево-Посадском районе',
+        content: `
+          <p class="mb-4">
+            NetConnect обеспечивает беспроводным интернетом город Сергиев Посад и все населённые пункты Сергиево-Посадского городского округа Московской области.
+          </p>
+          
+          <h3 class="text-xl font-semibold mb-3 mt-6">Населённые пункты с нашим покрытием:</h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <p class="font-medium mb-2">Посёлки и деревни:</p>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+                <li>Хотьково</li>
+                <li>Краснозаводск</li>
+                <li>Скоропусковский</li>
+                <li>Сергиев Посад-7</li>
+                <li>Богородское</li>
+                <li>Реммаш</li>
+                <li>Березняки</li>
+                <li>Жучки</li>
+              </ul>
+            </div>
+            
+            <div>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground mt-7">
+                <li>Шеметово</li>
+                <li>Абрамцево</li>
+                <li>Семхоз</li>
+                <li>Константиново</li>
+                <li>Васильевское</li>
+                <li>Лоза</li>
+                <li>Кузьмино</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Коттеджные посёлки Сергиева Посада:</h3>
+          <div class="grid md:grid-cols-3 gap-3 mb-4">
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Хотьковский парк</li>
+              <li>Абрамцево усадьба</li>
+              <li>Краснозаводск парк</li>
+              <li>Богородское парк</li>
+              <li>Березняковский лес</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Шеметово парк</li>
+              <li>Семхоз парк</li>
+              <li>Константиново парк</li>
+              <li>Васильевское парк</li>
+              <li>Лоза парк</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Кузьмино парк</li>
+              <li>Жучки парк</li>
+              <li>Посадский лес</li>
+              <li>Скоропусковский парк</li>
+            </ul>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Наши услуги в Сергиевом Посаде:</h3>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Беспроводной интернет до 250 Мбит/с</strong> — надёжное подключение для частных домов</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Установка и настройка</strong> — профессиональный монтаж оборудования</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Подключение коттеджных посёлков</strong> — работаем с любыми объектами</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Техподдержка 24/7</strong> — круглосуточная поддержка клиентов</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Расширение покрытия</strong> — усиление сигнала для больших территорий</span>
+            </li>
+          </ul>
+
+          <p class="mt-4 text-muted-foreground">
+            Подключаем беспроводной интернет в Сергиевом Посаде и районе, обеспечивая качественную связь для загородных домов.
+          </p>
+        `
+      };
+    }
     
     return null;
   };
