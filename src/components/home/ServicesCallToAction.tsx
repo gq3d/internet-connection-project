@@ -51,7 +51,7 @@ export default function ServicesCallToAction() {
               </h2>
               
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-2">
-                Подключение к сети интернет для частных лиц и бизнеса через беспроводные каналы связи, включая спутниковый интернет. Усиление сотовой связи и Wi-Fi сигнала. Системы видеонаблюдения и охраны объектов.
+                Интернет, видеонаблюдение, Wi-Fi оборудование, охранные системы и многое другое
               </p>
               
               <div className="flex flex-col gap-6 items-center">
