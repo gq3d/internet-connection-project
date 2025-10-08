@@ -41,11 +41,6 @@ const CityPage = () => {
     };
   }, []);
 
-  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, anchor: string) => {
-    e.preventDefault();
-    window.location.href = `/${anchor}`;
-  };
-
   useSEO({
     title: city?.seoTitle || 'NetConnect',
     description: city?.description || '',
@@ -140,7 +135,7 @@ const CityPage = () => {
         </script>
       </Helmet>
 
-      <CityHeader onAnchorClick={handleAnchorClick} />
+      <CityHeader />
 
       <Breadcrumbs items={[
         { label: 'Покрытие', href: '/#coverage' },

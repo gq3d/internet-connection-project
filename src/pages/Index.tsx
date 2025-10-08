@@ -21,14 +21,14 @@ const Index = () => {
       const scrollToSection = (anchorId: string, retries = 0) => {
         const section = document.getElementById(anchorId);
         if (section) {
-          setTimeout(() => {
-            section.scrollIntoView({ behavior: 'smooth' });
-          }, 100);
-        } else if (retries < 10) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        } else if (retries < 20) {
+          // Retry up to 20 times (2 seconds total)
           setTimeout(() => scrollToSection(anchorId, retries + 1), 100);
         }
       };
-      scrollToSection(location.state.scrollTo);
+      // Start after a short delay to ensure page is rendered
+      setTimeout(() => scrollToSection(location.state.scrollTo), 200);
     }
   }, [location]);
 
