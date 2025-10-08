@@ -48,10 +48,10 @@ const CityPage = () => {
   useSEO({
     title: city?.seoTitle || 'NetConnect',
     description: city?.description || '',
-    keywords: `интернет ${city?.name}, беспроводной интернет ${city?.name}, подключение интернета ${city?.name}, интернет на даче ${city?.name}`,
+    keywords: `интернет ${city?.name}, беспроводной интернет ${city?.name}, подключение интернета ${city?.name}, интернет на даче ${city?.name}, ${city?.district}, интернет ${city?.district}`,
     canonical: `https://mosoblconnect.ru/city/${citySlug}`,
     ogTitle: city?.seoTitle || '',
-    ogDescription: city?.description || '',
+    ogDescription: `${city?.description} ${city?.district ? `Район: ${city.district}.` : ''}`,
     ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg'
   });
 
