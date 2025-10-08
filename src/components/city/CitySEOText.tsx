@@ -1891,6 +1891,322 @@ const CitySEOText = ({ cityName }: CitySEOTextProps) => {
         `
       };
     }
+
+    if (cityName === 'Зеленоград') {
+      return {
+        title: 'Подключение интернета в Зеленограде',
+        content: `
+          <p class="mb-4">
+            NetConnect предоставляет услуги беспроводного интернета в Зеленограде и окрестностях Зеленоградского административного округа Москвы.
+          </p>
+          
+          <h3 class="text-xl font-semibold mb-3 mt-6">Микрорайоны и территории с нашим покрытием:</h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <p class="font-medium mb-2">Микрорайоны:</p>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+                <li>Крюково</li>
+                <li>Силино</li>
+                <li>Савёлки</li>
+                <li>Старое Крюково</li>
+                <li>Матушкино</li>
+                <li>Андреевка</li>
+              </ul>
+            </div>
+            
+            <div>
+              <p class="font-medium mb-2">Деревни и посёлки:</p>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+                <li>Ржавки</li>
+                <li>Каменка</li>
+                <li>Алабушево</li>
+                <li>Малино</li>
+                <li>Голубое</li>
+                <li>Назарьево</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Коттеджные посёлки Зеленограда:</h3>
+          <div class="grid md:grid-cols-3 gap-3 mb-4">
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Зеленоградский лес</li>
+              <li>Крюково парк</li>
+              <li>Силино парк</li>
+              <li>Савёлки парк</li>
+              <li>Матушкино парк</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Андреевка парк</li>
+              <li>Ржавки парк</li>
+              <li>Каменка парк</li>
+              <li>Алабушево парк</li>
+              <li>Малино парк</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Голубое озеро</li>
+              <li>Назарьево парк</li>
+              <li>Зеленоградские дачи</li>
+              <li>Лесной квартал</li>
+            </ul>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Наши услуги в Зеленограде:</h3>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Беспроводной интернет до 250 Мбит/с</strong> — быстрое подключение для домов и дач</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Установка оборудования</strong> — профессиональный монтаж антенны</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Подключение коттеджных посёлков</strong> — работаем с любыми объектами</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Техподдержка 24/7</strong> — круглосуточная поддержка</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Усиление сигнала</strong> — покрытие больших территорий</span>
+            </li>
+          </ul>
+
+          <p class="mt-4 text-muted-foreground">
+            Подключаем беспроводной интернет в Зеленограде и районе, обеспечивая стабильную связь для загородных объектов.
+          </p>
+        `
+      };
+    }
+
+    if (cityName === 'Дубна') {
+      return {
+        title: 'Подключение интернета в Дубне',
+        content: `
+          <p class="mb-4">
+            NetConnect обеспечивает беспроводным интернетом город Дубна и окрестности городского округа Дубна Московской области.
+          </p>
+          
+          <h3 class="text-xl font-semibold mb-3 mt-6">Населённые пункты с нашим покрытием:</h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <p class="font-medium mb-2">Посёлки и микрорайоны:</p>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+                <li>Большая Волга</li>
+                <li>Ратмино</li>
+                <li>Юркино</li>
+                <li>Александровка</li>
+                <li>Козлаки</li>
+                <li>Поселок Института ядерных исследований</li>
+              </ul>
+            </div>
+            
+            <div>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground mt-7">
+                <li>Левобережный</li>
+                <li>Черная речка</li>
+                <li>Притыкинская роща</li>
+                <li>Центральный</li>
+                <li>Новое Поле</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Коттеджные посёлки Дубны:</h3>
+          <div class="grid md:grid-cols-3 gap-3 mb-4">
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Дубна парк</li>
+              <li>Большая Волга парк</li>
+              <li>Ратмино парк</li>
+              <li>Юркино парк</li>
+              <li>Александровка парк</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Козлаки парк</li>
+              <li>Левобережный парк</li>
+              <li>Черная речка парк</li>
+              <li>Притыкинская роща парк</li>
+              <li>Волжский берег</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Дубненский лес</li>
+              <li>Канал имени Москвы</li>
+              <li>Новое Поле парк</li>
+              <li>Атомный парк</li>
+            </ul>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Наши услуги в Дубне:</h3>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Беспроводной интернет до 250 Мбит/с</strong> — надёжное подключение для домов и дач</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Профессиональная установка</strong> — монтаж и настройка оборудования</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Подключение коттеджных посёлков</strong> — опыт работы с жилыми комплексами</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Техподдержка 24/7</strong> — круглосуточная поддержка</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Усиление сигнала</strong> — покрытие больших участков</span>
+            </li>
+          </ul>
+
+          <p class="mt-4 text-muted-foreground">
+            Подключаем беспроводной интернет в Дубне и районе, обеспечивая качественную связь для загородных домов и дач.
+          </p>
+        `
+      };
+    }
+
+    if (cityName === 'Орехово-Зуево') {
+      return {
+        title: 'Подключение интернета в Орехово-Зуево',
+        content: `
+          <p class="mb-4">
+            NetConnect предоставляет услуги беспроводного интернета в городе Орехово-Зуево и окрестностях Орехово-Зуевского городского округа Московской области.
+          </p>
+          
+          <h3 class="text-xl font-semibold mb-3 mt-6">Населённые пункты с нашим покрытием:</h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <p class="font-medium mb-2">Посёлки и деревни:</p>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+                <li>Ликино-Дулёво</li>
+                <li>Верея</li>
+                <li>Горбачиха</li>
+                <li>Давыдово</li>
+                <li>Дровосеки</li>
+                <li>Запонорье</li>
+                <li>Зимино</li>
+              </ul>
+            </div>
+            
+            <div>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground mt-7">
+                <li>Ильинский Погост</li>
+                <li>Кабаново</li>
+                <li>Крутое</li>
+                <li>Малая Дубна</li>
+                <li>Мисцево</li>
+                <li>Новое</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Коттеджные посёлки Орехово-Зуево:</h3>
+          <div class="grid md:grid-cols-3 gap-3 mb-4">
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Орехово-Зуевский парк</li>
+              <li>Ликино-Дулёво парк</li>
+              <li>Верея парк</li>
+              <li>Горбачиха парк</li>
+              <li>Давыдово парк</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Дровосеки парк</li>
+              <li>Запонорье парк</li>
+              <li>Зимино парк</li>
+              <li>Ильинский Погост парк</li>
+              <li>Кабаново парк</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Крутое парк</li>
+              <li>Малая Дубна парк</li>
+              <li>Мисцево парк</li>
+              <li>Новое парк</li>
+            </ul>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Наши услуги в Орехово-Зуево:</h3>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Беспроводной интернет до 250 Мбит/с</strong> — быстрое подключение для дач и домов</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Установка оборудования</strong> — профессиональный монтаж антенны</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Подключение СНТ и посёлков</strong> — работаем с садовыми товариществами</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Техподдержка 24/7</strong> — оперативное решение вопросов</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Усиление сигнала</strong> — покрытие больших участков</span>
+            </li>
+          </ul>
+
+          <p class="mt-4 text-muted-foreground">
+            Подключаем беспроводной интернет в Орехово-Зуево и районе, обеспечивая стабильную связь для загородных объектов.
+          </p>
+        `
+      };
+    }
+
+    if (cityName === 'Фрязино' || cityName === 'Лобня' || cityName === 'Реутов' || cityName === 'Ногинск' || cityName === 'Красноармейск' || cityName === 'Лыткарино' || cityName === 'Старая Купавна' || cityName === 'Бронницы' || cityName === 'Кашира') {
+      return {
+        title: `Подключение интернета в ${cityName}`,
+        content: `
+          <p class="mb-4">
+            NetConnect предоставляет услуги высокоскоростного беспроводного интернета в городе ${cityName} и окрестностях Московской области.
+          </p>
+          
+          <h3 class="text-xl font-semibold mb-3 mt-6">Территории с нашим покрытием:</h3>
+          <p class="mb-4">
+            Подключаем интернет во всех районах города ${cityName}, включая частные дома, дачные участки, коттеджные посёлки и садовые товарищества.
+          </p>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Наши услуги в ${cityName}:</h3>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Беспроводной интернет до 250 Мбит/с</strong> — надёжное подключение через спутниковые и радиорелейные технологии для дач, коттеджей и частных домов</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Установка и настройка оборудования</strong> — выезд инженера на объект, монтаж антенны, настройка роутера и всех устройств</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Подключение СНТ и дачных кооперативов</strong> — организуем интернет для садовых товариществ по выгодным тарифам</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Техническая поддержка 24/7</strong> — оперативное решение любых вопросов круглосуточно</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Усиление сигнала</strong> — установка дополнительных репитеров для покрытия больших территорий</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Резервное подключение</strong> — настройка резервных каналов связи для бесперебойной работы</span>
+            </li>
+          </ul>
+
+          <p class="mt-4 text-muted-foreground">
+            Подключаем интернет там, где недоступны проводные технологии. Работаем по всему городу ${cityName} и окрестностям, включая удалённые районы и коттеджные посёлки. Гарантируем стабильную связь и высокую скорость.
+          </p>
+        `
+      };
+    }
     
     return null;
   };
