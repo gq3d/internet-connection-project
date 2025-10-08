@@ -9,11 +9,11 @@ export default function Equipment() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-background via-background to-secondary/5">
       <SEO 
-        title="Оборудование для беспроводного интернета | NetConnect - MikroTik, Ubiquiti, TP-Link"
-        description="Профессиональное оборудование для беспроводного интернета в Московской области: антенны MikroTik, Ubiquiti, TP-Link. Подбор оптимальной конфигурации для частных домов и дач. Установка и настройка под ключ. Консультация: +7 (901) 500-00-78"
-        keywords="оборудование беспроводного интернета, антенны mikrotik, ubiquiti точки доступа, tp-link wi-fi, оборудование для дачи интернет, роутер для беспроводного интернета, антенна для приема интернета, оборудование netconnect"
-        ogTitle="Оборудование для беспроводного интернета | NetConnect"
-        ogDescription="Профессиональное оборудование MikroTik, Ubiquiti, TP-Link для беспроводного интернета. Подбор под ваши условия. Установка под ключ."
+        title="Оборудование для интернета: антенны MIMO, роутеры 4G/LTE — примеры от NetConnect"
+        description="Примеры профессионального оборудования для беспроводного интернета в МО: MIMO антенны (усиление до 24 dBi, дальность до 35 км), 4G/LTE роутеры от MikroTik, Ubiquiti, TP-Link, Huawei. Индивидуальный подбор под ваши условия. Консультация: +7 (901) 500-00-78"
+        keywords="оборудование беспроводного интернета, антенны mimo, 4g lte роутер, антенны mikrotik, ubiquiti lte, tp-link archer, huawei роутер, оборудование для дачи интернет, антенна для приема 4g, направленная антенна lte, yagi mimo антенна"
+        ogTitle="Примеры оборудования для беспроводного интернета — антенны и роутеры | NetConnect"
+        ogDescription="Профессиональные MIMO антенны (2x18-24 dBi) и 4G/LTE роутеры для стабильного интернета. Подбираем оптимальное оборудование для вашего объекта индивидуально."
         canonical="https://mosoblconnect.ru/equipment"
       />
       {/* Navbar */}
@@ -638,22 +638,27 @@ export default function Equipment() {
           "@context": "https://schema.org",
           "@type": "Product",
           "name": "Оборудование для беспроводного интернета NetConnect",
-          "description": "Профессиональное оборудование для беспроводного интернета: антенны, роутеры, точки доступа MikroTik, Ubiquiti, TP-Link",
+          "description": "Профессиональное оборудование для беспроводного интернета: MIMO антенны (усиление 2x18-24 dBi, дальность до 35 км), 4G/LTE роутеры от MikroTik, Ubiquiti, TP-Link, Huawei, Netgear. Индивидуальный подбор под ваши условия.",
           "brand": {
             "@type": "Brand",
             "name": "NetConnect"
           },
+          "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
           "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "RUB",
             "lowPrice": "3000",
             "highPrice": "25000",
-            "offerCount": "3"
+            "offerCount": "12",
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": "2025-12-31"
           },
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.8",
-            "reviewCount": "1500"
+            "reviewCount": "1500",
+            "bestRating": "5",
+            "worstRating": "1"
           }
         })}
       </script>
