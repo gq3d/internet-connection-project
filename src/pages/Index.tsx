@@ -18,18 +18,13 @@ const Index = () => {
   useEffect(() => {
     // Handle scroll to section from navigation state
     if (location.state?.scrollTo) {
-      console.log('Index: Got scrollTo request:', location.state.scrollTo);
       const scrollToSection = (anchorId: string, retries = 0) => {
         const section = document.getElementById(anchorId);
-        console.log(`Index: Attempt ${retries + 1} to find #${anchorId}:`, section ? 'FOUND' : 'NOT FOUND');
         if (section) {
-          console.log('Index: Scrolling to section');
           section.scrollIntoView({ behavior: 'smooth' });
         } else if (retries < 20) {
           // Retry up to 20 times (2 seconds total)
           setTimeout(() => scrollToSection(anchorId, retries + 1), 100);
-        } else {
-          console.log('Index: Failed to find section after 20 retries');
         }
       };
       // Start after a short delay to ensure page is rendered
