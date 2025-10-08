@@ -154,9 +154,9 @@ const CityPage = () => {
         </div>
       </section>
 
-      <CityReviews cityName={city.name} />
-
       <CitySEOText cityName={city.name} />
+
+      <CityReviews cityName={city.name} />
 
       <CityWhatsAppButton cityName={city.name} />
       <CityFooter cityName={city.name} />
