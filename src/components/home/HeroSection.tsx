@@ -30,7 +30,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10">
+    <section ref={sectionRef} className="py-12 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10">
       <div className="container mx-auto px-4">
         <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'

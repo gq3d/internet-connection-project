@@ -30,7 +30,7 @@ export default function ServicesCallToAction() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-16 bg-gradient-to-br from-primary/5 via-secondary/5 to-success/5">
+    <section ref={sectionRef} className="py-10 bg-gradient-to-br from-primary/5 via-secondary/5 to-success/5">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className={`bg-gradient-to-r from-primary to-secondary rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl text-white relative overflow-hidden transform transition-all duration-1000 ${
