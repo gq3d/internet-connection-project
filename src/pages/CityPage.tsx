@@ -12,6 +12,7 @@ import CityCTA from '@/components/city/CityCTA';
 import CityWhatsAppButton from '@/components/city/CityWhatsAppButton';
 import CityFooter from '@/components/city/CityFooter';
 import CitySEOText from '@/components/city/CitySEOText';
+import CityReviews from '@/components/city/CityReviews';
 
 const CityPage = () => {
   const { citySlug } = useParams<{ citySlug: string }>();
@@ -152,6 +153,8 @@ const CityPage = () => {
           <CityCTA cityName={city.name} />
         </div>
       </section>
+
+      <CityReviews cityName={city.name} />
 
       <CitySEOText cityName={city.name} />
 
