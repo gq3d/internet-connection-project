@@ -421,6 +421,374 @@ const CitySEOText = ({ cityName }: CitySEOTextProps) => {
         `
       };
     }
+
+    if (cityName === 'Москва') {
+      return {
+        title: 'Беспроводной интернет в Москве и Новой Москве',
+        content: `
+          <p class="mb-4">
+            NetConnect предоставляет услуги беспроводного интернета в Москве, особенно в районах Новой Москвы, где проводное подключение затруднено или недоступно.
+          </p>
+          
+          <h3 class="text-xl font-semibold mb-3 mt-6">Районы Новой Москвы с нашим покрытием:</h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <p class="font-medium mb-2">Населённые пункты:</p>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+                <li>Внуково</li>
+                <li>Московский</li>
+                <li>Щербинка</li>
+                <li>Троицк</li>
+                <li>Сосенское</li>
+                <li>Воскресенское</li>
+                <li>Десёновское</li>
+                <li>Кокошкино</li>
+              </ul>
+            </div>
+            
+            <div>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground mt-7">
+                <li>Марушкинское</li>
+                <li>Московский</li>
+                <li>Новофёдоровское</li>
+                <li>Первомайское</li>
+                <li>Рязановское</li>
+                <li>Филимонковское</li>
+                <li>Щаповское</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Коттеджные посёлки Москвы:</h3>
+          <div class="grid md:grid-cols-3 gap-3 mb-4">
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Новая Москва</li>
+              <li>Московские водники</li>
+              <li>Троицкая слобода</li>
+              <li>Переделкино ближнее</li>
+              <li>Рассказовка</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Саларьево парк</li>
+              <li>Внуково парк</li>
+              <li>Западное Кунцево</li>
+              <li>Южное Бутово парк</li>
+              <li>Николо-Хованское</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Ватутинки</li>
+              <li>Мамыри</li>
+              <li>Бунинские луга</li>
+              <li>Марушкино</li>
+            </ul>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Наши услуги в Москве:</h3>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Беспроводной интернет до 250 Мбит/с</strong> — надёжное подключение для районов Новой Москвы</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Установка оборудования</strong> — профессиональный монтаж и настройка</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Подключение СНТ и дачных посёлков</strong> — работаем с любыми объектами</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Техподдержка 24/7</strong> — круглосуточная поддержка клиентов</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Расширение покрытия</strong> — усиление сигнала для больших территорий</span>
+            </li>
+          </ul>
+
+          <p class="mt-4 text-muted-foreground">
+            Специализируемся на подключении беспроводного интернета в районах Новой Москвы, где кабельные технологии недоступны или экономически нецелесообразны.
+          </p>
+        `
+      };
+    }
+
+    if (cityName === 'Мытищи') {
+      return {
+        title: 'Подключение интернета в Мытищинском районе',
+        content: `
+          <p class="mb-4">
+            NetConnect обеспечивает беспроводным интернетом город Мытищи и все населённые пункты Мытищинского городского округа Московской области.
+          </p>
+          
+          <h3 class="text-xl font-semibold mb-3 mt-6">Населённые пункты с нашим покрытием:</h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <p class="font-medium mb-2">Посёлки и деревни:</p>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+                <li>Пироговский</li>
+                <li>Нагорное</li>
+                <li>Дружба</li>
+                <li>Поведники</li>
+                <li>Подольниха</li>
+                <li>Троицкое</li>
+                <li>Челобитьево</li>
+                <li>Болтино</li>
+              </ul>
+            </div>
+            
+            <div>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground mt-7">
+                <li>Марфино</li>
+                <li>Высоково</li>
+                <li>Виноградово</li>
+                <li>Рупасово</li>
+                <li>Беляниново</li>
+                <li>Федоскино</li>
+                <li>Лупаново</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Коттеджные посёлки Мытищ:</h3>
+          <div class="grid md:grid-cols-3 gap-3 mb-4">
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Пироговская ривьера</li>
+              <li>Клязьминский берег</li>
+              <li>Марфинский парк</li>
+              <li>Зелёные холмы</li>
+              <li>Виноградово парк</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Лесная резиденция</li>
+              <li>Троицкие поляны</li>
+              <li>Мытищи парк</li>
+              <li>Дружба парк</li>
+              <li>Северный парк</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Федоскинская усадьба</li>
+              <li>Пироговский лес</li>
+              <li>Лесное озеро</li>
+              <li>Загородный клуб</li>
+            </ul>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Наши услуги в Мытищах:</h3>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Беспроводной интернет до 250 Мбит/с</strong> — стабильное подключение для дач и коттеджей</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Профессиональная установка</strong> — монтаж антенны и настройка оборудования</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Подключение коттеджных посёлков</strong> — опыт работы с жилыми комплексами</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Техподдержка 24/7</strong> — оперативное решение вопросов</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Усиление сигнала</strong> — покрытие больших участков</span>
+            </li>
+          </ul>
+
+          <p class="mt-4 text-muted-foreground">
+            Подключаем беспроводной интернет в Мытищах и районе, обеспечивая качественную связь там, где проводное подключение невозможно.
+          </p>
+        `
+      };
+    }
+
+    if (cityName === 'Люберцы') {
+      return {
+        title: 'Подключение интернета в Люберецком районе',
+        content: `
+          <p class="mb-4">
+            NetConnect предоставляет услуги беспроводного интернета в городе Люберцы и всех населённых пунктах Люберецкого городского округа Московской области.
+          </p>
+          
+          <h3 class="text-xl font-semibold mb-3 mt-6">Населённые пункты с нашим покрытием:</h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <p class="font-medium mb-2">Посёлки и деревни:</p>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+                <li>Котельники</li>
+                <li>Дзержинский</li>
+                <li>Малаховка</li>
+                <li>Красково</li>
+                <li>Октябрьский</li>
+                <li>Томилино</li>
+                <li>Некрасовка</li>
+                <li>Кожухово</li>
+              </ul>
+            </div>
+            
+            <div>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground mt-7">
+                <li>Марусино</li>
+                <li>Мотяково</li>
+                <li>Новая Ухтомка</li>
+                <li>Пехорка</li>
+                <li>Салтыковка</li>
+                <li>Токарёво</li>
+                <li>Ухтомский</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Коттеджные посёлки Люберец:</h3>
+          <div class="grid md:grid-cols-3 gap-3 mb-4">
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Люберцы парк</li>
+              <li>Малаховское озеро</li>
+              <li>Салтыковка парк</li>
+              <li>Томилинский лес</li>
+              <li>Красковский лес</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Некрасовка парк</li>
+              <li>Лесная дача</li>
+              <li>Зелёная поляна</li>
+              <li>Октябрьский парк</li>
+              <li>Марусино берег</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Пехорка парк</li>
+              <li>Ухтомский парк</li>
+              <li>Дзержинский парк</li>
+              <li>Котельниково</li>
+            </ul>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Наши услуги в Люберцах:</h3>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Беспроводной интернет до 250 Мбит/с</strong> — надёжное подключение для домов и дач</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Установка и настройка</strong> — профессиональный монтаж оборудования</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Подключение СНТ</strong> — работаем с садовыми товариществами</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Техподдержка 24/7</strong> — круглосуточная поддержка</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Расширение покрытия</strong> — усиление для больших территорий</span>
+            </li>
+          </ul>
+
+          <p class="mt-4 text-muted-foreground">
+            Подключаем беспроводной интернет в Люберцах и районе, обеспечивая качественную связь для частных домов и дачных участков.
+          </p>
+        `
+      };
+    }
+
+    if (cityName === 'Домодедово') {
+      return {
+        title: 'Подключение интернета в Домодедовском районе',
+        content: `
+          <p class="mb-4">
+            NetConnect обеспечивает беспроводным интернетом город Домодедово и все населённые пункты Домодедовского городского округа Московской области.
+          </p>
+          
+          <h3 class="text-xl font-semibold mb-3 mt-6">Населённые пункты с нашим покрытием:</h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <p class="font-medium mb-2">Посёлки и деревни:</p>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+                <li>Барыбино</li>
+                <li>Белые Столбы</li>
+                <li>Вельяминово</li>
+                <li>Ильинское</li>
+                <li>Константиново</li>
+                <li>Растуново</li>
+                <li>Заборье</li>
+                <li>Ямы</li>
+              </ul>
+            </div>
+            
+            <div>
+              <ul class="list-disc list-inside space-y-1 text-muted-foreground mt-7">
+                <li>Редькино</li>
+                <li>Добрыниха</li>
+                <li>Востряково</li>
+                <li>Кишкино</li>
+                <li>Павловское</li>
+                <li>Одинцово</li>
+                <li>Сатино-Русское</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Коттеджные посёлки Домодедово:</h3>
+          <div class="grid md:grid-cols-3 gap-3 mb-4">
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Домодедово парк</li>
+              <li>Барыбино парк</li>
+              <li>Белые столбы парк</li>
+              <li>Растуново лес</li>
+              <li>Вельяминово парк</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Заборье парк</li>
+              <li>Ильинские дачи</li>
+              <li>Константиново парк</li>
+              <li>Павловская слобода</li>
+              <li>Редькино парк</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
+              <li>Сатинский лес</li>
+              <li>Ямской парк</li>
+              <li>Востряково парк</li>
+              <li>Одинцовский парк</li>
+            </ul>
+          </div>
+
+          <h3 class="text-xl font-semibold mb-3 mt-6">Наши услуги в Домодедово:</h3>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Беспроводной интернет до 250 Мбит/с</strong> — быстрое подключение для дач и домов</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Профессиональная установка</strong> — монтаж и настройка оборудования</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Подключение коттеджных посёлков</strong> — работаем с любыми объектами</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Техподдержка 24/7</strong> — круглосуточная поддержка клиентов</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-primary mr-2">✓</span>
+              <span><strong>Усиление сигнала</strong> — покрытие больших территорий</span>
+            </li>
+          </ul>
+
+          <p class="mt-4 text-muted-foreground">
+            Подключаем беспроводной интернет в Домодедово и районе, обеспечивая стабильную связь для загородных домов и дач.
+          </p>
+        `
+      };
+    }
     
     return null;
   };
