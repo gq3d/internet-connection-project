@@ -9,7 +9,7 @@ import InternetTechnology from '@/components/internet/InternetTechnology';
 import InternetTariffs from '@/components/internet/InternetTariffs';
 import InternetExamples from '@/components/internet/InternetExamples';
 import InternetCTA from '@/components/internet/InternetCTA';
-import InternetFooter from '@/components/internet/InternetFooter';
+import UniversalFooter from '@/components/UniversalFooter';
 
 const Internet = () => {
   useSEO({
@@ -92,7 +92,7 @@ const Internet = () => {
       </div>
 
       <InternetCTA />
-      <InternetFooter />
+      <UniversalFooter customCopyright="© 2015 NetConnect. Беспроводной интернет для дома и бизнеса в Московской области." />
       <WhatsAppButton />
     </div>
   );

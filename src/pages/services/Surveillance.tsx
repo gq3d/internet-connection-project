@@ -8,7 +8,7 @@ import SurveillancePackages from '@/components/surveillance/SurveillancePackages
 import SurveillanceProcess from '@/components/surveillance/SurveillanceProcess';
 import SurveillanceExamples from '@/components/surveillance/SurveillanceExamples';
 import SurveillanceCTA from '@/components/surveillance/SurveillanceCTA';
-import SurveillanceFooter from '@/components/surveillance/SurveillanceFooter';
+import UniversalFooter from '@/components/UniversalFooter';
 
 const Surveillance = () => {
   useSEO({
@@ -75,7 +75,7 @@ const Surveillance = () => {
       <SurveillanceProcess />
       <SurveillanceExamples />
       <SurveillanceCTA />
-      <SurveillanceFooter />
+      <UniversalFooter customCopyright="© 2015 NetConnect. Видеонаблюдение для дома и бизнеса в Московской области." />
       <WhatsAppButton />
     </div>
   );

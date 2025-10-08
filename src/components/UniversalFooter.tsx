@@ -1,7 +1,36 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 
-const SurveillanceFooter = () => {
+interface UniversalFooterProps {
+  customCopyright?: string;
+}
+
+export default function UniversalFooter({ customCopyright }: UniversalFooterProps) {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, anchor: string) => {
+    e.preventDefault();
+    
+    if (location.pathname === '/') {
+      const section = document.getElementById(anchor);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        const section = document.getElementById(anchor);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  };
+
+  const defaultCopyright = "© 2015 NetConnect. Надежный беспроводной интернет в Московской области.";
+  const copyrightText = customCopyright || defaultCopyright;
+
   return (
     <footer className="bg-muted/50 border-t mt-20">
       <div className="container mx-auto px-4 py-12">
@@ -34,11 +63,11 @@ const SurveillanceFooter = () => {
             <h3 className="font-bold mb-4">Информация</h3>
             <div className="space-y-2 text-sm">
               <Link to="/" className="block text-muted-foreground hover:text-primary transition-colors">Главная</Link>
-              <a href="/#tariffs" className="block text-muted-foreground hover:text-primary transition-colors">Тарифы</a>
-              <a href="/#pricing" className="block text-muted-foreground hover:text-primary transition-colors">Стоимость</a>
-              <a href="/#coverage" className="block text-muted-foreground hover:text-primary transition-colors">Покрытие</a>
-              <a href="/#esim" className="block text-muted-foreground hover:text-primary transition-colors">eSIM</a>
-              <a href="/#about" className="block text-muted-foreground hover:text-primary transition-colors">О компании</a>
+              <a href="/#tariffs" onClick={(e) => handleAnchorClick(e, 'tariffs')} className="block text-muted-foreground hover:text-primary transition-colors">Тарифы</a>
+              <a href="/#pricing" onClick={(e) => handleAnchorClick(e, 'pricing')} className="block text-muted-foreground hover:text-primary transition-colors">Стоимость</a>
+              <a href="/#coverage" onClick={(e) => handleAnchorClick(e, 'coverage')} className="block text-muted-foreground hover:text-primary transition-colors">Покрытие</a>
+              <a href="/#esim" onClick={(e) => handleAnchorClick(e, 'esim')} className="block text-muted-foreground hover:text-primary transition-colors">eSIM</a>
+              <a href="/#about" onClick={(e) => handleAnchorClick(e, 'about')} className="block text-muted-foreground hover:text-primary transition-colors">О компании</a>
               <Link to="/faq" className="block text-muted-foreground hover:text-primary transition-colors">FAQ</Link>
               <Link to="/reviews" className="block text-muted-foreground hover:text-primary transition-colors">Отзывы</Link>
             </div>
@@ -80,11 +109,9 @@ const SurveillanceFooter = () => {
           </div>
         </div>
         <div className="border-t mt-8 pt-8 text-center text-muted-foreground text-sm">
-          <p>© 2015 NetConnect. Видеонаблюдение для дома и бизнеса в Московской области.</p>
+          <p>{copyrightText}</p>
         </div>
       </div>
     </footer>
   );
-};
-
-export default SurveillanceFooter;
+}

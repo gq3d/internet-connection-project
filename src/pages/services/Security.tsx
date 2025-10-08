@@ -8,7 +8,7 @@ import SecurityFeatures from '@/components/security/SecurityFeatures';
 import ArmedSecurity from '@/components/security/ArmedSecurity';
 import SecurityLicense from '@/components/security/SecurityLicense';
 import SecurityCTA from '@/components/security/SecurityCTA';
-import SecurityFooter from '@/components/security/SecurityFooter';
+import UniversalFooter from '@/components/UniversalFooter';
 
 const Security = () => {
   useSEO({
@@ -35,7 +35,7 @@ const Security = () => {
       <ArmedSecurity />
       <SecurityLicense />
       <SecurityCTA />
-      <SecurityFooter />
+      <UniversalFooter customCopyright="© 2015 NetConnect. Системы охраны и безопасности в Московской области." />
       
       <button
         onClick={handleWhatsAppClick}
