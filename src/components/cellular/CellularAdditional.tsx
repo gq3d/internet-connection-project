@@ -184,48 +184,6 @@ export const CellularExamples = () => (
           </Card>
         </div>
 
-        <Card className="mt-12 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
-          <CardContent className="p-8">
-            <div className="text-center">
-              <h3 className="text-2xl font-bold mb-4">Подберем оптимальное решение для вашего дома</h3>
-              <p className="text-muted-foreground mb-6 max-w-3xl mx-auto">
-                Проведем замеры уровня сигнала, определим лучшее расположение антенны и установим 
-                репитер с гарантией качественной связи.
-              </p>
-              <div className="grid md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-2">
-                    <Icon name="Activity" size={24} className="text-primary" />
-                  </div>
-                  <h4 className="font-semibold text-sm mb-1">Замер сигнала</h4>
-                  <p className="text-xs text-muted-foreground">Бесплатно</p>
-                </div>
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 bg-success/10 rounded-full flex items-center justify-center mb-2">
-                    <Icon name="Settings" size={24} className="text-success" />
-                  </div>
-                  <h4 className="font-semibold text-sm mb-1">Подбор системы</h4>
-                  <p className="text-xs text-muted-foreground">Под ваши нужды</p>
-                </div>
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-2">
-                    <Icon name="Wrench" size={24} className="text-secondary" />
-                  </div>
-                  <h4 className="font-semibold text-sm mb-1">Монтаж</h4>
-                  <p className="text-xs text-muted-foreground">За 2-4 часа</p>
-                </div>
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-2">
-                    <Icon name="CheckCircle" size={24} className="text-primary" />
-                  </div>
-                  <h4 className="font-semibold text-sm mb-1">Гарантия</h4>
-                  <p className="text-xs text-muted-foreground">24 месяца</p>
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
         <div className="mt-12 mb-8">
           <Link 
             to="/reviews"
