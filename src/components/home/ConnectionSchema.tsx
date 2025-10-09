@@ -1,5 +1,6 @@
 import Icon from '@/components/ui/icon';
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function ConnectionSchema() {
   const [isVisible, setIsVisible] = useState(false);
@@ -362,7 +363,7 @@ export default function ConnectionSchema() {
             </div>
 
             {/* Стильные ссылки */}
-            <div className={`mt-12 grid md:grid-cols-2 gap-6 transition-all duration-1000 ${
+            <div className={`mt-12 grid md:grid-cols-3 gap-6 transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
               <a 
@@ -412,6 +413,30 @@ export default function ConnectionSchema() {
                   </div>
                 </div>
               </a>
+              
+              <Link 
+                to="/equipment"
+                className="block bg-gradient-to-r from-orange-500/5 via-amber-500/5 to-orange-500/5 hover:from-orange-500/10 hover:via-amber-500/10 hover:to-orange-500/10 border-2 border-orange-500/20 hover:border-orange-500/40 rounded-2xl p-6 transition-all duration-300 group shadow-lg hover:shadow-2xl hover:scale-105"
+              >
+                <div className="flex flex-col items-center gap-4">
+                  <div className="relative">
+                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-600 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xl">
+                      <Icon name="Cpu" size={32} className="text-white" />
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-7 h-7 bg-blue-500 rounded-full flex items-center justify-center border-4 border-background shadow-lg animate-pulse">
+                      <Icon name="Antenna" size={14} className="text-white" />
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <h4 className="text-xl font-bold mb-2 bg-gradient-to-r from-orange-500 to-amber-600 bg-clip-text text-transparent">Оборудование</h4>
+                    <p className="text-muted-foreground text-sm">MIMO антенны и роутеры</p>
+                  </div>
+                  <div className="flex items-center gap-2 text-orange-500 font-semibold">
+                    <span>Посмотреть примеры</span>
+                    <Icon name="ArrowRight" size={20} className="group-hover:translate-x-2 transition-transform duration-300" />
+                  </div>
+                </div>
+              </Link>
             </div>
 
           </div>

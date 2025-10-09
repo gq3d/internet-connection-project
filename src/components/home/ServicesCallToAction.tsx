@@ -66,26 +66,13 @@ export default function ServicesCallToAction() {
                   <Icon name="ArrowRight" size={20} className="ml-2" />
                 </Link>
                 
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-3 w-full max-w-3xl px-2">
-                  <Link 
-                    to="/equipment"
-                    className={`group flex flex-col items-center justify-center p-4 bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-md text-white border-2 border-white/40 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-rotate-2 ${
-                      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                    }`}
-                    style={{ transitionDelay: isVisible ? '350ms' : '0ms' }}
-                  >
-                    <div className="w-12 h-12 mb-2 bg-gradient-to-br from-white/30 to-white/20 group-hover:bg-primary/10 rounded-full flex items-center justify-center transition-all shadow-lg">
-                      <Icon name="Cpu" size={22} className="group-hover:text-primary transition-colors" />
-                    </div>
-                    <span className="font-bold">Оборудование</span>
-                  </Link>
-                  
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 w-full max-w-2xl px-2">
                   <Link 
                     to="/pricing"
                     className={`group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-500 hover:scale-105 hover:shadow-xl ${
                       isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                     }`}
-                    style={{ transitionDelay: isVisible ? '450ms' : '0ms' }}
+                    style={{ transitionDelay: isVisible ? '400ms' : '0ms' }}
                   >
                     <div className="w-10 h-10 mb-2 bg-white/20 group-hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors">
                       <Icon name="DollarSign" size={20} className="group-hover:text-primary transition-colors" />
@@ -98,7 +85,7 @@ export default function ServicesCallToAction() {
                     className={`group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-500 hover:scale-105 hover:shadow-xl ${
                       isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                     }`}
-                    style={{ transitionDelay: isVisible ? '550ms' : '0ms' }}
+                    style={{ transitionDelay: isVisible ? '500ms' : '0ms' }}
                   >
                     <div className="w-10 h-10 mb-2 bg-white/20 group-hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors">
                       <Icon name="Calculator" size={20} className="group-hover:text-primary transition-colors" />
@@ -111,7 +98,7 @@ export default function ServicesCallToAction() {
                     className={`group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-500 hover:scale-105 hover:shadow-xl ${
                       isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                     }`}
-                    style={{ transitionDelay: isVisible ? '650ms' : '0ms' }}
+                    style={{ transitionDelay: isVisible ? '600ms' : '0ms' }}
                   >
                     <div className="w-10 h-10 mb-2 bg-white/20 group-hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors">
                       <Icon name="MapPin" size={20} className="group-hover:text-primary transition-colors" />
@@ -124,7 +111,7 @@ export default function ServicesCallToAction() {
                     className={`group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-500 hover:scale-105 hover:shadow-xl ${
                       isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                     }`}
-                    style={{ transitionDelay: isVisible ? '750ms' : '0ms' }}
+                    style={{ transitionDelay: isVisible ? '700ms' : '0ms' }}
                   >
                     <div className="w-10 h-10 mb-2 bg-white/20 group-hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors">
                       <Icon name="Smartphone" size={20} className="group-hover:text-primary transition-colors" />
