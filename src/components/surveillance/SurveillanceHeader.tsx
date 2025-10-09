@@ -27,13 +27,22 @@ const SurveillanceHeader = () => {
             </a>
           </nav>
 
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-accent transition-colors"
-            aria-label="Меню"
-          >
-            <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} />
-          </button>
+          <div className="flex items-center gap-2 lg:hidden">
+            <a 
+              href="tel:+79015000078" 
+              className="inline-flex items-center justify-center w-10 h-10 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+              aria-label="Позвонить"
+            >
+              <Icon name="Phone" size={20} />
+            </a>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 rounded-lg hover:bg-accent transition-colors"
+              aria-label="Меню"
+            >
+              <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} />
+            </button>
+          </div>
         </div>
 
         {isMobileMenuOpen && (

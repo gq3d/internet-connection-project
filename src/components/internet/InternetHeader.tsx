@@ -15,35 +15,40 @@ const InternetHeader = () => {
             <a href="/" className="text-2xl font-bold text-primary hover:opacity-80 transition-opacity">NetConnect</a>
           </div>
           
-          <nav className="hidden md:flex items-center space-x-4">
-            <a href="/#services" onClick={(e) => handleAnchorClick(e, 'services')} className="text-sm font-medium hover:text-success transition-colors">Услуги</a>
-            <a href="/#tariffs" onClick={(e) => handleAnchorClick(e, 'tariffs')} className="text-sm font-medium hover:text-success transition-colors">Тарифы</a>
-            <a href="/#pricing" onClick={(e) => handleAnchorClick(e, 'pricing')} className="text-sm font-medium hover:text-success transition-colors">Стоимость</a>
-            <a href="/#coverage" onClick={(e) => handleAnchorClick(e, 'coverage')} className="text-sm font-medium hover:text-success transition-colors">Покрытие</a>
-            <a href="/signal-boost" className="text-sm font-medium hover:text-success transition-colors">Усиление 4G/LTE</a>
-            <a href="/#esim" onClick={(e) => handleAnchorClick(e, 'esim')} className="text-sm font-medium hover:text-success transition-colors">eSIM</a>
-            <a href="/#about" onClick={(e) => handleAnchorClick(e, 'about')} className="text-sm font-medium hover:text-success transition-colors">О компании</a>
-            <a href="/#contacts" onClick={(e) => handleAnchorClick(e, 'contacts')} className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
+          <nav className="hidden lg:flex items-center gap-3 xl:gap-4">
+            <a href="/#services" onClick={(e) => handleAnchorClick(e, 'services')} className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Услуги</a>
+            <a href="/#tariffs" onClick={(e) => handleAnchorClick(e, 'tariffs')} className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Тарифы</a>
+            <a href="/#coverage" onClick={(e) => handleAnchorClick(e, 'coverage')} className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Покрытие</a>
             <a 
               href="tel:+79015000078" 
-              className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
+              className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium text-sm whitespace-nowrap"
             >
               <Icon name="Phone" size={16} className="mr-2" />
-              +7 (901) 500-00-78
+              <span className="hidden xl:inline">+7 (901) 500-00-78</span>
+              <span className="xl:hidden">Позвонить</span>
             </a>
           </nav>
 
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-accent transition-colors"
-            aria-label="Меню"
-          >
-            <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} />
-          </button>
+          <div className="flex items-center gap-2 lg:hidden">
+            <a 
+              href="tel:+79015000078" 
+              className="inline-flex items-center justify-center w-10 h-10 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+              aria-label="Позвонить"
+            >
+              <Icon name="Phone" size={20} />
+            </a>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 rounded-lg hover:bg-accent transition-colors"
+              aria-label="Меню"
+            >
+              <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} />
+            </button>
+          </div>
         </div>
 
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t border-border">
+          <div className="lg:hidden mt-4 py-4 border-t border-border">
             <div className="space-y-4">
               <a href="/#services" onClick={(e) => { handleAnchorClick(e, 'services'); setIsMobileMenuOpen(false); }} className="block py-2 text-sm font-medium hover:text-success transition-colors">Услуги</a>
               <a href="/#tariffs" onClick={(e) => { handleAnchorClick(e, 'tariffs'); setIsMobileMenuOpen(false); }} className="block py-2 text-sm font-medium hover:text-success transition-colors">Тарифы</a>
@@ -53,13 +58,6 @@ const InternetHeader = () => {
               <a href="/#esim" onClick={(e) => { handleAnchorClick(e, 'esim'); setIsMobileMenuOpen(false); }} className="block py-2 text-sm font-medium hover:text-success transition-colors">eSIM</a>
               <a href="/#about" onClick={(e) => { handleAnchorClick(e, 'about'); setIsMobileMenuOpen(false); }} className="block py-2 text-sm font-medium hover:text-success transition-colors">О компании</a>
               <a href="/#contacts" onClick={(e) => { handleAnchorClick(e, 'contacts'); setIsMobileMenuOpen(false); }} className="block py-2 text-sm font-medium hover:text-success transition-colors">Контакты</a>
-              <a 
-                href="tel:+79015000078" 
-                className="block w-full mt-4 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium text-center"
-              >
-                <Icon name="Phone" size={16} className="inline mr-2" />
-                +7 (901) 500-00-78
-              </a>
             </div>
           </div>
         )}
