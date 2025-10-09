@@ -80,7 +80,7 @@ export default function CoverageSection() {
         <div className="max-w-6xl mx-auto space-y-8">
           <YandexCoverageMap />
 
-          <div className="text-center">
+          <div className="bg-card border rounded-lg p-8 text-center">
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-6">
               Мы предоставляем доступ к <span className="font-semibold text-foreground">беспроводному</span> и <span className="font-semibold text-foreground">высокоскоростному</span> интернету в различных районах Московской области, включая крупные города, пригороды, дачи и удалённые населённые пункты.
             </p>
