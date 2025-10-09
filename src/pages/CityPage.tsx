@@ -19,6 +19,17 @@ const CityPage = () => {
   const city = citySlug ? cityData[citySlug] : null;
   const [isServicesVisible, setIsServicesVisible] = useState(false);
 
+  // SEO setup - always set canonical even if city is null (prevents index.html canonical from staying)
+  useSEO({
+    title: city ? `Интернет в ${city.name} от 1490₽/мес — подключение за 1-3 дня | NetConnect` : '',
+    description: city ? `Беспроводной интернет в ${city.name} и окрестностях: скорость до 250 Мбит/с, установка за 1-3 дня. Подключаем частные дома, дачи, коттеджные посёлки и СНТ. ${city.district}. Бесплатный выезд инженера. Звоните: +7 (901) 500-00-78` : '',
+    canonical: citySlug ? `https://mosoblconnect.ru/city/${encodeURIComponent(citySlug)}` : '',
+    ogTitle: city ? `Беспроводной интернет в ${city.name} от 1490₽/мес` : '',
+    ogDescription: city ? `Подключаем интернет до 250 Мбит/с за 1-3 дня в ${city.name}. Покрытие частных домов, дач, коттеджных посёлков и СНТ. Бесплатная установка оборудования.` : '',
+    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
+    ogImageAlt: city ? `Подключение беспроводного интернета NetConnect в ${city.name}` : ''
+  });
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -42,16 +53,6 @@ const CityPage = () => {
       }
     };
   }, []);
-
-  useSEO({
-    title: `Интернет в ${city?.name} от 1490₽/мес — подключение за 1-3 дня | NetConnect`,
-    description: `Беспроводной интернет в ${city?.name} и окрестностях: скорость до 250 Мбит/с, установка за 1-3 дня. Подключаем частные дома, дачи, коттеджные посёлки и СНТ${city?.district ? '. ' + city.district : ''}. Бесплатный выезд инженера. Звоните: +7 (901) 500-00-78`,
-    canonical: `https://mosoblconnect.ru/city/${citySlug}`,
-    ogTitle: `Беспроводной интернет в ${city?.name} от 1490₽/мес`,
-    ogDescription: `Подключаем интернет до 250 Мбит/с за 1-3 дня в ${city?.name}. Покрытие частных домов, дач, коттеджных посёлков и СНТ. Бесплатная установка оборудования.`,
-    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
-    ogImageAlt: `Подключение беспроводного интернета NetConnect в ${city?.name}`
-  });
 
   if (!city) {
     return <Navigate to="/404" replace />;

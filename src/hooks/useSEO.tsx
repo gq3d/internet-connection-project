@@ -65,7 +65,7 @@ export const useSEO = ({
     });
 
     let link = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
+    if (canonical && canonical.trim()) {
       if (!link) {
         link = document.createElement('link');
         link.setAttribute('rel', 'canonical');
