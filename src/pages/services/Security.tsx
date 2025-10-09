@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom';
 import { useSEO } from '@/hooks/useSEO';
 import Icon from '@/components/ui/icon';
+import { Card, CardContent } from '@/components/ui/card';
 import SecurityHeader from '@/components/security/SecurityHeader';
 import SecurityHero from '@/components/security/SecurityHero';
 import SecuritySystems from '@/components/security/SecuritySystems';
@@ -34,6 +36,42 @@ const Security = () => {
       <SecurityFeatures />
       <ArmedSecurity />
       <SecurityLicense />
+      
+      {/* Reviews Link Section */}
+      <section className="py-8 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="mt-12 mb-8">
+              <Link 
+                to="/reviews"
+                className="group block"
+              >
+                <Card className="overflow-hidden border-0 shadow-lg bg-gradient-to-br from-primary via-primary/95 to-secondary hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
+                  <CardContent className="p-6 md:p-8">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                      <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                          <Icon name="Star" size={18} className="text-yellow-300" />
+                          <span className="text-white text-sm font-medium">500+ довольных клиентов</span>
+                        </div>
+                        <h3 className="text-xl md:text-2xl font-bold text-white">
+                          Узнайте, что говорят наши клиенты
+                        </h3>
+                      </div>
+                      <div className="flex items-center gap-3 bg-white hover:bg-white/95 text-primary px-6 py-3 rounded-xl font-bold shadow-lg group-hover:shadow-xl transition-all">
+                        <Icon name="MessageSquare" size={20} />
+                        <span>Читать отзывы</span>
+                        <Icon name="ArrowRight" size={20} className="group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <SecurityCTA />
       <UniversalFooter customCopyright="© 2015 NetConnect. Системы охраны и безопасности в Московской области." />
       

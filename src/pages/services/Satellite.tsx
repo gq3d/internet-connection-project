@@ -389,7 +389,35 @@ const Satellite = () => {
               </Card>
             </div>
 
-            <div className="mt-12 text-center">
+            <div className="mt-12 mb-8">
+              <Link 
+                to="/reviews"
+                className="group block"
+              >
+                <Card className="overflow-hidden border-0 shadow-lg bg-gradient-to-br from-primary via-primary/95 to-secondary hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
+                  <CardContent className="p-6 md:p-8">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                      <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                          <Icon name="Star" size={18} className="text-yellow-300" />
+                          <span className="text-white text-sm font-medium">500+ довольных клиентов</span>
+                        </div>
+                        <h3 className="text-xl md:text-2xl font-bold text-white">
+                          Узнайте, что говорят наши клиенты
+                        </h3>
+                      </div>
+                      <div className="flex items-center gap-3 bg-white hover:bg-white/95 text-primary px-6 py-3 rounded-xl font-bold shadow-lg group-hover:shadow-xl transition-all">
+                        <Icon name="MessageSquare" size={20} />
+                        <span>Читать отзывы</span>
+                        <Icon name="ArrowRight" size={20} className="group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            </div>
+
+            <div className="text-center">
               <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
                 <CardContent className="p-8">
                   <Icon name="Wrench" size={48} className="text-primary mx-auto mb-4" />
