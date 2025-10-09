@@ -15,7 +15,7 @@ export default function Esim() {
       <Helmet>
         <title>Туристические eSIM NetConnect - Интернет без границ за 5 минут</title>
         <meta name="description" content="Туристические eSIM от NetConnect для путешествий по всему миру. Мгновенная активация, поддержка 200+ стран, без роуминга и физических SIM-карт." />
-        <link rel="canonical" href="https://netconnect.ru/esim" />
+        <link rel="canonical" href="https://mosoblconnect.ru/esim" />
       </Helmet>
       
       <div className="min-h-screen bg-background">

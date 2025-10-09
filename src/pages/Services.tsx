@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Header from '@/components/home/Header';
 import Footer from '@/components/home/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -56,8 +57,15 @@ export default function Services() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <>
+      <Helmet>
+        <title>Наши услуги - NetConnect</title>
+        <meta name="description" content="Полный спектр телекоммуникационных и охранных услуг для дома и бизнеса в Московской области: интернет, видеонаблюдение, Wi-Fi, системы охраны, спутниковый интернет" />
+        <link rel="canonical" href="https://mosoblconnect.ru/services" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-background">
+        <Header />
       
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -157,5 +165,6 @@ export default function Services() {
 
       <Footer />
     </div>
+    </>
   );
 }

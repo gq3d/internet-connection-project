@@ -64,14 +64,16 @@ export const useSEO = ({
       meta.setAttribute('content', content);
     });
 
+    let link = document.querySelector('link[rel="canonical"]');
     if (canonical) {
-      let link = document.querySelector('link[rel="canonical"]');
       if (!link) {
         link = document.createElement('link');
         link.setAttribute('rel', 'canonical');
         document.head.appendChild(link);
       }
       link.setAttribute('href', canonical);
+    } else if (link) {
+      link.remove();
     }
 
     if (structuredData) {

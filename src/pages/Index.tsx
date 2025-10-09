@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useSEO } from '@/hooks/useSEO';
 import Header from '@/components/home/Header';
 import HeroSection from '@/components/home/HeroSection';
 import ServicesCallToAction from '@/components/home/ServicesCallToAction';
@@ -10,6 +11,10 @@ import Footer from '@/components/home/Footer';
 
 const Index = () => {
   const location = useLocation();
+
+  useSEO({
+    canonical: 'https://mosoblconnect.ru/'
+  });
 
   useEffect(() => {
     document.title = 'NetConnect - Беспроводной интернет в Московской области | Спутниковый интернет до 250 Мбит/с';
