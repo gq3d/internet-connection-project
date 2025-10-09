@@ -25,7 +25,7 @@ export default function Equipment() {
               <span className="text-xl font-bold">NetConnect</span>
             </Link>
             
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center gap-4">
               <Link to="/" className="hidden sm:block">
                 <Button variant="ghost" className="font-medium">Главная</Button>
               </Link>
@@ -43,11 +43,17 @@ export default function Equipment() {
               </a>
               <a 
                 href="tel:+79015000078"
-                className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium text-sm"
+                className="hidden md:inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium text-sm"
               >
                 <Icon name="Phone" size={16} className="mr-2" />
-                <span className="hidden sm:inline">+7 (901) 500-00-78</span>
-                <span className="sm:hidden">Позвонить</span>
+                +7 (901) 500-00-78
+              </a>
+              <a 
+                href="tel:+79015000078"
+                className="md:hidden inline-flex items-center justify-center w-10 h-10 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+                aria-label="Позвонить"
+              >
+                <Icon name="Phone" size={20} />
               </a>
             </div>
           </div>
