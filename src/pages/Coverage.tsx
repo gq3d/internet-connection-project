@@ -1,16 +1,29 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Header from '@/components/home/Header';
 import Footer from '@/components/home/Footer';
 import CoverageSection from '@/components/home/CoverageSection';
 import Icon from '@/components/ui/icon';
 
 export default function Coverage() {
+  const location = useLocation();
+
   useEffect(() => {
     document.title = 'Покрытие интернета NetConnect в МО | 99% территории Московской области';
-    window.scrollTo(0, 0);
-  }, []);
+    
+    const hash = location.hash.replace('#', '');
+    if (hash) {
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
 
   return (
     <>
