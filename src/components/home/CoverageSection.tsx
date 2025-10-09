@@ -75,27 +75,30 @@ export default function CoverageSection() {
             Карта покрытия интернета<br />в Московской области
           </h2>
           <div className={`h-1 mx-auto mb-6 bg-gradient-to-r from-primary via-secondary to-primary rounded-full transition-all duration-1000 ${isVisible ? 'w-32' : 'w-0'}`}></div>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Мы предоставляем доступ к <span className="font-semibold text-foreground">беспроводному</span> и <span className="font-semibold text-foreground">высокоскоростному</span> интернету в различных районах Московской области, включая крупные города, пригороды, дачи и удалённые населённые пункты.
-          </p>
-          <div className="flex justify-center gap-3 mt-8 flex-wrap">
-            <div className="inline-flex items-center px-4 py-2 bg-success/10 rounded-lg animate-pulse hover:animate-none hover:scale-105 transition-transform cursor-default">
-              <Icon name="Wifi" size={18} className="text-success mr-2" />
-              <span className="text-sm font-medium">Беспроводной интернет</span>
-            </div>
-            <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-lg animate-pulse hover:animate-none hover:scale-105 transition-transform cursor-default" style={{ animationDelay: '150ms' }}>
-              <Icon name="Zap" size={18} className="text-primary mr-2" />
-              <span className="text-sm font-medium">Высокая скорость</span>
-            </div>
-            <div className="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-lg animate-pulse hover:animate-none hover:scale-105 transition-transform cursor-default" style={{ animationDelay: '300ms' }}>
-              <Icon name="MapPin" size={18} className="text-secondary mr-2" />
-              <span className="text-sm font-medium">Вся область</span>
-            </div>
-          </div>
         </div>
         
         <div className="max-w-6xl mx-auto space-y-8">
           <YandexCoverageMap />
+
+          <div className="text-center">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-6">
+              Мы предоставляем доступ к <span className="font-semibold text-foreground">беспроводному</span> и <span className="font-semibold text-foreground">высокоскоростному</span> интернету в различных районах Московской области, включая крупные города, пригороды, дачи и удалённые населённые пункты.
+            </p>
+            <div className="flex justify-center gap-3 flex-wrap">
+              <div className="inline-flex items-center px-4 py-2 bg-success/10 rounded-lg animate-pulse hover:animate-none hover:scale-105 transition-transform cursor-default">
+                <Icon name="Wifi" size={18} className="text-success mr-2" />
+                <span className="text-sm font-medium">Беспроводной интернет</span>
+              </div>
+              <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-lg animate-pulse hover:animate-none hover:scale-105 transition-transform cursor-default" style={{ animationDelay: '150ms' }}>
+                <Icon name="Zap" size={18} className="text-primary mr-2" />
+                <span className="text-sm font-medium">Высокая скорость</span>
+              </div>
+              <div className="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-lg animate-pulse hover:animate-none hover:scale-105 transition-transform cursor-default" style={{ animationDelay: '300ms' }}>
+                <Icon name="MapPin" size={18} className="text-secondary mr-2" />
+                <span className="text-sm font-medium">Вся область</span>
+              </div>
+            </div>
+          </div>
 
           <div className="mb-8">
             <SpeedTest />
