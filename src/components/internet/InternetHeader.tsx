@@ -16,9 +16,9 @@ const InternetHeader = () => {
           </div>
           
           <nav className="hidden lg:flex items-center gap-3 xl:gap-4">
-            <a href="/#services" onClick={(e) => handleAnchorClick(e, 'services')} className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Услуги</a>
-            <a href="/#tariffs" onClick={(e) => handleAnchorClick(e, 'tariffs')} className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Тарифы</a>
-            <a href="/#coverage" onClick={(e) => handleAnchorClick(e, 'coverage')} className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Покрытие</a>
+            <a href="/services" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Услуги</a>
+            <a href="/tariffs" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Тарифы</a>
+            <a href="/coverage" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Покрытие</a>
             <a 
               href="tel:+79015000078" 
               className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium text-sm whitespace-nowrap"
@@ -50,12 +50,12 @@ const InternetHeader = () => {
         {isMobileMenuOpen && (
           <div className="lg:hidden mt-4 py-4 border-t border-border">
             <div className="space-y-4">
-              <a href="/#services" onClick={(e) => { handleAnchorClick(e, 'services'); setIsMobileMenuOpen(false); }} className="block py-2 text-sm font-medium hover:text-success transition-colors">Услуги</a>
-              <a href="/#tariffs" onClick={(e) => { handleAnchorClick(e, 'tariffs'); setIsMobileMenuOpen(false); }} className="block py-2 text-sm font-medium hover:text-success transition-colors">Тарифы</a>
-              <a href="/#pricing" onClick={(e) => { handleAnchorClick(e, 'pricing'); setIsMobileMenuOpen(false); }} className="block py-2 text-sm font-medium hover:text-success transition-colors">Стоимость</a>
-              <a href="/#coverage" onClick={(e) => { handleAnchorClick(e, 'coverage'); setIsMobileMenuOpen(false); }} className="block py-2 text-sm font-medium hover:text-success transition-colors">Покрытие</a>
+              <a href="/services" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-medium hover:text-success transition-colors">Услуги</a>
+              <a href="/tariffs" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-medium hover:text-success transition-colors">Тарифы</a>
+              <a href="/pricing" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-medium hover:text-success transition-colors">Стоимость</a>
+              <a href="/coverage" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-medium hover:text-success transition-colors">Покрытие</a>
               <a href="/signal-boost" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-medium hover:text-success transition-colors">Усиление 4G/LTE</a>
-              <a href="/#esim" onClick={(e) => { handleAnchorClick(e, 'esim'); setIsMobileMenuOpen(false); }} className="block py-2 text-sm font-medium hover:text-success transition-colors">eSIM</a>
+              <a href="/esim" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-medium hover:text-success transition-colors">eSIM</a>
               <a href="/#about" onClick={(e) => { handleAnchorClick(e, 'about'); setIsMobileMenuOpen(false); }} className="block py-2 text-sm font-medium hover:text-success transition-colors">О компании</a>
               <a href="/#contacts" onClick={(e) => { handleAnchorClick(e, 'contacts'); setIsMobileMenuOpen(false); }} className="block py-2 text-sm font-medium hover:text-success transition-colors">Контакты</a>
             </div>
