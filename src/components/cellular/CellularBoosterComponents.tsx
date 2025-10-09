@@ -313,17 +313,6 @@ export const CellularCTA = () => (
             <a href="tel:+79015000087" className="hover:underline">+7 (901) 500-00-87</a>
           </div>
         </div>
-
-        <div className="mt-8">
-          <Link 
-            to="/reviews" 
-            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
-          >
-            <Icon name="Star" size={18} />
-            Читать отзывы клиентов
-            <Icon name="ArrowRight" size={18} />
-          </Link>
-        </div>
       </div>
     </div>
   </section>

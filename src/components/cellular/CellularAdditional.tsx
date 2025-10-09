@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import { Link } from 'react-router-dom';
 
 export const CellularSigns = () => (
   <section className="py-16">
@@ -224,6 +225,57 @@ export const CellularExamples = () => (
             </div>
           </CardContent>
         </Card>
+
+        <div className="mt-16">
+          <Card className="overflow-hidden border-0 shadow-2xl bg-gradient-to-br from-primary via-primary/95 to-secondary">
+            <CardContent className="p-0">
+              <div className="relative">
+                <div className="absolute inset-0 bg-grid-white/5 [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
+                <div className="relative px-8 py-12 md:px-16 md:py-16">
+                  <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div className="flex-1 text-center md:text-left">
+                      <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
+                        <Icon name="Star" size={18} className="text-yellow-300" />
+                        <span className="text-white text-sm font-medium">Более 500 довольных клиентов</span>
+                      </div>
+                      <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                        Узнайте, что говорят наши клиенты
+                      </h3>
+                      <p className="text-white/90 text-lg mb-6 max-w-2xl">
+                        Реальные отзывы людей, которые уже решили проблему слабого сигнала и теперь наслаждаются стабильной связью
+                      </p>
+                      <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                        <div className="flex items-center gap-2 text-white/90">
+                          <Icon name="CheckCircle" size={18} className="text-green-300" />
+                          <span className="text-sm">Проверенные отзывы</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-white/90">
+                          <Icon name="Users" size={18} className="text-blue-300" />
+                          <span className="text-sm">500+ установок</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-white/90">
+                          <Icon name="Award" size={18} className="text-yellow-300" />
+                          <span className="text-sm">15 лет опыта</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex-shrink-0">
+                      <Link 
+                        to="/reviews"
+                        className="group inline-flex items-center gap-3 bg-white hover:bg-white/95 text-primary px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                      >
+                        <Icon name="MessageSquare" size={22} />
+                        <span>Читать отзывы</span>
+                        <Icon name="ArrowRight" size={22} className="group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                      <p className="text-center text-white/70 text-sm mt-3">Более 200 отзывов</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </div>
   </section>
