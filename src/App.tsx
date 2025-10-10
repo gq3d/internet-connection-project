@@ -21,6 +21,10 @@ import WifiRoaming from "./pages/services/WifiRoaming";
 import WifiDiagnostics from "./pages/services/WifiDiagnostics";
 import Security from "./pages/services/Security";
 import Surveillance from "./pages/services/Surveillance";
+import IpCameras from "./pages/services/cameras/IpCameras";
+import FourKCameras from "./pages/services/cameras/FourKCameras";
+import PtzCameras from "./pages/services/cameras/PtzCameras";
+import ThermalCameras from "./pages/services/cameras/ThermalCameras";
 import AlarmSecurity from "./pages/services/AlarmSecurity";
 import AccessControl from "./pages/services/AccessControl";
 import FireSafety from "./pages/services/FireSafety";
@@ -62,6 +66,10 @@ const App = () => (
             <Route path="/services/wifi-diagnostics" element={<WifiDiagnostics />} />
             <Route path="/services/security" element={<Security />} />
             <Route path="/services/surveillance" element={<Surveillance />} />
+            <Route path="/services/cameras/ip-cameras" element={<IpCameras />} />
+            <Route path="/services/cameras/4k-cameras" element={<FourKCameras />} />
+            <Route path="/services/cameras/ptz-cameras" element={<PtzCameras />} />
+            <Route path="/services/cameras/thermal-cameras" element={<ThermalCameras />} />
             <Route path="/services/alarm-security" element={<AlarmSecurity />} />
             <Route path="/services/access-control" element={<AccessControl />} />
             <Route path="/services/fire-safety" element={<FireSafety />} />
