@@ -253,16 +253,11 @@ const FastSetup = () => {
                     При подключении в течение 3 дней — первый месяц бесплатно!
                   </p>
                 </div>
-                <div className="grid md:grid-cols-3 gap-4 mb-8">
+                <div className="grid md:grid-cols-2 gap-4 mb-8">
                   <div className="bg-white rounded-lg p-4 text-center">
                     <Icon name="Zap" size={32} className="text-primary mx-auto mb-2" />
                     <p className="font-semibold">Быстрая установка</p>
                     <p className="text-sm text-muted-foreground">За 1-3 дня</p>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 text-center">
-                    <Icon name="Package" size={32} className="text-primary mx-auto mb-2" />
-                    <p className="font-semibold">Оборудование</p>
-                    <p className="text-sm text-muted-foreground">Бесплатно в аренду</p>
                   </div>
                   <div className="bg-white rounded-lg p-4 text-center">
                     <Icon name="Wrench" size={32} className="text-primary mx-auto mb-2" />
