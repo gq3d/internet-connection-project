@@ -143,6 +143,9 @@ export default function Equipment() {
                       <img 
                         src={item.img} 
                         alt={item.title}
+                        loading="lazy"
+                        width="400"
+                        height="400"
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                       />
                     </div>
@@ -235,6 +238,9 @@ export default function Equipment() {
                       <img 
                         src={item.img} 
                         alt={item.title}
+                        loading="lazy"
+                        width="400"
+                        height="400"
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                       />
                     </div>

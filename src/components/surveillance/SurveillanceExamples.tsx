@@ -20,6 +20,9 @@ const SurveillanceExamples = () => {
                 <img 
                   src="https://cdn.poehali.dev/files/0b448bcd-e51b-47eb-92ad-a7d51be237a6.png" 
                   alt="Видеонаблюдение в коттедже" 
+                  loading="lazy"
+                  width="640"
+                  height="360"
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute top-4 right-4">
@@ -59,6 +62,9 @@ const SurveillanceExamples = () => {
                 <img 
                   src="https://cdn.poehali.dev/files/c0507610-bf80-4943-a2cd-f4b2fd8e2294.png" 
                   alt="Камеры на даче" 
+                  loading="lazy"
+                  width="640"
+                  height="360"
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute top-4 right-4">
@@ -98,6 +104,9 @@ const SurveillanceExamples = () => {
                 <img 
                   src="https://cdn.poehali.dev/files/5acc45ef-cca8-4d38-bd8b-c51a3d147548.png" 
                   alt="Система мониторинга дома" 
+                  loading="lazy"
+                  width="640"
+                  height="360"
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute top-4 right-4">

@@ -21,6 +21,9 @@ const InternetExamples = () => {
                 <img 
                   src="https://cdn.poehali.dev/files/648b0a23-c36e-412a-af45-8f16220c67e5.png" 
                   alt="Установка MIMO антенны на частном доме" 
+                  loading="lazy"
+                  width="640"
+                  height="360"
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute top-4 right-4">
@@ -60,6 +63,9 @@ const InternetExamples = () => {
                 <img 
                   src="https://cdn.poehali.dev/files/167a8eb4-3e8a-4755-a9a9-c85560b118f3.png" 
                   alt="Настройка роутера в частном доме" 
+                  loading="lazy"
+                  width="640"
+                  height="360"
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute top-4 right-4">
@@ -99,6 +105,9 @@ const InternetExamples = () => {
                 <img 
                   src="https://cdn.poehali.dev/files/c2990d17-9e72-4ce6-8df4-fb7ee481d9b1.png" 
                   alt="Интернет на даче" 
+                  loading="lazy"
+                  width="640"
+                  height="360"
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute top-4 right-4">

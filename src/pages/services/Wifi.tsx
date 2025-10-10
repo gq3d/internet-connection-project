@@ -215,6 +215,9 @@ const Wifi = () => {
                   <img 
                     src="https://cdn.poehali.dev/files/bdc92972-868c-4116-8dc6-32712c0b3ebe.png" 
                     alt="Уличная Wi-Fi точка доступа TP-Link" 
+                    loading="lazy"
+                    width="640"
+                    height="360"
                     className="w-full h-64 object-cover"
                   />
                   <Badge className="absolute top-4 right-4 bg-success/90 text-white">
@@ -249,6 +252,9 @@ const Wifi = () => {
                   <img 
                     src="https://cdn.poehali.dev/files/c0e2520c-f57b-445e-9706-7781bf7b230e.png" 
                     alt="Настенная Wi-Fi точка доступа" 
+                    loading="lazy"
+                    width="640"
+                    height="360"
                     className="w-full h-64 object-cover"
                   />
                   <Badge className="absolute top-4 right-4 bg-primary/90 text-white">
@@ -283,6 +289,9 @@ const Wifi = () => {
                   <img 
                     src="https://cdn.poehali.dev/files/dc28b1d8-f743-43c6-be30-d7bcca2650db.png" 
                     alt="Внутренняя установка Wi-Fi роутеров D-Link" 
+                    loading="lazy"
+                    width="640"
+                    height="360"
                     className="w-full h-64 object-cover"
                   />
                   <Badge className="absolute top-4 right-4 bg-secondary/90 text-white">
