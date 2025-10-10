@@ -17,7 +17,7 @@ export default function SEO({
   keywords = "интернет московская область, беспроводной интернет мо, спутниковый интернет, интернет на даче, интернет в частном доме, провайдер интернета мо, интернет загородный дом, wi-fi оборудование, видеонаблюдение установка, усиление сотовой связи, интернет без проводов, системы охраны",
   ogTitle,
   ogDescription,
-  ogImage = "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
+  ogImage = "https://cdn.poehali.dev/projects/d4f2c7e9-a091-4f1c-9e82-47f687864218/files/93db5504-b12a-4d11-8489-699ce8ce5049.jpg",
   canonical,
   noindex = false
 }: SEOProps) {
