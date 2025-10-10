@@ -14,21 +14,26 @@ export default function CityHeader() {
           <div className="flex items-center justify-between">
             <a href="/" className="text-2xl font-bold text-primary">NetConnect</a>
             
-            <div className="hidden lg:flex items-center gap-3 xl:gap-4">
-              <a href="/#services" onClick={(e) => handleAnchorClick(e, 'services')} className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Услуги</a>
-              <a href="/#tariffs" onClick={(e) => handleAnchorClick(e, 'tariffs')} className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Тарифы</a>
-              <Link to="/coverage" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Покрытие</Link>
+            <div className="hidden md:flex items-center space-x-4">
+              <Link to="/services" className="text-sm font-medium hover:text-success transition-colors">Услуги</Link>
+              <Link to="/tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</Link>
+              <Link to="/pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</Link>
+              <Link to="/coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</Link>
+              <Link to="/signal-boost" className="text-sm font-medium hover:text-success transition-colors">Усиление 4G/LTE</Link>
+              <Link to="/esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</Link>
+              <a href="/#about" onClick={(e) => handleAnchorClick(e, 'about')} className="text-sm font-medium hover:text-success transition-colors">О компании</a>
+              <Link to="/faq" className="text-sm font-medium hover:text-success transition-colors">FAQ</Link>
+              <a href="/#contacts" onClick={(e) => handleAnchorClick(e, 'contacts')} className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
               <a 
                 href="tel:+79015000078" 
-                className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium text-sm whitespace-nowrap"
+                className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
               >
                 <Icon name="Phone" size={16} className="mr-2" />
-                <span className="hidden xl:inline">+7 (901) 500-00-78</span>
-                <span className="xl:hidden">Позвонить</span>
+                +7 (901) 500-00-78
               </a>
             </div>
 
-            <div className="flex items-center gap-2 lg:hidden">
+            <div className="flex md:hidden items-center gap-2">
               <a 
                 href="tel:+79015000078" 
                 className="inline-flex items-center justify-center w-10 h-10 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
@@ -38,7 +43,7 @@ export default function CityHeader() {
               </a>
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 rounded-lg hover:bg-accent transition-colors"
+                className="flex items-center justify-center w-10 h-10 rounded-lg hover:bg-accent transition-colors"
                 aria-label="Меню"
               >
                 <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} />
@@ -47,22 +52,22 @@ export default function CityHeader() {
           </div>
 
           {isMobileMenuOpen && (
-            <div className="lg:hidden mt-4 py-4 border-t border-border max-h-[70vh] overflow-y-auto">
+            <div className="md:hidden mt-4 py-4 border-t border-border">
               <div className="space-y-4">
-                <a 
-                  href="/#services" 
+                <Link 
+                  to="/services" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
-                  onClick={(e) => { handleAnchorClick(e, 'services'); setIsMobileMenuOpen(false); }}
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Услуги
-                </a>
-                <a 
-                  href="/#tariffs" 
+                </Link>
+                <Link 
+                  to="/tariffs" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
-                  onClick={(e) => { handleAnchorClick(e, 'tariffs'); setIsMobileMenuOpen(false); }}
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Тарифы
-                </a>
+                </Link>
                 <Link 
                   to="/pricing" 
                   className="block py-2 text-sm font-medium hover:text-success transition-colors"
