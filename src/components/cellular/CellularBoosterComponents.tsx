@@ -152,17 +152,17 @@ export const CellularBoosters = () => (
       <div className="grid md:grid-cols-2 gap-8">
         {boosters.map((booster, index) => (
           <Card key={index} className="hover:shadow-lg transition-all duration-300">
-            <CardContent className="p-8">
-              <div className="flex items-start space-x-4">
+            <CardContent className="p-6 sm:p-8">
+              <div className="flex items-start gap-3 sm:gap-4">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full flex-shrink-0">
                   <Icon name={booster.icon} size={24} className="text-primary" />
                 </div>
-                <div className="flex-1">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-semibold">{booster.title}</h3>
-                    <span className="text-lg font-bold text-primary">{booster.price}</span>
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4 mb-2">
+                    <h3 className="text-lg sm:text-xl font-semibold">{booster.title}</h3>
+                    <span className="text-base sm:text-lg font-bold text-primary whitespace-nowrap">{booster.price}</span>
                   </div>
-                  <p className="text-muted-foreground mb-3">{booster.description}</p>
+                  <p className="text-sm sm:text-base text-muted-foreground mb-3">{booster.description}</p>
                   <div className="flex gap-4 mb-4 text-sm">
                     <div className="flex items-center text-secondary font-medium">
                       <Icon name="TrendingUp" size={16} className="mr-1" />
@@ -171,9 +171,9 @@ export const CellularBoosters = () => (
                   </div>
                   <ul className="space-y-1">
                     {booster.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm">
-                        <Icon name="Check" size={16} className="text-success mr-2 flex-shrink-0" />
-                        {feature}
+                      <li key={featureIndex} className="flex items-start text-sm">
+                        <Icon name="Check" size={16} className="text-success mr-2 flex-shrink-0 mt-0.5" />
+                        <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
