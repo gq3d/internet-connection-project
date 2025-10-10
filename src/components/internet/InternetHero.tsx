@@ -22,7 +22,7 @@ const InternetHero = () => {
               Беспроводной интернет до <span className="font-bold text-primary">250 Мбит/с</span> через современные технологии в Московской области
             </p>
             
-            <div className="flex flex-wrap justify-center gap-3 mb-10">
+            <div className="flex flex-wrap justify-center gap-3 mb-16">
               <Badge variant="secondary" className="px-5 py-3 text-base bg-success/10 text-success border-success/20 hover:bg-success/20 transition-colors">
                 <Icon name="Zap" size={18} className="mr-2" />
                 До 250 Мбит/с
@@ -36,19 +36,9 @@ const InternetHero = () => {
                 За 1-3 дня
               </Badge>
             </div>
-
-            <div className="flex justify-center">
-              <Link 
-                to="/coverage"
-                className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 font-bold text-lg"
-              >
-                <Icon name="Map" size={22} className="mr-3 group-hover:scale-110 transition-transform" />
-                Проверить покрытие
-              </Link>
-            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mt-16">
+          <div className="grid md:grid-cols-2 gap-6">
             <Link 
               to="/coverage#speed-test"
               className="group block"
