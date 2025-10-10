@@ -1,8 +1,42 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 
 const SecurityHeader = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const handleAboutClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    
+    if (location.pathname === '/') {
+      setTimeout(() => {
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) {
+          aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    } else {
+      window.location.href = '/#about';
+    }
+  };
+
+  const handleContactsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    
+    if (location.pathname === '/') {
+      setTimeout(() => {
+        const contactsSection = document.getElementById('contacts');
+        if (contactsSection) {
+          contactsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    } else {
+      window.location.href = '/#contacts';
+    }
+  };
 
   return (
     <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
@@ -20,9 +54,9 @@ const SecurityHeader = () => {
             <a href="/coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</a>
             <a href="/signal-boost" className="text-sm font-medium hover:text-success transition-colors">Усиление 4G/LTE</a>
             <a href="/esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</a>
-            <a href="/#about" className="text-sm font-medium hover:text-success transition-colors">О компании</a>
+            <a href="/#about" onClick={handleAboutClick} className="text-sm font-medium hover:text-success transition-colors">О компании</a>
             <a href="/faq" className="text-sm font-medium hover:text-success transition-colors">FAQ</a>
-            <a href="/#contacts" className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
+            <a href="/#contacts" onClick={handleContactsClick} className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
             <a 
               href="tel:+79015000078" 
               className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
@@ -59,9 +93,9 @@ const SecurityHeader = () => {
               <a href="/coverage" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-medium hover:text-success transition-colors">Покрытие</a>
               <a href="/signal-boost" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-medium hover:text-success transition-colors">Усиление 4G/LTE</a>
               <a href="/esim" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-medium hover:text-success transition-colors">eSIM</a>
-              <a href="/#about" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-medium hover:text-success transition-colors">О компании</a>
+              <a href="/#about" onClick={handleAboutClick} className="block py-2 text-sm font-medium hover:text-success transition-colors">О компании</a>
               <a href="/faq" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-medium hover:text-success transition-colors">FAQ</a>
-              <a href="/#contacts" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-medium hover:text-success transition-colors">Контакты</a>
+              <a href="/#contacts" onClick={handleContactsClick} className="block py-2 text-sm font-medium hover:text-success transition-colors">Контакты</a>
               <div className="pt-4 border-t border-border">
                 <div className="flex items-center space-x-2 text-success font-semibold">
                   <Icon name="Phone" size={16} />
