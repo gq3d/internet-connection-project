@@ -435,7 +435,7 @@ export default function SignalBoost() {
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a 
                       href="tel:+79015000078" 
-                      className="flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary/90 transition-all shadow-lg hover:scale-105"
+                      className="flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary/90 transition-all shadow-lg hover:scale-105 whitespace-nowrap"
                     >
                       <Icon name="Phone" size={24} />
                       +7 (901) 500-00-78
