@@ -298,10 +298,10 @@ export default function Equipment() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a 
                     href="tel:+79015000078"
-                    className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary rounded-full font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg"
+                    className="inline-flex items-center justify-center px-6 py-4 bg-white text-primary rounded-full font-bold text-base sm:text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg whitespace-nowrap"
                   >
-                    <Icon name="Phone" size={24} className="mr-3" />
-                    +7 (901) 500-00-78
+                    <Icon name="Phone" size={20} className="mr-2 flex-shrink-0" />
+                    <span className="whitespace-nowrap">+7 (901) 500-00-78</span>
                   </a>
                   <a 
                     href="https://wa.me/79015000078"
