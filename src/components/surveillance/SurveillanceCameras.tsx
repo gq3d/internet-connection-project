@@ -39,25 +39,40 @@ const cameraTypes = [
 
 const SurveillanceCameras = () => {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Типы камер видеонаблюдения</h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">Типы камер видеонаблюдения</h2>
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          Профессиональные камеры для любых задач безопасности
+        </p>
+        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {cameraTypes.map((camera, index) => (
-            <Link key={index} to={camera.link}>
-              <Card className="hover:shadow-xl hover:scale-[1.02] hover:border-primary/30 transition-all duration-300 cursor-pointer h-full">
-                <CardContent className="p-8">
-                  <div className="flex items-start space-x-4">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full flex-shrink-0">
-                      <Icon name={camera.icon} size={24} className="text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xl font-semibold">{camera.title}</h3>
-                        <span className="text-lg font-bold text-primary">{camera.price}</span>
+            <Link key={index} to={camera.link} className="group">
+              <Card className="hover:shadow-2xl hover:border-primary transition-all duration-300 cursor-pointer h-full overflow-hidden border-2">
+                <CardContent className="p-0">
+                  <div className="flex flex-col">
+                    <div className="bg-gradient-to-br from-primary/5 via-primary/10 to-primary/5 p-6 border-b">
+                      <div className="flex items-center justify-between gap-4">
+                        <div className="flex items-center gap-4">
+                          <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-2xl shadow-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                            <Icon name={camera.icon} size={32} className="text-primary" />
+                          </div>
+                          <div>
+                            <h3 className="text-xl md:text-2xl font-bold mb-1">{camera.title}</h3>
+                            <span className="inline-block text-2xl font-bold text-primary">{camera.price}</span>
+                          </div>
+                        </div>
                       </div>
-                      <p className="text-muted-foreground mb-3">{camera.description}</p>
-                      <p className="text-sm text-secondary font-medium">{camera.specs}</p>
+                    </div>
+                    
+                    <div className="p-6 bg-card">
+                      <p className="text-muted-foreground mb-4 text-base leading-relaxed">
+                        {camera.description}
+                      </p>
+                      <div className="flex items-start gap-2 bg-muted/50 rounded-lg p-3">
+                        <Icon name="Check" size={18} className="text-primary mt-0.5 flex-shrink-0" />
+                        <p className="text-sm font-medium text-foreground">{camera.specs}</p>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
