@@ -4,7 +4,7 @@ import { useSEO } from '@/hooks/useSEO';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
-import Header from '@/components/Header';
+import SurveillanceHeader from '@/components/surveillance/SurveillanceHeader';
 import UniversalFooter from '@/components/UniversalFooter';
 
 const FireSafety = () => {
@@ -185,7 +185,7 @@ const FireSafety = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <SurveillanceHeader />
       
       <section className="pt-24 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto px-4">
