@@ -15,7 +15,7 @@ const FourKCameras = () => {
     canonical: 'https://mosoblconnect.ru/services/cameras/4k-cameras',
     ogTitle: '4K камеры видеонаблюдения в Московской области',
     ogDescription: 'Камеры сверхвысокого разрешения 4K UHD. Детализация лиц и номеров, Smart аналитика, запись 8 Мп.',
-    ogImage: 'https://cdn.mosoblconnect.ru/files/4k-camera.jpg',
+    ogImage: 'https://cdn.poehali.dev/projects/d4f2c7e9-a091-4f1c-9e82-47f687864218/files/b435c19e-b35a-463b-9c15-5b429ceeada0.jpg',
     ogImageAlt: '4K камеры видеонаблюдения NetConnect',
     structuredData: {
       '@context': 'https://schema.org',

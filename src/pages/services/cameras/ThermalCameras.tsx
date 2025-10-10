@@ -15,7 +15,7 @@ const ThermalCameras = () => {
     canonical: 'https://mosoblconnect.ru/services/cameras/thermal-cameras',
     ogTitle: 'Тепловизионные камеры в Московской области',
     ogDescription: 'Камеры тепловидения для максимальной безопасности. Обнаружение в темноте, тумане, дыме. Дальность до 500 метров.',
-    ogImage: 'https://cdn.mosoblconnect.ru/files/thermal-camera.jpg',
+    ogImage: 'https://cdn.poehali.dev/projects/d4f2c7e9-a091-4f1c-9e82-47f687864218/files/80ad8e27-16e2-4c66-855c-ef66ff4ee42f.jpg',
     ogImageAlt: 'Тепловизионные камеры NetConnect',
     structuredData: {
       '@context': 'https://schema.org',

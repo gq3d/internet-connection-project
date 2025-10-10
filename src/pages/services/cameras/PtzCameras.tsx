@@ -15,7 +15,7 @@ const PtzCameras = () => {
     canonical: 'https://mosoblconnect.ru/services/cameras/ptz-cameras',
     ogTitle: 'PTZ камеры видеонаблюдения в Московской области',
     ogDescription: 'Поворотные камеры с зумом для контроля больших территорий. Поворот 360°, оптический зум, автотрекинг.',
-    ogImage: 'https://cdn.mosoblconnect.ru/files/ptz-camera.jpg',
+    ogImage: 'https://cdn.poehali.dev/projects/d4f2c7e9-a091-4f1c-9e82-47f687864218/files/3027c2a4-0771-41a8-a6aa-ae281f79aacc.jpg',
     ogImageAlt: 'PTZ камеры с зумом NetConnect',
     structuredData: {
       '@context': 'https://schema.org',
