@@ -25,25 +25,29 @@ const Wifi = () => {
       icon: 'Router',
       title: 'Установка Wi-Fi сетей',
       description: 'Профессиональная установка и настройка беспроводных сетей любой сложности',
-      features: ['Выбор оптимального оборудования', 'Настройка безопасности WPA3', 'Оптимизация покрытия', 'Гарантия на работы']
+      features: ['Выбор оптимального оборудования', 'Настройка безопасности WPA3', 'Оптимизация покрытия', 'Гарантия на работы'],
+      link: '/services/wifi-installation'
     },
     {
       icon: 'Signal',
       title: 'Усиление сигнала',
       description: 'Расширение зоны покрытия Wi-Fi с помощью репитеров и mesh-систем',
-      features: ['Анализ покрытия', 'Установка усилителей', 'Настройка mesh-сети', 'Устранение мертвых зон']
+      features: ['Анализ покрытия', 'Установка усилителей', 'Настройка mesh-сети', 'Устранение мертвых зон'],
+      link: '/services/wifi-signal-boost'
     },
     {
       icon: 'Wifi',
       title: 'Роуминг между точками',
       description: 'Бесшовное переключение между точками доступа при перемещении',
-      features: ['Настройка роуминга', 'Единая сеть', 'Автоматическое переключение', 'Стабильное соединение']
+      features: ['Настройка роуминга', 'Единая сеть', 'Автоматическое переключение', 'Стабильное соединение'],
+      link: '/services/wifi-roaming'
     },
     {
       icon: 'Settings',
       title: 'Настройка и диагностика',
       description: 'Полная настройка параметров сети и устранение проблем с подключением',
-      features: ['Диагностика проблем', 'Оптимизация каналов', 'Настройка QoS', 'Мониторинг сети']
+      features: ['Диагностика проблем', 'Оптимизация каналов', 'Настройка QoS', 'Мониторинг сети'],
+      link: '/services/wifi-diagnostics'
     }
   ];
 
@@ -109,27 +113,29 @@ const Wifi = () => {
           <h2 className="text-3xl font-bold text-center mb-12">Наши Wi-Fi услуги</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-xl hover:scale-[1.02] hover:border-primary/30 transition-all duration-300 cursor-pointer">
-                <CardContent className="p-8">
-                  <div className="flex items-start space-x-4">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full flex-shrink-0">
-                      <Icon name={service.icon} size={24} className="text-primary" />
+              <Link key={index} to={service.link}>
+                <Card className="hover:shadow-xl hover:scale-[1.02] hover:border-primary/30 transition-all duration-300 cursor-pointer h-full">
+                  <CardContent className="p-8">
+                    <div className="flex items-start space-x-4">
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full flex-shrink-0">
+                        <Icon name={service.icon} size={24} className="text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                        <p className="text-muted-foreground mb-4">{service.description}</p>
+                        <ul className="space-y-2">
+                          {service.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-center text-sm">
+                              <Icon name="Check" size={16} className="text-success mr-3 flex-shrink-0" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                      <p className="text-muted-foreground mb-4">{service.description}</p>
-                      <ul className="space-y-2">
-                        {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center text-sm">
-                            <Icon name="Check" size={16} className="text-success mr-3 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>

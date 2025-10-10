@@ -15,6 +15,10 @@ import CityPage from "./pages/CityPage";
 import Internet from "./pages/services/Internet";
 import Satellite from "./pages/services/Satellite";
 import Wifi from "./pages/services/Wifi";
+import WifiInstallation from "./pages/services/WifiInstallation";
+import WifiSignalBoost from "./pages/services/WifiSignalBoost";
+import WifiRoaming from "./pages/services/WifiRoaming";
+import WifiDiagnostics from "./pages/services/WifiDiagnostics";
 import Security from "./pages/services/Security";
 import Surveillance from "./pages/services/Surveillance";
 import AlarmSecurity from "./pages/services/AlarmSecurity";
@@ -52,6 +56,10 @@ const App = () => (
             <Route path="/services/internet" element={<Internet />} />
             <Route path="/services/satellite" element={<Satellite />} />
             <Route path="/services/wifi" element={<Wifi />} />
+            <Route path="/services/wifi-installation" element={<WifiInstallation />} />
+            <Route path="/services/wifi-signal-boost" element={<WifiSignalBoost />} />
+            <Route path="/services/wifi-roaming" element={<WifiRoaming />} />
+            <Route path="/services/wifi-diagnostics" element={<WifiDiagnostics />} />
             <Route path="/services/security" element={<Security />} />
             <Route path="/services/surveillance" element={<Surveillance />} />
             <Route path="/services/alarm-security" element={<AlarmSecurity />} />
