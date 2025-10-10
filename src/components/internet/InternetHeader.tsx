@@ -16,9 +16,11 @@ const InternetHeader = () => {
           </div>
           
           <nav className="hidden lg:flex items-center gap-3 xl:gap-4">
+            <a href="/" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Главная</a>
             <a href="/services" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Услуги</a>
             <a href="/tariffs" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Тарифы</a>
             <a href="/coverage" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Покрытие</a>
+            <a href="/reviews" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Отзывы</a>
             <a 
               href="tel:+79015000078" 
               className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium text-sm whitespace-nowrap"
