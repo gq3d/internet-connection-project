@@ -6,12 +6,14 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import SurveillanceHeader from '@/components/surveillance/SurveillanceHeader';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import UniversalFooter from '@/components/UniversalFooter';
 
 const PtzCameras = () => {
   useSEO({
-    title: 'PTZ камеры с зумом для видеонаблюдения в МО от 35000₽ | NetConnect',
+    title: 'PTZ камеры с зумом в МО от 35000₽ | NetConnect',
     description: 'Установка PTZ камер с поворотом 360° и 20x зумом. Автоследование объектов, патрулирование. Звоните: +7 (901) 500-00-78',
+    keywords: 'ptz камеры, поворотные камеры, камеры с зумом, камеры с поворотом, автослежение, ptz установка, камеры 360 градусов',
     canonical: 'https://mosoblconnect.ru/services/cameras/ptz-cameras',
     ogTitle: 'PTZ камеры видеонаблюдения в Московской области',
     ogDescription: 'Поворотные камеры с зумом для контроля больших территорий. Поворот 360°, оптический зум, автотрекинг.',
@@ -131,8 +133,13 @@ const PtzCameras = () => {
   return (
     <div className="min-h-screen bg-background">
       <SurveillanceHeader />
+      <Breadcrumbs items={[
+        { label: 'Услуги', href: '/services' },
+        { label: 'Видеонаблюдение', href: '/services/surveillance' },
+        { label: 'PTZ камеры' }
+      ]} />
       
-      <section className="pt-24 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
+      <section className="pt-8 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4" variant="secondary">

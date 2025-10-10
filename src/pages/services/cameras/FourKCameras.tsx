@@ -6,12 +6,14 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import SurveillanceHeader from '@/components/surveillance/SurveillanceHeader';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import UniversalFooter from '@/components/UniversalFooter';
 
 const FourKCameras = () => {
   useSEO({
-    title: '4K камеры для видеонаблюдения в МО от 15000₽ | NetConnect',
+    title: '4K камеры Ultra HD в МО от 15000₽ | NetConnect',
     description: 'Установка камер 4K Ultra HD 3840x2160. Максимальная детализация, Smart детекция, ночное видение до 50м. Звоните: +7 (901) 500-00-78',
+    keywords: '4k камеры, камеры ultra hd, камеры 4к установка, видеонаблюдение 4k, камеры высокого разрешения, камеры 8 мп, smart детекция',
     canonical: 'https://mosoblconnect.ru/services/cameras/4k-cameras',
     ogTitle: '4K камеры видеонаблюдения в Московской области',
     ogDescription: 'Камеры сверхвысокого разрешения 4K UHD. Детализация лиц и номеров, Smart аналитика, запись 8 Мп.',
@@ -124,8 +126,13 @@ const FourKCameras = () => {
   return (
     <div className="min-h-screen bg-background">
       <SurveillanceHeader />
+      <Breadcrumbs items={[
+        { label: 'Услуги', href: '/services' },
+        { label: 'Видеонаблюдение', href: '/services/surveillance' },
+        { label: '4K камеры Ultra HD' }
+      ]} />
       
-      <section className="pt-24 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
+      <section className="pt-8 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4" variant="secondary">

@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 interface SEOProps {
   title?: string;
   description?: string;
+  keywords?: string;
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
@@ -15,6 +16,7 @@ interface SEOProps {
 export const useSEO = ({
   title,
   description,
+  keywords,
   ogTitle,
   ogDescription,
   ogImage,
@@ -32,6 +34,7 @@ export const useSEO = ({
     
     const metaTags: { [key: string]: string } = {
       description: description || '',
+      keywords: keywords || '',
       robots: robotsContent,
       'og:type': 'website',
       'og:title': ogTitle || title || '',
@@ -89,5 +92,5 @@ export const useSEO = ({
       
       script.textContent = JSON.stringify(structuredData);
     }
-  }, [title, description, ogTitle, ogDescription, ogImage, ogImageAlt, canonical, structuredData, noindex]);
+  }, [title, description, keywords, ogTitle, ogDescription, ogImage, ogImageAlt, canonical, structuredData, noindex]);
 };

@@ -6,12 +6,14 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import SurveillanceHeader from '@/components/surveillance/SurveillanceHeader';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import UniversalFooter from '@/components/UniversalFooter';
 
 const ThermalCameras = () => {
   useSEO({
-    title: 'Тепловизионные камеры для видеонаблюдения в МО от 85000₽ | NetConnect',
+    title: 'Тепловизионные камеры в МО от 85000₽ | NetConnect',
     description: 'Установка тепловизионных камер для периметровой охраны. Детекция в полной темноте, дальность до 500м. Звоните: +7 (901) 500-00-78',
+    keywords: 'тепловизионные камеры, камеры тепловидения, периметровая охрана, thermal камеры, тепловизоры, ночное видение, системы охраны',
     canonical: 'https://mosoblconnect.ru/services/cameras/thermal-cameras',
     ogTitle: 'Тепловизионные камеры в Московской области',
     ogDescription: 'Камеры тепловидения для максимальной безопасности. Обнаружение в темноте, тумане, дыме. Дальность до 500 метров.',
@@ -148,8 +150,13 @@ const ThermalCameras = () => {
   return (
     <div className="min-h-screen bg-background">
       <SurveillanceHeader />
+      <Breadcrumbs items={[
+        { label: 'Услуги', href: '/services' },
+        { label: 'Видеонаблюдение', href: '/services/surveillance' },
+        { label: 'Тепловизионные камеры' }
+      ]} />
       
-      <section className="pt-24 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
+      <section className="pt-8 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4" variant="secondary">
