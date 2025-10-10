@@ -1,41 +1,19 @@
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
+import { useAnchorScroll } from '@/hooks/useAnchorScroll';
 
 const SecurityHeader = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
+  const { handleAnchorClick } = useAnchorScroll();
 
   const handleAboutClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
     setIsMobileMenuOpen(false);
-    
-    if (location.pathname === '/') {
-      setTimeout(() => {
-        const aboutSection = document.getElementById('about');
-        if (aboutSection) {
-          aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 100);
-    } else {
-      window.location.href = '/#about';
-    }
+    handleAnchorClick(e, 'about');
   };
 
   const handleContactsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
     setIsMobileMenuOpen(false);
-    
-    if (location.pathname === '/') {
-      setTimeout(() => {
-        const contactsSection = document.getElementById('contacts');
-        if (contactsSection) {
-          contactsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 100);
-    } else {
-      window.location.href = '/#contacts';
-    }
+    handleAnchorClick(e, 'contacts');
   };
 
   return (

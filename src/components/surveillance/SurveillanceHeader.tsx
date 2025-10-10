@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
+import { useAnchorScroll } from '@/hooks/useAnchorScroll';
 
 const SurveillanceHeader = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
+  const { handleAnchorClick } = useAnchorScroll();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,35 +18,13 @@ const SurveillanceHeader = () => {
   }, []);
 
   const handleContactsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
     setIsMobileMenuOpen(false);
-    
-    if (location.pathname === '/') {
-      setTimeout(() => {
-        const contactsSection = document.getElementById('contacts');
-        if (contactsSection) {
-          contactsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 100);
-    } else {
-      window.location.href = '/#contacts';
-    }
+    handleAnchorClick(e, 'contacts');
   };
 
   const handleAboutClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
     setIsMobileMenuOpen(false);
-    
-    if (location.pathname === '/') {
-      setTimeout(() => {
-        const aboutSection = document.getElementById('about');
-        if (aboutSection) {
-          aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 100);
-    } else {
-      window.location.href = '/#about';
-    }
+    handleAnchorClick(e, 'about');
   };
 
   return (
