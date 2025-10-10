@@ -16,11 +16,15 @@ const InternetHeader = () => {
           </div>
           
           <nav className="hidden lg:flex items-center gap-3 xl:gap-4">
-            <a href="/" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Главная</a>
             <a href="/services" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Услуги</a>
             <a href="/tariffs" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Тарифы</a>
+            <a href="/pricing" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Стоимость</a>
             <a href="/coverage" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Покрытие</a>
-            <a href="/reviews" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Отзывы</a>
+            <a href="/signal-boost" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Усиление 4G/LTE</a>
+            <a href="/esim" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">eSIM</a>
+            <a href="/#about" onClick={(e) => handleAnchorClick(e, 'about')} className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">О компании</a>
+            <a href="/faq" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">FAQ</a>
+            <a href="/#contacts" onClick={(e) => handleAnchorClick(e, 'contacts')} className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Контакты</a>
             <a 
               href="tel:+79015000078" 
               className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium text-sm whitespace-nowrap"
