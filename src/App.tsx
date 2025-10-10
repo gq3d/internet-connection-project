@@ -25,6 +25,11 @@ import Pricing from "./pages/Pricing";
 import Coverage from "./pages/Coverage";
 import Esim from "./pages/Esim";
 import SignalBoost from "./pages/SignalBoost";
+import HighSpeed from "./pages/HighSpeed";
+import StableConnection from "./pages/StableConnection";
+import SecureConnection from "./pages/SecureConnection";
+import KidsInternet from "./pages/KidsInternet";
+import FastSetup from "./pages/FastSetup";
 
 const queryClient = new QueryClient();
 
@@ -54,6 +59,11 @@ const App = () => (
             <Route path="/coverage" element={<Coverage />} />
             <Route path="/esim" element={<Esim />} />
             <Route path="/signal-boost" element={<SignalBoost />} />
+            <Route path="/high-speed" element={<HighSpeed />} />
+            <Route path="/stable-connection" element={<StableConnection />} />
+            <Route path="/secure-connection" element={<SecureConnection />} />
+            <Route path="/kids-internet" element={<KidsInternet />} />
+            <Route path="/fast-setup" element={<FastSetup />} />
             <Route path="/sitemap.xml" element={<SitemapGenerator type="sitemap" />} />
             <Route path="/robots.txt" element={<SitemapGenerator type="robots" />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

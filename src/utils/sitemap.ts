@@ -36,6 +36,15 @@ const servicePages = [
   { slug: 'cellular-booster', name: 'Усиление сотовой связи' }
 ];
 
+// Список страниц преимуществ интернета
+const advantagePages = [
+  { slug: 'high-speed', name: 'Высокоскоростной интернет' },
+  { slug: 'stable-connection', name: 'Стабильное соединение' },
+  { slug: 'secure-connection', name: 'Защищённое подключение' },
+  { slug: 'kids-internet', name: 'Детский интернет' },
+  { slug: 'fast-setup', name: 'Быстрое подключение' }
+];
+
 // Список всех страниц сайта
 export const siteUrls: SitemapUrl[] = [
   {
@@ -50,6 +59,13 @@ export const siteUrls: SitemapUrl[] = [
     lastmod: new Date().toISOString().split('T')[0],
     changefreq: 'monthly' as const,
     priority: 0.9
+  })),
+  // Добавляем страницы преимуществ интернета
+  ...advantagePages.map(advantage => ({
+    loc: `/${advantage.slug}`,
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: 'monthly' as const,
+    priority: 0.8
   })),
   // Добавляем все городские страницы
   ...cities.map(city => ({
