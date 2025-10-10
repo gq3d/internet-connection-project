@@ -17,6 +17,9 @@ import Satellite from "./pages/services/Satellite";
 import Wifi from "./pages/services/Wifi";
 import Security from "./pages/services/Security";
 import Surveillance from "./pages/services/Surveillance";
+import AlarmSecurity from "./pages/services/AlarmSecurity";
+import AccessControl from "./pages/services/AccessControl";
+import FireSafety from "./pages/services/FireSafety";
 import CellularBooster from "./pages/services/CellularBooster";
 import Equipment from "./pages/Equipment";
 import Reviews from "./pages/Reviews";
@@ -51,6 +54,9 @@ const App = () => (
             <Route path="/services/wifi" element={<Wifi />} />
             <Route path="/services/security" element={<Security />} />
             <Route path="/services/surveillance" element={<Surveillance />} />
+            <Route path="/services/alarm-security" element={<AlarmSecurity />} />
+            <Route path="/services/access-control" element={<AccessControl />} />
+            <Route path="/services/fire-safety" element={<FireSafety />} />
             <Route path="/services/cellular-booster" element={<CellularBooster />} />
             <Route path="/equipment" element={<Equipment />} />
             <Route path="/reviews" element={<Reviews />} />
