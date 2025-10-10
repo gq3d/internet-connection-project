@@ -247,11 +247,8 @@ const FastSetup = () => {
             <Card className="bg-gradient-to-br from-primary/10 to-secondary/10 border-primary/20">
               <CardContent className="p-8">
                 <div className="text-center mb-8">
-                  <Icon name="Gift" size={48} className="text-primary mx-auto mb-4" />
-                  <h2 className="text-3xl font-bold mb-4">Специальное предложение</h2>
-                  <p className="text-xl text-muted-foreground">
-                    При подключении в течение 3 дней — первый месяц бесплатно!
-                  </p>
+                  <Icon name="Zap" size={48} className="text-primary mx-auto mb-4" />
+                  <h2 className="text-3xl font-bold mb-4">Наши преимущества</h2>
                 </div>
                 <div className="grid md:grid-cols-2 gap-4 mb-8">
                   <div className="bg-white rounded-lg p-4 text-center">
