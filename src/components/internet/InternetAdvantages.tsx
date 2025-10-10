@@ -21,10 +21,16 @@ const advantages = [
     gradient: 'from-blue-500 to-cyan-500'
   },
   {
+    icon: 'Baby',
+    title: 'Детский интернет',
+    description: 'Родительский контроль, блокировка опасных сайтов и ограничение времени доступа',
+    gradient: 'from-pink-500 to-rose-500'
+  },
+  {
     icon: 'Clock',
     title: 'Быстрое подключение',
     description: 'Установка за 1-3 дня без прокладки кабелей',
-    gradient: 'from-purple-500 to-pink-500'
+    gradient: 'from-purple-500 to-indigo-500'
   }
 ];
 
@@ -41,7 +47,7 @@ const InternetAdvantages = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
           {advantages.map((advantage, index) => (
             <Card 
               key={index} 

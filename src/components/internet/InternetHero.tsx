@@ -15,7 +15,7 @@ const InternetHero = () => {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-2xl mb-6 shadow-xl">
               <Icon name="Wifi" size={40} className="text-white" />
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-gradient">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-gradient leading-tight">
               Интернет-подключение
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -37,18 +37,10 @@ const InternetHero = () => {
               </Badge>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a 
-                href="tel:+79015000078"
-                className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 font-bold text-lg"
-              >
-                <Icon name="Phone" size={22} className="mr-3 group-hover:rotate-12 transition-transform" />
-                Позвонить сейчас
-              </a>
-              
+            <div className="flex justify-center">
               <Link 
                 to="/coverage"
-                className="group inline-flex items-center justify-center px-8 py-4 bg-white border-2 border-primary text-primary rounded-xl hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105 font-bold text-lg shadow-lg"
+                className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 font-bold text-lg"
               >
                 <Icon name="Map" size={22} className="mr-3 group-hover:scale-110 transition-transform" />
                 Проверить покрытие
@@ -57,10 +49,8 @@ const InternetHero = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mt-16">
-            <a 
-              href="https://www.speedtest.net/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link 
+              to="/coverage#speed-test"
               className="group block"
             >
               <div className="bg-white/80 backdrop-blur-sm border-2 border-primary/20 rounded-2xl p-6 hover:border-primary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
@@ -72,10 +62,10 @@ const InternetHero = () => {
                     <h3 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Тест скорости интернета</h3>
                     <p className="text-sm text-muted-foreground">Проверьте текущую скорость вашего соединения</p>
                   </div>
-                  <Icon name="ExternalLink" size={20} className="ml-auto text-muted-foreground group-hover:text-primary transition-colors" />
+                  <Icon name="ArrowRight" size={20} className="ml-auto text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
                 </div>
               </div>
-            </a>
+            </Link>
 
             <Link 
               to="/coverage"
