@@ -105,18 +105,18 @@ const FourKCameras = () => {
   const models = [
     {
       name: 'Hikvision DS-2CD2683G2',
-      price: '15 500 ₽',
+      price: 'от 15 500 ₽',
       features: ['8 Мп (4K)', 'AcuSense детекция', 'ИК до 50м', 'PoE', 'H.265+ кодек', 'MicroSD 256 ГБ']
     },
     {
       name: 'Dahua IPC-HFW3841E',
-      price: '17 200 ₽',
+      price: 'от 17 200 ₽',
       features: ['8 Мп (4K)', 'SMD Plus', 'Starlight', 'ИК до 60м', 'WDR 140 дБ', 'AI распознавание'],
       popular: true
     },
     {
       name: 'Uniview IPC2328SB',
-      price: '14 800 ₽',
+      price: 'от 14 800 ₽',
       features: ['8 Мп (4K)', 'Smart детекция', 'ИК до 50м', 'PoE', 'IP67', 'ONVIF Profile S']
     }
   ];

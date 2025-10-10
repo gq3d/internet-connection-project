@@ -82,7 +82,7 @@ const AccessControl = () => {
   const packages = [
     {
       name: 'Офис',
-      price: '40 000',
+      price: 'от 40 000',
       features: [
         'Контроллер на 2 двери',
         '20 карт доступа',
@@ -95,7 +95,7 @@ const AccessControl = () => {
     },
     {
       name: 'Бизнес',
-      price: '85 000',
+      price: 'от 85 000',
       features: [
         'Контроллер на 4 двери',
         '50 карт доступа',

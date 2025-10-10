@@ -43,7 +43,7 @@ const AlarmSecurity = () => {
   const packages = [
     {
       name: 'Базовая',
-      price: '35 000',
+      price: 'от 35 000',
       features: [
         '4 датчика движения',
         '4 датчика открытия',
@@ -55,7 +55,7 @@ const AlarmSecurity = () => {
     },
     {
       name: 'Оптимальная',
-      price: '55 000',
+      price: 'от 55 000',
       features: [
         '8 датчиков движения',
         '6 датчиков открытия',
@@ -69,7 +69,7 @@ const AlarmSecurity = () => {
     },
     {
       name: 'Премиум',
-      price: '95 000',
+      price: 'от 95 000',
       features: [
         '12 датчиков движения',
         '10 датчиков открытия',

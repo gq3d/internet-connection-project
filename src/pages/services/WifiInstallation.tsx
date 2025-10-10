@@ -43,7 +43,7 @@ const WifiInstallation = () => {
   const packages = [
     {
       name: 'Базовая установка',
-      price: '5 000',
+      price: 'от 5 000',
       features: [
         'Настройка роутера',
         'Подключение к интернету',
@@ -54,7 +54,7 @@ const WifiInstallation = () => {
     },
     {
       name: 'Оптимальная',
-      price: '12 000',
+      price: 'от 12 000',
       features: [
         'Установка роутера Wi-Fi 6',
         'Оптимизация покрытия',

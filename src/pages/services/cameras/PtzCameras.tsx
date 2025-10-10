@@ -112,18 +112,18 @@ const PtzCameras = () => {
   const models = [
     {
       name: 'Hikvision DS-2DE4A425IW',
-      price: '35 000 ₽',
+      price: 'от 35 000 ₽',
       features: ['4 Мп', '25x оптический зум', 'Поворот 360°', 'ИК до 100м', 'Smart детекция', 'Автотрекинг']
     },
     {
       name: 'Dahua SD49425XB-HNR',
-      price: '42 500 ₽',
+      price: 'от 42 500 ₽',
       features: ['4 Мп', '25x зум', 'Starlight', 'ИК до 150м', 'AI аналитика', 'Wipers (дворники)'],
       popular: true
     },
     {
       name: 'Uniview IPC6858SR-X38',
-      price: '68 000 ₽',
+      price: 'от 68 000 ₽',
       features: ['8 Мп (4K)', '38x оптический зум', 'Поворот 360°', 'ИК до 200м', 'Face Recognition', 'ANPR']
     }
   ];

@@ -82,7 +82,7 @@ const FireSafety = () => {
   const packages = [
     {
       name: 'Квартира',
-      price: '30 000',
+      price: 'от 30 000',
       features: [
         '4 дымовых датчика',
         '2 тепловых датчика',
@@ -95,7 +95,7 @@ const FireSafety = () => {
     },
     {
       name: 'Дом/Офис',
-      price: '65 000',
+      price: 'от 65 000',
       features: [
         '8 дымовых датчиков',
         '4 тепловых датчика',

@@ -66,18 +66,18 @@ const IpCameras = () => {
   const models = [
     {
       name: 'Hikvision DS-2CD2043G2',
-      price: '8 500 ₽',
+      price: 'от 8 500 ₽',
       features: ['4 Мп разрешение', 'H.265+ кодек', 'ИК до 30м', 'PoE', 'IP67 защита', 'MicroSD до 256 ГБ']
     },
     {
       name: 'Dahua IPC-HFW2431S',
-      price: '9 200 ₽',
+      price: 'от 9 200 ₽',
       features: ['4 Мп разрешение', 'Starlight технология', 'ИК до 40м', 'PoE', 'WDR 120 дБ', 'Детекция лиц'],
       popular: true
     },
     {
       name: 'Uniview IPC2124SR3',
-      price: '7 800 ₽',
+      price: 'от 7 800 ₽',
       features: ['4 Мп разрешение', 'Smart детекция', 'ИК до 30м', 'PoE', 'IP67 защита', 'ONVIF']
     }
   ];
