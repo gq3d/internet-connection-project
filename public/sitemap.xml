@@ -38,53 +38,124 @@
         <priority>0.9</priority>
     </url>
     
-    <!-- Страница оборудования -->
+    <!-- Страницы услуг -->
+    <url>
+        <loc>https://mosoblconnect.ru/services</loc>
+        <lastmod>2025-10-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    
     <url>
         <loc>https://mosoblconnect.ru/equipment</loc>
-        <lastmod>2025-10-05</lastmod>
+        <lastmod>2025-10-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
-    <!-- Страницы услуг -->
+    <url>
+        <loc>https://mosoblconnect.ru/reviews</loc>
+        <lastmod>2025-10-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://mosoblconnect.ru/faq</loc>
+        <lastmod>2025-10-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <!-- Дополнительные страницы -->
+    <url>
+        <loc>https://mosoblconnect.ru/esim</loc>
+        <lastmod>2025-10-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://mosoblconnect.ru/signal-boost</loc>
+        <lastmod>2025-10-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://mosoblconnect.ru/high-speed</loc>
+        <lastmod>2025-10-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://mosoblconnect.ru/stable-connection</loc>
+        <lastmod>2025-10-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://mosoblconnect.ru/secure-connection</loc>
+        <lastmod>2025-10-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://mosoblconnect.ru/kids-internet</loc>
+        <lastmod>2025-10-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://mosoblconnect.ru/fast-setup</loc>
+        <lastmod>2025-10-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <!-- Категории услуг -->
     <url>
         <loc>https://mosoblconnect.ru/services/internet</loc>
-        <lastmod>2025-09-30</lastmod>
+        <lastmod>2025-10-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/services/satellite</loc>
-        <lastmod>2025-09-30</lastmod>
+        <lastmod>2025-10-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/services/wifi</loc>
-        <lastmod>2025-09-30</lastmod>
+        <lastmod>2025-10-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/services/security</loc>
-        <lastmod>2025-09-30</lastmod>
+        <lastmod>2025-10-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/services/surveillance</loc>
-        <lastmod>2025-09-30</lastmod>
+        <lastmod>2025-10-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/services/cellular-booster</loc>
-        <lastmod>2025-09-30</lastmod>
+        <lastmod>2025-10-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
