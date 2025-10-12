@@ -1,6 +1,7 @@
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { useSEO } from '@/hooks/useSEO';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Icon from '@/components/ui/icon';
 import InternetHeader from '@/components/internet/InternetHeader';
 import InternetHero from '@/components/internet/InternetHero';
@@ -23,8 +24,48 @@ const Internet = () => {
     ogImageAlt: 'Беспроводной интернет NetConnect в Московской области'
   });
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Беспроводной интернет для дома",
+    "description": "Подключение беспроводного интернета для частного дома и дачи в Московской области. Скорость до 250 Мбит/с без закапывания кабеля.",
+    "provider": {
+      "@type": "Organization",
+      "name": "NetConnect",
+      "telephone": "+7-901-500-00-78",
+      "url": "https://mosoblconnect.ru"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Московская область"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "1490",
+      "highPrice": "3990",
+      "priceCurrency": "RUB",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "1490",
+        "priceCurrency": "RUB",
+        "unitText": "MONTH"
+      }
+    },
+    "serviceType": "Беспроводной интернет",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "156"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </Helmet>
       <InternetHeader />
       <InternetHero />
       <InternetAdvantages />

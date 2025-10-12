@@ -1,5 +1,6 @@
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { useSEO } from '@/hooks/useSEO';
+import { Helmet } from 'react-helmet-async';
 import {
   CellularHeader,
   CellularHero,
@@ -13,6 +14,35 @@ import {
 import { CellularSigns, CellularExamples } from '@/components/cellular/CellularAdditional';
 
 const CellularBooster = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Усиление сотовой связи",
+    "description": "Усиление сотовой связи в Московской области. Репитеры GSM, 3G, 4G, 5G для всех операторов.",
+    "provider": {
+      "@type": "Organization",
+      "name": "NetConnect",
+      "telephone": "+7-901-500-00-78",
+      "url": "https://mosoblconnect.ru"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Московская область"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "18000",
+      "highPrice": "65000",
+      "priceCurrency": "RUB"
+    },
+    "serviceType": "Усиление сотовой связи",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "93"
+    }
+  };
+
   useSEO({
     title: 'Усиление сотовой связи в МО от 18000₽ | NetConnect',
     description: 'Усиление сотовой связи в Московской области: репитеры GSM, 3G, 4G, 5G для всех операторов. Усиление сигнала на даче, в частном доме и на участке. Профессиональная установка, комплекты от 18000 рублей.',
@@ -25,6 +55,11 @@ const CellularBooster = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </Helmet>
       <CellularHeader />
       <CellularHero />
       <CellularBoosters />

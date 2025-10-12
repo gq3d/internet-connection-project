@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useSEO } from '@/hooks/useSEO';
+import { Helmet } from 'react-helmet-async';
 import Icon from '@/components/ui/icon';
 import { Card, CardContent } from '@/components/ui/card';
 import SecurityHeader from '@/components/security/SecurityHeader';
@@ -13,6 +14,35 @@ import SecurityCTA from '@/components/security/SecurityCTA';
 import UniversalFooter from '@/components/UniversalFooter';
 
 const Security = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Охранная сигнализация",
+    "description": "Охранная сигнализация для частных домов и дач. GSM и беспроводные системы, пультовая охрана.",
+    "provider": {
+      "@type": "Organization",
+      "name": "NetConnect",
+      "telephone": "+7-901-500-00-78",
+      "url": "https://mosoblconnect.ru"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Московская область"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "25000",
+      "highPrice": "85000",
+      "priceCurrency": "RUB"
+    },
+    "serviceType": "Охранная сигнализация",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "124"
+    }
+  };
+
   useSEO({
     title: 'Охранная сигнализация в МО от 25000₽ | NetConnect',
     description: 'Охранная сигнализация для частных домов и дач в Московской области. GSM и беспроводные системы, пультовая охрана. Профессиональная установка под ключ. Комплекты от 25000 рублей.',
@@ -29,6 +59,11 @@ const Security = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </Helmet>
       <SecurityHeader />
       <SecurityHero />
       <SecuritySystems />
