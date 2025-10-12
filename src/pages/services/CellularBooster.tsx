@@ -15,7 +15,7 @@ import { CellularSigns, CellularExamples } from '@/components/cellular/CellularA
 const CellularBooster = () => {
   useSEO({
     title: 'Усиление сотовой связи в МО от 18000₽ | NetConnect',
-    description: 'Репитеры GSM/3G/4G/5G для всех операторов. Установка за 1 день. Звоните: +7 (901) 500-00-78',
+    description: 'Усиление сотовой связи в Московской области: репитеры GSM, 3G, 4G, 5G для всех операторов. Усиление сигнала на даче, в частном доме и на участке. Профессиональная установка, комплекты от 18000 рублей.',
     canonical: 'https://mosoblconnect.ru/services/cellular-booster',
     ogTitle: 'Усиление сотовой связи в МО от 18000₽',
     ogDescription: 'Репитеры GSM, 3G, 4G, 5G. Усиление сигнала всех операторов на доме и даче. Комплекты от 18 000₽.',
