@@ -10,34 +10,60 @@ import SurveillanceHeader from '@/components/surveillance/SurveillanceHeader';
 import { useSEO } from '@/hooks/useSEO';
 
 const Wifi = () => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Wi-Fi оборудование для дома",
-    "description": "Продажа и установка Wi-Fi оборудования: роутеры, mesh-системы, точки доступа. Полное покрытие дома без мертвых зон.",
-    "provider": {
-      "@type": "Organization",
-      "name": "NetConnect",
-      "telephone": "+7-901-500-00-78",
-      "url": "https://mosoblconnect.ru"
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Wi-Fi оборудование для дома",
+      "description": "Продажа и установка Wi-Fi оборудования: роутеры, mesh-системы, точки доступа. Полное покрытие дома без мертвых зон.",
+      "provider": {
+        "@type": "Organization",
+        "name": "NetConnect",
+        "telephone": "+7-901-500-00-78",
+        "url": "https://mosoblconnect.ru"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Московская область"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "8000",
+        "highPrice": "45000",
+        "priceCurrency": "RUB"
+      },
+      "serviceType": "Wi-Fi оборудование",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "89"
+      }
     },
-    "areaServed": {
-      "@type": "State",
-      "name": "Московская область"
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "lowPrice": "8000",
-      "highPrice": "45000",
-      "priceCurrency": "RUB"
-    },
-    "serviceType": "Wi-Fi оборудование",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "89"
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://mosoblconnect.ru"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Услуги",
+          "item": "https://mosoblconnect.ru/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Wi-Fi оборудование",
+          "item": "https://mosoblconnect.ru/services/wifi"
+        }
+      ]
     }
-  };
+  ];
 
   useSEO({
     title: 'Wi-Fi оборудование для дома в МО от 8000₽ | NetConnect',

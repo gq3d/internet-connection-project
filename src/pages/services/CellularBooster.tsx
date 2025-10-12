@@ -14,34 +14,60 @@ import {
 import { CellularSigns, CellularExamples } from '@/components/cellular/CellularAdditional';
 
 const CellularBooster = () => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Усиление сотовой связи",
-    "description": "Усиление сотовой связи в Московской области. Репитеры GSM, 3G, 4G, 5G для всех операторов.",
-    "provider": {
-      "@type": "Organization",
-      "name": "NetConnect",
-      "telephone": "+7-901-500-00-78",
-      "url": "https://mosoblconnect.ru"
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Усиление сотовой связи",
+      "description": "Усиление сотовой связи в Московской области. Репитеры GSM, 3G, 4G, 5G для всех операторов.",
+      "provider": {
+        "@type": "Organization",
+        "name": "NetConnect",
+        "telephone": "+7-901-500-00-78",
+        "url": "https://mosoblconnect.ru"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Московская область"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "18000",
+        "highPrice": "65000",
+        "priceCurrency": "RUB"
+      },
+      "serviceType": "Усиление сотовой связи",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "93"
+      }
     },
-    "areaServed": {
-      "@type": "State",
-      "name": "Московская область"
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "lowPrice": "18000",
-      "highPrice": "65000",
-      "priceCurrency": "RUB"
-    },
-    "serviceType": "Усиление сотовой связи",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "93"
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://mosoblconnect.ru"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Услуги",
+          "item": "https://mosoblconnect.ru/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Усиление сотовой связи",
+          "item": "https://mosoblconnect.ru/services/cellular-booster"
+        }
+      ]
     }
-  };
+  ];
 
   useSEO({
     title: 'Усиление сотовой связи в МО от 18000₽ | NetConnect',

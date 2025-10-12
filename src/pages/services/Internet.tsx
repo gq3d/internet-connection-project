@@ -24,40 +24,66 @@ const Internet = () => {
     ogImageAlt: 'Беспроводной интернет NetConnect в Московской области'
   });
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Беспроводной интернет для дома",
-    "description": "Подключение беспроводного интернета для частного дома и дачи в Московской области. Скорость до 250 Мбит/с без закапывания кабеля.",
-    "provider": {
-      "@type": "Organization",
-      "name": "NetConnect",
-      "telephone": "+7-901-500-00-78",
-      "url": "https://mosoblconnect.ru"
-    },
-    "areaServed": {
-      "@type": "State",
-      "name": "Московская область"
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "lowPrice": "1490",
-      "highPrice": "3990",
-      "priceCurrency": "RUB",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "1490",
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Беспроводной интернет для дома",
+      "description": "Подключение беспроводного интернета для частного дома и дачи в Московской области. Скорость до 250 Мбит/с без закапывания кабеля.",
+      "provider": {
+        "@type": "Organization",
+        "name": "NetConnect",
+        "telephone": "+7-901-500-00-78",
+        "url": "https://mosoblconnect.ru"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Московская область"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "1490",
+        "highPrice": "3990",
         "priceCurrency": "RUB",
-        "unitText": "MONTH"
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "1490",
+          "priceCurrency": "RUB",
+          "unitText": "MONTH"
+        }
+      },
+      "serviceType": "Беспроводной интернет",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "156"
       }
     },
-    "serviceType": "Беспроводной интернет",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "156"
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://mosoblconnect.ru"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Услуги",
+          "item": "https://mosoblconnect.ru/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Беспроводной интернет",
+          "item": "https://mosoblconnect.ru/services/internet"
+        }
+      ]
     }
-  };
+  ];
 
   return (
     <div className="min-h-screen bg-background">

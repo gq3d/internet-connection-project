@@ -14,34 +14,60 @@ import SecurityCTA from '@/components/security/SecurityCTA';
 import UniversalFooter from '@/components/UniversalFooter';
 
 const Security = () => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Охранная сигнализация",
-    "description": "Охранная сигнализация для частных домов и дач. GSM и беспроводные системы, пультовая охрана.",
-    "provider": {
-      "@type": "Organization",
-      "name": "NetConnect",
-      "telephone": "+7-901-500-00-78",
-      "url": "https://mosoblconnect.ru"
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Охранная сигнализация",
+      "description": "Охранная сигнализация для частных домов и дач. GSM и беспроводные системы, пультовая охрана.",
+      "provider": {
+        "@type": "Organization",
+        "name": "NetConnect",
+        "telephone": "+7-901-500-00-78",
+        "url": "https://mosoblconnect.ru"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Московская область"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "25000",
+        "highPrice": "85000",
+        "priceCurrency": "RUB"
+      },
+      "serviceType": "Охранная сигнализация",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "124"
+      }
     },
-    "areaServed": {
-      "@type": "State",
-      "name": "Московская область"
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "lowPrice": "25000",
-      "highPrice": "85000",
-      "priceCurrency": "RUB"
-    },
-    "serviceType": "Охранная сигнализация",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "124"
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://mosoblconnect.ru"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Услуги",
+          "item": "https://mosoblconnect.ru/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Охранная сигнализация",
+          "item": "https://mosoblconnect.ru/services/security"
+        }
+      ]
     }
-  };
+  ];
 
   useSEO({
     title: 'Охранная сигнализация в МО от 25000₽ | NetConnect',
