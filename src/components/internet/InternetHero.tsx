@@ -91,7 +91,7 @@ const InternetHero = () => {
                 <div className="flex flex-col h-full">
                   <div className="flex items-start gap-4 mb-3">
                     <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Icon name="CircleDollarSign" size={28} className="text-white" />
+                      <span className="text-white text-3xl font-bold">₽</span>
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-1 group-hover:text-success transition-colors">Стоимость</h3>
