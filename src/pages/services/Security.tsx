@@ -72,7 +72,7 @@ const Security = () => {
   useSEO({
     title: 'Охранная сигнализация в МО от 25000₽ | NetConnect',
     description: 'Охранная сигнализация для частных домов и дач в Московской области. GSM и беспроводные системы, пультовая охрана. Профессиональная установка под ключ. Комплекты от 25000 рублей.',
-    canonical: 'https://mosoblconnect.ru/services/security',
+    canonical: 'https://mosoblconnect.ru/services/security/',
     ogTitle: 'Охранные системы в МО от 25000₽',
     ogDescription: 'Профессиональная установка охранных систем. Беспроводная сигнализация, GSM мониторинг, пультовая охрана. Комплекты от 25 000₽.',
     ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
