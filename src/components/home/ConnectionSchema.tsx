@@ -333,7 +333,7 @@ export default function ConnectionSchema() {
 
             {/* Преимущества */}
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="flex items-start gap-3 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl p-5 border border-primary/20 hover:shadow-lg transition-shadow">
+              <Link to="/services/internet" className="flex items-start gap-3 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl p-5 border border-primary/20 hover:shadow-lg hover:scale-105 transition-all cursor-pointer">
                 <div className="bg-primary p-3 rounded-lg flex-shrink-0">
                   <Icon name="Zap" size={24} className="text-white" />
                 </div>
@@ -341,8 +341,8 @@ export default function ConnectionSchema() {
                   <h5 className="font-bold mb-1 text-lg">Быстрая установка</h5>
                   <p className="text-sm text-muted-foreground">Быстрое подключение</p>
                 </div>
-              </div>
-              <div className="flex items-start gap-3 bg-gradient-to-br from-success/10 to-success/5 rounded-xl p-5 border border-success/20 hover:shadow-lg transition-shadow">
+              </Link>
+              <Link to="/services/cellular-booster" className="flex items-start gap-3 bg-gradient-to-br from-success/10 to-success/5 rounded-xl p-5 border border-success/20 hover:shadow-lg hover:scale-105 transition-all cursor-pointer">
                 <div className="bg-success p-3 rounded-lg flex-shrink-0">
                   <Icon name="Signal" size={24} className="text-white" />
                 </div>
@@ -350,8 +350,8 @@ export default function ConnectionSchema() {
                   <h5 className="font-bold mb-1 text-lg">Стабильный сигнал</h5>
                   <p className="text-sm text-muted-foreground">До 250 Мбит/с</p>
                 </div>
-              </div>
-              <div className="flex items-start gap-3 bg-gradient-to-br from-secondary/10 to-secondary/5 rounded-xl p-5 border border-secondary/20 hover:shadow-lg transition-shadow">
+              </Link>
+              <Link to="/services/wifi" className="flex items-start gap-3 bg-gradient-to-br from-secondary/10 to-secondary/5 rounded-xl p-5 border border-secondary/20 hover:shadow-lg hover:scale-105 transition-all cursor-pointer">
                 <div className="bg-secondary p-3 rounded-lg flex-shrink-0">
                   <Icon name="Home" size={24} className="text-white" />
                 </div>
@@ -359,7 +359,7 @@ export default function ConnectionSchema() {
                   <h5 className="font-bold mb-1 text-lg">Для всего дома</h5>
                   <p className="text-sm text-muted-foreground">Покрытие по всей территории</p>
                 </div>
-              </div>
+              </Link>
             </div>
 
             {/* Стильные ссылки */}
