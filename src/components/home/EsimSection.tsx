@@ -162,70 +162,120 @@ export default function EsimSection() {
           </div>
 
           <div className="mt-16">
-            <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">Наши услуги в Московской области</h3>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-success bg-clip-text text-transparent">
+                Наши услуги в Московской области
+              </h3>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Полный спектр телекоммуникационных решений для дома и бизнеса
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Link 
                 to="/services/internet"
-                className="group block h-full"
+                className="group relative overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100/50 border-2 border-blue-200 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
-                <div className="bg-white border-2 border-primary/20 rounded-2xl p-6 hover:border-primary hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
-                  <div className="flex flex-col h-full">
-                    <div className="flex items-start gap-4 mb-3">
-                      <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Icon name="Wifi" size={28} className="text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Интернет-подключение</h4>
-                        <p className="text-sm text-muted-foreground">Беспроводной интернет до 250 Мбит/с</p>
-                      </div>
-                    </div>
-                    <div className="mt-auto flex justify-end">
-                      <Icon name="ArrowRight" size={20} className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
-                    </div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-400/10 rounded-full blur-3xl group-hover:bg-blue-400/20 transition-colors"></div>
+                <div className="relative">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <Icon name="Wifi" size={32} className="text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold mb-2 text-blue-900">Интернет-подключение</h4>
+                  <p className="text-blue-700 text-sm mb-4">Беспроводной интернет до 250 Мбит/с для дома и офиса</p>
+                  <div className="flex items-center text-blue-600 font-medium">
+                    <span className="text-sm">Подробнее</span>
+                    <Icon name="ArrowRight" size={18} className="ml-2 group-hover:translate-x-2 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+
+              <Link 
+                to="/services/satellite"
+                className="group relative overflow-hidden bg-gradient-to-br from-purple-50 to-purple-100/50 border-2 border-purple-200 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-purple-400/10 rounded-full blur-3xl group-hover:bg-purple-400/20 transition-colors"></div>
+                <div className="relative">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <Icon name="Satellite" size={32} className="text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold mb-2 text-purple-900">Спутниковый интернет</h4>
+                  <p className="text-purple-700 text-sm mb-4">Связь в самых удалённых уголках Подмосковья</p>
+                  <div className="flex items-center text-purple-600 font-medium">
+                    <span className="text-sm">Подробнее</span>
+                    <Icon name="ArrowRight" size={18} className="ml-2 group-hover:translate-x-2 transition-transform" />
                   </div>
                 </div>
               </Link>
 
               <Link 
                 to="/services/surveillance"
-                className="group block h-full"
+                className="group relative overflow-hidden bg-gradient-to-br from-amber-50 to-amber-100/50 border-2 border-amber-200 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
-                <div className="bg-white border-2 border-secondary/20 rounded-2xl p-6 hover:border-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
-                  <div className="flex flex-col h-full">
-                    <div className="flex items-start gap-4 mb-3">
-                      <div className="w-14 h-14 bg-gradient-to-br from-secondary to-secondary/80 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Icon name="Video" size={28} className="text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="text-xl font-bold mb-1 group-hover:text-secondary transition-colors">Видеонаблюдение</h4>
-                        <p className="text-sm text-muted-foreground">Системы безопасности и камеры</p>
-                      </div>
-                    </div>
-                    <div className="mt-auto flex justify-end">
-                      <Icon name="ArrowRight" size={20} className="text-muted-foreground group-hover:text-secondary group-hover:translate-x-1 transition-all" />
-                    </div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-400/10 rounded-full blur-3xl group-hover:bg-amber-400/20 transition-colors"></div>
+                <div className="relative">
+                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <Icon name="Video" size={32} className="text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold mb-2 text-amber-900">Видеонаблюдение</h4>
+                  <p className="text-amber-700 text-sm mb-4">Системы безопасности и IP-камеры с облаком</p>
+                  <div className="flex items-center text-amber-600 font-medium">
+                    <span className="text-sm">Подробнее</span>
+                    <Icon name="ArrowRight" size={18} className="ml-2 group-hover:translate-x-2 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+
+              <Link 
+                to="/services/security"
+                className="group relative overflow-hidden bg-gradient-to-br from-red-50 to-red-100/50 border-2 border-red-200 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-red-400/10 rounded-full blur-3xl group-hover:bg-red-400/20 transition-colors"></div>
+                <div className="relative">
+                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <Icon name="Shield" size={32} className="text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold mb-2 text-red-900">Системы охраны</h4>
+                  <p className="text-red-700 text-sm mb-4">Умная сигнализация и охранные комплексы</p>
+                  <div className="flex items-center text-red-600 font-medium">
+                    <span className="text-sm">Подробнее</span>
+                    <Icon name="ArrowRight" size={18} className="ml-2 group-hover:translate-x-2 transition-transform" />
                   </div>
                 </div>
               </Link>
 
               <Link 
                 to="/services/cellular-booster"
-                className="group block h-full"
+                className="group relative overflow-hidden bg-gradient-to-br from-green-50 to-green-100/50 border-2 border-green-200 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
-                <div className="bg-white border-2 border-success/20 rounded-2xl p-6 hover:border-success hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
-                  <div className="flex flex-col h-full">
-                    <div className="flex items-start gap-4 mb-3">
-                      <div className="w-14 h-14 bg-gradient-to-br from-success to-success/80 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Icon name="Signal" size={28} className="text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="text-xl font-bold mb-1 group-hover:text-success transition-colors">Усиление LTE</h4>
-                        <p className="text-sm text-muted-foreground">Антенны и усилители сигнала</p>
-                      </div>
-                    </div>
-                    <div className="mt-auto flex justify-end">
-                      <Icon name="ArrowRight" size={20} className="text-muted-foreground group-hover:text-success group-hover:translate-x-1 transition-all" />
-                    </div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-green-400/10 rounded-full blur-3xl group-hover:bg-green-400/20 transition-colors"></div>
+                <div className="relative">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <Icon name="Signal" size={32} className="text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold mb-2 text-green-900">Усиление LTE/4G</h4>
+                  <p className="text-green-700 text-sm mb-4">Антенны и усилители мобильной связи</p>
+                  <div className="flex items-center text-green-600 font-medium">
+                    <span className="text-sm">Подробнее</span>
+                    <Icon name="ArrowRight" size={18} className="ml-2 group-hover:translate-x-2 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+
+              <Link 
+                to="/services/wifi"
+                className="group relative overflow-hidden bg-gradient-to-br from-cyan-50 to-cyan-100/50 border-2 border-cyan-200 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-400/10 rounded-full blur-3xl group-hover:bg-cyan-400/20 transition-colors"></div>
+                <div className="relative">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <Icon name="Router" size={32} className="text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold mb-2 text-cyan-900">Wi-Fi оборудование</h4>
+                  <p className="text-cyan-700 text-sm mb-4">Бесшовный Wi-Fi и профессиональные роутеры</p>
+                  <div className="flex items-center text-cyan-600 font-medium">
+                    <span className="text-sm">Подробнее</span>
+                    <Icon name="ArrowRight" size={18} className="ml-2 group-hover:translate-x-2 transition-transform" />
                   </div>
                 </div>
               </Link>
