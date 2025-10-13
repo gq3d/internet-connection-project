@@ -334,9 +334,9 @@ export default function Equipment() {
             <div>
               <h3 className="font-bold mb-4">Услуги</h3>
               <div className="space-y-2 text-sm">
-                <a href="/services" className="block text-muted-foreground hover:text-primary transition-colors">Интернет-подключение</a>
-                <a href="/services" className="block text-muted-foreground hover:text-primary transition-colors">Спутниковый интернет</a>
-                <a href="/services" className="block text-muted-foreground hover:text-primary transition-colors">Видеонаблюдение</a>
+                <Link to="/services/internet" className="block text-muted-foreground hover:text-primary transition-colors">Интернет-подключение</Link>
+                <Link to="/services/satellite" className="block text-muted-foreground hover:text-primary transition-colors">Спутниковый интернет</Link>
+                <Link to="/services/surveillance" className="block text-muted-foreground hover:text-primary transition-colors">Видеонаблюдение</Link>
                 <Link to="/equipment" className="block text-muted-foreground hover:text-primary transition-colors">Оборудование</Link>
               </div>
             </div>
