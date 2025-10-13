@@ -49,8 +49,8 @@ const InternetHero = () => {
                     <Icon name="Gauge" size={28} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Тест скорости интернета</h3>
-                    <p className="text-sm text-muted-foreground">Проверьте текущую скорость вашего соединения</p>
+                    <h3 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Тест скорости</h3>
+                    <p className="text-sm text-muted-foreground">Проверьте скорость вашего соединения</p>
                   </div>
                   <Icon name="ArrowRight" size={20} className="ml-auto text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
                 </div>
