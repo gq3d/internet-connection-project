@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Icon from '@/components/ui/icon';
+import { Link } from 'react-router-dom';
 
 export default function EsimSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -157,6 +158,77 @@ export default function EsimSection() {
                 <span className="text-xl font-semibold">Подключайтесь прямо сейчас!</span>
               </div>
               <p className="text-sm mt-4 opacity-80">Наслаждайтесь интернетом без границ в 200+ странах мира</p>
+            </div>
+          </div>
+
+          <div className="mt-16">
+            <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">Наши услуги в Московской области</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <Link 
+                to="/services/internet"
+                className="group block h-full"
+              >
+                <div className="bg-white border-2 border-primary/20 rounded-2xl p-6 hover:border-primary hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
+                  <div className="flex flex-col h-full">
+                    <div className="flex items-start gap-4 mb-3">
+                      <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Icon name="Wifi" size={28} className="text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Интернет-подключение</h4>
+                        <p className="text-sm text-muted-foreground">Беспроводной интернет до 250 Мбит/с</p>
+                      </div>
+                    </div>
+                    <div className="mt-auto flex justify-end">
+                      <Icon name="ArrowRight" size={20} className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              <Link 
+                to="/services/surveillance"
+                className="group block h-full"
+              >
+                <div className="bg-white border-2 border-secondary/20 rounded-2xl p-6 hover:border-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
+                  <div className="flex flex-col h-full">
+                    <div className="flex items-start gap-4 mb-3">
+                      <div className="w-14 h-14 bg-gradient-to-br from-secondary to-secondary/80 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Icon name="Video" size={28} className="text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-xl font-bold mb-1 group-hover:text-secondary transition-colors">Видеонаблюдение</h4>
+                        <p className="text-sm text-muted-foreground">Системы безопасности и камеры</p>
+                      </div>
+                    </div>
+                    <div className="mt-auto flex justify-end">
+                      <Icon name="ArrowRight" size={20} className="text-muted-foreground group-hover:text-secondary group-hover:translate-x-1 transition-all" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              <Link 
+                to="/services/cellular-booster"
+                className="group block h-full"
+              >
+                <div className="bg-white border-2 border-success/20 rounded-2xl p-6 hover:border-success hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
+                  <div className="flex flex-col h-full">
+                    <div className="flex items-start gap-4 mb-3">
+                      <div className="w-14 h-14 bg-gradient-to-br from-success to-success/80 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Icon name="Signal" size={28} className="text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-xl font-bold mb-1 group-hover:text-success transition-colors">Усиление LTE</h4>
+                        <p className="text-sm text-muted-foreground">Антенны и усилители сигнала</p>
+                      </div>
+                    </div>
+                    <div className="mt-auto flex justify-end">
+                      <Icon name="ArrowRight" size={20} className="text-muted-foreground group-hover:text-success group-hover:translate-x-1 transition-all" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
