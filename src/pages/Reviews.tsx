@@ -443,9 +443,13 @@ const Reviews = () => {
                 <Icon name="Satellite" size={32} className="text-primary" />
                 <span className="text-xl font-bold">NetConnect</span>
               </div>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-muted-foreground text-sm mb-3">
                 Надежный беспроводной интернет в Московской области
               </p>
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mt-4">
+                <p className="font-semibold text-sm text-gray-900 mb-1">ООО "ЧОО "СБ ЗВИ"</p>
+                <p className="text-xs text-muted-foreground">115093, г. Москва,<br/>пер. Партийный, д. 1</p>
+              </div>
             </div>
             <div>
               <h3 className="font-bold mb-4">Услуги</h3>
@@ -453,7 +457,9 @@ const Reviews = () => {
                 <a href="/services/internet" className="block text-muted-foreground hover:text-primary transition-colors">Интернет-подключение</a>
                 <a href="/services/satellite" className="block text-muted-foreground hover:text-primary transition-colors">Спутниковый интернет</a>
                 <a href="/services/surveillance" className="block text-muted-foreground hover:text-primary transition-colors">Видеонаблюдение</a>
-                <a href="/equipment" className="block text-muted-foreground hover:text-primary transition-colors">Оборудование</a>
+                <a href="/services/security" className="block text-muted-foreground hover:text-primary transition-colors">Системы охраны</a>
+                <a href="/services/wifi" className="block text-muted-foreground hover:text-primary transition-colors">Wi-Fi оборудование</a>
+                <a href="/services/cellular-booster" className="block text-muted-foreground hover:text-primary transition-colors">Усиление связи</a>
               </div>
             </div>
             <div>
@@ -462,8 +468,11 @@ const Reviews = () => {
                 <a href="/tariffs" className="block text-muted-foreground hover:text-primary transition-colors">Тарифы</a>
                 <a href="/pricing" className="block text-muted-foreground hover:text-primary transition-colors">Стоимость</a>
                 <a href="/coverage" className="block text-muted-foreground hover:text-primary transition-colors">Покрытие</a>
+                <a href="/signal-boost" className="block text-muted-foreground hover:text-primary transition-colors">Усиление 4G/LTE</a>
+                <a href="/esim" className="block text-muted-foreground hover:text-primary transition-colors">eSIM</a>
+                <a href="/#about" className="block text-muted-foreground hover:text-primary transition-colors">О компании</a>
+                <a href="/faq" className="block text-muted-foreground hover:text-primary transition-colors">FAQ</a>
                 <a href="/reviews" className="block text-muted-foreground hover:text-primary transition-colors">Отзывы</a>
-                <a href="/" className="block text-muted-foreground hover:text-primary transition-colors">Главная</a>
               </div>
             </div>
             <div>
@@ -477,6 +486,13 @@ const Reviews = () => {
                   +7 (901) 500-00-78
                 </a>
                 <a 
+                  href="tel:+79015000087"
+                  className="flex items-center text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Icon name="Phone" size={16} className="mr-2" />
+                  +7 (901) 500-00-87
+                </a>
+                <a 
                   href="https://wa.me/79015000078"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -485,7 +501,13 @@ const Reviews = () => {
                   <Icon name="MessageCircle" size={16} className="mr-2" />
                   WhatsApp
                 </a>
-                <p className="text-muted-foreground">Московская область</p>
+                <a 
+                  href="mailto:info@mosoblconnect.ru"
+                  className="flex items-center text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Icon name="Mail" size={16} className="mr-2" />
+                  info@mosoblconnect.ru
+                </a>
               </div>
             </div>
           </div>
