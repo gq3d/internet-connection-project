@@ -244,7 +244,9 @@ const Reviews = () => {
             <nav className="hidden lg:flex items-center gap-3 xl:gap-4">
               <a href="/services" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Услуги</a>
               <a href="/tariffs" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Тарифы</a>
+              <a href="/pricing" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Стоимость</a>
               <a href="/coverage" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Покрытие</a>
+              <a href="/equipment" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Оборудование</a>
               <a 
                 href="tel:+79015000078" 
                 className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium text-sm whitespace-nowrap"
@@ -433,16 +435,62 @@ const Reviews = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-secondary/5 py-8 border-t">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <Icon name="Wifi" size={24} className="text-primary" />
-              <span className="text-lg font-semibold text-primary">NetConnect</span>
+      <footer className="bg-muted/50 border-t mt-20">
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <div className="flex items-center space-x-2 mb-4">
+                <Icon name="Satellite" size={32} className="text-primary" />
+                <span className="text-xl font-bold">NetConnect</span>
+              </div>
+              <p className="text-muted-foreground text-sm">
+                Надежный беспроводной интернет в Московской области
+              </p>
             </div>
-            <div className="text-sm text-muted-foreground text-center md:text-right">
-              © 2024 NetConnect. Интернет в Московской области
+            <div>
+              <h3 className="font-bold mb-4">Услуги</h3>
+              <div className="space-y-2 text-sm">
+                <a href="/services/internet" className="block text-muted-foreground hover:text-primary transition-colors">Интернет-подключение</a>
+                <a href="/services/satellite" className="block text-muted-foreground hover:text-primary transition-colors">Спутниковый интернет</a>
+                <a href="/services/surveillance" className="block text-muted-foreground hover:text-primary transition-colors">Видеонаблюдение</a>
+                <a href="/equipment" className="block text-muted-foreground hover:text-primary transition-colors">Оборудование</a>
+              </div>
             </div>
+            <div>
+              <h3 className="font-bold mb-4">Информация</h3>
+              <div className="space-y-2 text-sm">
+                <a href="/tariffs" className="block text-muted-foreground hover:text-primary transition-colors">Тарифы</a>
+                <a href="/pricing" className="block text-muted-foreground hover:text-primary transition-colors">Стоимость</a>
+                <a href="/coverage" className="block text-muted-foreground hover:text-primary transition-colors">Покрытие</a>
+                <a href="/reviews" className="block text-muted-foreground hover:text-primary transition-colors">Отзывы</a>
+                <a href="/" className="block text-muted-foreground hover:text-primary transition-colors">Главная</a>
+              </div>
+            </div>
+            <div>
+              <h3 className="font-bold mb-4">Контакты</h3>
+              <div className="space-y-3 text-sm">
+                <a 
+                  href="tel:+79015000078"
+                  className="flex items-center text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Icon name="Phone" size={16} className="mr-2" />
+                  +7 (901) 500-00-78
+                </a>
+                <a 
+                  href="https://wa.me/79015000078"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-muted-foreground hover:text-green-600 transition-colors"
+                >
+                  <Icon name="MessageCircle" size={16} className="mr-2" />
+                  WhatsApp
+                </a>
+                <p className="text-muted-foreground">Московская область</p>
+              </div>
+            </div>
+          </div>
+          <div className="border-t mt-8 pt-8 text-center text-muted-foreground text-sm">
+            <p>© 2015 NetConnect. Все права защищены.</p>
           </div>
         </div>
       </footer>
