@@ -201,7 +201,7 @@ export default function FAQ() {
                   
                   <div 
                     className={`overflow-hidden transition-all duration-300 ${
-                      openIndex === index ? 'max-h-96' : 'max-h-0'
+                      openIndex === index ? 'max-h-[1000px]' : 'max-h-0'
                     }`}
                   >
                     <div className="px-6 pb-5 pt-2">
