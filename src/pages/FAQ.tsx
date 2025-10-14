@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import Header from '@/components/home/Header';
 import Footer from '@/components/home/Footer';
 import Icon from '@/components/ui/icon';
@@ -7,7 +8,14 @@ import Icon from '@/components/ui/icon';
 const faqs = [
   {
     question: 'Как быстро можно подключить интернет?',
-    answer: 'Подключение занимает 1-3 дня с момента заявки. Наши специалисты приедут, установят оборудование и настроят всё под ключ. Подробнее о тарифах и стоимости подключения можно узнать на странице "Стоимость".'
+    answer: (
+      <span>
+        Подключение занимает 1-3 дня с момента заявки. Наши специалисты приедут, установят оборудование и настроят всё под ключ. Подробнее о тарифах и стоимости подключения можно узнать на странице{' '}
+        <Link to="/pricing" className="text-blue-600 hover:text-blue-800 underline font-medium">
+          Стоимость
+        </Link>.
+      </span>
+    )
   },
   {
     question: 'Какая зона покрытия вашей сети?',
@@ -150,9 +158,9 @@ export default function FAQ() {
                     }`}
                   >
                     <div className="px-6 pb-5 pt-2">
-                      <p className="text-muted-foreground leading-relaxed">
+                      <div className="text-muted-foreground leading-relaxed">
                         {faq.answer}
-                      </p>
+                      </div>
                     </div>
                   </div>
                 </div>
