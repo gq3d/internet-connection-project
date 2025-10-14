@@ -25,24 +25,29 @@ const CityPage = () => {
     .replace(/-+/g, '-')
     .replace(/^-|-$/g, '') : null;
   
-  // Redirect Cyrillic URLs to canonical Latin URLs
-  if (citySlug && normalizedSlug && citySlug !== normalizedSlug) {
-    return <Navigate to={`/city/${normalizedSlug}`} replace />;
-  }
-  
   const city = normalizedSlug ? cityData[normalizedSlug] : null;
   const [isServicesVisible, setIsServicesVisible] = useState(false);
+  
+  const shouldRedirect = citySlug && normalizedSlug && citySlug !== normalizedSlug;
 
-  // SEO setup - always set canonical even if city is null (prevents index.html canonical from staying)
+  // CRITICAL: Set canonical BEFORE redirect to prevent index.html canonical from staying
+  // For Cyrillic URLs: set noindex to tell search engines not to index them
   useSEO({
     title: city ? `Интернет в ${city.name} от 1490₽/мес — подключение за 1-3 дня | NetConnect` : '',
     description: city ? `Беспроводной интернет в ${city.name} и окрестностях: скорость до 250 Мбит/с, установка за 1-3 дня. Подключаем частные дома, дачи, коттеджные посёлки и СНТ. ${city.district}. Бесплатный выезд инженера. Звоните: +7 (901) 500-00-78` : '',
+    keywords: city ? `интернет ${city.name}, беспроводной интернет ${city.name}, подключение интернета ${city.name}, интернет на даче ${city.name}, интернет в коттедже ${city.name}, провайдер ${city.name}, ${city.district} интернет, wifi ${city.name}` : '',
     canonical: normalizedSlug ? `https://mosoblconnect.ru/city/${normalizedSlug}` : '',
     ogTitle: city ? `Беспроводной интернет в ${city.name} от 1490₽/мес` : '',
     ogDescription: city ? `Подключаем интернет до 250 Мбит/с за 1-3 дня в ${city.name}. Покрытие частных домов, дач, коттеджных посёлков и СНТ. Бесплатная установка оборудования.` : '',
     ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
-    ogImageAlt: city ? `Подключение беспроводного интернета NetConnect в ${city.name}` : ''
+    ogImageAlt: city ? `Подключение беспроводного интернета NetConnect в ${city.name}` : '',
+    noindex: shouldRedirect // Tell search engines: don't index Cyrillic URLs
   });
+  
+  // Redirect Cyrillic URLs to canonical Latin URLs AFTER setting canonical
+  if (shouldRedirect) {
+    return <Navigate to={`/city/${normalizedSlug}`} replace />;
+  }
 
   useEffect(() => {
     if (city && normalizedSlug) {
@@ -81,16 +86,7 @@ const CityPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <meta name="keywords" content={`интернет ${city.name}, беспроводной интернет ${city.name}, подключение интернета ${city.name}, интернет на даче ${city.name}, интернет в коттедже ${city.name}, провайдер ${city.name}, ${city.district} интернет, wifi ${city.name}`} />
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
-        <meta name="yandex" content="index, follow" />
-        <meta property="og:locale" content="ru_RU" />
-        <meta property="og:site_name" content="NetConnect" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`Интернет в ${city.name} от 1490₽/мес — NetConnect`} />
-        <meta name="twitter:description" content={`Беспроводной интернет в ${city.name} и окрестностях: скорость до 250 Мбит/с, установка за 1-3 дня.`} />
-        <meta name="twitter:image" content="https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg" />
+        {/* Note: robots meta is set by useSEO hook - don't override it here */}
         
         <script type="application/ld+json">
           {JSON.stringify({
