@@ -116,7 +116,7 @@ export default function EngineerPricingSection() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {engineerServices.map((service, index) => (
+            {engineerServices.slice(0, 6).map((service, index) => (
               <Card 
                 key={index} 
                 className="shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-primary/20 hover:-translate-y-1"
@@ -153,6 +153,42 @@ export default function EngineerPricingSection() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* Прочие работы - центрированная карточка */}
+          <div className="flex justify-center mb-12">
+            <Card className="shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-primary/20 hover:-translate-y-1 w-full max-w-md">
+              <CardHeader className={`bg-gradient-to-r ${engineerServices[6].color} text-white rounded-t-lg`}>
+                <CardTitle className="text-lg flex items-center gap-3">
+                  <div className="bg-white/20 p-2 rounded-lg backdrop-blur-sm">
+                    <Icon name={engineerServices[6].icon as any} size={20} className="text-white" />
+                  </div>
+                  <span className="leading-tight">{engineerServices[6].title}</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-0">
+                <div className="space-y-0">
+                  {engineerServices[6].items.map((item, itemIndex) => (
+                    <div 
+                      key={itemIndex} 
+                      className={`p-4 hover:bg-gray-50 transition-colors ${
+                        itemIndex !== engineerServices[6].items.length - 1 ? 'border-b border-gray-200' : ''
+                      }`}
+                    >
+                      <div className="flex flex-col gap-2">
+                        <span className="text-sm text-gray-700 leading-snug">{item.name}</span>
+                        <Badge 
+                          variant="secondary" 
+                          className="bg-primary/10 text-primary font-semibold w-fit"
+                        >
+                          {item.price}
+                        </Badge>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           <div className="mt-12 bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-200 rounded-2xl p-8 shadow-lg">
