@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { useSEO } from '@/hooks/useSEO';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import SurveillanceHeader from '@/components/surveillance/SurveillanceHeader';
-import UniversalFooter from '@/components/UniversalFooter';
+import Footer from '@/components/home/Footer';
 
 const WifiRoaming = () => {
   useSEO({
@@ -292,8 +291,7 @@ const WifiRoaming = () => {
         </div>
       </section>
 
-      <UniversalFooter />
-      <WhatsAppButton />
+      <Footer />
     </div>
   );
 };

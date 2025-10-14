@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
-import UniversalFooter from '@/components/UniversalFooter';
+import Footer from '@/components/home/Footer';
 
 export const CellularHeader = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -325,5 +325,5 @@ export const CellularCTA = () => (
 );
 
 export const CellularFooter = () => (
-  <UniversalFooter customCopyright="© 2015 NetConnect. Усиление сотовой связи и интернета в Московской области." />
+  <Footer />
 );

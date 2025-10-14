@@ -4,8 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
-import WhatsAppButton from '@/components/WhatsAppButton';
-import UniversalFooter from '@/components/UniversalFooter';
+import Footer from '@/components/home/Footer';
 import SurveillanceHeader from '@/components/surveillance/SurveillanceHeader';
 import { useSEO } from '@/hooks/useSEO';
 
@@ -470,8 +469,7 @@ const Wifi = () => {
         </div>
       </section>
 
-      <UniversalFooter customCopyright="© 2015 NetConnect. Wi-Fi оборудование для дома и бизнеса в Московской области." />
-      <WhatsAppButton />
+      <Footer />
     </div>
   );
 };

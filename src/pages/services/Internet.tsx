@@ -1,4 +1,3 @@
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { useSEO } from '@/hooks/useSEO';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -10,7 +9,7 @@ import InternetTechnology from '@/components/internet/InternetTechnology';
 import InternetTariffs from '@/components/internet/InternetTariffs';
 import InternetExamples from '@/components/internet/InternetExamples';
 import InternetCTA from '@/components/internet/InternetCTA';
-import UniversalFooter from '@/components/UniversalFooter';
+import Footer from '@/components/home/Footer';
 
 const Internet = () => {
   useSEO({
@@ -160,8 +159,7 @@ const Internet = () => {
       </div>
 
       <InternetCTA />
-      <UniversalFooter customCopyright="© 2015 NetConnect. Беспроводной интернет для дома и бизнеса в Московской области." />
-      <WhatsAppButton />
+      <Footer />
     </div>
   );
 };

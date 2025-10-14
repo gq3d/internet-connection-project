@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { useSEO } from '@/hooks/useSEO';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
@@ -11,7 +10,7 @@ import SurveillancePackages from '@/components/surveillance/SurveillancePackages
 import SurveillanceProcess from '@/components/surveillance/SurveillanceProcess';
 import SurveillanceExamples from '@/components/surveillance/SurveillanceExamples';
 import SurveillanceCTA from '@/components/surveillance/SurveillanceCTA';
-import UniversalFooter from '@/components/UniversalFooter';
+import Footer from '@/components/home/Footer';
 
 const Surveillance = () => {
   useSEO({
@@ -115,8 +114,7 @@ const Surveillance = () => {
       </section>
       
       <SurveillanceCTA />
-      <UniversalFooter customCopyright="© 2015 NetConnect. Видеонаблюдение для дома и бизнеса в Московской области." />
-      <WhatsAppButton />
+      <Footer />
     </div>
   );
 };

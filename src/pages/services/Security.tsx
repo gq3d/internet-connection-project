@@ -11,7 +11,7 @@ import SecurityFeatures from '@/components/security/SecurityFeatures';
 import ArmedSecurity from '@/components/security/ArmedSecurity';
 import SecurityLicense from '@/components/security/SecurityLicense';
 import SecurityCTA from '@/components/security/SecurityCTA';
-import UniversalFooter from '@/components/UniversalFooter';
+import Footer from '@/components/home/Footer';
 
 const Security = () => {
   const structuredData = [
@@ -79,10 +79,6 @@ const Security = () => {
     ogImageAlt: 'Охранная сигнализация NetConnect в Московской области'
   });
 
-  const handleWhatsAppClick = () => {
-    window.open('https://wa.me/79857608347', '_blank');
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
@@ -134,15 +130,7 @@ const Security = () => {
       </section>
       
       <SecurityCTA />
-      <UniversalFooter customCopyright="© 2015 NetConnect. Системы охраны и безопасности в Московской области." />
-      
-      <button
-        onClick={handleWhatsAppClick}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110"
-        aria-label="Связаться в WhatsApp"
-      >
-        <Icon name="MessageCircle" size={28} className="group-hover:scale-110 transition-transform" />
-      </button>
+      <Footer />
     </div>
   );
 };

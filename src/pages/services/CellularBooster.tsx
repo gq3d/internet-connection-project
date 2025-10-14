@@ -1,4 +1,3 @@
-import WhatsAppButton from '@/components/WhatsAppButton';
 import { useSEO } from '@/hooks/useSEO';
 import { Helmet } from 'react-helmet-async';
 import {
@@ -96,7 +95,6 @@ const CellularBooster = () => {
       <CellularExamples />
       <CellularCTA />
       <CellularFooter />
-      <WhatsAppButton />
     </div>
   );
 };
