@@ -1,166 +1,187 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import Icon from '@/components/ui/icon';
+
+const engineerServices = [
+  {
+    icon: 'Wrench',
+    title: 'Стандартные работы',
+    color: 'from-blue-600 to-blue-700',
+    items: [
+      { name: 'Выезд инженера, диагностика сети, замер сигнала', price: 'от 2000 ₽' },
+      { name: 'Установка кронштейна для антенны MIMO', price: 'от 2000 ₽' },
+      { name: 'Подключение и настройка антенны MIMO', price: 'от 2500 ₽' },
+      { name: 'Подключение и настройка Wi-Fi роутера', price: 'от 1500 ₽' },
+      { name: 'Прокладка кабеля', price: 'от 150 ₽/м' },
+      { name: 'Сверление отверстия в оконной раме', price: 'от 500 ₽' },
+      { name: 'Сверление отверстия в стене', price: 'от 1000 ₽' }
+    ]
+  },
+  {
+    icon: 'Settings',
+    title: 'Пусконаладочные работы',
+    color: 'from-indigo-600 to-indigo-700',
+    items: [
+      { name: 'Проверка и настройка сетевого оборудования', price: 'от 3500 ₽' },
+      { name: 'Тестирование стабильности соединения', price: 'от 1500 ₽' },
+      { name: 'Настройка резервных каналов связи (4G/5G + провод)', price: 'от 4500 ₽' },
+      { name: 'Оптимизация Wi-Fi покрытия, настройка Mesh-сети', price: 'от 5500 ₽' },
+      { name: 'Проверка и настройка камер видеонаблюдения', price: 'от 4000 ₽' },
+      { name: 'Настройка видеорегистратора, удалённого доступа', price: 'от 2500 ₽' },
+      { name: 'Проверка охранных и пожарных датчиков', price: 'от 3000 ₽' },
+      { name: 'Настройка сигнализаций и уведомлений', price: 'от 4500 ₽' },
+      { name: 'Установка и настройка программного обеспечения', price: 'от 1500 ₽' },
+      { name: 'Настройка удалённого доступа и прошивок', price: 'от 3000 ₽' }
+    ]
+  },
+  {
+    icon: 'Radio',
+    title: 'Усиление связи',
+    color: 'from-purple-600 to-purple-700',
+    items: [
+      { name: 'Замер уровня сигнала и диагностика покрытия', price: 'от 2000 ₽' },
+      { name: 'Монтаж внешней антенны MIMO / LTE', price: 'от 3000 ₽' },
+      { name: 'Настройка и установка репитера', price: 'от 6000 ₽' },
+      { name: 'Прокладка высокочастотного кабеля', price: 'от 500 ₽/м' },
+      { name: 'Настройка усилителя под оператора', price: 'от 1500 ₽' }
+    ]
+  },
+  {
+    icon: 'Video',
+    title: 'Видеонаблюдение',
+    color: 'from-cyan-600 to-cyan-700',
+    items: [
+      { name: 'Подбор и проектирование системы', price: 'бесплатно (при заказе установки)' },
+      { name: 'Монтаж IP-камер', price: 'от 2000 ₽/шт.' },
+      { name: 'Монтаж аналоговых камер', price: 'от 1500 ₽/шт.' },
+      { name: 'Прокладка кабеля (витая пара, коаксиал, питание)', price: 'от 200 ₽/м' },
+      { name: 'Настройка удалённого просмотра с телефона', price: 'от 1500 ₽' }
+    ]
+  },
+  {
+    icon: 'Bell',
+    title: 'Охранные и пожарные системы',
+    color: 'from-red-600 to-red-700',
+    items: [
+      { name: 'Проектирование схемы размещения датчиков', price: 'от 2500 ₽' },
+      { name: 'Установка датчиков движения, открытия, дыма', price: 'от 1000 ₽/шт.' },
+      { name: 'Монтаж и настройка GSM-сигнализации', price: 'от 6000 ₽' },
+      { name: 'Подключение сирен, блоков питания, АКБ', price: 'от 1500 ₽' },
+      { name: 'Настройка мобильных уведомлений', price: 'от 2000 ₽' }
+    ]
+  },
+  {
+    icon: 'Monitor',
+    title: 'Настройка клиентских устройств',
+    color: 'from-green-600 to-green-700',
+    items: [
+      { name: 'Настройка Smart TV, IPTV, медиаприставок', price: 'от 2000 ₽' },
+      { name: 'Установка антивируса, браузера, офисных пакетов', price: 'от 1500 ₽/устройство' },
+      { name: 'Настройка VPN, RDP, TeamViewer', price: 'от 2500 ₽' },
+      { name: 'Настройка Wi-Fi-принтеров, NAS, IP-телефонии', price: 'от 3000 ₽' },
+      { name: 'Оптимизация Windows / macOS', price: 'от 2500 ₽' }
+    ]
+  },
+  {
+    icon: 'HardHat',
+    title: 'Прочие работы',
+    color: 'from-orange-600 to-orange-700',
+    items: [
+      { name: 'Высотные работы', price: 'от 2000 ₽' },
+      { name: 'Сложная трассировка кабеля (через перекрытия, чердак, подвал)', price: 'от 600 ₽/м' },
+      { name: 'Монтаж оборудования в стойку / щит / шкаф', price: 'от 2000 ₽' },
+      { name: 'Консультация инженера на объекте (без монтажа)', price: 'от 2500 ₽' }
+    ]
+  }
+];
 
 export default function EngineerPricingSection() {
   return (
-    <section className="py-20">
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center mb-4">
-              <div className="bg-primary/10 p-2 rounded-lg">
-                <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                </svg>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center mb-6">
+              <div className="bg-gradient-to-r from-primary to-secondary p-3 rounded-2xl shadow-lg">
+                <Icon name="Briefcase" size={32} className="text-white" />
               </div>
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Прайс-лист на услуги инженера
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              💼 Прайс на инженерные работы
             </h2>
             <div className="w-24 h-1 mx-auto mb-6 bg-gradient-to-r from-primary via-secondary to-primary rounded-full"></div>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Перечень инженерных работ и их стоимость. Качественное подключение и настройка оборудования.
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Полный перечень услуг и стоимость работ. От базовой установки до комплексных инженерных решений.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Стандартные работы */}
-            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-transparent hover:border-primary/20">
-              <CardHeader className="bg-gradient-to-r from-primary to-primary/90 text-white">
-                <CardTitle className="text-xl flex items-center gap-3">
-                  <span className="bg-white text-blue-600 w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold">1</span>
-                  Стандартные работы
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-0">
-                <div className="space-y-0">
-                  <div className="border-b border-gray-200 p-4 hover:bg-gray-50 transition-colors">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm">Выезд инженера на объект, диагностика сети, замер сигнала</span>
-                      <Badge variant="secondary" className="bg-primary/10 text-primary font-semibold">2000 ₽</Badge>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {engineerServices.map((service, index) => (
+              <Card 
+                key={index} 
+                className="shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-primary/20 hover:-translate-y-1"
+              >
+                <CardHeader className={`bg-gradient-to-r ${service.color} text-white rounded-t-lg`}>
+                  <CardTitle className="text-lg flex items-center gap-3">
+                    <div className="bg-white/20 p-2 rounded-lg backdrop-blur-sm">
+                      <Icon name={service.icon as any} size={20} className="text-white" />
                     </div>
+                    <span className="leading-tight">{service.title}</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-0">
+                  <div className="space-y-0">
+                    {service.items.map((item, itemIndex) => (
+                      <div 
+                        key={itemIndex} 
+                        className={`p-4 hover:bg-gray-50 transition-colors ${
+                          itemIndex !== service.items.length - 1 ? 'border-b border-gray-200' : ''
+                        }`}
+                      >
+                        <div className="flex flex-col gap-2">
+                          <span className="text-sm text-gray-700 leading-snug">{item.name}</span>
+                          <Badge 
+                            variant="secondary" 
+                            className="bg-primary/10 text-primary font-semibold w-fit"
+                          >
+                            {item.price}
+                          </Badge>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                  <div className="border-b border-gray-200 p-4 hover:bg-gray-50 transition-colors">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm">Установка кронштейна для антенны MIMO на фасаде здания</span>
-                      <Badge variant="secondary" className="bg-primary/10 text-primary font-semibold">2000 ₽</Badge>
-                    </div>
-                  </div>
-                  <div className="border-b border-gray-200 p-4 hover:bg-gray-50 transition-colors">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm">Подключение и настройка антенны MIMO</span>
-                      <Badge variant="secondary" className="bg-primary/10 text-primary font-semibold">2500 ₽</Badge>
-                    </div>
-                  </div>
-                  <div className="border-b border-gray-200 p-4 hover:bg-gray-50 transition-colors">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm">Подключение и настройка wi-fi роутера</span>
-                      <Badge variant="secondary" className="bg-primary/10 text-primary font-semibold">1500 ₽</Badge>
-                    </div>
-                  </div>
-                  <div className="border-b border-gray-200 p-4 hover:bg-gray-50 transition-colors">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm">Прокладка кабеля</span>
-                      <Badge variant="secondary" className="bg-primary/10 text-primary font-semibold">150 ₽/м</Badge>
-                    </div>
-                  </div>
-                  <div className="border-b border-gray-200 p-4 hover:bg-gray-50 transition-colors">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm">Сверление отверстия для вывода кабеля в оконной раме</span>
-                      <Badge variant="secondary" className="bg-primary/10 text-primary font-semibold">500 ₽</Badge>
-                    </div>
-                  </div>
-                  <div className="p-4 hover:bg-gray-50 transition-colors">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm">Сверление отверстия для вывода кабеля в стене</span>
-                      <Badge variant="secondary" className="bg-primary/10 text-primary font-semibold">1000 ₽</Badge>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Дополнительные работы */}
-            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-transparent hover:border-secondary/20">
-              <CardHeader className="bg-gradient-to-r from-secondary to-secondary/90 text-white">
-                <CardTitle className="text-xl flex items-center gap-3">
-                  <span className="bg-white text-indigo-600 w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold">2</span>
-                  Дополнительные работы
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-0">
-                <div className="space-y-0">
-                  <div className="border-b border-gray-200 p-4 hover:bg-gray-50 transition-colors">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm">Высотные работы</span>
-                      <Badge variant="secondary" className="bg-secondary/10 text-secondary font-semibold">от 1500 ₽</Badge>
-                    </div>
-                  </div>
-                  <div className="border-b border-gray-200 p-4 hover:bg-gray-50 transition-colors">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm">Настройка "бесшовного" соединения (несколько роутеров в одну сеть)</span>
-                      <Badge variant="secondary" className="bg-secondary/10 text-secondary font-semibold">от 10000 ₽</Badge>
-                    </div>
-                  </div>
-                  <div className="border-b border-gray-200 p-4 hover:bg-gray-50 transition-colors">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm">Обжим сетевого кабеля</span>
-                      <Badge variant="secondary" className="bg-secondary/10 text-secondary font-semibold">100 ₽/шт.</Badge>
-                    </div>
-                  </div>
-                  <div className="border-b border-gray-200 p-4 hover:bg-gray-50 transition-colors">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm">Настройка оборудования клиента</span>
-                      <Badge variant="secondary" className="bg-secondary/10 text-secondary font-semibold">5000 ₽</Badge>
-                    </div>
-                  </div>
-                  <div className="border-b border-gray-200 p-4 hover:bg-gray-50 transition-colors">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm">Установка спутниковой антенны</span>
-                      <Badge variant="secondary" className="bg-secondary/10 text-secondary font-semibold">8000 ₽</Badge>
-                    </div>
-                  </div>
-                  <div className="border-b border-gray-200 p-4 hover:bg-gray-50 transition-colors">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm">Установка антенного усилителя мобильной связи</span>
-                      <Badge variant="secondary" className="bg-secondary/10 text-secondary font-semibold">6000 ₽</Badge>
-                    </div>
-                  </div>
-                  <div className="p-4 hover:bg-gray-50 transition-colors">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm">Прокладка высокочастотного кабеля</span>
-                      <Badge variant="secondary" className="bg-secondary/10 text-secondary font-semibold">500 ₽/м</Badge>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            ))}
           </div>
 
-          {/* Дополнительная информация */}
-          <div className="mt-8 bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-200 rounded-xl p-6 shadow-md">
-            <div className="flex items-center gap-2 mb-3">
-              <svg className="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-              </svg>
-              <h3 className="text-lg font-semibold text-amber-800">Важная информация</h3>
+          <div className="mt-12 bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-200 rounded-2xl p-8 shadow-lg">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="bg-amber-100 p-2 rounded-lg">
+                <Icon name="Info" size={24} className="text-amber-600" />
+              </div>
+              <h3 className="text-xl font-bold text-amber-800">Важная информация</h3>
             </div>
-            <ul className="text-amber-700 space-y-2 text-sm">
-              <li className="flex items-start">
-                <span className="text-amber-500 mr-2 font-bold">✓</span>
+            <ul className="text-amber-700 space-y-3 text-base">
+              <li className="flex items-start gap-3">
+                <Icon name="Check" size={20} className="text-amber-600 flex-shrink-0 mt-0.5" />
                 <span>Все цены указаны с учетом работы инженера</span>
               </li>
-              <li className="flex items-start">
-                <span className="text-amber-500 mr-2 font-bold">✓</span>
-                <span>Стоимость материалов оплачивается отдельно</span>
+              <li className="flex items-start gap-3">
+                <Icon name="Check" size={20} className="text-amber-600 flex-shrink-0 mt-0.5" />
+                <span>Стоимость материалов и оборудования оплачивается отдельно</span>
               </li>
-              <li className="flex items-start">
-                <span className="text-amber-500 mr-2 font-bold">✓</span>
-                <span>Точную стоимость работ уточняйте при заказе</span>
+              <li className="flex items-start gap-3">
+                <Icon name="Check" size={20} className="text-amber-600 flex-shrink-0 mt-0.5" />
+                <span>Точная стоимость работ определяется после выезда специалиста на объект</span>
               </li>
-              <li className="flex items-start">
-                <span className="text-amber-500 mr-2 font-bold">✓</span>
+              <li className="flex items-start gap-3">
+                <Icon name="Check" size={20} className="text-amber-600 flex-shrink-0 mt-0.5" />
                 <span>Гарантия на выполненные работы — 12 месяцев</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Icon name="Check" size={20} className="text-amber-600 flex-shrink-0 mt-0.5" />
+                <span>Консультация по подбору оборудования — бесплатно</span>
               </li>
             </ul>
           </div>
