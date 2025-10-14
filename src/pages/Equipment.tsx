@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import SEO from '@/components/SEO';
+import Header from '@/components/home/Header';
+import Footer from '@/components/home/Footer';
 
 export default function Equipment() {
   return (
@@ -17,48 +19,7 @@ export default function Equipment() {
         canonical="https://mosoblconnect.ru/equipment"
       />
       
-      <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-md border-b z-50 shadow-sm">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-              <Icon name="Satellite" size={32} className="text-primary" />
-              <span className="text-xl font-bold">NetConnect</span>
-            </Link>
-            
-            <div className="flex items-center gap-4">
-              <Link to="/" className="hidden sm:block">
-                <Button variant="ghost" className="font-medium">Главная</Button>
-              </Link>
-              <a 
-                href="/services"
-                className="hidden md:block text-sm font-medium hover:text-primary transition-colors"
-              >
-                Услуги
-              </a>
-              <a 
-                href="/tariffs"
-                className="hidden md:block text-sm font-medium hover:text-primary transition-colors"
-              >
-                Тарифы
-              </a>
-              <a 
-                href="tel:+79015000078"
-                className="hidden md:inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium text-sm"
-              >
-                <Icon name="Phone" size={16} className="mr-2" />
-                +7 (901) 500-00-78
-              </a>
-              <a 
-                href="tel:+79015000078"
-                className="md:hidden inline-flex items-center justify-center w-10 h-10 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
-                aria-label="Позвонить"
-              >
-                <Icon name="Phone" size={20} />
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Header />
       
       <main className="flex-grow pt-16">
         <div className="bg-gradient-to-br from-primary/5 via-background to-success/5">
@@ -319,65 +280,7 @@ export default function Equipment() {
         </section>
       </main>
 
-      <footer className="bg-muted/50 border-t mt-20">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <Icon name="Satellite" size={32} className="text-primary" />
-                <span className="text-xl font-bold">NetConnect</span>
-              </div>
-              <p className="text-muted-foreground text-sm">
-                Надежный беспроводной интернет в Московской области
-              </p>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4">Услуги</h3>
-              <div className="space-y-2 text-sm">
-                <Link to="/services/internet" className="block text-muted-foreground hover:text-primary transition-colors">Интернет-подключение</Link>
-                <Link to="/services/satellite" className="block text-muted-foreground hover:text-primary transition-colors">Спутниковый интернет</Link>
-                <Link to="/services/surveillance" className="block text-muted-foreground hover:text-primary transition-colors">Видеонаблюдение</Link>
-                <Link to="/equipment" className="block text-muted-foreground hover:text-primary transition-colors">Оборудование</Link>
-              </div>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4">Информация</h3>
-              <div className="space-y-2 text-sm">
-                <a href="/tariffs" className="block text-muted-foreground hover:text-primary transition-colors">Тарифы</a>
-                <a href="/coverage" className="block text-muted-foreground hover:text-primary transition-colors">Покрытие</a>
-                <Link to="/" className="block text-muted-foreground hover:text-primary transition-colors">Главная</Link>
-              </div>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4">Контакты</h3>
-              <div className="space-y-3 text-sm">
-                <a 
-                  href="tel:+79015000078"
-                  className="flex items-center text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <Icon name="Phone" size={16} className="mr-2" />
-                  +7 (901) 500-00-78
-                </a>
-                <a 
-                  href="https://wa.me/79015000078"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-muted-foreground hover:text-green-600 transition-colors"
-                >
-                  <Icon name="MessageCircle" size={16} className="mr-2" />
-                  WhatsApp
-                </a>
-                <p className="text-muted-foreground">Московская область</p>
-              </div>
-            </div>
-          </div>
-          <div className="border-t mt-8 pt-8 text-center text-muted-foreground text-sm">
-            <p>© 2015 NetConnect. Все права защищены.</p>
-          </div>
-        </div>
-      </footer>
-      
-      <WhatsAppButton />
+      <Footer />
       
       <script type="application/ld+json">
         {JSON.stringify({
