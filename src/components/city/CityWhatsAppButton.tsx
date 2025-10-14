@@ -1,13 +1,20 @@
+import { trackWhatsAppClick } from '@/utils/metrika';
+
 interface CityWhatsAppButtonProps {
   cityName: string;
 }
 
 export default function CityWhatsAppButton({ cityName }: CityWhatsAppButtonProps) {
+  const handleClick = () => {
+    trackWhatsAppClick('floating_button_city', cityName);
+  };
+
   return (
     <a
       href={`https://wa.me/79015000078?text=Здравствуйте! Хочу подключить интернет в г. ${cityName}`}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={handleClick}
       className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-50 flex items-center justify-center group"
       title="Написать в WhatsApp"
     >
