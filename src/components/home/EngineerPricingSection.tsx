@@ -191,7 +191,44 @@ export default function EngineerPricingSection() {
             </Card>
           </div>
 
-          <div className="mt-12 bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-200 rounded-2xl p-8 shadow-lg">
+          {/* Call to Action блок */}
+          <div className="mt-12 bg-white border-2 border-green-200 rounded-2xl p-8 shadow-xl max-w-md mx-auto">
+            <div className="text-center mb-6">
+              <div className="inline-flex items-center justify-center mb-4">
+                <div className="bg-green-100 p-4 rounded-full">
+                  <Icon name="Phone" size={32} className="text-green-600" />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                Получите персональный расчёт
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Свяжитесь с нами — подберем оптимальное решение для вашего объекта и рассчитаем точную стоимость
+              </p>
+            </div>
+            
+            <div className="space-y-3">
+              <a 
+                href="tel:+79015000078" 
+                className="flex items-center justify-center gap-2 w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-6 rounded-lg transition-all shadow-md hover:shadow-lg"
+              >
+                <Icon name="Phone" size={20} />
+                +7 (901) 500-00-78
+              </a>
+              
+              <a 
+                href="https://wa.me/79015000078" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-6 rounded-lg transition-all shadow-md hover:shadow-lg"
+              >
+                <Icon name="MessageCircle" size={20} />
+                WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-8 bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-200 rounded-2xl p-8 shadow-lg">
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-amber-100 p-2 rounded-lg">
                 <Icon name="Info" size={24} className="text-amber-600" />
