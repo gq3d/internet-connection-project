@@ -16,14 +16,27 @@ import CityReviews from '@/components/city/CityReviews';
 
 const CityPage = () => {
   const { citySlug } = useParams<{ citySlug: string }>();
-  const city = citySlug ? cityData[citySlug] : null;
+  
+  // Normalize slug: convert Cyrillic to Latin for canonical URLs
+  const normalizedSlug = citySlug ? citySlug.toLowerCase()
+    .replace(/ё/g, 'e')
+    .replace(/[^a-zA-Z0-9\u0430-\u044f]/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '') : null;
+  
+  // Redirect Cyrillic URLs to canonical Latin URLs
+  if (citySlug && normalizedSlug && citySlug !== normalizedSlug) {
+    return <Navigate to={`/city/${normalizedSlug}`} replace />;
+  }
+  
+  const city = normalizedSlug ? cityData[normalizedSlug] : null;
   const [isServicesVisible, setIsServicesVisible] = useState(false);
 
   // SEO setup - always set canonical even if city is null (prevents index.html canonical from staying)
   useSEO({
     title: city ? `Интернет в ${city.name} от 1490₽/мес — подключение за 1-3 дня | NetConnect` : '',
     description: city ? `Беспроводной интернет в ${city.name} и окрестностях: скорость до 250 Мбит/с, установка за 1-3 дня. Подключаем частные дома, дачи, коттеджные посёлки и СНТ. ${city.district}. Бесплатный выезд инженера. Звоните: +7 (901) 500-00-78` : '',
-    canonical: citySlug ? `https://mosoblconnect.ru/city/${encodeURIComponent(citySlug)}` : '',
+    canonical: normalizedSlug ? `https://mosoblconnect.ru/city/${normalizedSlug}` : '',
     ogTitle: city ? `Беспроводной интернет в ${city.name} от 1490₽/мес` : '',
     ogDescription: city ? `Подключаем интернет до 250 Мбит/с за 1-3 дня в ${city.name}. Покрытие частных домов, дач, коттеджных посёлков и СНТ. Бесплатная установка оборудования.` : '',
     ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
@@ -69,7 +82,7 @@ const CityPage = () => {
             "alternateName": `NetConnect - Беспроводной интернет в ${city.name}`,
             "description": `Подключение беспроводного интернета в ${city.name}, ${city.district}. Обслуживаем частные дома, дачи, коттеджные посёлки и СНТ. Скорость до 250 Мбит/с, установка за 1-3 дня.`,
             "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
-            "url": `https://mosoblconnect.ru/city/${citySlug}`,
+            "url": `https://mosoblconnect.ru/city/${normalizedSlug}`,
             "telephone": ["+7 (901) 500-00-78", "+7 (901) 500-00-87"],
             "priceRange": "1490₽ - 2590₽",
             "address": {
