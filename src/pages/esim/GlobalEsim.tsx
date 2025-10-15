@@ -372,7 +372,7 @@ export default function GlobalEsim() {
                   <div className="grid md:grid-cols-3 gap-8 mt-8 max-w-5xl mx-auto">
                     <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                       <Icon name="Globe" size={32} className="text-white mb-3 mx-auto" />
-                      <h4 className="font-bold text-xl mb-2">200+ стран</h4>
+                      <h4 className="font-bold text-xl mb-2">106 стран</h4>
                       <p className="text-white/90 text-sm">
                         Работает по всему миру без смены SIM-карты
                       </p>
