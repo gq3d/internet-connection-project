@@ -38,6 +38,13 @@ const Pricing = lazy(() => import("./pages/Pricing"));
 const Coverage = lazy(() => import("./pages/Coverage"));
 const Esim = lazy(() => import("./pages/Esim"));
 const GlobalEsim = lazy(() => import("./pages/esim/GlobalEsim"));
+const EuropeEsim = lazy(() => import("./pages/esim/EuropeEsim"));
+const AsiaEsim = lazy(() => import("./pages/esim/AsiaEsim"));
+const AmericaEsim = lazy(() => import("./pages/esim/AmericaEsim"));
+const AfricaEsim = lazy(() => import("./pages/esim/AfricaEsim"));
+const MiddleEastEsim = lazy(() => import("./pages/esim/MiddleEastEsim"));
+const AustraliaEsim = lazy(() => import("./pages/esim/AustraliaEsim"));
+const CaribbeanEsim = lazy(() => import("./pages/esim/CaribbeanEsim"));
 const SignalBoost = lazy(() => import("./pages/SignalBoost"));
 const HighSpeed = lazy(() => import("./pages/HighSpeed"));
 const StableConnection = lazy(() => import("./pages/StableConnection"));
@@ -100,6 +107,13 @@ const App = () => (
               <Route path="/coverage" element={<Coverage />} />
               <Route path="/esim" element={<Esim />} />
               <Route path="/esim/global" element={<GlobalEsim />} />
+              <Route path="/esim/europe" element={<EuropeEsim />} />
+              <Route path="/esim/asia" element={<AsiaEsim />} />
+              <Route path="/esim/america" element={<AmericaEsim />} />
+              <Route path="/esim/africa" element={<AfricaEsim />} />
+              <Route path="/esim/middle-east" element={<MiddleEastEsim />} />
+              <Route path="/esim/australia" element={<AustraliaEsim />} />
+              <Route path="/esim/caribbean" element={<CaribbeanEsim />} />
               <Route path="/signal-boost" element={<SignalBoost />} />
               <Route path="/high-speed" element={<HighSpeed />} />
               <Route path="/stable-connection" element={<StableConnection />} />
