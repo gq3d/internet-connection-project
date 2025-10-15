@@ -6,7 +6,7 @@ import Footer from '@/components/home/Footer';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
 
-export default function AmericasEsim() {
+export default function SouthAmericaEsim() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -16,64 +16,55 @@ export default function AmericasEsim() {
       data: '1 ГБ',
       days: 7,
       speed: 'до 4G',
-      calls: '544 ₽',
+      calls: '537 ₽',
       sms: '7 дней',
-      price: 1088,
-      oldPrice: 1224
+      price: 1074,
+      oldPrice: 1208
     },
     {
       data: '2 ГБ',
       days: 15,
       speed: 'до 4G',
-      calls: '968 ₽',
+      calls: '960 ₽',
       sms: '15 дней',
-      price: 1936,
-      oldPrice: 2176
+      price: 1920,
+      oldPrice: 2160
     },
     {
       data: '3 ГБ',
       days: 30,
       speed: 'до 4G',
-      calls: '1 270 ₽',
+      calls: '1 260 ₽',
       sms: '30 дней',
-      price: 2540,
-      oldPrice: 2856
+      price: 2520,
+      oldPrice: 2835
     },
     {
       data: '5 ГБ',
       days: 30,
       speed: 'до 4G',
-      calls: '2 174 ₽',
+      calls: '2 135 ₽',
       sms: '30 дней',
-      price: 4348,
-      oldPrice: 4896
+      price: 4270,
+      oldPrice: 4804
     },
     {
       data: '10 ГБ',
       days: 30,
       speed: 'до 4G',
-      calls: '3 894 ₽',
+      calls: '3 868 ₽',
       sms: '30 дней',
-      price: 7788,
-      oldPrice: 8762
+      price: 7736,
+      oldPrice: 8703
     },
     {
       data: '20 ГБ',
       days: 30,
       speed: 'до 4G',
-      calls: '7 330 ₽',
+      calls: '7 260 ₽',
       sms: '30 дней',
-      price: 14660,
-      oldPrice: 16490
-    },
-    {
-      data: '50 ГБ',
-      days: 30,
-      speed: 'до 4G',
-      calls: '17 330 ₽',
-      sms: '30 дней',
-      price: 34660,
-      oldPrice: 38992
+      price: 14520,
+      oldPrice: 16335
     }
   ];
 
@@ -82,83 +73,74 @@ export default function AmericasEsim() {
       data: '∞ ГБ',
       days: 1,
       speed: 'до 4G',
-      calls: '660 ₽',
+      calls: '650 ₽',
       sms: '1 день',
-      price: 1320,
-      oldPrice: 1485
+      price: 1300,
+      oldPrice: 1462
     },
     {
       data: '∞ ГБ',
       days: 3,
       speed: 'до 4G',
-      calls: '1 837 ₽',
+      calls: '1 800 ₽',
       sms: '3 дня',
-      price: 3674,
-      oldPrice: 4133
+      price: 3600,
+      oldPrice: 4050
     },
     {
       data: '∞ ГБ',
       days: 5,
       speed: 'до 4G',
-      calls: '2 960 ₽',
+      calls: '2 900 ₽',
       sms: '5 дней',
-      price: 5920,
-      oldPrice: 6660
+      price: 5800,
+      oldPrice: 6525
     },
     {
       data: '∞ ГБ',
       days: 7,
       speed: 'до 4G',
-      calls: '4 260 ₽',
+      calls: '4 180 ₽',
       sms: '7 дней',
-      price: 8520,
-      oldPrice: 9585
+      price: 8360,
+      oldPrice: 9405
     },
     {
       data: '∞ ГБ',
       days: 10,
       speed: 'до 4G',
-      calls: '5 500 ₽',
+      calls: '5 400 ₽',
       sms: '10 дней',
-      price: 11000,
-      oldPrice: 12375
+      price: 10800,
+      oldPrice: 12150
     },
     {
       data: '∞ ГБ',
       days: 15,
       speed: 'до 4G',
-      calls: '8 200 ₽',
+      calls: '8 000 ₽',
       sms: '15 дней',
-      price: 16400,
-      oldPrice: 18450
-    },
-    {
-      data: '∞ ГБ',
-      days: 30,
-      speed: 'до 4G',
-      calls: '15 800 ₽',
-      sms: '30 дней',
-      price: 31600,
-      oldPrice: 35550
+      price: 16000,
+      oldPrice: 18000
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>eSIM для Америки - Интернет в 30 странах | NetConnect</title>
-        <meta name="description" content="Купить eSIM для Америки (Северная и Южная). Тарифы от 1088₽, безлимитный интернет в 30 странах. Активация за 5 минут." />
-        <link rel="canonical" href="https://mosoblconnect.ru/esim/americas" />
-        <meta property="og:title" content="eSIM для Америки - Интернет в 30 странах | NetConnect" />
-        <meta property="og:description" content="Купить eSIM для Америки. Тарифы от 1088₽, безлимитный интернет." />
-        <meta property="og:url" content="https://mosoblconnect.ru/esim/americas" />
+        <title>eSIM для Южной Америки - Интернет в 11 странах | NetConnect</title>
+        <meta name="description" content="Купить eSIM для Южной Америки. Тарифы от 1074₽, безлимитный интернет в 11 странах. Активация за 5 минут." />
+        <link rel="canonical" href="https://mosoblconnect.ru/esim/south-america" />
+        <meta property="og:title" content="eSIM для Южной Америки - Интернет в 11 странах | NetConnect" />
+        <meta property="og:description" content="Купить eSIM для Южной Америки. Тарифы от 1074₽, безлимитный интернет." />
+        <meta property="og:url" content="https://mosoblconnect.ru/esim/south-america" />
       </Helmet>
       
       <div className="min-h-screen bg-background">
         <Header />
         
         <div className="pt-20">
-          <div className="bg-gradient-to-br from-secondary/10 via-primary/10 to-success/10 py-16">
+          <div className="bg-gradient-to-br from-success/10 via-secondary/10 to-primary/10 py-16">
             <div className="container mx-auto px-4">
               <div className="max-w-5xl mx-auto">
                 <Link 
@@ -171,30 +153,30 @@ export default function AmericasEsim() {
                 
                 <div className="text-center">
                   <div className="flex items-center justify-center mb-6">
-                    <div className="bg-gradient-to-r from-secondary to-primary p-4 rounded-2xl shadow-lg">
-                      <Icon name="MapPin" size={40} className="text-white" />
+                    <div className="bg-gradient-to-r from-success to-secondary p-4 rounded-2xl shadow-lg">
+                      <Icon name="Palmtree" size={40} className="text-white" />
                     </div>
                   </div>
                   
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-secondary via-primary to-success bg-clip-text text-transparent leading-tight">
-                    eSIM для Америки
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-success via-secondary to-primary bg-clip-text text-transparent leading-tight">
+                    eSIM для Южной Америки
                   </h1>
                   
                   <p className="text-xl md:text-2xl text-muted-foreground mb-4">
-                    Интернет без границ в 30 странах Северной и Южной Америки
+                    Интернет без границ в 11 странах Южной Америки
                   </p>
                   
                   <div className="flex flex-wrap items-center justify-center gap-6 mt-8">
                     <div className="flex items-center gap-2 bg-card px-4 py-2 rounded-full border">
-                      <Icon name="MapPin" size={20} className="text-secondary" />
-                      <span className="font-semibold">30 стран</span>
+                      <Icon name="Palmtree" size={20} className="text-success" />
+                      <span className="font-semibold">11 стран</span>
                     </div>
                     <div className="flex items-center gap-2 bg-card px-4 py-2 rounded-full border">
-                      <Icon name="Zap" size={20} className="text-primary" />
+                      <Icon name="Zap" size={20} className="text-secondary" />
                       <span className="font-semibold">Активация 5 минут</span>
                     </div>
                     <div className="flex items-center gap-2 bg-card px-4 py-2 rounded-full border">
-                      <Icon name="Shield" size={20} className="text-success" />
+                      <Icon name="Shield" size={20} className="text-primary" />
                       <span className="font-semibold">Без роуминга</span>
                     </div>
                   </div>
@@ -209,18 +191,18 @@ export default function AmericasEsim() {
               <div className="mb-16">
                 <div className="text-center mb-12">
                   <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                    Купить сим в Америке для интернета
+                    Купить сим в Южной Америке для интернета
                   </h2>
                   <p className="text-muted-foreground text-lg">
                     Выберите подходящий тариф с интернетом
                   </p>
                 </div>
                 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {internetTariffs.map((tariff, index) => (
                     <div 
                       key={index}
-                      className="bg-card border-2 border-border rounded-xl p-6 hover:border-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                      className="bg-card border-2 border-border rounded-xl p-6 hover:border-success hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                     >
                       <div className="text-center mb-6">
                         <div className="text-4xl font-bold text-foreground mb-2">
@@ -254,13 +236,13 @@ export default function AmericasEsim() {
                         <div className="text-sm text-muted-foreground line-through mb-1">
                           {tariff.oldPrice.toLocaleString('ru-RU')} ₽
                         </div>
-                        <div className="text-3xl font-bold text-secondary">
+                        <div className="text-3xl font-bold text-success">
                           {tariff.price.toLocaleString('ru-RU')} ₽
                         </div>
                       </div>
                       
                       <Button 
-                        className="w-full bg-gradient-to-r from-secondary to-primary hover:from-secondary/90 hover:to-primary/90"
+                        className="w-full bg-gradient-to-r from-success to-secondary hover:from-success/90 hover:to-secondary/90"
                         size="lg"
                       >
                         Купить {tariff.price.toLocaleString('ru-RU')} ₽
@@ -273,25 +255,25 @@ export default function AmericasEsim() {
               <div className="mb-16">
                 <div className="text-center mb-12">
                   <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                    Купить безлимитный интернет в Америке
+                    Купить безлимитный интернет в Южной Америке
                   </h2>
                   <p className="text-muted-foreground text-lg">
                     Безлимитный интернет без ограничений
                   </p>
                 </div>
                 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {unlimitedTariffs.map((tariff, index) => (
                     <div 
                       key={index}
-                      className="bg-gradient-to-br from-secondary/5 to-primary/5 border-2 border-secondary/30 rounded-xl p-6 hover:border-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
+                      className="bg-gradient-to-br from-success/5 to-secondary/5 border-2 border-success/30 rounded-xl p-6 hover:border-success hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
                     >
-                      <div className="absolute top-0 right-0 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                      <div className="absolute top-0 right-0 bg-success text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
                         БЕЗЛИМИТ
                       </div>
                       
                       <div className="text-center mb-6 mt-4">
-                        <div className="text-4xl font-bold text-secondary mb-2">
+                        <div className="text-4xl font-bold text-success mb-2">
                           {tariff.data}
                         </div>
                         <div className="text-muted-foreground">
@@ -322,13 +304,13 @@ export default function AmericasEsim() {
                         <div className="text-sm text-muted-foreground line-through mb-1">
                           {tariff.oldPrice.toLocaleString('ru-RU')} ₽
                         </div>
-                        <div className="text-3xl font-bold text-secondary">
+                        <div className="text-3xl font-bold text-success">
                           {tariff.price.toLocaleString('ru-RU')} ₽
                         </div>
                       </div>
                       
                       <Button 
-                        className="w-full bg-gradient-to-r from-secondary to-primary hover:from-secondary/90 hover:to-primary/90"
+                        className="w-full bg-gradient-to-r from-success to-secondary hover:from-success/90 hover:to-secondary/90"
                         size="lg"
                       >
                         Купить {tariff.price.toLocaleString('ru-RU')} ₽
@@ -338,7 +320,7 @@ export default function AmericasEsim() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-secondary via-primary to-success text-white rounded-2xl p-10 text-center shadow-2xl relative overflow-hidden">
+              <div className="bg-gradient-to-br from-success via-secondary to-primary text-white rounded-2xl p-10 text-center shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
                 
@@ -350,18 +332,18 @@ export default function AmericasEsim() {
                   </div>
                   
                   <h3 className="text-3xl md:text-4xl font-bold mb-4">
-                    Путешествуйте по Америке без ограничений!
+                    Путешествуйте по Южной Америке без ограничений!
                   </h3>
                   
                   <p className="text-xl mb-8 opacity-90">
-                    30 стран Северной и Южной Америки с одной eSIM-картой
+                    11 стран Южной Америки с одной eSIM-картой
                   </p>
                   
                   <div className="mt-8">
                     <Link to="/esim">
                       <Button 
                         size="lg"
-                        className="bg-white text-secondary hover:bg-white/90 font-bold"
+                        className="bg-white text-success hover:bg-white/90 font-bold"
                       >
                         Посмотреть все регионы
                       </Button>

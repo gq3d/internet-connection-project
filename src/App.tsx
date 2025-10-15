@@ -40,7 +40,8 @@ const Esim = lazy(() => import("./pages/Esim"));
 const GlobalEsim = lazy(() => import("./pages/esim/GlobalEsim"));
 const EuropeEsim = lazy(() => import("./pages/esim/EuropeEsim"));
 const AsiaEsim = lazy(() => import("./pages/esim/AsiaEsim"));
-const AmericasEsim = lazy(() => import("./pages/esim/AmericasEsim"));
+const NorthAmericaEsim = lazy(() => import("./pages/esim/NorthAmericaEsim"));
+const SouthAmericaEsim = lazy(() => import("./pages/esim/SouthAmericaEsim"));
 const AfricaEsim = lazy(() => import("./pages/esim/AfricaEsim"));
 const MiddleEastEsim = lazy(() => import("./pages/esim/MiddleEastEsim"));
 const AustraliaEsim = lazy(() => import("./pages/esim/AustraliaEsim"));
@@ -109,7 +110,8 @@ const App = () => (
               <Route path="/esim/global" element={<GlobalEsim />} />
               <Route path="/esim/europe" element={<EuropeEsim />} />
               <Route path="/esim/asia" element={<AsiaEsim />} />
-              <Route path="/esim/americas" element={<AmericasEsim />} />
+              <Route path="/esim/north-america" element={<NorthAmericaEsim />} />
+              <Route path="/esim/south-america" element={<SouthAmericaEsim />} />
               <Route path="/esim/africa" element={<AfricaEsim />} />
               <Route path="/esim/middle-east" element={<MiddleEastEsim />} />
               <Route path="/esim/australia" element={<AustraliaEsim />} />
