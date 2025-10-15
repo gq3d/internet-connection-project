@@ -58,9 +58,14 @@ export default function EsimSection() {
               </div>
               
               <div className="text-center mb-8">
-                <h3 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 bg-clip-text text-transparent">
-                  🌍 Любая одна страна на выбор
-                </h3>
+                <div className="flex items-center justify-center gap-3 mb-3">
+                  <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg flex-shrink-0">
+                    <Icon name="Globe" size={28} className="text-white" />
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 bg-clip-text text-transparent">
+                    Любая одна страна на выбор
+                  </h3>
+                </div>
                 <p className="text-lg text-muted-foreground">
                   Специальное предложение: выберите любую страну мира
                 </p>
