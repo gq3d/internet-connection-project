@@ -70,7 +70,7 @@ export default function EsimSection() {
                   <Icon name="ArrowRight" size={20} className="text-success opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex-shrink-0" />
                 </div>
                 <div className="text-sm text-primary font-medium underline">
-                  200+ стран
+                  106 стран
                 </div>
               </Link>
 
