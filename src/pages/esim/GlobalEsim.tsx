@@ -117,8 +117,7 @@ export default function GlobalEsim() {
       sms: 'входящие',
       price: 7600,
       oldPrice: 8488,
-      operator: 'O2',
-      coverage: '42 страны'
+      operator: 'O2'
     },
     {
       data: '25 ГБ',
@@ -128,8 +127,7 @@ export default function GlobalEsim() {
       sms: 'входящие',
       price: 10388,
       oldPrice: 11600,
-      operator: 'Vodafone',
-      coverage: '66 стран'
+      operator: 'Vodafone'
     }
   ];
 
