@@ -7,6 +7,8 @@ interface TariffCardProps {
     sms: string;
     price: number;
     oldPrice: number;
+    operator?: string;
+    coverage?: string;
   };
   variant?: 'default' | 'unlimited' | 'fullService';
 }
@@ -61,28 +63,64 @@ export default function TariffCard({ tariff, variant = 'default' }: TariffCardPr
         </div>
       )}
       
-      <div className="text-center mb-6">
-        <div className={`${getDataSize()} font-bold text-foreground mb-2`}>
-          {tariff.data}
+      {variant !== 'fullService' && (
+        <div className="text-center mb-6">
+          <div className={`${getDataSize()} font-bold text-foreground mb-2`}>
+            {tariff.data}
+          </div>
+          <div className={`text-muted-foreground ${getDaysSize()}`}>
+            {tariff.days} дн.
+          </div>
         </div>
-        <div className={`text-muted-foreground ${getDaysSize()}`}>
-          {tariff.days} дн.
-        </div>
-      </div>
+      )}
       
       {variant === 'fullService' && (
-        <div className="space-y-4 mb-6">
+        <div className="text-center mb-6">
+          <div className="text-3xl font-bold text-foreground mb-1">
+            {tariff.data}
+          </div>
+          <div className="text-lg text-muted-foreground">
+            {tariff.days} дн.
+          </div>
+          <div className="text-sm text-muted-foreground mt-1">
+            Цена
+          </div>
+        </div>
+      )}
+      
+      {variant === 'fullService' && (
+        <div className="space-y-3 mb-6">
           <div className="flex items-center justify-between py-2 border-b border-border">
-            <span className="text-muted-foreground">Скорость:</span>
-            <span className="font-semibold">{tariff.speed}</span>
+            <span className="text-muted-foreground">Интернет</span>
+            <span className="font-semibold">{tariff.data}</span>
           </div>
           <div className="flex items-center justify-between py-2 border-b border-border">
-            <span className="text-muted-foreground">Звонки:</span>
+            <span className="text-muted-foreground">Звонки</span>
             <span className="font-semibold">{tariff.calls}</span>
           </div>
-          <div className="flex items-center justify-between py-2">
-            <span className="text-muted-foreground">SMS:</span>
+          <div className="flex items-center justify-between py-2 border-b border-border">
+            <span className="text-muted-foreground">Сообщения</span>
             <span className="font-semibold">{tariff.sms}</span>
+          </div>
+          <div className="flex items-center justify-between py-2 border-b border-border">
+            <span className="text-muted-foreground">Срок действия</span>
+            <span className="font-semibold">{tariff.days} дней</span>
+          </div>
+          {tariff.operator && (
+            <div className="flex items-center justify-between py-2 border-b border-border">
+              <span className="text-muted-foreground">Оператор</span>
+              <span className="font-semibold">{tariff.operator}</span>
+            </div>
+          )}
+          {tariff.coverage && (
+            <div className="flex items-center justify-between py-2 border-b border-border">
+              <span className="text-muted-foreground">Покрытие</span>
+              <span className="font-semibold text-primary underline">{tariff.coverage}</span>
+            </div>
+          )}
+          <div className="flex items-center justify-between py-2">
+            <span className="text-muted-foreground">Продление</span>
+            <span className="font-semibold text-red-500">Нет</span>
           </div>
         </div>
       )}

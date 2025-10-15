@@ -110,22 +110,26 @@ export default function GlobalEsim() {
 
   const callsSmsTariffs = [
     {
-      data: '3.5 ГБ',
+      data: '35 ГБ',
       days: 30,
       speed: 'до 4G',
-      calls: '∞ звонков',
-      sms: '∞ SMS и интернета',
-      price: 7200,
-      oldPrice: 8040
+      calls: '∞ минут',
+      sms: 'входящие',
+      price: 3828,
+      oldPrice: 4276,
+      operator: 'O2',
+      coverage: '42 страны'
     },
     {
-      data: '2.5 ГБ',
+      data: '25 ГБ',
       days: 30,
       speed: 'до 4G',
-      calls: '∞ звонков',
-      sms: '∞ SMS и интернета',
-      price: 5600,
-      oldPrice: 6264
+      calls: '∞ минут',
+      sms: 'входящие',
+      price: 5210,
+      oldPrice: 5822,
+      operator: 'Vodafone',
+      coverage: '66 стран'
     }
   ];
 
