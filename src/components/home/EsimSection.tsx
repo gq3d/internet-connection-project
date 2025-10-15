@@ -80,7 +80,7 @@ export default function EsimSection() {
                   <div className="space-y-2 text-xs mb-3">
                     <div className="flex justify-between"><span className="text-muted-foreground">Цена</span><span className="font-medium">476 ₽</span></div>
                     <div className="flex justify-between"><span className="text-muted-foreground">Интернет</span><span className="font-medium">1 ГБ</span></div>
-                    <div className="flex justify-between"><span className="text-muted-foreground">Срок<br/>действия</span><span className="font-medium">7 дней</span></div>
+                    <div className="flex justify-between"><span className="text-muted-foreground">Срок<br/>действия</span><span className="font-medium">7<br/>дней</span></div>
                     <div className="flex justify-between"><span className="text-muted-foreground">Покрытие</span><span className="font-medium text-amber-600">1 страна</span></div>
                     <div className="flex justify-between"><span className="text-muted-foreground">Продление</span><span className="font-medium text-green-600">Да</span></div>
                   </div>
