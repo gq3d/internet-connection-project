@@ -178,7 +178,7 @@ export default function CaribbeanEsim() {
                         </div>
                       </div>
                       
-                      <div className="text-center mb-4">
+                      <div className="text-center">
                         <div className="text-sm text-muted-foreground line-through mb-1">
                           {tariff.oldPrice.toLocaleString('ru-RU')} ₽
                         </div>
@@ -186,13 +186,6 @@ export default function CaribbeanEsim() {
                           {tariff.price.toLocaleString('ru-RU')} ₽
                         </div>
                       </div>
-                      
-                      <Button 
-                        className="w-full bg-gradient-to-r from-primary to-success hover:from-primary/90 hover:to-success/90"
-                        size="lg"
-                      >
-                        Купить {tariff.price.toLocaleString('ru-RU')} ₽
-                      </Button>
                     </div>
                   ))}
                 </div>
@@ -246,7 +239,7 @@ export default function CaribbeanEsim() {
                         </div>
                       </div>
                       
-                      <div className="text-center mb-4">
+                      <div className="text-center">
                         <div className="text-sm text-muted-foreground line-through mb-1">
                           {tariff.oldPrice.toLocaleString('ru-RU')} ₽
                         </div>
@@ -254,13 +247,6 @@ export default function CaribbeanEsim() {
                           {tariff.price.toLocaleString('ru-RU')} ₽
                         </div>
                       </div>
-                      
-                      <Button 
-                        className="w-full bg-gradient-to-r from-primary to-success hover:from-primary/90 hover:to-success/90"
-                        size="lg"
-                      >
-                        Купить {tariff.price.toLocaleString('ru-RU')} ₽
-                      </Button>
                     </div>
                   ))}
                 </div>

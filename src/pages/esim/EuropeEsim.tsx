@@ -283,7 +283,7 @@ export default function EuropeEsim() {
                         </div>
                       </div>
                       
-                      <div className="text-center mb-4">
+                      <div className="text-center">
                         <div className="text-sm text-muted-foreground line-through mb-1">
                           {tariff.oldPrice.toLocaleString('ru-RU')} ₽
                         </div>
@@ -291,13 +291,6 @@ export default function EuropeEsim() {
                           {tariff.price.toLocaleString('ru-RU')} ₽
                         </div>
                       </div>
-                      
-                      <Button 
-                        className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
-                        size="lg"
-                      >
-                        Купить {tariff.price.toLocaleString('ru-RU')} ₽
-                      </Button>
                     </div>
                   ))}
                 </div>
@@ -351,7 +344,7 @@ export default function EuropeEsim() {
                         </div>
                       </div>
                       
-                      <div className="text-center mb-4">
+                      <div className="text-center">
                         <div className="text-sm text-muted-foreground line-through mb-1">
                           {tariff.oldPrice.toLocaleString('ru-RU')} ₽
                         </div>
@@ -359,13 +352,6 @@ export default function EuropeEsim() {
                           {tariff.price.toLocaleString('ru-RU')} ₽
                         </div>
                       </div>
-                      
-                      <Button 
-                        className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
-                        size="lg"
-                      >
-                        Купить {tariff.price.toLocaleString('ru-RU')} ₽
-                      </Button>
                     </div>
                   ))}
                 </div>
@@ -423,7 +409,7 @@ export default function EuropeEsim() {
                         </div>
                       </div>
                       
-                      <div className="text-center mb-6">
+                      <div className="text-center">
                         <div className="text-sm text-muted-foreground line-through mb-1">
                           {tariff.oldPrice.toLocaleString('ru-RU')} ₽
                         </div>
@@ -431,13 +417,6 @@ export default function EuropeEsim() {
                           {tariff.price.toLocaleString('ru-RU')} ₽
                         </div>
                       </div>
-                      
-                      <Button 
-                        className="w-full bg-gradient-to-r from-secondary to-primary hover:from-secondary/90 hover:to-primary/90"
-                        size="lg"
-                      >
-                        Купить {tariff.price.toLocaleString('ru-RU')} ₽
-                      </Button>
                     </div>
                   ))}
                 </div>
