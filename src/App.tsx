@@ -37,6 +37,7 @@ const Tariffs = lazy(() => import("./pages/Tariffs"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const Coverage = lazy(() => import("./pages/Coverage"));
 const Esim = lazy(() => import("./pages/Esim"));
+const GlobalEsim = lazy(() => import("./pages/esim/GlobalEsim"));
 const SignalBoost = lazy(() => import("./pages/SignalBoost"));
 const HighSpeed = lazy(() => import("./pages/HighSpeed"));
 const StableConnection = lazy(() => import("./pages/StableConnection"));
@@ -98,6 +99,7 @@ const App = () => (
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/coverage" element={<Coverage />} />
               <Route path="/esim" element={<Esim />} />
+              <Route path="/esim/global" element={<GlobalEsim />} />
               <Route path="/signal-boost" element={<SignalBoost />} />
               <Route path="/high-speed" element={<HighSpeed />} />
               <Route path="/stable-connection" element={<StableConnection />} />
