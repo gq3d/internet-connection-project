@@ -87,11 +87,11 @@ export default function TariffsSection() {
         </div>
         
         {/* Карточки тарифов */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-20">
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-20 pt-6">
           {tariffs.map((tariff, index) => (
             <Card 
               key={index} 
-              className={`relative hover:shadow-2xl transition-all duration-300 overflow-hidden bg-white ${
+              className={`relative hover:shadow-2xl transition-all duration-300 overflow-visible bg-white ${
                 tariff.popular ? 'border-4 border-primary shadow-xl md:scale-105 md:-translate-y-4' : 'border-2 border-gray-200'
               }`}
             >
