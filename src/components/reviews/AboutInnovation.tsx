@@ -55,7 +55,7 @@ export default function AboutInnovation() {
                 Наши услуги в Московской области
               </h3>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Полный спектр телекоммуникационных решений для дома и бизнеса
+                Полный спектр телекоммуникационных и охранных решений для дома и бизнеса
               </p>
             </div>
             
