@@ -84,7 +84,7 @@ export default function EsimSection() {
                   </div>
                   <div className="flex-1">
                     <h4 className="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Европа</h4>
-                    <p className="text-sm text-muted-foreground">от 1 490 ₽ - 1 ГБ / 7 Day</p>
+                    <p className="text-sm text-muted-foreground">от 572 ₽ - 1 ГБ / 7 Day</p>
                   </div>
                   <Icon name="ArrowRight" size={20} className="text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex-shrink-0" />
                 </div>
@@ -103,7 +103,7 @@ export default function EsimSection() {
                   </div>
                   <div className="flex-1">
                     <h4 className="font-bold text-lg mb-1 group-hover:text-secondary transition-colors">Азия</h4>
-                    <p className="text-sm text-muted-foreground">от 1 690 ₽ - 1 ГБ / 7 Day</p>
+                    <p className="text-sm text-muted-foreground">от 878 ₽ - 1 ГБ / 7 Day</p>
                   </div>
                   <Icon name="ArrowRight" size={20} className="text-secondary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex-shrink-0" />
                 </div>
@@ -160,7 +160,7 @@ export default function EsimSection() {
                   </div>
                   <div className="flex-1">
                     <h4 className="font-bold text-lg mb-1 group-hover:text-secondary transition-colors">Африка</h4>
-                    <p className="text-sm text-muted-foreground">от 2 250 ₽ - 1 ГБ / 7 Day</p>
+                    <p className="text-sm text-muted-foreground">от 2 394 ₽ - 1 ГБ / 7 Day</p>
                   </div>
                   <Icon name="ArrowRight" size={20} className="text-secondary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex-shrink-0" />
                 </div>
@@ -217,7 +217,7 @@ export default function EsimSection() {
                   </div>
                   <div className="flex-1">
                     <h4 className="font-bold text-lg mb-1 group-hover:text-secondary transition-colors">Карибский бассейн</h4>
-                    <p className="text-sm text-muted-foreground">от 6 916 ₽ - 1 ГБ / 7 Day</p>
+                    <p className="text-sm text-muted-foreground">от 6 286 ₽ - 1 ГБ / 7 Day</p>
                   </div>
                   <Icon name="ArrowRight" size={20} className="text-secondary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex-shrink-0" />
                 </div>
