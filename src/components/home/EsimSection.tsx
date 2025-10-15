@@ -89,7 +89,7 @@ export default function EsimSection() {
                   <Icon name="ArrowRight" size={20} className="text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex-shrink-0" />
                 </div>
                 <div className="text-sm text-primary font-medium underline">
-                  45+ стран
+                  70 стран
                 </div>
               </Link>
 
@@ -108,7 +108,7 @@ export default function EsimSection() {
                   <Icon name="ArrowRight" size={20} className="text-secondary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex-shrink-0" />
                 </div>
                 <div className="text-sm text-primary font-medium underline">
-                  30+ стран
+                  13 стран
                 </div>
               </Link>
 
@@ -203,7 +203,7 @@ export default function EsimSection() {
                   <Icon name="ArrowRight" size={20} className="text-success opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex-shrink-0" />
                 </div>
                 <div className="text-sm text-primary font-medium underline">
-                  15 стран
+                  2 страны
                 </div>
               </Link>
 
