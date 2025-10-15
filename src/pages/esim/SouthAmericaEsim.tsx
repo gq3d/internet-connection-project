@@ -154,7 +154,7 @@ export default function SouthAmericaEsim() {
                 <div className="text-center">
                   <div className="flex items-center justify-center mb-6">
                     <div className="bg-gradient-to-r from-success to-secondary p-4 rounded-2xl shadow-lg">
-                      <Icon name="Palmtree" size={40} className="text-white" />
+                      <Icon name="TreePalm" size={40} className="text-white" />
                     </div>
                   </div>
                   
@@ -168,7 +168,7 @@ export default function SouthAmericaEsim() {
                   
                   <div className="flex flex-wrap items-center justify-center gap-6 mt-8">
                     <div className="flex items-center gap-2 bg-card px-4 py-2 rounded-full border">
-                      <Icon name="Palmtree" size={20} className="text-success" />
+                      <Icon name="TreePalm" size={20} className="text-success" />
                       <span className="font-semibold">11 стран</span>
                     </div>
                     <div className="flex items-center gap-2 bg-card px-4 py-2 rounded-full border">

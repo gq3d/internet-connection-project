@@ -36,6 +36,19 @@ const servicePages = [
   { slug: 'cellular-booster', name: 'Усиление сотовой связи' }
 ];
 
+// Список страниц eSIM
+const esimPages = [
+  { slug: 'global', name: 'Глобальный' },
+  { slug: 'europe', name: 'Европа' },
+  { slug: 'asia', name: 'Азия' },
+  { slug: 'north-america', name: 'Северная Америка' },
+  { slug: 'south-america', name: 'Южная Америка' },
+  { slug: 'africa', name: 'Африка' },
+  { slug: 'middle-east', name: 'Ближний Восток' },
+  { slug: 'australia', name: 'Австралия и Океания' },
+  { slug: 'caribbean', name: 'Карибский бассейн' }
+];
+
 // Список страниц преимуществ интернета
 const advantagePages = [
   { slug: 'high-speed', name: 'Высокоскоростной интернет' },
@@ -53,12 +66,26 @@ export const siteUrls: SitemapUrl[] = [
     changefreq: 'weekly',
     priority: 1.0
   },
+  // Главная страница eSIM
+  {
+    loc: '/esim',
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: 'weekly' as const,
+    priority: 0.9
+  },
   // Добавляем страницы услуг
   ...servicePages.map(service => ({
     loc: `/services/${service.slug}`,
     lastmod: new Date().toISOString().split('T')[0],
     changefreq: 'monthly' as const,
     priority: 0.9
+  })),
+  // Добавляем страницы eSIM регионов
+  ...esimPages.map(esim => ({
+    loc: `/esim/${esim.slug}`,
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: 'weekly' as const,
+    priority: 0.8
   })),
   // Добавляем страницы преимуществ интернета
   ...advantagePages.map(advantage => ({
