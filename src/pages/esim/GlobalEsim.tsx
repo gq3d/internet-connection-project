@@ -115,8 +115,8 @@ export default function GlobalEsim() {
       speed: 'до 4G',
       calls: '∞ минут',
       sms: 'входящие',
-      price: 3828,
-      oldPrice: 4276,
+      price: 7600,
+      oldPrice: 8488,
       operator: 'O2',
       coverage: '42 страны'
     },
@@ -126,8 +126,8 @@ export default function GlobalEsim() {
       speed: 'до 4G',
       calls: '∞ минут',
       sms: 'входящие',
-      price: 5210,
-      oldPrice: 5822,
+      price: 10388,
+      oldPrice: 11600,
       operator: 'Vodafone',
       coverage: '66 стран'
     }
