@@ -242,10 +242,13 @@ export default function EsimSection() {
               </div>
               <h3 className="text-3xl font-bold mb-4">С туристическими eSIM от NetConnect<br />вы всегда на связи</h3>
               <p className="text-lg mb-6 opacity-90">в командировке, путешествии или отпуске по всему миру</p>
-              <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-8 py-4 rounded-full">
+              <a 
+                href="tel:+79015000078"
+                className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-8 py-4 rounded-full hover:bg-white/30 transition-all duration-300 hover:scale-105"
+              >
                 <Icon name="Smartphone" size={28} className="text-white" />
                 <span className="text-xl font-semibold">Подключайтесь прямо сейчас!</span>
-              </div>
+              </a>
               <p className="text-sm mt-4 opacity-80">Наслаждайтесь интернетом без границ в 200+ странах мира</p>
             </div>
           </div>
