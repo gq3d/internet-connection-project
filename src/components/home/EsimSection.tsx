@@ -75,15 +75,21 @@ export default function EsimSection() {
                   </div>
                 </div>
                 
-                <div className="flex items-start bg-card rounded-lg p-4 hover:shadow-md transition-shadow">
-                  <div className="bg-success/10 p-3 rounded-lg mr-4 flex-shrink-0">
+                <Link 
+                  to="/esim/global"
+                  className="flex items-start bg-card rounded-lg p-4 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-success/30 group"
+                >
+                  <div className="bg-success/10 p-3 rounded-lg mr-4 flex-shrink-0 group-hover:bg-success/20 transition-colors">
                     <Icon name="Earth" size={24} className="text-success" />
                   </div>
-                  <div>
-                    <h4 className="font-semibold mb-2 text-lg">Глобальные eSIM</h4>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between">
+                      <h4 className="font-semibold mb-2 text-lg group-hover:text-success transition-colors">Глобальные eSIM</h4>
+                      <Icon name="ArrowRight" size={20} className="text-success opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                    </div>
                     <p className="text-muted-foreground">единая карта для всех стран мира, без смены SIM.</p>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
             
