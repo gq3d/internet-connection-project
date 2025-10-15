@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Header from '@/components/home/Header';
@@ -7,6 +7,8 @@ import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
 
 export default function GlobalEsim() {
+  const [showAllCountries, setShowAllCountries] = useState(false);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -1018,14 +1020,492 @@ export default function GlobalEsim() {
                       </div>
                     </div>
 
-                    <div className="col-span-full bg-gradient-to-r from-primary/10 via-secondary/10 to-success/10 rounded-xl p-6 border-2 border-primary/30 text-center">
-                      <div className="flex items-center justify-center gap-3 mb-3">
-                        <Icon name="Info" size={24} className="text-primary" />
-                        <h3 className="font-bold text-lg">И ещё 82+ страны</h3>
-                      </div>
-                      <p className="text-muted-foreground">
-                        Полный список из 106 стран с поддержкой 2G, 3G, 4G и 5G сетей от ведущих операторов мира
-                      </p>
+                    {showAllCountries && (
+                      <>
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">Bolivia (Боливия)</h3>
+                          </div>
+                          <p className="text-sm text-muted-foreground mb-2">Telefonica Celular de Bolivia S.A.</p>
+                          <div className="flex gap-2 flex-wrap">
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                          </div>
+                        </div>
+
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">Bosnia Herzegovina (Босния и Герцеговина)</h3>
+                          </div>
+                          <p className="text-sm text-muted-foreground mb-2">BH Telecom JSC Sarajevo</p>
+                          <div className="flex gap-2 flex-wrap">
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                          </div>
+                        </div>
+
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">Brazil (Бразилия)</h3>
+                          </div>
+                          <p className="text-sm text-muted-foreground mb-2">Vivo S.A.</p>
+                          <div className="flex gap-2 flex-wrap">
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">5G</span>
+                          </div>
+                        </div>
+
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">Bulgaria (Болгария)</h3>
+                          </div>
+                          <div className="space-y-3">
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">A1 Bulgaria EAD</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                              </div>
+                            </div>
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">Telenor Bulgaria EAD</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                              </div>
+                            </div>
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">Bulgarian Telecommunications Company EAD</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">5G</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">Cameroon (Камерун)</h3>
+                          </div>
+                          <div className="space-y-3">
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">MTN</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                              </div>
+                            </div>
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">Orange Cameroun SA</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">Chile (Чили)</h3>
+                          </div>
+                          <p className="text-sm text-muted-foreground mb-2">Telefonica Movil de Chile S.A.</p>
+                          <div className="flex gap-2 flex-wrap">
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                          </div>
+                        </div>
+
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">Colombia (Колумбия)</h3>
+                          </div>
+                          <p className="text-sm text-muted-foreground mb-2">Colombia Telecomunicaciones S.A. ESP</p>
+                          <div className="flex gap-2 flex-wrap">
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                          </div>
+                        </div>
+
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">Costa Rica (Коста-Рика)</h3>
+                          </div>
+                          <p className="text-sm text-muted-foreground mb-2">Millicom</p>
+                          <div className="flex gap-2 flex-wrap">
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                          </div>
+                        </div>
+
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">Croatia (Хорватия)</h3>
+                          </div>
+                          <div className="space-y-3">
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">A1 Hrvatska d.o.o</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">5G</span>
+                              </div>
+                            </div>
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">Tele2 d.o.o</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">5G</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">Cyprus (Кипр)</h3>
+                          </div>
+                          <div className="space-y-3">
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">MTN Cyprus Limited</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">5G</span>
+                              </div>
+                            </div>
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">PrimeTel PLC</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                              </div>
+                            </div>
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">Cyprus Telecommunications Authority</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">5G</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">Czech (Чехия)</h3>
+                          </div>
+                          <div className="space-y-3">
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">O2 Czech Republic a.s.</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">5G</span>
+                              </div>
+                            </div>
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">Vodafone Czech Republic a.s.</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">5G</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">Denmark (Дания)</h3>
+                          </div>
+                          <div className="space-y-3">
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">HI3G Denmark ApS</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">5G</span>
+                              </div>
+                            </div>
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">Telia Denmark</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">5G</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">Ecuador (Эквадор)</h3>
+                          </div>
+                          <p className="text-sm text-muted-foreground mb-2">Otecel Sociedad Anonima</p>
+                          <div className="flex gap-2 flex-wrap">
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                          </div>
+                        </div>
+
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">Egypt (Египет)</h3>
+                          </div>
+                          <div className="space-y-3">
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">Etisalat - Misr</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                              </div>
+                            </div>
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">Orange Egypt</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">El Salvador (Сальвадор)</h3>
+                          </div>
+                          <p className="text-sm text-muted-foreground mb-2">Telefonica Moviles El Salvador</p>
+                          <div className="flex gap-2 flex-wrap">
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                          </div>
+                        </div>
+
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">Estonia (Эстония)</h3>
+                          </div>
+                          <div className="space-y-3">
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">Telia Eesti AS</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">5G</span>
+                              </div>
+                            </div>
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">Tele2 Eesti Aktsiaselts</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                              </div>
+                            </div>
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">Elisa Eesti AS</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">5G</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">Finland (Финляндия)</h3>
+                          </div>
+                          <div className="space-y-3">
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">Elisa Corporation</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">5G</span>
+                              </div>
+                            </div>
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">Telia Finland Oyj</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">5G</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">Gibraltar (Гибралтар)</h3>
+                          </div>
+                          <p className="text-sm text-muted-foreground mb-2">Gibtelecom Limited</p>
+                          <div className="flex gap-2 flex-wrap">
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">5G</span>
+                          </div>
+                        </div>
+
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">Greece (Греция)</h3>
+                          </div>
+                          <div className="space-y-3">
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">Vodafone-Panafon</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">5G</span>
+                              </div>
+                            </div>
+                            <div>
+                              <p className="text-sm text-muted-foreground mb-2">Wind Hellas</p>
+                              <div className="flex gap-2 flex-wrap">
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                                <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">Guam (Гуам)</h3>
+                          </div>
+                          <p className="text-sm text-muted-foreground mb-2">PTI Pacifica Inc.</p>
+                          <div className="flex gap-2 flex-wrap">
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">2G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">3G</span>
+                            <span className="px-2 py-1 bg-success/10 text-success text-xs font-semibold rounded">4G</span>
+                          </div>
+                        </div>
+
+                        <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-colors">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="bg-primary/10 p-2 rounded-lg">
+                              <Icon name="Globe" size={20} className="text-primary" />
+                            </div>
+                            <h3 className="font-bold text-lg">And 62+ more countries</h3>
+                          </div>
+                          <p className="text-sm text-muted-foreground">
+                            Guatemala, Guernsey, Guyana, Hong Kong, Hungary, Iceland, Indonesia, Iraq, Ireland, Isle of Man, Israel, Jordan, Kazakhstan, Kenya, Kuwait, Latvia, Liechtenstein, Lithuania, Luxembourg, Macau, Madagascar, Malaysia, Malta, Mauritius, Mexico, Moldova, Montenegro, Morocco, Netherlands, New Zealand, Nicaragua, Nigeria, North Macedonia, Norway, Oman, Pakistan, Panama, Paraguay, Peru, Poland, Portugal, Qatar, Reunion, Romania, Saudi Arabia, Serbia, Seychelles, Slovakia, Slovenia, South Africa, Sri Lanka, Sweden, Switzerland, Taiwan, Tanzania, Tunisia, Uganda, Ukraine, United Arab Emirates, Uruguay, Uzbekistan, Zambia
+                          </p>
+                        </div>
+                      </>
+                    )}
+
+                    <div className="col-span-full">
+                      <Button
+                        onClick={() => setShowAllCountries(!showAllCountries)}
+                        className="w-full bg-gradient-to-r from-primary/10 via-secondary/10 to-success/10 hover:from-primary/20 hover:via-secondary/20 hover:to-success/20 border-2 border-primary/30 hover:border-primary/50 text-foreground"
+                        size="lg"
+                      >
+                        <div className="flex items-center justify-center gap-3">
+                          <Icon name={showAllCountries ? "ChevronUp" : "ChevronDown"} size={24} className="text-primary" />
+                          <div>
+                            <h3 className="font-bold text-lg">
+                              {showAllCountries ? "Скрыть остальные страны" : "И ещё 82+ страны"}
+                            </h3>
+                            <p className="text-sm text-muted-foreground">
+                              {showAllCountries ? "Свернуть полный список" : "Показать полный список из 106 стран"}
+                            </p>
+                          </div>
+                        </div>
+                      </Button>
                     </div>
 
                   </div>
