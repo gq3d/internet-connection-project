@@ -59,10 +59,10 @@ export default function EsimSection() {
               
               <div className="text-center mb-8">
                 <h3 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 bg-clip-text text-transparent">
-                  🇹🇷 Специальное предложение: Турция
+                  🌍 Любая одна страна на выбор
                 </h3>
                 <p className="text-lg text-muted-foreground">
-                  Лучшие тарифы для путешествия в Турцию
+                  Специальное предложение: выберите любую страну мира
                 </p>
               </div>
 
