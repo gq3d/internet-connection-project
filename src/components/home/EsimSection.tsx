@@ -156,7 +156,7 @@ export default function EsimSection() {
               >
                 <div className="flex items-start mb-4">
                   <div className="bg-secondary/10 p-3 rounded-lg mr-4 flex-shrink-0 group-hover:bg-secondary/20 transition-colors">
-                    <Icon name="Mountain" size={32} className="text-secondary" />
+                    <Icon name="Sun" size={32} className="text-secondary" />
                   </div>
                   <div className="flex-1">
                     <h4 className="font-bold text-lg mb-1 group-hover:text-secondary transition-colors">Африка</h4>
@@ -194,7 +194,7 @@ export default function EsimSection() {
               >
                 <div className="flex items-start mb-4">
                   <div className="bg-success/10 p-3 rounded-lg mr-4 flex-shrink-0 group-hover:bg-success/20 transition-colors">
-                    <Icon name="Kanban" size={32} className="text-success" />
+                    <Icon name="Waves" size={32} className="text-success" />
                   </div>
                   <div className="flex-1">
                     <h4 className="font-bold text-lg mb-1 group-hover:text-success transition-colors">Австралия и Океания</h4>
