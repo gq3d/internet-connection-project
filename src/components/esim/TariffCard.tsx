@@ -70,20 +70,7 @@ export default function TariffCard({ tariff, variant = 'default' }: TariffCardPr
         </div>
       </div>
       
-      <div className={`space-y-${variant === 'fullService' ? '4' : '3'} mb-6`}>
-        <div className="flex items-center justify-between py-2 border-b border-border">
-          <span className="text-muted-foreground">Скорость:</span>
-          <span className="font-semibold">{tariff.speed}</span>
-        </div>
-        <div className="flex items-center justify-between py-2 border-b border-border">
-          <span className="text-muted-foreground">Звонки:</span>
-          <span className="font-semibold">{tariff.calls}</span>
-        </div>
-        <div className="flex items-center justify-between py-2">
-          <span className="text-muted-foreground">SMS:</span>
-          <span className="font-semibold">{tariff.sms}</span>
-        </div>
-      </div>
+
       
       <div className="text-center">
         <div className="text-sm text-muted-foreground line-through mb-1">
