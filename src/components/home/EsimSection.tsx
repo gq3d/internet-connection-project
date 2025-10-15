@@ -173,23 +173,6 @@ export default function EsimSection() {
                     <div className="text-xl font-bold text-amber-600">4 054 ₽</div>
                   </div>
                 </div>
-
-                <div className="bg-white border-2 border-amber-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-lg transition-all duration-300">
-                  <div className="text-center mb-3">
-                    <div className="text-3xl font-bold text-foreground mb-1">50 ГБ</div>
-                    <div className="text-sm text-muted-foreground">30 дн.</div>
-                  </div>
-                  <div className="space-y-2 text-xs mb-3">
-                    <div className="flex justify-between"><span className="text-muted-foreground">Цена</span><span className="font-medium">8 460 ₽</span></div>
-                    <div className="flex justify-between"><span className="text-muted-foreground">Интернет</span><span className="font-medium">50 ГБ</span></div>
-                    <div className="flex justify-between"><span className="text-muted-foreground">Срок действия</span><span className="font-medium">30 дней</span></div>
-                    <div className="flex justify-between"><span className="text-muted-foreground">Покрытие</span><span className="font-medium text-amber-600">1 страна</span></div>
-                    <div className="flex justify-between"><span className="text-muted-foreground">Продление</span><span className="font-medium text-green-600">Да</span></div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-xl font-bold text-amber-600">8 460 ₽</div>
-                  </div>
-                </div>
               </div>
             </div>
 
