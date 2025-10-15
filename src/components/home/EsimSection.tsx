@@ -228,63 +228,7 @@ export default function EsimSection() {
             </div>
           </div>
 
-          <div className={`grid lg:grid-cols-2 gap-12 items-center mb-16 transition-all duration-700 delay-200 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-          }`}>
-            
-            <div className={`bg-card border-2 border-secondary/30 rounded-xl p-8 shadow-lg transition-all duration-700 delay-200 ${
-              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
-            }`}>
-              <div className="flex items-center justify-center mb-6">
-                <div className="bg-secondary/10 p-2 rounded-lg">
-                  <Icon name="Sparkles" size={24} className="text-secondary" />
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold mb-6 text-center">Преимущества наших туристических eSIM:</h3>
-              <div className="space-y-4">
-                <div className="flex items-start p-3 rounded-lg hover:bg-accent/50 transition-colors">
-                  <div className="bg-success/10 p-2 rounded-lg mr-3 flex-shrink-0">
-                    <Icon name="Clock" size={20} className="text-success" />
-                  </div>
-                  <div>
-                    <strong className="text-foreground">Мгновенная активация</strong>
-                    <p className="text-muted-foreground text-sm mt-1">подключение за 5 минут</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start p-3 rounded-lg hover:bg-accent/50 transition-colors">
-                  <div className="bg-success/10 p-2 rounded-lg mr-3 flex-shrink-0">
-                    <Icon name="Smartphone" size={20} className="text-success" />
-                  </div>
-                  <div>
-                    <strong className="text-foreground">Поддержка всех современных устройств</strong>
-                    <p className="text-muted-foreground text-sm mt-1">смартфоны, планшеты, модемы, роутеры</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start p-3 rounded-lg hover:bg-accent/50 transition-colors">
-                  <div className="bg-success/10 p-2 rounded-lg mr-3 flex-shrink-0">
-                    <Icon name="DollarSign" size={20} className="text-success" />
-                  </div>
-                  <div>
-                    <strong className="text-foreground">Гибкие тарифы</strong>
-                    <p className="text-muted-foreground text-sm mt-1">оплачиваете только нужный трафик</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start p-3 rounded-lg hover:bg-accent/50 transition-colors">
-                  <div className="bg-success/10 p-2 rounded-lg mr-3 flex-shrink-0">
-                    <Icon name="Wifi" size={20} className="text-success" />
-                  </div>
-                  <div>
-                    <strong className="text-foreground">Надёжная связь</strong>
-                    <p className="text-muted-foreground text-sm mt-1">высокая скорость интернета</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
+
           <div className={`relative overflow-hidden bg-gradient-to-br from-primary via-secondary to-success text-white rounded-2xl p-10 text-center shadow-2xl transition-all duration-700 delay-500 ${
             isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
           }`}>
