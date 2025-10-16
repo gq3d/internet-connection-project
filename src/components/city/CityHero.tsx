@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 
 interface CityHeroProps {
@@ -7,17 +6,9 @@ interface CityHeroProps {
 }
 
 export default function CityHero({ cityName, district }: CityHeroProps) {
-  const navigate = useNavigate();
-
   const handleTariffsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    navigate('/');
-    setTimeout(() => {
-      const tariffsSection = document.getElementById('tariffs');
-      if (tariffsSection) {
-        tariffsSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 100);
+    window.location.href = '/#tariffs';
   };
   return (
     <section className="py-16 bg-gradient-to-r from-primary/10 to-accent/20">
