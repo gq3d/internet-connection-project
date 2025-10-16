@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Icon from '@/components/ui/icon';
+import UnblockedServicesBadge from '@/components/UnblockedServicesBadge';
 import ExclusiveOffer from '@/components/esim/ExclusiveOffer';
 import RegionCards from '@/components/esim/RegionCards';
 import ActivationSteps from '@/components/esim/ActivationSteps';
@@ -46,9 +47,12 @@ export default function EsimSection() {
             Интернет без границ за 5 минут
           </h2>
           <div className="w-32 h-1 mx-auto mb-6 bg-gradient-to-r from-primary via-secondary to-primary rounded-full"></div>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-6">
             Компания NetConnect предлагает туристические eSIM, которые можно подключить всего за 5 минут на любой телефон с поддержкой eSIM. <span className="font-semibold text-foreground">Забудьте про физические SIM-карты, роуминг и ограничения операторов</span> — оставайтесь на связи в любой точке мира.
           </p>
+          <div className="flex justify-center">
+            <UnblockedServicesBadge />
+          </div>
         </div>
         
         <div className="max-w-7xl mx-auto">

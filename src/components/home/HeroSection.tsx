@@ -1,5 +1,6 @@
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import UnblockedServicesBadge from '@/components/UnblockedServicesBadge';
 import { useEffect, useRef, useState } from 'react';
 
 export default function HeroSection() {
@@ -38,6 +39,10 @@ export default function HeroSection() {
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Беспроводной интернет в Московской области
           </h1>
+
+          <div className="flex justify-center mb-6">
+            <UnblockedServicesBadge />
+          </div>
 
           {/* Mobile only: Large Internet card above description */}
           <div className="md:hidden mb-6">
