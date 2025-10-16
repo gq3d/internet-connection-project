@@ -588,10 +588,21 @@ const allCities = [
   { name: 'Нахабино', district: 'Красногорский городской округ' }
 ];
 
+const translitMap: Record<string, string> = {
+  'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 'е': 'e', 'ё': 'e',
+  'ж': 'zh', 'з': 'z', 'и': 'i', 'й': 'y', 'к': 'k', 'л': 'l', 'м': 'm',
+  'н': 'n', 'о': 'o', 'п': 'p', 'р': 'r', 'с': 's', 'т': 't', 'у': 'u',
+  'ф': 'f', 'х': 'kh', 'ц': 'ts', 'ч': 'ch', 'ш': 'sh', 'щ': 'shch',
+  'ъ': '', 'ы': 'y', 'ь': '', 'э': 'e', 'ю': 'yu', 'я': 'ya'
+};
+
+function transliterate(text: string): string {
+  return text.toLowerCase().split('').map(char => translitMap[char] || char).join('');
+}
+
 allCities.forEach(city => {
-  const slug = city.name.toLowerCase()
-    .replace(/ё/g, 'e')
-    .replace(/[^a-zA-Z0-9\u0430-\u044f]/g, '-')
+  const slug = transliterate(city.name)
+    .replace(/[^a-z0-9]/g, '-')
     .replace(/-+/g, '-')
     .replace(/^-|-$/g, '');
   
