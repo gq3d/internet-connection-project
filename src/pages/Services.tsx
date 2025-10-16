@@ -233,21 +233,20 @@ export default function Services() {
           </div>
 
           {/* Reviews CTA */}
-          <div className="mt-16 max-w-5xl mx-auto">
+          <div className="mt-16 max-w-3xl mx-auto">
             <Link to="/reviews" className="block group">
-              <div className="bg-gradient-to-br from-primary/10 via-secondary/10 to-success/10 border-2 border-primary/20 rounded-2xl p-8 md:p-12 hover:border-primary/40 hover:shadow-xl transition-all duration-300">
-                <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
-                    <Icon name="MessageCircle" size={32} className="text-primary" />
+              <div className="bg-gradient-to-br from-primary/10 via-secondary/10 to-success/10 border-2 border-primary/20 rounded-xl p-6 hover:border-primary/40 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Icon name="MessageCircle" size={24} className="text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold group-hover:text-primary transition-colors">Отзывы наших клиентов</h3>
+                      <p className="text-sm text-muted-foreground">Узнайте, что говорят о нас</p>
+                    </div>
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold mb-4 group-hover:text-primary transition-colors">Отзывы наших клиентов</h2>
-                  <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-                    Узнайте, что говорят наши клиенты о качестве наших услуг и обслуживания
-                  </p>
-                  <div className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-xl font-semibold group-hover:scale-105 transition-transform">
-                    <span>Читать отзывы</span>
-                    <Icon name="ArrowRight" size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                  </div>
+                  <Icon name="ArrowRight" size={24} className="text-primary group-hover:translate-x-1 transition-transform flex-shrink-0" />
                 </div>
               </div>
             </Link>
