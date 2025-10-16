@@ -10,8 +10,6 @@ export default function Coverage() {
   const location = useLocation();
 
   useEffect(() => {
-    document.title = 'Покрытие интернета NetConnect в МО | 99% территории Московской области';
-    
     const hash = location.hash.replace('#', '');
     if (hash) {
       setTimeout(() => {
