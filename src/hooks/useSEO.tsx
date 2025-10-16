@@ -33,24 +33,33 @@ export const useSEO = ({
     const robotsContent = noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
     
     const metaTags: { [key: string]: string } = {
-      description: description || '',
-      keywords: keywords || '',
-      robots: robotsContent,
-      'og:type': 'website',
-      'og:title': ogTitle || title || '',
-      'og:description': ogDescription || description || '',
-      'og:image': ogImage || '',
-      'og:image:alt': ogImageAlt || title || '',
-      'og:locale': 'ru_RU',
-      'twitter:card': 'summary_large_image',
-      'twitter:title': ogTitle || title || '',
-      'twitter:description': ogDescription || description || '',
-      'twitter:image': ogImage || '',
-      'twitter:image:alt': ogImageAlt || title || ''
+      robots: robotsContent
     };
 
+    if (description) metaTags.description = description;
+    if (keywords) metaTags.keywords = keywords;
+    if (ogTitle || title) {
+      metaTags['og:type'] = 'website';
+      metaTags['og:title'] = ogTitle || title || '';
+      metaTags['og:locale'] = 'ru_RU';
+    }
+    if (ogDescription || description) metaTags['og:description'] = ogDescription || description || '';
+    if (ogImage) {
+      metaTags['og:image'] = ogImage;
+      metaTags['og:image:alt'] = ogImageAlt || title || '';
+    }
+    if (ogTitle || title || ogImage) {
+      metaTags['twitter:card'] = 'summary_large_image';
+      if (ogTitle || title) metaTags['twitter:title'] = ogTitle || title || '';
+      if (ogDescription || description) metaTags['twitter:description'] = ogDescription || description || '';
+      if (ogImage) {
+        metaTags['twitter:image'] = ogImage;
+        metaTags['twitter:image:alt'] = ogImageAlt || title || '';
+      }
+    }
+
     Object.entries(metaTags).forEach(([name, content]) => {
-      if (!content) return;
+      if (!content || content.trim() === '') return;
 
       const isOg = name.startsWith('og:');
       const isTwitter = name.startsWith('twitter:');
