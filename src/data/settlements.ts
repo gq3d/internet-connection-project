@@ -122,6 +122,7 @@ export const settlements: Settlement[] = [
   { name: 'Новоивановское', city: 'odintsovo', type: 'settlement' },
   { name: 'Лесной городок', city: 'odintsovo', type: 'settlement' },
   { name: 'Барвиха', city: 'odintsovo', type: 'village' },
+  { name: 'Жуковка', city: 'odintsovo', type: 'village' },
   
   // Раменское
   { name: 'Бронницы', city: 'ramenskoye', type: 'settlement' },
