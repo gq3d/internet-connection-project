@@ -1,9 +1,4 @@
-import { useLocation, useNavigate } from 'react-router-dom';
-
 export const useAnchorScroll = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
-
   const scrollToSection = (anchorId: string, retries = 0) => {
     const section = document.getElementById(anchorId);
     if (section) {
@@ -20,12 +15,12 @@ export const useAnchorScroll = () => {
     // Remove leading # if present
     const cleanAnchor = anchorId.startsWith('#') ? anchorId.substring(1) : anchorId;
     
-    if (location.pathname === '/') {
+    if (window.location.pathname === '/') {
       // Already on homepage - just scroll
       scrollToSection(cleanAnchor);
     } else {
-      // Navigate to homepage first, Index.tsx will handle scrolling via useEffect
-      navigate('/', { state: { scrollTo: cleanAnchor } });
+      // Navigate to homepage with anchor
+      window.location.href = `/#${cleanAnchor}`;
     }
   };
 
