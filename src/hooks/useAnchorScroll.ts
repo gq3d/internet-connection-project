@@ -1,4 +1,8 @@
+import { useNavigate } from 'react-router-dom';
+
 export const useAnchorScroll = () => {
+  const navigate = useNavigate();
+  
   const scrollToSection = (anchorId: string, retries = 0) => {
     const section = document.getElementById(anchorId);
     if (section) {
@@ -19,8 +23,8 @@ export const useAnchorScroll = () => {
       // Already on homepage - just scroll
       scrollToSection(cleanAnchor);
     } else {
-      // Navigate to homepage with anchor
-      window.location.href = `/#${cleanAnchor}`;
+      // Navigate to homepage with anchor using React Router
+      navigate('/', { state: { scrollTo: cleanAnchor } });
     }
   };
 

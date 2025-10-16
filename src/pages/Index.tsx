@@ -21,19 +21,22 @@ const Index = () => {
   }, []);
 
   useEffect(() => {
-    // Handle scroll to section from navigation state
-    if (location.state?.scrollTo) {
-      const scrollToSection = (anchorId: string, retries = 0) => {
-        const section = document.getElementById(anchorId);
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
-        } else if (retries < 20) {
-          // Retry up to 20 times (2 seconds total)
-          setTimeout(() => scrollToSection(anchorId, retries + 1), 100);
-        }
-      };
+    const scrollToSection = (anchorId: string, retries = 0) => {
+      const section = document.getElementById(anchorId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      } else if (retries < 20) {
+        // Retry up to 20 times (2 seconds total)
+        setTimeout(() => scrollToSection(anchorId, retries + 1), 100);
+      }
+    };
+
+    // Handle scroll to section from navigation state or hash
+    const scrollTarget = location.state?.scrollTo || (location.hash ? location.hash.substring(1) : null);
+    
+    if (scrollTarget) {
       // Start after a short delay to ensure page is rendered
-      setTimeout(() => scrollToSection(location.state.scrollTo), 200);
+      setTimeout(() => scrollToSection(scrollTarget), 200);
     }
   }, [location]);
 
