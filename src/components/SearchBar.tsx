@@ -142,12 +142,12 @@ export default function SearchBar() {
   };
 
   return (
-    <div ref={searchRef} className="relative w-full max-w-md">
+    <div ref={searchRef} className="relative w-full max-w-[200px]">
       <div className="relative">
         <Icon 
           name="Search" 
-          size={18} 
-          className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none" 
+          size={16} 
+          className="absolute left-2.5 top-1/2 -translate-y-1/2 text-muted-foreground/60 pointer-events-none" 
         />
         <input
           ref={inputRef}
@@ -156,8 +156,8 @@ export default function SearchBar() {
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
           onFocus={() => query.trim().length > 0 && setIsOpen(true)}
-          placeholder="Поиск... (Ctrl+K)"
-          className="w-full pl-10 pr-4 py-2 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm"
+          placeholder="Поиск..."
+          className="w-full pl-9 pr-9 py-1.5 text-sm border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all placeholder:text-muted-foreground/60"
         />
         {query && (
           <button
@@ -165,15 +165,15 @@ export default function SearchBar() {
               setQuery('');
               setIsOpen(false);
             }}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+            className="absolute right-2.5 top-1/2 -translate-y-1/2 text-muted-foreground/60 hover:text-foreground transition-colors"
           >
-            <Icon name="X" size={16} />
+            <Icon name="X" size={14} />
           </button>
         )}
       </div>
 
       {isOpen && suggestions.length > 0 && (
-        <div className="absolute top-full mt-2 w-full bg-white rounded-lg shadow-lg border border-border overflow-hidden z-50">
+        <div className="absolute top-full mt-2 w-max min-w-[300px] max-w-[400px] bg-white rounded-lg shadow-lg border border-border overflow-hidden z-50 right-0">
           {suggestions.map((suggestion, index) => (
             <button
               key={suggestion.url}
@@ -197,7 +197,7 @@ export default function SearchBar() {
       )}
 
       {isOpen && query.trim().length > 0 && suggestions.length === 0 && (
-        <div className="absolute top-full mt-2 w-full bg-white rounded-lg shadow-lg border border-border p-4 z-50">
+        <div className="absolute top-full mt-2 w-max min-w-[250px] bg-white rounded-lg shadow-lg border border-border p-4 z-50 right-0">
           <div className="flex items-center gap-2 text-muted-foreground text-sm">
             <Icon name="Search" size={16} />
             <span>Ничего не найдено</span>
