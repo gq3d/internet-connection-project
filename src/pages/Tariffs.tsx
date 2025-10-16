@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Header from '@/components/home/Header';
 import Footer from '@/components/home/Footer';
 import TariffsSection from '@/components/home/TariffsSection';
+import UnblockedServicesBadge from '@/components/UnblockedServicesBadge';
 
 export default function Tariffs() {
   useEffect(() => {
@@ -122,9 +123,12 @@ export default function Tariffs() {
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">
                   Тарифные планы NetConnect
                 </h1>
-                <p className="text-xl text-muted-foreground">
+                <p className="text-xl text-muted-foreground mb-6">
                   Выберите оптимальный тариф для вашего дома или дачи
                 </p>
+                <div className="flex justify-center">
+                  <UnblockedServicesBadge />
+                </div>
               </div>
             </div>
           </div>
