@@ -29,7 +29,9 @@ const CityPage = () => {
   
   // Alternative slug mappings for redirects (old URLs -> correct URLs)
   const slugRedirects: { [key: string]: string } = {
-    'mytischi': 'mytishchi'
+    'mytischi': 'mytishchi',
+    'schelkovo': 'shchyolkovo',
+    'shelkovo': 'shchyolkovo'
   };
   
   const normalizedSlug = citySlug ? citySlug.toLowerCase()
