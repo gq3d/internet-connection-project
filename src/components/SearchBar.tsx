@@ -114,10 +114,40 @@ export default function SearchBar() {
   useEffect(() => {
     if (query.trim().length > 0) {
       const lowerQuery = query.toLowerCase();
-      const filtered = searchData.filter(item =>
-        item.title.toLowerCase().includes(lowerQuery) ||
-        item.description?.toLowerCase().includes(lowerQuery)
-      ).slice(0, 6);
+      
+      // Фильтруем и сортируем результаты
+      const filtered = searchData
+        .filter(item => {
+          const titleLower = item.title.toLowerCase();
+          const descLower = item.description?.toLowerCase() || '';
+          
+          return titleLower.includes(lowerQuery) || descLower.includes(lowerQuery);
+        })
+        .sort((a, b) => {
+          const aTitle = a.title.toLowerCase();
+          const bTitle = b.title.toLowerCase();
+          
+          // Точное совпадение в начале
+          const aExact = aTitle === lowerQuery;
+          const bExact = bTitle === lowerQuery;
+          if (aExact && !bExact) return -1;
+          if (!aExact && bExact) return 1;
+          
+          // Совпадение с начала строки
+          const aStarts = aTitle.startsWith(lowerQuery);
+          const bStarts = bTitle.startsWith(lowerQuery);
+          if (aStarts && !bStarts) return -1;
+          if (!aStarts && bStarts) return 1;
+          
+          // Деревни и посёлки приоритетнее страниц
+          const aPriority = (a.type === 'village' || a.type === 'city') ? 1 : 0;
+          const bPriority = (b.type === 'village' || b.type === 'city') ? 1 : 0;
+          if (aPriority !== bPriority) return bPriority - aPriority;
+          
+          return 0;
+        })
+        .slice(0, 8); // Увеличено до 8 результатов
+      
       setSuggestions(filtered);
       setIsOpen(true);
       setSelectedIndex(-1);
