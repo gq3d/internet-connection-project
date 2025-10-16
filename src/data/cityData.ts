@@ -600,17 +600,52 @@ function transliterate(text: string): string {
   return text.toLowerCase().split('').map(char => translitMap[char] || char).join('');
 }
 
+function toPrepositionalCase(cityName: string): string {
+  // Города на -ск, -ово, -ино, -ево → -е
+  if (cityName.match(/(ск|ово|ино|ево)$/)) {
+    return cityName.slice(0, -1) + 'е';
+  }
+  // Города на -град → -граде
+  if (cityName.endsWith('град')) {
+    return cityName + 'е';
+  }
+  // Города на -а → -е
+  if (cityName.endsWith('а')) {
+    return cityName.slice(0, -1) + 'е';
+  }
+  // Города на -ы, -и → без изменений
+  if (cityName.match(/[ыи]$/)) {
+    return cityName + 'х';
+  }
+  // Города на -ка → -ке
+  if (cityName.endsWith('ка')) {
+    return cityName.slice(0, -1) + 'е';
+  }
+  // Города на мягкий согласный → добавляем -е
+  if (cityName.match(/[ньйчщ]$/)) {
+    return cityName + 'е';
+  }
+  // Города на -о → -е
+  if (cityName.endsWith('о')) {
+    return cityName.slice(0, -1) + 'е';
+  }
+  // По умолчанию добавляем -е
+  return cityName + 'е';
+}
+
 allCities.forEach(city => {
   const slug = transliterate(city.name)
     .replace(/[^a-z0-9]/g, '-')
     .replace(/-+/g, '-')
     .replace(/^-|-$/g, '');
   
+  const cityInPrepositional = toPrepositionalCase(city.name);
+  
   if (!cityDataMap[slug]) {
     cityDataMap[slug] = {
       name: city.name,
-      seoTitle: `Беспроводной интернет в ${city.name} (${city.district}) — подключение дач и коттеджей | NetConnect`,
-      description: `Качественное подключение беспроводного интернета в ${city.name}, ${city.district}. Подключение дач, коттеджных поселков, СНТ, частных домов. Выезд инженера, установка оборудования, техподдержка 24/7.`,
+      seoTitle: `Беспроводной интернет в ${cityInPrepositional} (${city.district}) — подключение дач и коттеджей | NetConnect`,
+      description: `Качественное подключение беспроводного интернета в ${cityInPrepositional}, ${city.district}. Подключение дач, коттеджных поселков, СНТ, частных домов. Выезд инженера, установка оборудования, техподдержка 24/7.`,
       slug,
       district: city.district
     };
