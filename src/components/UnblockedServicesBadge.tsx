@@ -2,7 +2,7 @@ export default function UnblockedServicesBadge() {
   return (
     <div className="inline-flex items-center gap-3 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10 border-2 border-green-500/30 rounded-2xl px-6 py-4 shadow-lg hover:shadow-xl transition-all">
       <div className="flex items-center gap-2">
-        <span className="text-sm font-medium text-foreground">Работают:</span>
+        <span className="text-sm font-medium text-foreground">Интернет без границ</span>
         <div className="flex items-center gap-2 flex-wrap">
           <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center shadow-sm" title="YouTube">
             <svg className="w-6 h-6" viewBox="0 0 24 24" fill="#FF0000">
