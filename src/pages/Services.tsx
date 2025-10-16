@@ -231,6 +231,27 @@ export default function Services() {
               </Link>
             </div>
           </div>
+
+          {/* Reviews CTA */}
+          <div className="mt-16 max-w-5xl mx-auto">
+            <Link to="/reviews" className="block group">
+              <div className="bg-gradient-to-br from-primary/10 via-secondary/10 to-success/10 border-2 border-primary/20 rounded-2xl p-8 md:p-12 hover:border-primary/40 hover:shadow-xl transition-all duration-300">
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
+                    <Icon name="MessageCircle" size={32} className="text-primary" />
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-4 group-hover:text-primary transition-colors">Отзывы наших клиентов</h2>
+                  <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
+                    Узнайте, что говорят наши клиенты о качестве наших услуг и обслуживания
+                  </p>
+                  <div className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-xl font-semibold group-hover:scale-105 transition-transform">
+                    <span>Читать отзывы</span>
+                    <Icon name="ArrowRight" size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
 
