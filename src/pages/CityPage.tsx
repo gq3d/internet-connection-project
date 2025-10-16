@@ -29,9 +29,28 @@ const CityPage = () => {
   
   // Alternative slug mappings for redirects (old URLs -> correct URLs)
   const slugRedirects: { [key: string]: string } = {
+    // Мытищи: 'щ' can be 'sch' or 'shch'
     'mytischi': 'mytishchi',
+    
+    // Щёлково: 'щ' can be 'sch' or 'shch', 'ё' can be 'e' or 'yo'
     'schelkovo': 'shchyolkovo',
-    'shelkovo': 'shchyolkovo'
+    'shelkovo': 'shchyolkovo',
+    'shchelkovo': 'shchyolkovo',
+    
+    // Химки: 'х' can be 'h' or 'kh'
+    'khimki': 'himki',
+    
+    // Орехово-Зуево: 'х' can be 'h' or 'kh'
+    'orekho-zuevo': 'oreho-zuevo',
+    
+    // Серпухов: 'х' can be 'h' or 'kh'
+    'serpukhov': 'serpuhov',
+    
+    // Чехов: 'х' can be 'h' or 'kh'
+    'chekhov': 'chehov',
+    
+    // Егорьевск: may have extra dash
+    'egorevsk': 'egor-evsk'
   };
   
   const normalizedSlug = citySlug ? citySlug.toLowerCase()
