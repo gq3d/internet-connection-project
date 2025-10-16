@@ -13,12 +13,9 @@ const Index = () => {
   const location = useLocation();
 
   useSEO({
+    title: 'NetConnect - Беспроводной интернет в Московской области | Спутниковый интернет до 250 Мбит/с',
     canonical: 'https://mosoblconnect.ru/'
   });
-
-  useEffect(() => {
-    document.title = 'NetConnect - Интернет в Московской области';
-  }, []);
 
   useEffect(() => {
     const scrollToSection = (anchorId: string, retries = 0) => {
