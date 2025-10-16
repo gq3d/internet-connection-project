@@ -20,7 +20,7 @@ const Index = () => {
     ogDescription: 'Высокоскоростной интернет до 250 Мбит/с в 169+ населённых пунктах Московской области. Города, деревни, КП, СНТ.',
     ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
     canonical: 'https://mosoblconnect.ru/',
-    structuredData: {
+structuredData: {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "NetConnect",
