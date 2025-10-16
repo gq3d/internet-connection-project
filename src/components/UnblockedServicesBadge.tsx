@@ -1,5 +1,11 @@
-export default function UnblockedServicesBadge() {
-  return (
+import { Link } from 'react-router-dom';
+
+interface UnblockedServicesBadgeProps {
+  linkTo?: string;
+}
+
+export default function UnblockedServicesBadge({ linkTo }: UnblockedServicesBadgeProps) {
+  const content = (
     <div className="relative inline-flex flex-col items-center gap-4 bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 border-2 border-primary/20 rounded-3xl px-8 py-6 shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300 backdrop-blur-sm">
       <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 via-blue-500/5 to-purple-500/5 rounded-3xl"></div>
       
@@ -56,4 +62,14 @@ export default function UnblockedServicesBadge() {
       </div>
     </div>
   );
+
+  if (linkTo) {
+    return (
+      <Link to={linkTo} className="block">
+        {content}
+      </Link>
+    );
+  }
+
+  return content;
 }

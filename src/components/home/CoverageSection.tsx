@@ -102,7 +102,7 @@ export default function CoverageSection() {
           </div>
 
           <div className="flex justify-center my-8">
-            <UnblockedServicesBadge />
+            <UnblockedServicesBadge linkTo="/services/internet" />
           </div>
 
           <div className="mb-8">
