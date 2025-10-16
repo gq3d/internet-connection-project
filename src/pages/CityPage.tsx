@@ -27,6 +27,11 @@ const CityPage = () => {
     'ъ': '', 'ы': 'y', 'ь': '', 'э': 'e', 'ю': 'yu', 'я': 'ya'
   };
   
+  // Alternative slug mappings for redirects (old URLs -> correct URLs)
+  const slugRedirects: { [key: string]: string } = {
+    'mytischi': 'mytishchi'
+  };
+  
   const normalizedSlug = citySlug ? citySlug.toLowerCase()
     .split('')
     .map(char => translitMap[char] || char)
@@ -35,10 +40,15 @@ const CityPage = () => {
     .replace(/-+/g, '-')
     .replace(/^-|-$/g, '') : null;
   
-  const city = normalizedSlug ? cityData[normalizedSlug] : null;
+  // Check if this is an old slug that needs redirect
+  const correctSlug = normalizedSlug && slugRedirects[normalizedSlug] 
+    ? slugRedirects[normalizedSlug] 
+    : normalizedSlug;
+  
+  const city = correctSlug ? cityData[correctSlug] : null;
   const [isServicesVisible, setIsServicesVisible] = useState(false);
   
-  const shouldRedirect = citySlug && normalizedSlug && citySlug !== normalizedSlug;
+  const shouldRedirect = citySlug && correctSlug && (citySlug !== correctSlug || citySlug !== normalizedSlug);
 
   // CRITICAL: Set canonical BEFORE redirect to prevent index.html canonical from staying
   // For Cyrillic URLs: set noindex to tell search engines not to index them
@@ -46,7 +56,7 @@ const CityPage = () => {
     title: city ? `Интернет в ${city.name} от 1490₽/мес — подключение за 1-3 дня | NetConnect` : '',
     description: city ? `Беспроводной интернет в ${city.name} и окрестностях: скорость до 250 Мбит/с, установка за 1-3 дня. Подключаем частные дома, дачи, коттеджные посёлки и СНТ. ${city.district}. Бесплатный выезд инженера. Звоните: +7 (901) 500-00-78` : '',
     keywords: city ? `интернет ${city.name}, беспроводной интернет ${city.name}, подключение интернета ${city.name}, интернет на даче ${city.name}, интернет в коттедже ${city.name}, провайдер ${city.name}, ${city.district} интернет, wifi ${city.name}` : '',
-    canonical: normalizedSlug ? `https://mosoblconnect.ru/city/${normalizedSlug}` : '',
+    canonical: correctSlug ? `https://mosoblconnect.ru/city/${correctSlug}` : '',
     ogTitle: city ? `Беспроводной интернет в ${city.name} от 1490₽/мес` : '',
     ogDescription: city ? `Подключаем интернет до 250 Мбит/с за 1-3 дня в ${city.name}. Покрытие частных домов, дач, коттеджных посёлков и СНТ. Бесплатная установка оборудования.` : '',
     ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
@@ -54,9 +64,9 @@ const CityPage = () => {
     noindex: shouldRedirect // Tell search engines: don't index Cyrillic URLs
   });
   
-  // Redirect Cyrillic URLs to canonical Latin URLs AFTER setting canonical
+  // Redirect Cyrillic URLs and old slugs to canonical Latin URLs AFTER setting canonical
   if (shouldRedirect) {
-    return <Navigate to={`/city/${normalizedSlug}`} replace />;
+    return <Navigate to={`/city/${correctSlug}`} replace />;
   }
 
   useEffect(() => {
