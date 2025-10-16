@@ -68,7 +68,7 @@ export default function ServicesCallToAction() {
                 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 w-full max-w-2xl px-2">
                   <Link 
-                    to="/pricing"
+                    to="/tariffs"
                     className={`group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-500 hover:scale-105 hover:shadow-xl ${
                       isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                     }`}
