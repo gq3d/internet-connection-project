@@ -140,8 +140,8 @@ const CityPage = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": `NetConnect`,
-            "alternateName": `NetConnect - Беспроводной интернет в ${city.name}`,
-            "description": `Подключение беспроводного интернета в ${city.name}, ${city.district}. Обслуживаем частные дома, дачи, коттеджные посёлки и СНТ. Скорость до 250 Мбит/с, установка за 1-3 дня.`,
+            "alternateName": `NetConnect - Беспроводной интернет в ${city.nameInPrepositional}`,
+            "description": `Подключение беспроводного интернета в ${city.nameInPrepositional}, ${city.district}. Обслуживаем частные дома, дачи, коттеджные посёлки и СНТ. Скорость до 250 Мбит/с, установка за 1-3 дня.`,
             "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
             "url": `https://mosoblconnect.ru/city/${normalizedSlug}`,
             "telephone": ["+7 (901) 500-00-78", "+7 (901) 500-00-87"],
@@ -251,34 +251,34 @@ const CityPage = () => {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": `Как быстро можно подключить интернет в ${city.name}?`,
+                "name": `Как быстро можно подключить интернет в ${city.nameInPrepositional}?`,
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": `Подключение беспроводного интернета в ${city.name} занимает от 1 до 3 дней. После заявки наш инженер выезжает на объект, устанавливает оборудование и настраивает подключение.`
+                  "text": `Подключение беспроводного интернета в ${city.nameInPrepositional} занимает от 1 до 3 дней. После заявки наш инженер выезжает на объект, устанавливает оборудование и настраивает подключение.`
                 }
               },
               {
                 "@type": "Question",
-                "name": `Какая скорость интернета доступна в ${city.name}?`,
+                "name": `Какая скорость интернета доступна в ${city.nameInPrepositional}?`,
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": `В ${city.name} доступны тарифы со скоростью от 30 до 250 Мбит/с. Конкретная скорость зависит от выбранного тарифа и технических возможностей в вашем районе.`
+                  "text": `В ${city.nameInPrepositional} доступны тарифы со скоростью от 30 до 250 Мбит/с. Конкретная скорость зависит от выбранного тарифа и технических возможностей в вашем районе.`
                 }
               },
               {
                 "@type": "Question",
-                "name": `Сколько стоит интернет в ${city.name}?`,
+                "name": `Сколько стоит интернет в ${city.nameInPrepositional}?`,
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": `Стоимость интернета в ${city.name} начинается от 1490₽ в месяц за тариф Стартовый (30 Мбит/с). Оптимальный тариф (100 Мбит/с) — 1990₽, Максимальный (250 Мбит/с) — 2590₽.`
+                  "text": `Стоимость интернета в ${city.nameInPrepositional} начинается от 1490₽ в месяц за тариф Стартовый (30 Мбит/с). Оптимальный тариф (100 Мбит/с) — 1990₽, Максимальный (250 Мбит/с) — 2590₽.`
                 }
               },
               {
                 "@type": "Question",
-                "name": `Работает ли интернет на дачах в ${city.name}?`,
+                "name": `Работает ли интернет на дачах в ${city.nameInPrepositional}?`,
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": `Да, беспроводной интернет работает на дачах, в СНТ и коттеджных посёлках ${city.name}. Мы специализируемся на подключении интернета в загородных домах.`
+                  "text": `Да, беспроводной интернет работает на дачах, в СНТ и коттеджных посёлках ${city.nameInPrepositional}. Мы специализируемся на подключении интернета в загородных домах.`
                 }
               }
             ]
@@ -293,19 +293,19 @@ const CityPage = () => {
         { label: city.name }
       ]} />
 
-      <CityHero cityName={city.name} district={city.district} />
+      <CityHero cityName={city.nameInPrepositional} district={city.district} />
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <CityServicesSection cityName={city.name} />
-          <CityAdditionalServices cityName={city.name} isVisible={isServicesVisible} />
-          <CityCTA cityName={city.name} />
+          <CityServicesSection cityName={city.nameInPrepositional} />
+          <CityAdditionalServices cityName={city.nameInPrepositional} isVisible={isServicesVisible} />
+          <CityCTA cityName={city.nameInPrepositional} />
         </div>
       </section>
 
-      <CitySEOText cityName={city.name} />
+      <CitySEOText cityName={city.nameInPrepositional} />
 
-      <CityReviews cityName={city.name} />
+      <CityReviews cityName={city.nameInPrepositional} />
 
       <CityWhatsAppButton cityName={city.name} />
       <CityFooter cityName={city.name} />
