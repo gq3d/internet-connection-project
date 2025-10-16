@@ -1,0 +1,42 @@
+{
+  "turboSite": {
+    "site": "mosoblconnect.ru",
+    "name": "NetConnect",
+    "language": "ru",
+    "icon": "https://cdn.poehali.dev/files/c5a89164-139e-4511-95a4-e8257ea9eb51.png",
+    "color": "#2563eb",
+    "analytics": {
+      "yandex": "104206748"
+    },
+    "menu": [
+      {
+        "text": "Главная",
+        "url": "https://mosoblconnect.ru/"
+      },
+      {
+        "text": "Тарифы",
+        "url": "https://mosoblconnect.ru/tariffs"
+      },
+      {
+        "text": "Покрытие",
+        "url": "https://mosoblconnect.ru/coverage"
+      },
+      {
+        "text": "Услуги",
+        "url": "https://mosoblconnect.ru/services"
+      },
+      {
+        "text": "FAQ",
+        "url": "https://mosoblconnect.ru/faq"
+      }
+    ],
+    "contacts": {
+      "phone": "+79015000078",
+      "email": "info@mosoblconnect.ru"
+    },
+    "feedback": {
+      "type": "callback",
+      "url": "https://mosoblconnect.ru/#order-form"
+    }
+  }
+}

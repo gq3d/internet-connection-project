@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:yandex="http://news.yandex.ru" xmlns:media="http://search.yahoo.com/mrss/" xmlns:turbo="http://turbo.yandex.ru" version="2.0">
+    <channel>
+        <title>NetConnect - Провайдер беспроводного интернета</title>
+        <link>https://mosoblconnect.ru</link>
+        <description>Подключение беспроводного интернета в Московской области</description>
+        <language>ru</language>
+        <turbo:analytics id="104206748" type="Yandex"/>
+        
+        <!-- Главная страница -->
+        <item turbo="true">
+            <title>NetConnect - Провайдер беспроводного интернета в Московской области</title>
+            <link>https://mosoblconnect.ru/</link>
+            <turbo:content>
+                <![CDATA[
+                    <header>
+                        <h1>Беспроводной интернет в Московской области</h1>
+                        <figure>
+                            <img src="https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg" alt="NetConnect"/>
+                        </figure>
+                    </header>
+                    <p>NetConnect — надёжный провайдер беспроводного интернета в Московской области. Подключение за 1 день, скорость до 250 Мбит/с.</p>
+                    <ul>
+                        <li>Беспроводной интернет для дачи и загородного дома</li>
+                        <li>Быстрая установка и настройка оборудования</li>
+                        <li>Техподдержка 24/7</li>
+                        <li>Покрытие 59+ городов Подмосковья</li>
+                    </ul>
+                    <button formaction="https://mosoblconnect.ru/tariffs">Выбрать тариф</button>
+                ]]>
+            </turbo:content>
+        </item>
+        
+        <!-- Тарифы -->
+        <item turbo="true">
+            <title>Тарифы на интернет - NetConnect</title>
+            <link>https://mosoblconnect.ru/tariffs</link>
+            <turbo:content>
+                <![CDATA[
+                    <header>
+                        <h1>Тарифы на беспроводной интернет</h1>
+                    </header>
+                    <p>Выберите оптимальный тариф для вашего дома или дачи. Скорость от 50 до 250 Мбит/с.</p>
+                    <h2>Базовый - 990 ₽/мес</h2>
+                    <p>Скорость до 50 Мбит/с. Идеально для дачи и просмотра видео.</p>
+                    <h2>Стандарт - 1290 ₽/мес</h2>
+                    <p>Скорость до 100 Мбит/с. Для всей семьи и онлайн-игр.</p>
+                    <h2>Премиум - 1690 ₽/мес</h2>
+                    <p>Скорость до 250 Мбит/с. Максимальная скорость для дома.</p>
+                    <button formaction="https://mosoblconnect.ru/#order-form">Подключить</button>
+                ]]>
+            </turbo:content>
+        </item>
+        
+        <!-- Покрытие -->
+        <item turbo="true">
+            <title>Зона покрытия интернета - NetConnect</title>
+            <link>https://mosoblconnect.ru/coverage</link>
+            <turbo:content>
+                <![CDATA[
+                    <header>
+                        <h1>Карта покрытия в Московской области</h1>
+                    </header>
+                    <p>Подключаем беспроводной интернет в 59+ городах Подмосковья, включая дачные посёлки и коттеджные посёлки.</p>
+                    <h2>Основные города с покрытием:</h2>
+                    <ul>
+                        <li>Москва и ТиНАО</li>
+                        <li>Подольск, Красногорск, Химки</li>
+                        <li>Королёв, Мытищи, Балашиха</li>
+                        <li>Одинцово, Долгопрудный, Пушкино</li>
+                        <li>И ещё 50+ городов области</li>
+                    </ul>
+                    <button formaction="https://mosoblconnect.ru/coverage">Проверить покрытие</button>
+                ]]>
+            </turbo:content>
+        </item>
+        
+    </channel>
+</rss>

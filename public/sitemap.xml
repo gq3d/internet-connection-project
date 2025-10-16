@@ -75,7 +75,7 @@
         <loc>https://mosoblconnect.ru/signal-boost</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
     
     <!-- Страницы услуг -->
@@ -121,411 +121,411 @@
         <priority>0.9</priority>
     </url>
     
-    <!-- Страницы городов (59 городов) -->
+    <!-- Страницы городов (59 городов - высокий приоритет для региональных запросов) -->
     <url>
         <loc>https://mosoblconnect.ru/city/moskva</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.85</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/podolsk</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/krasnogorsk</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/himki</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/korolyev</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/mytischi</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/lyubertsy</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/elektrostal</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/domodedovo</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/odintsovo</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/sergiev-posad</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/kolomna</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/ramenskoe</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/dolgoprudnyy</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/pushkino</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/zelenograd</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/schyolkovo</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/vidnoe</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/dubna</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/istra</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/orehovo-zuevo</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/klin</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/fryazino</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/lobnya</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/noginsk</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/reutov</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/krasnoarmeysk</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/dmitrov</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/serpuhov</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/egoryevsk</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/lytkarino</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/solnechnogorsk</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/zhukovskiy</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/staraya-kupavna</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/bronnitsy</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/chehov</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/kashira</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/voskresensk</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/ivanteevka</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/pavlovskiy-posad</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/naro-fominsk</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/mozhaysk</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/stupino</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/protvino</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/losino-petrovskiy</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/aprelevka</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/chernogolovka</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/balashiha</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/roshal</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/vysokovsk</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/kurovskoe</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/krasnoznamensk</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/zvenigorod</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/volokolamsk</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/ruza</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/taldom</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/shatura</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://mosoblconnect.ru/city/ozyory</loc>
         <lastmod>2025-10-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
 </urlset>

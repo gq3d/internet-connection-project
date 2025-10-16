@@ -1,5 +1,5 @@
 # mosoblconnect.ru robots.txt
-# Обновлено: 2025-09-30
+# Обновлено: 2025-10-16
 
 User-agent: *
 Allow: /
@@ -10,7 +10,8 @@ Disallow: /*.json$
 # Yandex Bot
 User-agent: Yandex
 Allow: /
-Crawl-delay: 1
+Crawl-delay: 0.5
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&yclid&gclid&fbclid /
 
 # Google Bot
 User-agent: Googlebot
@@ -32,5 +33,8 @@ Allow: /
 # Sitemap
 Sitemap: https://mosoblconnect.ru/sitemap.xml
 
-# Host (для Яндекса)
+# Яндекс.Турбо (ускоренные мобильные страницы)
+Sitemap: https://mosoblconnect.ru/yandex_turbo.xml
+
+# Host (для Яндекса - указание главного зеркала)
 Host: mosoblconnect.ru

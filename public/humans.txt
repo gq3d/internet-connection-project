@@ -1,0 +1,19 @@
+# NetConnect - Провайдер беспроводного интернета в Московской области
+# humanstxt.org
+
+/* КОМАНДА */
+    Разработка: NetConnect Tech Team
+    Контакты: info@mosoblconnect.ru
+    Телефон: +7 (901) 500-00-78
+    Telegram: https://t.me/+QgiLIa1gFRY4Y2Iy
+    Локация: Московская область, Россия
+
+/* САЙТ */
+    Стандарты: HTML5, CSS3, React, TypeScript
+    Компоненты: Vite, React Router, TailwindCSS
+    Софт: VS Code, Bun, Git
+    
+/* БЛАГОДАРНОСТИ */
+    Яндекс.Метрика для аналитики
+    Яндекс.Карты для отображения покрытия
+    Клиентам за доверие и отзывы
