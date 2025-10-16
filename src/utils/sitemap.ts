@@ -8,20 +8,34 @@ export interface SitemapUrl {
 
 // Список всех городов
 const cities = [
-  'Москва', 'Подольск', 'Красногорск', 'Химки', 'Мытищи', 'Люберцы',
-  'Домодедово', 'Сергиев Посад', 'Коломна', 'Пушкино', 'Зеленоград', 'Щёлково',
-  'Видное', 'Дубна', 'Истра', 'Орехово-Зуево', 'Клин', 'Фрязино',
-  'Лобня', 'Ногинск', 'Реутов', 'Красноармейск', 'Дмитров', 'Серпухов',
-  'Егорьевск', 'Лыткарино', 'Солнечногорск', 'Жуковский', 'Старая Купавна',
-  'Бронницы', 'Чехов', 'Кашира'
+  'Москва', 'Подольск', 'Красногорск', 'Химки', 'Королёв', 'Мытищи', 'Люберцы',
+  'Электросталь', 'Домодедово', 'Одинцово', 'Сергиев Посад', 'Коломна', 'Раменское',
+  'Долгопрудный', 'Пушкино', 'Зеленоград', 'Щёлково', 'Видное', 'Дубна', 'Истра',
+  'Орехово-Зуево', 'Клин', 'Фрязино', 'Лобня', 'Ногинск', 'Реутов', 'Красноармейск',
+  'Дмитров', 'Серпухов', 'Егорьевск', 'Лыткарино', 'Солнечногорск', 'Жуковский',
+  'Старая Купавна', 'Бронницы', 'Чехов', 'Кашира', 'Воскресенск', 'Ивантеевка',
+  'Павловский Посад', 'Наро-Фоминск', 'Можайск', 'Ступино', 'Протвино',
+  'Лосино-Петровский', 'Апрелевка', 'Черноголовка', 'Балашиха', 'Рошаль',
+  'Высоковск', 'Куровское', 'Краснознаменск', 'Звенигород', 'Волоколамск',
+  'Руза', 'Талдом', 'Шатура', 'Озёры'
 ];
 
-// Функция генерации slug
+// Функция генерации slug (полная транслитерация)
 const generateCitySlug = (cityName: string): string => {
+  const translitMap: { [key: string]: string } = {
+    'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 'е': 'e', 'ё': 'e',
+    'ж': 'zh', 'з': 'z', 'и': 'i', 'й': 'y', 'к': 'k', 'л': 'l', 'м': 'm',
+    'н': 'n', 'о': 'o', 'п': 'p', 'р': 'r', 'с': 's', 'т': 't', 'у': 'u',
+    'ф': 'f', 'х': 'h', 'ц': 'ts', 'ч': 'ch', 'ш': 'sh', 'щ': 'sch',
+    'ъ': '', 'ы': 'y', 'ь': '', 'э': 'e', 'ю': 'yu', 'я': 'ya'
+  };
+  
   return cityName
     .toLowerCase()
-    .replace(/ё/g, 'e')
-    .replace(/[^a-zA-Z0-9\u0430-\u044f]/g, '-')
+    .split('')
+    .map(char => translitMap[char] || char)
+    .join('')
+    .replace(/[^a-zA-Z0-9]/g, '-')
     .replace(/-+/g, '-')
     .replace(/^-|-$/g, '');
 };
@@ -66,12 +80,59 @@ export const siteUrls: SitemapUrl[] = [
     changefreq: 'weekly',
     priority: 1.0
   },
-  // Главная страница eSIM
+  {
+    loc: '/tariffs',
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: 'monthly' as const,
+    priority: 0.95
+  },
+  {
+    loc: '/pricing',
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: 'monthly' as const,
+    priority: 0.95
+  },
+  {
+    loc: '/coverage',
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: 'weekly' as const,
+    priority: 0.9
+  },
+  {
+    loc: '/services',
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: 'monthly' as const,
+    priority: 0.95
+  },
+  {
+    loc: '/equipment',
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: 'monthly' as const,
+    priority: 0.9
+  },
+  {
+    loc: '/reviews',
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: 'monthly' as const,
+    priority: 0.85
+  },
+  {
+    loc: '/faq',
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: 'monthly' as const,
+    priority: 0.85
+  },
   {
     loc: '/esim',
     lastmod: new Date().toISOString().split('T')[0],
     changefreq: 'weekly' as const,
     priority: 0.9
+  },
+  {
+    loc: '/signal-boost',
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: 'monthly' as const,
+    priority: 0.8
   },
   // Добавляем страницы услуг
   ...servicePages.map(service => ({
