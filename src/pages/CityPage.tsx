@@ -38,22 +38,9 @@ const CityPage = () => {
     // Щёлково: 'щ' can be 'sch' or 'shch', 'ё' can be 'e' or 'yo'
     'schelkovo': 'shchyolkovo',
     'shelkovo': 'shchyolkovo',
-    'shchelkovo': 'shchyolkovo',
-    
-    // Химки: 'х' can be 'h' or 'kh'
-    'khimki': 'himki',
-    
-    // Орехово-Зуево: 'х' can be 'h' or 'kh'
-    'orekho-zuevo': 'oreho-zuevo',
-    
-    // Серпухов: 'х' can be 'h' or 'kh'
-    'serpukhov': 'serpuhov',
     
     // Чехов: 'х' can be 'h' or 'kh'
-    'chekhov': 'chehov',
-    
-    // Егорьевск: may have extra dash
-    'egorevsk': 'egor-evsk'
+    'chekhov': 'chehov'
   };
   
   const normalizedSlug = citySlug ? citySlug.toLowerCase()
