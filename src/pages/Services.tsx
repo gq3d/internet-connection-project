@@ -160,6 +160,77 @@ export default function Services() {
               </div>
             </div>
           </div>
+
+          {/* Quick Links Section */}
+          <div className="mt-16 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6">
+              <Link 
+                to="/coverage#speed-test"
+                className="group block"
+              >
+                <div className="bg-white/80 backdrop-blur-sm border-2 border-primary/20 rounded-2xl p-6 hover:border-primary hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
+                  <div className="flex flex-col h-full">
+                    <div className="flex items-start gap-4 mb-3">
+                      <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Icon name="Gauge" size={28} className="text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors">Тест скорости интернета</h3>
+                        <p className="text-sm text-muted-foreground">Проверьте скорость вашего соединения</p>
+                      </div>
+                    </div>
+                    <div className="mt-auto flex justify-end">
+                      <Icon name="ArrowRight" size={20} className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              <Link 
+                to="/coverage"
+                className="group block"
+              >
+                <div className="bg-white/80 backdrop-blur-sm border-2 border-secondary/20 rounded-2xl p-6 hover:border-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
+                  <div className="flex flex-col h-full">
+                    <div className="flex items-start gap-4 mb-3">
+                      <div className="w-14 h-14 bg-gradient-to-br from-secondary to-secondary/80 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Icon name="MapPin" size={28} className="text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold mb-1 group-hover:text-secondary transition-colors">Карта покрытия</h3>
+                        <p className="text-sm text-muted-foreground">Узнайте, доступен ли интернет в вашем районе</p>
+                      </div>
+                    </div>
+                    <div className="mt-auto flex justify-end">
+                      <Icon name="ArrowRight" size={20} className="text-muted-foreground group-hover:text-secondary group-hover:translate-x-1 transition-all" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              <Link 
+                to="/esim"
+                className="group block"
+              >
+                <div className="bg-white/80 backdrop-blur-sm border-2 border-success/20 rounded-2xl p-6 hover:border-success hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
+                  <div className="flex flex-col h-full">
+                    <div className="flex items-start gap-4 mb-3">
+                      <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Icon name="Smartphone" size={28} className="text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold mb-1 group-hover:text-success transition-colors">eSIM для путешествий</h3>
+                        <p className="text-sm text-muted-foreground">Мобильный интернет в 200+ странах мира</p>
+                      </div>
+                    </div>
+                    <div className="mt-auto flex justify-end">
+                      <Icon name="ArrowRight" size={20} className="text-muted-foreground group-hover:text-success group-hover:translate-x-1 transition-all" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
