@@ -654,3 +654,8 @@ const generatedCities = allCitiesToGenerate.reduce((acc, city) => {
 }, {} as { [key: string]: CityData });
 
 export const cityData = { ...cityDataMap, ...generatedCities };
+
+// Debug: log generated cities count
+console.log('Generated cities count:', Object.keys(generatedCities).length);
+console.log('Total cities count:', Object.keys(cityData).length);
+console.log('Has kotelniki:', 'kotelniki' in cityData);
