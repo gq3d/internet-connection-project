@@ -6,12 +6,9 @@
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   
-  # Для несуществующих страниц возвращаем 404.html с кодом 404
-  RewriteRule . /404.html [L,R=404]
+  # SPA режим: для несуществующих путей отдаём index.html
+  RewriteRule . /index.html [L]
 </IfModule>
-
-# Настройка ErrorDocument для возврата правильного кода 404
-ErrorDocument 404 /404.html
 
 # Кэширование статических ресурсов
 <IfModule mod_expires.c>

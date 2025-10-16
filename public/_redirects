@@ -1,3 +1,3 @@
-# Cloudflare Pages / Netlify redirects
-# Несуществующие страницы возвращают 404
-/*    /404.html   404
+# SPA режим для React Router
+# Все несуществующие пути отдают index.html для клиентского роутинга
+/*    /index.html   200
