@@ -177,7 +177,7 @@ export default function SearchBar() {
   };
 
   return (
-    <div ref={searchRef} className="relative w-full md:max-w-[200px]">
+    <div ref={searchRef} className="relative w-full md:max-w-[180px]">
       <div className="relative">
         <Icon 
           name="Search" 

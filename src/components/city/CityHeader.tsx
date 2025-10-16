@@ -15,25 +15,20 @@ export default function CityHeader() {
           <div className="flex items-center justify-between gap-4">
             <a href="/" className="text-2xl font-bold text-primary flex-shrink-0">NetConnect</a>
             
-            <div className="hidden lg:flex items-center gap-3 flex-1 justify-end">
+            <div className="hidden md:flex items-center gap-4">
               <SearchBar />
-              <Link to="/services" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Услуги</Link>
-              <Link to="/tariffs" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Тарифы</Link>
-              <Link to="/coverage" className="text-sm font-medium hover:text-success transition-colors whitespace-nowrap">Покрытие</Link>
+              <Link to="/services" className="text-sm font-medium hover:text-success transition-colors">Услуги</Link>
+              <Link to="/tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</Link>
+              <Link to="/pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</Link>
+              <Link to="/coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</Link>
+              <Link to="/signal-boost" className="text-sm font-medium hover:text-success transition-colors">Усиление 4G/LTE</Link>
+              <Link to="/esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</Link>
+              <a href="/#about" onClick={(e) => handleAnchorClick(e, 'about')} className="text-sm font-medium hover:text-success transition-colors">О компании</a>
+              <Link to="/faq" className="text-sm font-medium hover:text-success transition-colors">FAQ</Link>
+              <a href="/#contacts" onClick={(e) => handleAnchorClick(e, 'contacts')} className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
               <a 
                 href="tel:+79015000078" 
-                className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium whitespace-nowrap flex-shrink-0"
-              >
-                <Icon name="Phone" size={16} className="mr-2" />
-                +7 (901) 500-00-78
-              </a>
-            </div>
-            
-            <div className="hidden md:flex lg:hidden items-center gap-2">
-              <SearchBar />
-              <a 
-                href="tel:+79015000078" 
-                className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium whitespace-nowrap"
+                className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
               >
                 <Icon name="Phone" size={16} className="mr-2" />
                 +7 (901) 500-00-78
