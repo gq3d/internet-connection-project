@@ -1,70 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 import Icon from '@/components/ui/icon';
-import { generateCitySlug } from '@/utils/citySlug';
 import SpeedTest from '@/components/SpeedTest';
 import YandexCoverageMap from '@/components/YandexCoverageMap';
 import UnblockedServicesBadge from '@/components/UnblockedServicesBadge';
+import { cities } from '@/data/cities';
 
-const cities = [
-  { name: 'Москва', district: 'Город федерального значения' },
-  { name: 'Подольск', district: 'Городской округ Подольск' },
-  { name: 'Красногорск', district: 'Красногорский городской округ' },
-  { name: 'Химки', district: 'Городской округ Химки' },
-  { name: 'Королёв', district: 'Городской округ Королёв' },
-  { name: 'Мытищи', district: 'Городской округ Мытищи' },
-  { name: 'Люберцы', district: 'Люберецкий городской округ' },
-  { name: 'Электросталь', district: 'Городской округ Электросталь' },
-  { name: 'Домодедово', district: 'Городской округ Домодедово' },
-  { name: 'Одинцово', district: 'Одинцовский городской округ' },
-  { name: 'Сергиев Посад', district: 'Сергиево-Посадский городской округ' },
-  { name: 'Коломна', district: 'Городской округ Коломна' },
-  { name: 'Раменское', district: 'Раменский городской округ' },
-  { name: 'Долгопрудный', district: 'Городской округ Долгопрудный' },
-  { name: 'Пушкино', district: 'Пушкинский городской округ' },
-  { name: 'Зеленоград', district: 'Зеленоградский административный округ Москвы' },
-  { name: 'Щёлково', district: 'Щёлковский городской округ' },
-  { name: 'Видное', district: 'Ленинский городской округ' },
-  { name: 'Дубна', district: 'Городской округ Дубна' },
-  { name: 'Истра', district: 'Истринский городской округ' },
-  { name: 'Орехово-Зуево', district: 'Орехово-Зуевский городской округ' },
-  { name: 'Клин', district: 'Клинский городской округ' },
-  { name: 'Фрязино', district: 'Городской округ Фрязино' },
-  { name: 'Лобня', district: 'Городской округ Лобня' },
-  { name: 'Ногинск', district: 'Богородский городской округ' },
-  { name: 'Реутов', district: 'Городской округ Реутов' },
-  { name: 'Красноармейск', district: 'Городской округ Красноармейск' },
-  { name: 'Дмитров', district: 'Дмитровский городской округ' },
-  { name: 'Серпухов', district: 'Городской округ Серпухов' },
-  { name: 'Егорьевск', district: 'Егорьевский городской округ' },
-  { name: 'Лыткарино', district: 'Городской округ Лыткарино' },
-  { name: 'Солнечногорск', district: 'Солнечногорский городской округ' },
-  { name: 'Жуковский', district: 'Городской округ Жуковский' },
-  { name: 'Старая Купавна', district: 'Городской округ Павловский Посад' },
-  { name: 'Бронницы', district: 'Городской округ Бронницы' },
-  { name: 'Чехов', district: 'Чеховский городской округ' },
-  { name: 'Кашира', district: 'Городской округ Кашира' },
-  { name: 'Воскресенск', district: 'Воскресенский городской округ' },
-  { name: 'Ивантеевка', district: 'Городской округ Ивантеевка' },
-  { name: 'Павловский Посад', district: 'Павлово-Посадский городской округ' },
-  { name: 'Наро-Фоминск', district: 'Наро-Фоминский городской округ' },
-  { name: 'Можайск', district: 'Можайский городской округ' },
-  { name: 'Ступино', district: 'Ступинский городской округ' },
-  { name: 'Протвино', district: 'Городской округ Протвино' },
-  { name: 'Лосино-Петровский', district: 'Городской округ Лосино-Петровский' },
-  { name: 'Апрелевка', district: 'Городской округ Апрелевка' },
-  { name: 'Черноголовка', district: 'Городской округ Черноголовка' },
-  { name: 'Балашиха', district: 'Городской округ Балашиха' },
-  { name: 'Рошаль', district: 'Городской округ Рошаль' },
-  { name: 'Высоковск', district: 'Клинский городской округ' },
-  { name: 'Куровское', district: 'Орехово-Зуевский городской округ' },
-  { name: 'Краснознаменск', district: 'Городской округ Краснознаменск' },
-  { name: 'Звенигород', district: 'Одинцовский городской округ' },
-  { name: 'Волоколамск', district: 'Волоколамский городской округ' },
-  { name: 'Руза', district: 'Рузский городской округ' },
-  { name: 'Талдом', district: 'Талдомский городской округ' },
-  { name: 'Шатура', district: 'Шатурский городской округ' },
-  { name: 'Озёры', district: 'Озёрский городской округ' }
-];
+const displayCities = cities;
 
 export default function CoverageSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -139,10 +80,10 @@ export default function CoverageSection() {
             <h3 className="text-2xl font-semibold mb-6 text-center">Основные регионы и города <span className="text-muted-foreground text-lg">(список минимальный, для примера)</span></h3>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center">
-              {cities.map((city, index) => (
+              {displayCities.map((city, index) => (
                 <a
                   key={city.name}
-                  href={`/city/${generateCitySlug(city.name)}`}
+                  href={`/city/${city.slug}`}
                   className={`bg-accent/30 rounded-lg p-3 border hover:bg-accent/50 transition-all duration-500 group ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                   }`}
@@ -150,10 +91,11 @@ export default function CoverageSection() {
                     transitionDelay: `${index * 30}ms`
                   }}
                 >
-                  <div className="flex items-center justify-center">
+                  <div className="flex items-center justify-center mb-1">
                     <Icon name="MapPin" size={16} className="text-success mr-2 group-hover:scale-110 transition-transform" />
                     <span className="font-medium group-hover:text-primary transition-colors">{city.name}</span>
                   </div>
+                  <div className="text-xs text-muted-foreground">{city.region}</div>
                 </a>
               ))}
             </div>
