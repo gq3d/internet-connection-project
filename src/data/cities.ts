@@ -44,7 +44,7 @@ export const cities: City[] = [
   { name: 'Красноармейск', slug: 'krasnoarmeysk', region: 'Московская область' },
   { name: 'Дмитров', slug: 'dmitrov', region: 'Московская область' },
   { name: 'Звенигород', slug: 'zvenigorod', region: 'Московская область' },
-  { name: 'Чехов', slug: 'chehov', region: 'Московская область' },
+  { name: 'Чехов', slug: 'chekhov', region: 'Московская область' },
   { name: 'Троицк', slug: 'troitsk', region: 'Москва' },
   { name: 'Руза', slug: 'ruza', region: 'Московская область' },
   { name: 'Можайск', slug: 'mozhaysk', region: 'Московская область' },
@@ -67,6 +67,6 @@ export const cities: City[] = [
   { name: 'Черноголовка', slug: 'chernogolovka', region: 'Московская область' },
   { name: 'Старая Купавна', slug: 'staraya-kupavna', region: 'Московская область' },
   { name: 'Высоковск', slug: 'vysokovsk', region: 'Московская область' },
-  { name: 'Архангельское', slug: 'arhangelskoe', region: 'Московская область' },
-  { name: 'Нахабино', slug: 'nahabino', region: 'Московская область' },
+  { name: 'Архангельское', slug: 'arkhangelskoe', region: 'Московская область' },
+  { name: 'Нахабино', slug: 'nakhabino', region: 'Московская область' },
 ];
