@@ -1,14 +1,14 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import Icon from '@/components/ui/icon';
 import SpeedTest from '@/components/SpeedTest';
 import YandexCoverageMap from '@/components/YandexCoverageMap';
 import UnblockedServicesBadge from '@/components/UnblockedServicesBadge';
 import { cities } from '@/data/cities';
 
-const displayCities = cities;
-
 export default function CoverageSection() {
   const [isVisible, setIsVisible] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedRegion, setSelectedRegion] = useState<string>('all');
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -31,6 +31,20 @@ export default function CoverageSection() {
       }
     };
   }, []);
+
+  const regions = useMemo(() => {
+    const uniqueRegions = Array.from(new Set(cities.map(city => city.region)));
+    return ['all', ...uniqueRegions.sort()];
+  }, []);
+
+  const filteredCities = useMemo(() => {
+    return cities.filter(city => {
+      const matchesSearch = city.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                          city.region.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesRegion = selectedRegion === 'all' || city.region === selectedRegion;
+      return matchesSearch && matchesRegion;
+    });
+  }, [searchQuery, selectedRegion]);
   return (
     <section id="coverage" className="py-20" ref={sectionRef}>
       <div className="container mx-auto px-4">
@@ -81,27 +95,78 @@ export default function CoverageSection() {
               Основные регионы и города 
               <span className="block md:inline text-muted-foreground text-sm md:text-lg mt-1 md:mt-0"> (список минимальный, для примера)</span>
             </h3>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-              {displayCities.map((city, index) => (
-                <a
-                  key={city.name}
-                  href={`/city/${city.slug}`}
-                  className={`bg-accent/30 rounded-lg p-4 border hover:bg-accent/50 transition-all duration-500 group ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                  }`}
-                  style={{
-                    transitionDelay: `${index * 30}ms`
-                  }}
-                >
-                  <div className="flex items-center justify-start md:justify-center mb-1">
-                    <Icon name="MapPin" size={16} className="text-success mr-2 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                    <span className="font-medium group-hover:text-primary transition-colors text-left md:text-center">{city.name}</span>
-                  </div>
-                  <div className="text-xs text-muted-foreground text-left md:text-center">{city.region}</div>
-                </a>
-              ))}
+
+            <div className="mb-6 space-y-4">
+              <div className="relative">
+                <Icon name="Search" size={20} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
+                <input
+                  type="text"
+                  placeholder="Поиск города или района..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                />
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery('')}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <Icon name="X" size={20} />
+                  </button>
+                )}
+              </div>
+
+              <div className="flex gap-2 flex-wrap">
+                {regions.map(region => (
+                  <button
+                    key={region}
+                    onClick={() => setSelectedRegion(region)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                      selectedRegion === region
+                        ? 'bg-primary text-primary-foreground shadow-md'
+                        : 'bg-accent/50 hover:bg-accent text-foreground'
+                    }`}
+                  >
+                    {region === 'all' ? 'Все районы' : region}
+                  </button>
+                ))}
+              </div>
+
+              {filteredCities.length > 0 && (
+                <div className="text-sm text-muted-foreground text-center">
+                  Найдено: <span className="font-semibold text-foreground">{filteredCities.length}</span> {filteredCities.length === 1 ? 'город' : filteredCities.length < 5 ? 'города' : 'городов'}
+                </div>
+              )}
             </div>
+            
+            {filteredCities.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+                {filteredCities.map((city, index) => (
+                  <a
+                    key={city.name}
+                    href={`/city/${city.slug}`}
+                    className={`bg-accent/30 rounded-lg p-4 border hover:bg-accent/50 transition-all duration-500 group ${
+                      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                    }`}
+                    style={{
+                      transitionDelay: `${index * 30}ms`
+                    }}
+                  >
+                    <div className="flex items-center justify-start md:justify-center mb-1">
+                      <Icon name="MapPin" size={16} className="text-success mr-2 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                      <span className="font-medium group-hover:text-primary transition-colors text-left md:text-center">{city.name}</span>
+                    </div>
+                    <div className="text-xs text-muted-foreground text-left md:text-center">{city.region}</div>
+                  </a>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-12">
+                <Icon name="Search" size={48} className="text-muted-foreground mx-auto mb-4 opacity-50" />
+                <p className="text-lg text-muted-foreground">Ничего не найдено</p>
+                <p className="text-sm text-muted-foreground mt-2">Попробуйте изменить запрос или сбросить фильтр</p>
+              </div>
+            )}
           </div>
 
           <div className="bg-muted/50 border rounded-lg p-6">
