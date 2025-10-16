@@ -64,6 +64,70 @@ let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
         </image:image>
     </url>
     
+    <!-- Основные страницы -->
+    <url>
+        <loc>${baseUrl}/tariffs</loc>
+        <lastmod>${today}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    
+    <url>
+        <loc>${baseUrl}/pricing</loc>
+        <lastmod>${today}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    
+    <url>
+        <loc>${baseUrl}/coverage</loc>
+        <lastmod>${today}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>${baseUrl}/services</loc>
+        <lastmod>${today}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    
+    <url>
+        <loc>${baseUrl}/equipment</loc>
+        <lastmod>${today}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>${baseUrl}/reviews</loc>
+        <lastmod>${today}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>${baseUrl}/faq</loc>
+        <lastmod>${today}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>${baseUrl}/esim</loc>
+        <lastmod>${today}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>${baseUrl}/signal-boost</loc>
+        <lastmod>${today}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
     <!-- Страницы услуг -->
 `;
 
