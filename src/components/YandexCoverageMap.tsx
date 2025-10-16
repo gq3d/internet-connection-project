@@ -11,8 +11,6 @@ export default function YandexCoverageMap() {
   const mapRef = useRef<HTMLDivElement>(null);
   const [mapLoaded, setMapLoaded] = useState(false);
   const mapInstanceRef = useRef<any>(null);
-  const searchControlRef = useRef<any>(null);
-  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     if (typeof window.ymaps !== 'undefined') {
