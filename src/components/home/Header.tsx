@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 import { useAnchorScroll } from '@/hooks/useAnchorScroll';
+import SearchBar from '@/components/SearchBar';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -64,29 +65,35 @@ export default function Header() {
             </div>
 
             {/* Desktop Menu */}
-            <nav className="hidden md:flex items-center space-x-4">
-              <Link to="/services" className="text-sm font-medium hover:text-success transition-colors">Услуги</Link>
-              <Link to="/tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</Link>
-              <Link to="/pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</Link>
-              <Link to="/coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</Link>
-              <Link to="/signal-boost" className="text-sm font-medium hover:text-success transition-colors">Усиление 4G/LTE</Link>
-              <Link to="/esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</Link>
-              <a href="/#about" onClick={handleAboutClick} className="text-sm font-medium hover:text-success transition-colors">О компании</a>
-              <Link to="/faq" className="text-sm font-medium hover:text-success transition-colors">FAQ</Link>
-              <a href="/#contacts" onClick={handleContactsClick} className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
-              <a 
-                href="tel:+79015000078" 
-                className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
-              >
-                <Icon name="Phone" size={16} className="mr-2" />
-                +7 (901) 500-00-78
-              </a>
-            </nav>
+            <div className="hidden md:flex items-center gap-4">
+              <SearchBar />
+              <nav className="flex items-center space-x-4">
+                <Link to="/services" className="text-sm font-medium hover:text-success transition-colors">Услуги</Link>
+                <Link to="/tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</Link>
+                <Link to="/pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</Link>
+                <Link to="/coverage" className="text-sm font-medium hover:text-success transition-colors">Покрытие</Link>
+                <Link to="/signal-boost" className="text-sm font-medium hover:text-success transition-colors">Усиление 4G/LTE</Link>
+                <Link to="/esim" className="text-sm font-medium hover:text-success transition-colors">eSIM</Link>
+                <a href="/#about" onClick={handleAboutClick} className="text-sm font-medium hover:text-success transition-colors">О компании</a>
+                <Link to="/faq" className="text-sm font-medium hover:text-success transition-colors">FAQ</Link>
+                <a href="/#contacts" onClick={handleContactsClick} className="text-sm font-medium hover:text-success transition-colors">Контакты</a>
+                <a 
+                  href="tel:+79015000078" 
+                  className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
+                >
+                  <Icon name="Phone" size={16} className="mr-2" />
+                  +7 (901) 500-00-78
+                </a>
+              </nav>
+            </div>
           </div>
 
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
             <div className="md:hidden mt-4 py-4 border-t border-border">
+              <div className="mb-4">
+                <SearchBar />
+              </div>
               <div className="space-y-4">
                 <Link 
                   to="/services" 
