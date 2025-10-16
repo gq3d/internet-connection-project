@@ -36,11 +36,18 @@ const CityPage = () => {
     'mytischi': 'mytishchi',
     
     // Щёлково: 'щ' can be 'sch' or 'shch', 'ё' can be 'e' or 'yo'
-    'schelkovo': 'shchyolkovo',
-    'shelkovo': 'shchyolkovo',
+    'schelkovo': 'shchelkovo',
+    'shelkovo': 'shchelkovo',
+    'shchyolkovo': 'shchelkovo',
     
     // Чехов: 'х' can be 'h' or 'kh'
-    'chekhov': 'chehov'
+    'chehov': 'chekhov',
+    
+    // Архангельское: 'х' can be 'h' or 'kh'
+    'arhangelskoe': 'arkhangelskoe',
+    
+    // Нахабино: 'х' can be 'h' or 'kh'
+    'nahabino': 'nakhabino'
   };
   
   const normalizedSlug = citySlug ? citySlug.toLowerCase()
