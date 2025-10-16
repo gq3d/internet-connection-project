@@ -76,26 +76,29 @@ export default function CoverageSection() {
             <SpeedTest />
           </div>
           
-          <div className="bg-card border rounded-lg p-8">
-            <h3 className="text-2xl font-semibold mb-6 text-center">Основные регионы и города <span className="text-muted-foreground text-lg">(список минимальный, для примера)</span></h3>
+          <div className="bg-card border rounded-lg p-4 md:p-8">
+            <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-center">
+              Основные регионы и города 
+              <span className="block md:inline text-muted-foreground text-sm md:text-lg mt-1 md:mt-0"> (список минимальный, для примера)</span>
+            </h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
               {displayCities.map((city, index) => (
                 <a
                   key={city.name}
                   href={`/city/${city.slug}`}
-                  className={`bg-accent/30 rounded-lg p-3 border hover:bg-accent/50 transition-all duration-500 group ${
+                  className={`bg-accent/30 rounded-lg p-4 border hover:bg-accent/50 transition-all duration-500 group ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                   }`}
                   style={{
                     transitionDelay: `${index * 30}ms`
                   }}
                 >
-                  <div className="flex items-center justify-center mb-1">
-                    <Icon name="MapPin" size={16} className="text-success mr-2 group-hover:scale-110 transition-transform" />
-                    <span className="font-medium group-hover:text-primary transition-colors">{city.name}</span>
+                  <div className="flex items-center justify-start md:justify-center mb-1">
+                    <Icon name="MapPin" size={16} className="text-success mr-2 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                    <span className="font-medium group-hover:text-primary transition-colors text-left md:text-center">{city.name}</span>
                   </div>
-                  <div className="text-xs text-muted-foreground">{city.region}</div>
+                  <div className="text-xs text-muted-foreground text-left md:text-center">{city.region}</div>
                 </a>
               ))}
             </div>
