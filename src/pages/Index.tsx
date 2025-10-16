@@ -13,12 +13,26 @@ const Index = () => {
   const location = useLocation();
 
   useSEO({
-    canonical: 'https://mosoblconnect.ru/'
+    title: 'NetConnect - Беспроводной интернет в МО | 169+ населённых пунктов, деревень, КП',
+    description: 'Высокоскоростной беспроводной и спутниковый интернет NetConnect до 250 Мбит/с в Московской области. 169+ населённых пунктов: города, деревни, посёлки, КП, СНТ. Удобный поиск. Подключение за 1 день. ☎️ +7 (901) 500-00-78',
+    keywords: 'интернет московская область, беспроводной интернет мо, спутниковый интернет подмосковье, интернет в деревне мо, интернет в коттеджном посёлке, интернет на даче, интернет в снт, быстрый интернет мо, подключить интернет деревня',
+    ogTitle: 'NetConnect - Беспроводной интернет в МО | Города, деревни, посёлки',
+    ogDescription: 'Высокоскоростной интернет до 250 Мбит/с в 169+ населённых пунктах Московской области. Города, деревни, КП, СНТ.',
+    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
+    canonical: 'https://mosoblconnect.ru/',
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "NetConnect",
+      "url": "https://mosoblconnect.ru/",
+      "logo": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+7-901-500-00-78",
+        "contactType": "customer service"
+      }
+    }
   });
-
-  useEffect(() => {
-    document.title = 'NetConnect - Беспроводной интернет в Московской области | Спутниковый интернет до 250 Мбит/с';
-  }, []);
 
   useEffect(() => {
     const scrollToSection = (anchorId: string, retries = 0) => {
