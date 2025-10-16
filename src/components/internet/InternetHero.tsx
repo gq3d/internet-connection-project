@@ -2,6 +2,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
+import UnblockedServicesBadge from '@/components/UnblockedServicesBadge';
 
 const InternetHero = () => {
   return (
@@ -21,6 +22,10 @@ const InternetHero = () => {
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
               Беспроводной интернет до <span className="font-bold text-primary">250 Мбит/с</span> через современные технологии в Московской области
             </p>
+
+            <div className="flex justify-center mb-8">
+              <UnblockedServicesBadge />
+            </div>
             
             <div className="flex flex-wrap justify-center gap-3 mb-16">
               <Badge variant="secondary" className="px-5 py-3 text-base bg-success/10 text-success border-success/20 hover:bg-success/20 transition-colors">
