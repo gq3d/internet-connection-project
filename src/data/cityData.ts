@@ -521,7 +521,7 @@ const cityDataMap: { [key: string]: CityData } = {
   }
 };
 
-const allCities = [
+const allCitiesToGenerate = [
   { name: 'Москва', district: 'Город федерального значения' },
   { name: 'Подольск', district: 'Городской округ Подольск' },
   { name: 'Красногорск', district: 'Красногорский городской округ' },
@@ -633,7 +633,7 @@ function toPrepositionalCase(cityName: string): string {
   return cityName + 'е';
 }
 
-allCities.forEach(city => {
+const generatedCities = allCitiesToGenerate.reduce((acc, city) => {
   const slug = transliterate(city.name)
     .replace(/[^a-z0-9]/g, '-')
     .replace(/-+/g, '-')
@@ -642,7 +642,7 @@ allCities.forEach(city => {
   const cityInPrepositional = toPrepositionalCase(city.name);
   
   if (!cityDataMap[slug]) {
-    cityDataMap[slug] = {
+    acc[slug] = {
       name: city.name,
       seoTitle: `Беспроводной интернет в ${cityInPrepositional} (${city.district}) — подключение дач и коттеджей | NetConnect`,
       description: `Качественное подключение беспроводного интернета в ${cityInPrepositional}, ${city.district}. Подключение дач, коттеджных поселков, СНТ, частных домов. Выезд инженера, установка оборудования, техподдержка 24/7.`,
@@ -650,6 +650,7 @@ allCities.forEach(city => {
       district: city.district
     };
   }
-});
+  return acc;
+}, {} as { [key: string]: CityData });
 
-export const cityData = cityDataMap;
+export const cityData = { ...cityDataMap, ...generatedCities };
