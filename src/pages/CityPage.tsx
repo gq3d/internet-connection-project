@@ -19,9 +19,19 @@ const CityPage = () => {
   const { citySlug } = useParams<{ citySlug: string }>();
   
   // Normalize slug: convert Cyrillic to Latin for canonical URLs
+  const translitMap: { [key: string]: string } = {
+    'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 'е': 'e', 'ё': 'e',
+    'ж': 'zh', 'з': 'z', 'и': 'i', 'й': 'y', 'к': 'k', 'л': 'l', 'м': 'm',
+    'н': 'n', 'о': 'o', 'п': 'p', 'р': 'r', 'с': 's', 'т': 't', 'у': 'u',
+    'ф': 'f', 'х': 'h', 'ц': 'ts', 'ч': 'ch', 'ш': 'sh', 'щ': 'sch',
+    'ъ': '', 'ы': 'y', 'ь': '', 'э': 'e', 'ю': 'yu', 'я': 'ya'
+  };
+  
   const normalizedSlug = citySlug ? citySlug.toLowerCase()
-    .replace(/ё/g, 'e')
-    .replace(/[^a-zA-Z0-9\u0430-\u044f]/g, '-')
+    .split('')
+    .map(char => translitMap[char] || char)
+    .join('')
+    .replace(/[^a-zA-Z0-9]/g, '-')
     .replace(/-+/g, '-')
     .replace(/^-|-$/g, '') : null;
   
