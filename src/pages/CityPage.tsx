@@ -92,6 +92,13 @@ const CityPage = () => {
     }
   }, [shouldRedirect, correctSlug]);
 
+  // Redirect to 404 if city not found
+  useEffect(() => {
+    if (!city && citySlug) {
+      window.location.replace('/404');
+    }
+  }, [city, citySlug]);
+
   useEffect(() => {
     if (city && normalizedSlug) {
       trackCityVisit(city.name, normalizedSlug);
@@ -123,7 +130,7 @@ const CityPage = () => {
   }, []);
 
   if (!city) {
-    return <Navigate to="/404" replace />;
+    return null;
   }
 
   return (
