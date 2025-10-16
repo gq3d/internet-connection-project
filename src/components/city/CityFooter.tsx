@@ -38,10 +38,10 @@ export default function CityFooter({ cityName }: CityFooterProps) {
             <h3 className="font-bold mb-4">Информация</h3>
             <div className="space-y-2 text-sm">
               <Link to="/" className="block text-muted-foreground hover:text-primary transition-colors">Главная</Link>
-              <a href="/#tariffs" className="block text-muted-foreground hover:text-primary transition-colors">Тарифы</a>
-              <a href="/#pricing" className="block text-muted-foreground hover:text-primary transition-colors">Стоимость</a>
-              <a href="/#coverage" className="block text-muted-foreground hover:text-primary transition-colors">Покрытие</a>
-              <a href="/#esim" className="block text-muted-foreground hover:text-primary transition-colors">eSIM</a>
+              <Link to="/tariffs" className="block text-muted-foreground hover:text-primary transition-colors">Тарифы</Link>
+              <Link to="/pricing" className="block text-muted-foreground hover:text-primary transition-colors">Стоимость</Link>
+              <Link to="/coverage" className="block text-muted-foreground hover:text-primary transition-colors">Покрытие</Link>
+              <Link to="/esim" className="block text-muted-foreground hover:text-primary transition-colors">eSIM</Link>
               <a href="/#about" className="block text-muted-foreground hover:text-primary transition-colors">О компании</a>
               <Link to="/faq" className="block text-muted-foreground hover:text-primary transition-colors">FAQ</Link>
               <Link to="/reviews" className="block text-muted-foreground hover:text-primary transition-colors">Отзывы</Link>

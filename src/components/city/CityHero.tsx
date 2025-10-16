@@ -6,10 +6,6 @@ interface CityHeroProps {
 }
 
 export default function CityHero({ cityName, district }: CityHeroProps) {
-  const handleTariffsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    window.location.href = '/#tariffs';
-  };
   return (
     <section className="py-16 bg-gradient-to-r from-primary/10 to-accent/20">
       <div className="container mx-auto px-4">
@@ -36,8 +32,7 @@ export default function CityHero({ cityName, district }: CityHeroProps) {
               <span>Вызвать инженера</span>
             </a>
             <a
-              href="/#tariffs"
-              onClick={handleTariffsClick}
+              href="/tariffs"
               className="border border-primary text-primary px-8 py-3 rounded-lg font-semibold hover:bg-primary/10 transition-colors"
             >
               Посмотреть тарифы
