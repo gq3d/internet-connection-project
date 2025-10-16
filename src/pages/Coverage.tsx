@@ -35,6 +35,111 @@ export default function Coverage() {
         <meta property="og:description" content="Интернет доступен в городах, деревнях, посёлках, КП, СНТ и дачах Московской области. 169+ населённых пунктов в базе. Удобный поиск." />
         <meta property="og:url" content="https://mosoblconnect.ru/coverage" />
         <meta property="og:image" content="https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebPage",
+                "@id": "https://mosoblconnect.ru/coverage#webpage",
+                "url": "https://mosoblconnect.ru/coverage",
+                "name": "Покрытие интернета NetConnect в МО",
+                "description": "Карта покрытия интернета в 169+ населённых пунктах Московской области",
+                "breadcrumb": {
+                  "@id": "https://mosoblconnect.ru/coverage#breadcrumb"
+                },
+                "inLanguage": "ru-RU",
+                "isPartOf": {
+                  "@id": "https://mosoblconnect.ru/#website"
+                }
+              },
+              {
+                "@type": "BreadcrumbList",
+                "@id": "https://mosoblconnect.ru/coverage#breadcrumb",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Главная",
+                    "item": "https://mosoblconnect.ru/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Покрытие",
+                    "item": "https://mosoblconnect.ru/coverage"
+                  }
+                ]
+              },
+              {
+                "@type": "ItemList",
+                "@id": "https://mosoblconnect.ru/coverage#serviceareas",
+                "name": "Зоны покрытия интернета NetConnect",
+                "description": "169+ населённых пунктов Московской области с доступом к интернету",
+                "numberOfItems": 169,
+                "itemListElement": [
+                  {
+                    "@type": "Place",
+                    "name": "Подольск",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "addressRegion": "Московская область",
+                      "addressCountry": "RU"
+                    }
+                  },
+                  {
+                    "@type": "Place",
+                    "name": "Химки",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "addressRegion": "Московская область",
+                      "addressCountry": "RU"
+                    }
+                  },
+                  {
+                    "@type": "Place",
+                    "name": "Видное",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "addressRegion": "Московская область",
+                      "addressCountry": "RU"
+                    }
+                  }
+                ]
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "Есть ли интернет в деревнях Московской области?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Да, NetConnect предоставляет беспроводной и спутниковый интернет в 169+ населённых пунктах Московской области, включая деревни, посёлки, коттеджные посёлки и СНТ."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Как проверить покрытие интернета в моей деревне?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Используйте поиск на сайте mosoblconnect.ru или позвоните по телефону +7 (901) 500-00-78 для уточнения покрытия в вашем населённом пункте."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Какая скорость интернета доступна в коттеджных посёлках?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "В зависимости от тарифа и зоны покрытия скорость может достигать до 250 Мбит/с. Точную скорость для вашего КП можно узнать по телефону +7 (901) 500-00-78."
+                    }
+                  }
+                ]
+              }
+            ]
+          })}
+        </script>
       </Helmet>
       
       <div className="min-h-screen bg-background">
