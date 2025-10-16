@@ -1,6 +1,5 @@
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
-import UnblockedServicesBadge from '@/components/UnblockedServicesBadge';
 import { useEffect, useRef, useState } from 'react';
 
 export default function HeroSection() {
@@ -116,10 +115,6 @@ export default function HeroSection() {
                 </div>
               </a>
             </div>
-          </div>
-
-          <div className="flex justify-center mb-6">
-            <UnblockedServicesBadge />
           </div>
           
           <div className="flex flex-wrap justify-center gap-4">

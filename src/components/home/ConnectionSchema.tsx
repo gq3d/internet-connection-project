@@ -1,4 +1,5 @@
 import Icon from '@/components/ui/icon';
+import UnblockedServicesBadge from '@/components/UnblockedServicesBadge';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -437,6 +438,13 @@ export default function ConnectionSchema() {
                   </div>
                 </div>
               </Link>
+            </div>
+
+            {/* Интернет без границ баннер */}
+            <div className={`mt-12 flex justify-center transition-all duration-1000 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
+              <UnblockedServicesBadge />
             </div>
 
           </div>
