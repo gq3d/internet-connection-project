@@ -3,6 +3,7 @@ import Icon from '@/components/ui/icon';
 import { generateCitySlug } from '@/utils/citySlug';
 import SpeedTest from '@/components/SpeedTest';
 import YandexCoverageMap from '@/components/YandexCoverageMap';
+import UnblockedServicesBadge from '@/components/UnblockedServicesBadge';
 
 const cities = [
   { name: 'Москва', district: 'Город федерального значения' },
@@ -98,6 +99,10 @@ export default function CoverageSection() {
                 <span className="text-sm font-semibold">Вся область</span>
               </div>
             </div>
+          </div>
+
+          <div className="flex justify-center my-8">
+            <UnblockedServicesBadge />
           </div>
 
           <div className="mb-8">
