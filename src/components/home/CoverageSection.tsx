@@ -124,16 +124,11 @@ export default function CoverageSection() {
             
             {filteredCities.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-                {filteredCities.map((city, index) => (
+                {filteredCities.map((city) => (
                   <a
                     key={city.name}
                     href={`/city/${city.slug}`}
-                    className={`bg-accent/30 rounded-lg p-4 border hover:bg-accent/50 transition-all duration-500 group ${
-                      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                    }`}
-                    style={{
-                      transitionDelay: `${Math.min(index * 20, 600)}ms`
-                    }}
+                    className="bg-accent/30 rounded-lg p-4 border hover:bg-accent/50 transition-colors group"
                   >
                     <div className="flex items-center justify-start md:justify-center mb-1">
                       <Icon name="MapPin" size={16} className="text-success mr-2 flex-shrink-0 group-hover:scale-110 transition-transform" />
