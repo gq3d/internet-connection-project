@@ -27,6 +27,8 @@ const searchData: SearchSuggestion[] = [
   { title: 'Wi-Fi', url: '/services/wifi', type: 'service' },
   { title: 'Установка Wi-Fi', url: '/services/wifi-installation', type: 'service' },
   { title: 'Усиление Wi-Fi сигнала', url: '/services/wifi-signal-boost', type: 'service' },
+  { title: 'Wi-Fi роуминг', url: '/services/wifi-roaming', type: 'service' },
+  { title: 'Диагностика Wi-Fi', url: '/services/wifi-diagnostics', type: 'service' },
   { title: 'Безопасность', url: '/services/security', type: 'service' },
   { title: 'Видеонаблюдение', url: '/services/surveillance', type: 'service' },
   { title: 'IP камеры', url: '/services/cameras/ip-cameras', type: 'service' },
@@ -42,6 +44,12 @@ const searchData: SearchSuggestion[] = [
   { title: 'Глобальный eSIM', url: '/esim/global', type: 'service' },
   { title: 'eSIM для Европы', url: '/esim/europe', type: 'service' },
   { title: 'eSIM для Азии', url: '/esim/asia', type: 'service' },
+  { title: 'eSIM для Северной Америки', url: '/esim/north-america', type: 'service' },
+  { title: 'eSIM для Южной Америки', url: '/esim/south-america', type: 'service' },
+  { title: 'eSIM для Африки', url: '/esim/africa', type: 'service' },
+  { title: 'eSIM для Ближнего Востока', url: '/esim/middle-east', type: 'service' },
+  { title: 'eSIM для Австралии', url: '/esim/australia', type: 'service' },
+  { title: 'eSIM для Карибских островов', url: '/esim/caribbean', type: 'service' },
   { title: 'Высокая скорость', url: '/high-speed', type: 'page' },
   { title: 'Стабильное соединение', url: '/stable-connection', type: 'page' },
   { title: 'Безопасное подключение', url: '/secure-connection', type: 'page' },
@@ -49,6 +57,8 @@ const searchData: SearchSuggestion[] = [
   { title: 'Быстрая настройка', url: '/fast-setup', type: 'page' },
   { title: 'FAQ', url: '/faq', type: 'page' },
   { title: 'Услуги', url: '/services', type: 'page' },
+  { title: 'Оборудование', url: '/equipment', type: 'page' },
+  { title: 'Отзывы', url: '/reviews', type: 'page' },
 ];
 
 export default function SearchBar() {
@@ -56,6 +66,7 @@ export default function SearchBar() {
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [isFocused, setIsFocused] = useState(false);
   const navigate = useNavigate();
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -84,8 +95,10 @@ export default function SearchBar() {
 
   useEffect(() => {
     if (query.trim().length > 0) {
+      const lowerQuery = query.toLowerCase();
       const filtered = searchData.filter(item =>
-        item.title.toLowerCase().includes(query.toLowerCase())
+        item.title.toLowerCase().includes(lowerQuery) ||
+        item.description?.toLowerCase().includes(lowerQuery)
       ).slice(0, 6);
       setSuggestions(filtered);
       setIsOpen(true);
@@ -142,7 +155,9 @@ export default function SearchBar() {
   };
 
   return (
-    <div ref={searchRef} className="relative w-full max-w-[200px]">
+    <div ref={searchRef} className={`relative w-full transition-all duration-300 ${
+      isFocused ? 'max-w-[320px]' : 'max-w-[200px]'
+    }`}>
       <div className="relative">
         <Icon 
           name="Search" 
@@ -155,7 +170,11 @@ export default function SearchBar() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
-          onFocus={() => query.trim().length > 0 && setIsOpen(true)}
+          onFocus={() => {
+            setIsFocused(true);
+            query.trim().length > 0 && setIsOpen(true);
+          }}
+          onBlur={() => setIsFocused(false)}
           placeholder="Поиск..."
           className="w-full pl-9 pr-9 py-1.5 text-sm border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all placeholder:text-muted-foreground/60"
         />
@@ -173,7 +192,7 @@ export default function SearchBar() {
       </div>
 
       {isOpen && suggestions.length > 0 && (
-        <div className="absolute top-full mt-2 w-max min-w-[300px] max-w-[400px] bg-white rounded-lg shadow-lg border border-border overflow-hidden z-50 right-0">
+        <div className="absolute top-full mt-2 w-max min-w-[300px] max-w-[400px] bg-white rounded-lg shadow-lg border border-border overflow-hidden z-50 right-0 animate-in fade-in slide-in-from-top-2 duration-200">
           {suggestions.map((suggestion, index) => (
             <button
               key={suggestion.url}
@@ -197,7 +216,7 @@ export default function SearchBar() {
       )}
 
       {isOpen && query.trim().length > 0 && suggestions.length === 0 && (
-        <div className="absolute top-full mt-2 w-max min-w-[250px] bg-white rounded-lg shadow-lg border border-border p-4 z-50 right-0">
+        <div className="absolute top-full mt-2 w-max min-w-[250px] bg-white rounded-lg shadow-lg border border-border p-4 z-50 right-0 animate-in fade-in slide-in-from-top-2 duration-200">
           <div className="flex items-center gap-2 text-muted-foreground text-sm">
             <Icon name="Search" size={16} />
             <span>Ничего не найдено</span>
