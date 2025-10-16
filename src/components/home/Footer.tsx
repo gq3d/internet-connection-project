@@ -1,9 +1,8 @@
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 
 export default function Footer() {
   const location = useLocation();
-  const navigate = useNavigate();
 
   const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, anchor: string) => {
     e.preventDefault();
@@ -14,13 +13,7 @@ export default function Footer() {
         section.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      navigate('/');
-      setTimeout(() => {
-        const section = document.getElementById(anchor);
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
+      window.location.href = `/#${anchor}`;
     }
   };
 
