@@ -19,7 +19,19 @@ const Index = () => {
     ogTitle: 'NetConnect - Беспроводной интернет в МО | Города, деревни, посёлки',
     ogDescription: 'Высокоскоростной интернет до 250 Мбит/с в 169+ населённых пунктах Московской области. Города, деревни, КП, СНТ.',
     ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
-    canonical: 'https://mosoblconnect.ru/'
+    canonical: 'https://mosoblconnect.ru/',
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "NetConnect",
+      "url": "https://mosoblconnect.ru/",
+      "logo": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+7-901-500-00-78",
+        "contactType": "customer service"
+      }
+    }
   });
 
   useEffect(() => {
