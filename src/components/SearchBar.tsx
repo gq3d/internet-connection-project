@@ -2,11 +2,12 @@ import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 import { cities } from '@/data/cities';
+import { settlements } from '@/data/settlements';
 
 interface SearchSuggestion {
   title: string;
   url: string;
-  type: 'page' | 'city' | 'service';
+  type: 'page' | 'city' | 'service' | 'village';
   description?: string;
 }
 
@@ -17,8 +18,26 @@ const cityData: SearchSuggestion[] = cities.map(city => ({
   description: city.region,
 }));
 
+const settlementData: SearchSuggestion[] = settlements.map(settlement => {
+  const city = cities.find(c => c.slug === settlement.city);
+  const typeLabel = {
+    'village': 'деревня',
+    'settlement': 'посёлок',
+    'cottage': 'КП',
+    'snt': 'СНТ'
+  }[settlement.type];
+  
+  return {
+    title: settlement.name,
+    url: `/city/${settlement.city}`,
+    type: 'village' as const,
+    description: `${typeLabel}, ${city?.name || ''}`,
+  };
+});
+
 const searchData: SearchSuggestion[] = [
   ...cityData,
+  ...settlementData,
   { title: 'Покрытие', url: '/coverage', type: 'page' },
   { title: 'Тарифы', url: '/tariffs', type: 'page' },
   { title: 'Стоимость подключения', url: '/pricing', type: 'page' },
@@ -135,6 +154,8 @@ export default function SearchBar() {
     switch (type) {
       case 'city':
         return 'MapPin';
+      case 'village':
+        return 'Home';
       case 'service':
         return 'Wrench';
       default:
@@ -146,6 +167,8 @@ export default function SearchBar() {
     switch (type) {
       case 'city':
         return 'Город';
+      case 'village':
+        return 'Населённый пункт';
       case 'service':
         return 'Услуга';
       default:
@@ -154,7 +177,7 @@ export default function SearchBar() {
   };
 
   return (
-    <div ref={searchRef} className="relative w-full max-w-[200px]">
+    <div ref={searchRef} className="relative w-full md:max-w-[200px]">
       <div className="relative">
         <Icon 
           name="Search" 
@@ -185,7 +208,7 @@ export default function SearchBar() {
       </div>
 
       {isOpen && suggestions.length > 0 && (
-        <div className="absolute top-full mt-2 w-max min-w-[300px] max-w-[400px] bg-white rounded-lg shadow-lg border border-border overflow-hidden z-50 right-0 animate-in fade-in slide-in-from-top-2 duration-200">
+        <div className="absolute top-full mt-2 w-full md:w-max md:min-w-[300px] md:max-w-[400px] md:right-0 bg-white rounded-lg shadow-lg border border-border overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200">
           {suggestions.map((suggestion, index) => (
             <button
               key={suggestion.url}
@@ -209,7 +232,7 @@ export default function SearchBar() {
       )}
 
       {isOpen && query.trim().length > 0 && suggestions.length === 0 && (
-        <div className="absolute top-full mt-2 w-max min-w-[250px] bg-white rounded-lg shadow-lg border border-border p-4 z-50 right-0 animate-in fade-in slide-in-from-top-2 duration-200">
+        <div className="absolute top-full mt-2 w-full md:w-max md:min-w-[250px] md:right-0 bg-white rounded-lg shadow-lg border border-border p-4 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
           <div className="flex items-center gap-2 text-muted-foreground text-sm">
             <Icon name="Search" size={16} />
             <span>Ничего не найдено</span>
