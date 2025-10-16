@@ -66,7 +66,6 @@ export default function SearchBar() {
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
-  const [isFocused, setIsFocused] = useState(false);
   const navigate = useNavigate();
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -155,9 +154,7 @@ export default function SearchBar() {
   };
 
   return (
-    <div ref={searchRef} className={`relative w-full transition-all duration-300 ${
-      isFocused ? 'max-w-[320px]' : 'max-w-[200px]'
-    }`}>
+    <div ref={searchRef} className="relative w-full max-w-[200px]">
       <div className="relative">
         <Icon 
           name="Search" 
@@ -170,11 +167,7 @@ export default function SearchBar() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
-          onFocus={() => {
-            setIsFocused(true);
-            query.trim().length > 0 && setIsOpen(true);
-          }}
-          onBlur={() => setIsFocused(false)}
+          onFocus={() => query.trim().length > 0 && setIsOpen(true)}
           placeholder="Поиск..."
           className="w-full pl-9 pr-9 py-1.5 text-sm border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all placeholder:text-muted-foreground/60"
         />
