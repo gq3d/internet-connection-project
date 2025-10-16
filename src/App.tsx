@@ -84,6 +84,7 @@ const App = () => (
               <Route path="/faq" element={<FAQ />} />
               <Route path="/services" element={<Services />} />
               <Route path="/city/:citySlug" element={<CityPage />} />
+              <Route path="/ozery" element={<CityPage />} />
               <Route path="/services/internet" element={<Internet />} />
               <Route path="/services/satellite" element={<Satellite />} />
               <Route path="/services/wifi" element={<Wifi />} />

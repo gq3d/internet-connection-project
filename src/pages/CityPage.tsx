@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -16,7 +16,10 @@ import CitySEOText from '@/components/city/CitySEOText';
 import CityReviews from '@/components/city/CityReviews';
 
 const CityPage = () => {
-  const { citySlug } = useParams<{ citySlug: string }>();
+  const { citySlug: paramSlug } = useParams<{ citySlug: string }>();
+  const location = useLocation();
+  
+  const citySlug = paramSlug || location.pathname.replace(/^\//, '').replace(/\/$/, '');
   
   // Normalize slug: convert Cyrillic to Latin for canonical URLs
   const translitMap: { [key: string]: string } = {
