@@ -2,6 +2,7 @@ import { getCitySEOGroup1 } from './seo/CitySEOGroup1';
 import { getCitySEOGroup2 } from './seo/CitySEOGroup2';
 import { getCitySEOGroup3 } from './seo/CitySEOGroup3';
 import { getCitySEOGroup4 } from './seo/CitySEOGroup4';
+import { getCitySEOGroup5 } from './seo/CitySEOGroup5';
 
 interface CitySEOTextProps {
   cityName: string;
@@ -14,6 +15,7 @@ const CitySEOText = ({ cityName }: CitySEOTextProps) => {
       getCitySEOGroup2(cityName) ||
       getCitySEOGroup3(cityName) ||
       getCitySEOGroup4(cityName) ||
+      getCitySEOGroup5(cityName) ||
       null
     );
   };
