@@ -21,8 +21,6 @@ export default function UnblockedServicesBadge() {
           </div>
         </div>
       </div>
-      <div className="h-6 w-px bg-border"></div>
-      <span className="text-xs font-semibold text-green-600">Без VPN</span>
     </div>
   );
 }
