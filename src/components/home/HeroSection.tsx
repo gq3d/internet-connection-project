@@ -40,10 +40,6 @@ export default function HeroSection() {
             Беспроводной интернет в Московской области
           </h1>
 
-          <div className="flex justify-center mb-6">
-            <UnblockedServicesBadge />
-          </div>
-
           {/* Mobile only: Large Internet card above description */}
           <div className="md:hidden mb-6">
             <a href="/services/internet" className="block">
@@ -120,6 +116,10 @@ export default function HeroSection() {
                 </div>
               </a>
             </div>
+          </div>
+
+          <div className="flex justify-center mb-6">
+            <UnblockedServicesBadge />
           </div>
           
           <div className="flex flex-wrap justify-center gap-4">
