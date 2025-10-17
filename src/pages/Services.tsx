@@ -61,7 +61,8 @@ export default function Services() {
       <Helmet>
         <title>Наши услуги - NetConnect</title>
         <meta name="description" content="Полный спектр телекоммуникационных и охранных услуг для дома и бизнеса в Московской области: интернет, видеонаблюдение, Wi-Fi, системы охраны, спутниковый интернет" />
-        <link rel="canonical" href="https://mosoblconnect.ru/services/" />
+        <link rel="canonical" href="https://mosoblconnect.ru/services" />
+        <meta name="keywords" content="услуги интернет московская область, видеонаблюдение мо, wifi оборудование, охранные системы, спутниковый интернет, усиление связи" />
       </Helmet>
       
       <div className="min-h-screen bg-background">
