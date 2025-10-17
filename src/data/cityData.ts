@@ -680,8 +680,12 @@ function transliterate(text: string): string {
 }
 
 function toPrepositionalCase(cityName: string): string {
-  // Города на -ск, -ово, -ино, -ево → -е
-  if (cityName.match(/(ск|ово|ино|ево)$/)) {
+  // Города на -ск → -ске (Электрогорск → Электрогорске)
+  if (cityName.endsWith('ск')) {
+    return cityName + 'е';
+  }
+  // Города на -ово, -ино, -ево → -е
+  if (cityName.match(/(ово|ино|ево)$/)) {
     return cityName.slice(0, -1) + 'е';
   }
   // Города на -град → -граде
