@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Icon from '@/components/ui/icon';
 import { useAnchorScroll } from '@/hooks/useAnchorScroll';
+import SearchBar from '@/components/SearchBar';
 
 const SecurityHeader = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -26,6 +27,7 @@ const SecurityHeader = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-4">
+            <SearchBar />
             <a href="/services" className="text-sm font-medium hover:text-success transition-colors">Услуги</a>
             <a href="/tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</a>
             <a href="/pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</a>
@@ -64,6 +66,9 @@ const SecurityHeader = () => {
 
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 py-4 border-t border-border">
+            <div className="mb-4">
+              <SearchBar />
+            </div>
             <div className="space-y-4">
               <a href="/services" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-medium hover:text-success transition-colors">Услуги</a>
               <a href="/tariffs" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-sm font-medium hover:text-success transition-colors">Тарифы</a>

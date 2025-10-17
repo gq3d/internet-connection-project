@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 import { useAnchorScroll } from '@/hooks/useAnchorScroll';
+import SearchBar from '@/components/SearchBar';
 
 const SurveillanceHeader = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -63,6 +64,7 @@ const SurveillanceHeader = () => {
             </div>
 
             <nav className="hidden md:flex items-center space-x-4">
+              <SearchBar />
               <Link to="/services" className="text-sm font-medium hover:text-success transition-colors">Услуги</Link>
               <Link to="/tariffs" className="text-sm font-medium hover:text-success transition-colors">Тарифы</Link>
               <Link to="/pricing" className="text-sm font-medium hover:text-success transition-colors">Стоимость</Link>
@@ -84,6 +86,9 @@ const SurveillanceHeader = () => {
 
           {isMobileMenuOpen && (
             <div className="md:hidden mt-4 py-4 border-t border-border">
+              <div className="mb-4">
+                <SearchBar />
+              </div>
               <div className="space-y-4">
                 <Link 
                   to="/services" 
