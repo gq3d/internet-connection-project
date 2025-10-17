@@ -241,19 +241,19 @@ const CityPage = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Главная",
-                "item": "https://mosoblconnect.ru"
+                "item": "https://wiline.ru"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Покрытие",
-                "item": "https://mosoblconnect.ru/coverage"
+                "item": "https://wiline.ru/coverage"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": city.name,
-                "item": `https://mosoblconnect.ru/city/${normalizedSlug}`
+                "item": `https://wiline.ru/city/${normalizedSlug}`
               }
             ]
           })}

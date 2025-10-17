@@ -292,7 +292,7 @@ export default function Equipment() {
             "@type": "Brand",
             "name": "NetConnect"
           },
-          "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
+          "image": "https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
           "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "RUB",
@@ -321,13 +321,13 @@ export default function Equipment() {
               "@type": "ListItem",
               "position": 1,
               "name": "Главная",
-              "item": "https://mosoblconnect.ru/"
+              "item": "https://wiline.ru/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Оборудование",
-              "item": "https://mosoblconnect.ru/equipment"
+              "item": "https://wiline.ru/equipment"
             }
           ]
         })}
