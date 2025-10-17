@@ -86,8 +86,8 @@ const CityPage = () => {
   // CRITICAL: Set canonical BEFORE redirect to prevent index.html canonical from staying
   // For Cyrillic URLs: set noindex to tell search engines not to index them
   useSEO({
-    title: city ? `Интернет в ${city.name} от 1490₽/мес — подключение за 1-3 дня | NetConnect` : '',
-    description: city ? `Беспроводной интернет в ${city.name} и окрестностях: скорость до 250 Мбит/с, установка за 1-3 дня. Подключаем частные дома, дачи, коттеджные посёлки и СНТ. ${city.district}. Бесплатный выезд инженера. Звоните: +7 (901) 500-00-78` : '',
+    title: city?.seoTitle || '',
+    description: city?.description || '',
     keywords: city ? `интернет ${city.name}, беспроводной интернет ${city.name}, подключение интернета ${city.name}, интернет на даче ${city.name}, интернет в коттедже ${city.name}, провайдер ${city.name}, ${city.district} интернет, wifi ${city.name}` : '',
     canonical: correctSlug ? `https://wiline.ru/city/${correctSlug}` : '',
     ogTitle: city ? `Беспроводной интернет в ${city.name} от 1490₽/мес` : '',
