@@ -59,10 +59,10 @@ export default function Services() {
   return (
     <>
       <Helmet>
-        <title>Наши услуги - NetConnect</title>
-        <meta name="description" content="Полный спектр телекоммуникационных и охранных услуг для дома и бизнеса в Московской области: интернет, видеонаблюдение, Wi-Fi, системы охраны, спутниковый интернет" />
+        <title>Подключение интернета и услуги связи в Московской области - быстро и надежно</title>
+        <meta name="description" content="Подключение беспроводного интернета, видеонаблюдение, Wi-Fi оборудование, системы охраны в Подмосковье. Скорость до 250 Мбит/с. Поддержка 24/7. Профессиональный монтаж." />
         <link rel="canonical" href="https://wiline.ru/services" />
-        <meta name="keywords" content="услуги интернет московская область, видеонаблюдение мо, wifi оборудование, охранные системы, спутниковый интернет, усиление связи" />
+        <meta name="keywords" content="подключить интернет московская область, беспроводной интернет подмосковье, видеонаблюдение дача, wifi оборудование частный дом, охранные системы мо" />
       </Helmet>
       
       <div className="min-h-screen bg-background">
@@ -71,9 +71,9 @@ export default function Services() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Наши услуги</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Услуги связи и интернета в Подмосковье</h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Полный спектр телекоммуникационных и охранных услуг для дома и бизнеса
+              Подключение беспроводного интернета, видеонаблюдение, Wi-Fi оборудование и системы охраны для дома и бизнеса
             </p>
           </div>
           
