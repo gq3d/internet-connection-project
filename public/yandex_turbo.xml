@@ -2,7 +2,7 @@
 <rss xmlns:yandex="http://news.yandex.ru" xmlns:media="http://search.yahoo.com/mrss/" xmlns:turbo="http://turbo.yandex.ru" version="2.0">
     <channel>
         <title>NetConnect - Провайдер беспроводного интернета</title>
-        <link>https://mosoblconnect.ru</link>
+        <link>https://wiline.ru</link>
         <description>Подключение беспроводного интернета в Московской области</description>
         <language>ru</language>
         <turbo:analytics id="104206748" type="Yandex"/>
@@ -10,13 +10,13 @@
         <!-- Главная страница -->
         <item turbo="true">
             <title>NetConnect - Провайдер беспроводного интернета в Московской области</title>
-            <link>https://mosoblconnect.ru/</link>
+            <link>https://wiline.ru/</link>
             <turbo:content>
                 <![CDATA[
                     <header>
                         <h1>Беспроводной интернет в Московской области</h1>
                         <figure>
-                            <img src="https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg" alt="NetConnect"/>
+                            <img src="https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg" alt="NetConnect"/>
                         </figure>
                     </header>
                     <p>NetConnect — надёжный провайдер беспроводного интернета в Московской области. Подключение за 1 день, скорость до 250 Мбит/с.</p>
@@ -26,7 +26,7 @@
                         <li>Техподдержка 24/7</li>
                         <li>Покрытие 59+ городов Подмосковья</li>
                     </ul>
-                    <button formaction="https://mosoblconnect.ru/tariffs">Выбрать тариф</button>
+                    <button formaction="https://wiline.ru/tariffs">Выбрать тариф</button>
                 ]]>
             </turbo:content>
         </item>
@@ -34,7 +34,7 @@
         <!-- Тарифы -->
         <item turbo="true">
             <title>Тарифы на интернет - NetConnect</title>
-            <link>https://mosoblconnect.ru/tariffs</link>
+            <link>https://wiline.ru/tariffs</link>
             <turbo:content>
                 <![CDATA[
                     <header>
@@ -47,7 +47,7 @@
                     <p>Скорость до 100 Мбит/с. Для всей семьи и онлайн-игр.</p>
                     <h2>Премиум - 1690 ₽/мес</h2>
                     <p>Скорость до 250 Мбит/с. Максимальная скорость для дома.</p>
-                    <button formaction="https://mosoblconnect.ru/#order-form">Подключить</button>
+                    <button formaction="https://wiline.ru/#order-form">Подключить</button>
                 ]]>
             </turbo:content>
         </item>
@@ -55,7 +55,7 @@
         <!-- Покрытие -->
         <item turbo="true">
             <title>Зона покрытия интернета - NetConnect</title>
-            <link>https://mosoblconnect.ru/coverage</link>
+            <link>https://wiline.ru/coverage</link>
             <turbo:content>
                 <![CDATA[
                     <header>
@@ -70,7 +70,7 @@
                         <li>Одинцово, Долгопрудный, Пушкино</li>
                         <li>И ещё 50+ городов области</li>
                     </ul>
-                    <button formaction="https://mosoblconnect.ru/coverage">Проверить покрытие</button>
+                    <button formaction="https://wiline.ru/coverage">Проверить покрытие</button>
                 ]]>
             </turbo:content>
         </item>

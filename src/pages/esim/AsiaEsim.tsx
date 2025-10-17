@@ -148,10 +148,10 @@ export default function AsiaEsim() {
       <Helmet>
         <title>eSIM для Азии - Интернет в 30+ странах | NetConnect</title>
         <meta name="description" content="Купить eSIM для Азии. Тарифы от 878₽, безлимитный интернет в 30+ странах Азии. Активация за 5 минут." />
-        <link rel="canonical" href="https://mosoblconnect.ru/esim/asia" />
+        <link rel="canonical" href="https://wiline.ru/esim/asia" />
         <meta property="og:title" content="eSIM для Азии - Интернет в 30+ странах | NetConnect" />
         <meta property="og:description" content="Купить eSIM для Азии. Тарифы от 878₽, безлимитный интернет в 30+ странах." />
-        <meta property="og:url" content="https://mosoblconnect.ru/esim/asia" />
+        <meta property="og:url" content="https://wiline.ru/esim/asia" />
       </Helmet>
       
       <div className="min-h-screen bg-background">

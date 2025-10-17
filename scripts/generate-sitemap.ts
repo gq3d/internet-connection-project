@@ -45,7 +45,7 @@ const generateCitySlug = (cityName: string): string => {
 };
 
 const today = new Date().toISOString().split('T')[0];
-const baseUrl = 'https://mosoblconnect.ru';
+const baseUrl = 'https://wiline.ru';
 
 // Генерация XML
 let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -59,7 +59,7 @@ let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <image:image>
-            <image:loc>https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg</image:loc>
+            <image:loc>https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg</image:loc>
             <image:title>NetConnect - провайдер интернета в Московской области</image:title>
         </image:image>
     </url>

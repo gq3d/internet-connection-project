@@ -9,10 +9,10 @@ const FastSetup = () => {
   useSEO({
     title: 'Быстрое подключение интернета за 1-3 дня в МО | NetConnect',
     description: 'Подключение беспроводного интернета за 1-3 дня без прокладки кабелей. Профессиональная установка, всё оборудование включено. Без копания траншей. Звоните: +7 (901) 500-00-78',
-    canonical: 'https://mosoblconnect.ru/fast-setup',
+    canonical: 'https://wiline.ru/fast-setup',
     ogTitle: 'Быстрое подключение интернета за 1-3 дня в Московской области',
     ogDescription: 'Установка беспроводного интернета за 1-3 дня. Без прокладки кабелей, профессиональный монтаж оборудования.',
-    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
+    ogImage: 'https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
     ogImageAlt: 'Быстрое подключение интернета NetConnect'
   });
 

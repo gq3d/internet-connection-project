@@ -10,10 +10,10 @@ const AlarmSecurity = () => {
   useSEO({
     title: 'Охранная сигнализация в МО от 35000₽ | NetConnect',
     description: 'Установка охранной сигнализации под ключ. Датчики движения, пультовая охрана, SMS уведомления. Звоните: +7 (901) 500-00-78',
-    canonical: 'https://mosoblconnect.ru/services/alarm-security',
+    canonical: 'https://wiline.ru/services/alarm-security',
     ogTitle: 'Охранная сигнализация в МО от 35000₽',
     ogDescription: 'Профессиональная установка охранной сигнализации. Датчики движения и открытия, пультовая охрана, мобильные уведомления.',
-    ogImage: 'https://cdn.mosoblconnect.ru/files/security-alarm.jpg',
+    ogImage: 'https://cdn.wiline.ru/files/security-alarm.jpg',
     ogImageAlt: 'Охранная сигнализация NetConnect',
     structuredData: {
       '@context': 'https://schema.org',

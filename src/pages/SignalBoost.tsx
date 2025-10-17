@@ -15,12 +15,12 @@ export default function SignalBoost() {
         <title>Усиление 4G/LTE интернета в МО - от 16800₽ | Антенны и роутеры для интернета</title>
         <meta name="description" content="Усиление 4G/LTE интернета для дачи и загородного дома в Московской области. Антенны с роутерами от 16800₽, уличные 4G роутеры от 45000₽. Решения именно для мобильного интернета, не для голосовой связи. Установка от 8000₽ ☎ +7 (901) 500-00-78" />
         <meta name="keywords" content="усилитель 4g интернета московская область, антенна 4g lte для интернета, усиление мобильного интернета на даче, уличный 4g роутер, антенна для 4g модема, усилитель lte интернета для дачи" />
-        <link rel="canonical" href="https://mosoblconnect.ru/signal-boost" />
+        <link rel="canonical" href="https://wiline.ru/signal-boost" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Усиление 4G/LTE интернета для дачи и дома - от 16800₽" />
         <meta property="og:description" content="Решения для усиления 4G/LTE интернета: антенны с роутерами, уличные 4G роутеры. Стабильный мобильный интернет даже при слабом сигнале. Установка в МО" />
-        <meta property="og:url" content="https://mosoblconnect.ru/signal-boost" />
-        <meta property="og:image" content="https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg" />
+        <meta property="og:url" content="https://wiline.ru/signal-boost" />
+        <meta property="og:image" content="https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

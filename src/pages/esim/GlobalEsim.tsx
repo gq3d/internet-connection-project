@@ -136,10 +136,10 @@ export default function GlobalEsim() {
       <Helmet>
         <title>Глобальные eSIM для интернета - 106 стран | NetConnect</title>
         <meta name="description" content="Купить глобальные eSIM для путешествий по всему миру. Тарифы от 2980₽, безлимитный интернет, звонки и SMS в 106 странах. Активация за 5 минут." />
-        <link rel="canonical" href="https://mosoblconnect.ru/esim/global" />
+        <link rel="canonical" href="https://wiline.ru/esim/global" />
         <meta property="og:title" content="Глобальные eSIM для интернета - 106 стран | NetConnect" />
         <meta property="og:description" content="Купить глобальные eSIM для путешествий по всему миру. Тарифы от 2980₽, безлимитный интернет, звонки и SMS в 106 странах." />
-        <meta property="og:url" content="https://mosoblconnect.ru/esim/global" />
+        <meta property="og:url" content="https://wiline.ru/esim/global" />
       </Helmet>
       
       <div className="min-h-screen bg-background">

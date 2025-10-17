@@ -10,10 +10,10 @@ const WifiRoaming = () => {
   useSEO({
     title: 'Бесшовный Wi-Fi роуминг в МО от 15000₽ | NetConnect',
     description: 'Настройка бесшовного переключения между точками доступа. Единая сеть без обрывов при перемещении. Звоните: +7 (901) 500-00-78',
-    canonical: 'https://mosoblconnect.ru/services/wifi-roaming',
+    canonical: 'https://wiline.ru/services/wifi-roaming',
     ogTitle: 'Бесшовный Wi-Fi роуминг в Московской области',
     ogDescription: 'Настройка роуминга между точками доступа. Автоматическое переключение, единая сеть, стабильное соединение без обрывов.',
-    ogImage: 'https://cdn.mosoblconnect.ru/files/wifi-roaming.jpg',
+    ogImage: 'https://cdn.wiline.ru/files/wifi-roaming.jpg',
     ogImageAlt: 'Бесшовный Wi-Fi роуминг NetConnect',
     structuredData: {
       '@context': 'https://schema.org',

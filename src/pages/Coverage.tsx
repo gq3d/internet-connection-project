@@ -29,12 +29,12 @@ export default function Coverage() {
         <title>Покрытие интернета NetConnect в МО | 169+ населённых пунктов, деревень, КП</title>
         <meta name="description" content="Покрытие беспроводного и спутникового интернета NetConnect - 99% Московской области. 169+ населённых пунктов: города, деревни, посёлки, коттеджные посёлки, СНТ. Удобный поиск по карте. Интернет в Подольске, Химках, Видном и др. ☎️ +7 (901) 500-00-78" />
         <meta name="keywords" content="покрытие интернета московская область, карта покрытия интернета мо, интернет в деревне московская область, интернет в коттеджном посёлке, интернет в снт, интернет на даче подмосковье, поиск покрытия интернета, зоны покрытия мо, интернет в посёлке, проверить покрытие интернета деревня, тест скорости интернета" />
-        <link rel="canonical" href="https://mosoblconnect.ru/coverage" />
+        <link rel="canonical" href="https://wiline.ru/coverage" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Покрытие интернета NetConnect - 169+ населённых пунктов МО" />
         <meta property="og:description" content="Интернет доступен в городах, деревнях, посёлках, КП, СНТ и дачах Московской области. 169+ населённых пунктов в базе. Удобный поиск." />
-        <meta property="og:url" content="https://mosoblconnect.ru/coverage" />
-        <meta property="og:image" content="https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg" />
+        <meta property="og:url" content="https://wiline.ru/coverage" />
+        <meta property="og:image" content="https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg" />
         
         <script type="application/ld+json">
           {JSON.stringify({
@@ -42,39 +42,39 @@ export default function Coverage() {
             "@graph": [
               {
                 "@type": "WebPage",
-                "@id": "https://mosoblconnect.ru/coverage#webpage",
-                "url": "https://mosoblconnect.ru/coverage",
+                "@id": "https://wiline.ru/coverage#webpage",
+                "url": "https://wiline.ru/coverage",
                 "name": "Покрытие интернета NetConnect в МО",
                 "description": "Карта покрытия интернета в 169+ населённых пунктах Московской области",
                 "breadcrumb": {
-                  "@id": "https://mosoblconnect.ru/coverage#breadcrumb"
+                  "@id": "https://wiline.ru/coverage#breadcrumb"
                 },
                 "inLanguage": "ru-RU",
                 "isPartOf": {
-                  "@id": "https://mosoblconnect.ru/#website"
+                  "@id": "https://wiline.ru/#website"
                 }
               },
               {
                 "@type": "BreadcrumbList",
-                "@id": "https://mosoblconnect.ru/coverage#breadcrumb",
+                "@id": "https://wiline.ru/coverage#breadcrumb",
                 "itemListElement": [
                   {
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Главная",
-                    "item": "https://mosoblconnect.ru/"
+                    "item": "https://wiline.ru/"
                   },
                   {
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Покрытие",
-                    "item": "https://mosoblconnect.ru/coverage"
+                    "item": "https://wiline.ru/coverage"
                   }
                 ]
               },
               {
                 "@type": "ItemList",
-                "@id": "https://mosoblconnect.ru/coverage#serviceareas",
+                "@id": "https://wiline.ru/coverage#serviceareas",
                 "name": "Зоны покрытия интернета NetConnect",
                 "description": "169+ населённых пунктов Московской области с доступом к интернету",
                 "numberOfItems": 169,
@@ -124,7 +124,7 @@ export default function Coverage() {
                     "name": "Как проверить покрытие интернета в моей деревне?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Используйте поиск на сайте mosoblconnect.ru или позвоните по телефону +7 (901) 500-00-78 для уточнения покрытия в вашем населённом пункте."
+                      "text": "Используйте поиск на сайте wiline.ru или позвоните по телефону +7 (901) 500-00-78 для уточнения покрытия в вашем населённом пункте."
                     }
                   },
                   {

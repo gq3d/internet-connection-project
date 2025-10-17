@@ -10,10 +10,10 @@ const SecureConnection = () => {
   useSEO({
     title: 'Защищённое интернет-подключение с шифрованием в МО | NetConnect',
     description: 'Безопасный беспроводной интернет с шифрованием трафика, защитой от DDoS, VPN-поддержкой. Конфиденциальность данных гарантирована. Звоните: +7 (901) 500-00-78',
-    canonical: 'https://mosoblconnect.ru/secure-connection',
+    canonical: 'https://wiline.ru/secure-connection',
     ogTitle: 'Защищённый интернет с шифрованием в Московской области',
     ogDescription: 'Безопасное беспроводное подключение. Шифрование WPA3, защита от DDoS-атак, поддержка VPN.',
-    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
+    ogImage: 'https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
     ogImageAlt: 'Защищённое интернет-соединение NetConnect'
   });
 

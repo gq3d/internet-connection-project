@@ -86,11 +86,11 @@ export default function Footer() {
                   WhatsApp
                 </a>
                 <a 
-                  href="mailto:info@mosoblconnect.ru"
+                  href="mailto:info@wiline.ru"
                   className="flex items-center text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Icon name="Mail" size={16} className="mr-2" />
-                  info@mosoblconnect.ru
+                  info@wiline.ru
                 </a>
               </div>
             </div>

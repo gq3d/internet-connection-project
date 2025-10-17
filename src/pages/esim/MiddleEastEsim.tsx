@@ -148,10 +148,10 @@ export default function MiddleEastEsim() {
       <Helmet>
         <title>eSIM для Ближнего Востока - Интернет в 8 странах | NetConnect</title>
         <meta name="description" content="Купить eSIM для Ближнего Востока. Тарифы от 1220₽, безлимитный интернет в 8 странах. Активация за 5 минут." />
-        <link rel="canonical" href="https://mosoblconnect.ru/esim/middle-east" />
+        <link rel="canonical" href="https://wiline.ru/esim/middle-east" />
         <meta property="og:title" content="eSIM для Ближнего Востока - Интернет в 8 странах | NetConnect" />
         <meta property="og:description" content="Купить eSIM для Ближнего Востока. Тарифы от 1220₽, безлимитный интернет." />
-        <meta property="og:url" content="https://mosoblconnect.ru/esim/middle-east" />
+        <meta property="og:url" content="https://wiline.ru/esim/middle-east" />
       </Helmet>
       
       <div className="min-h-screen bg-background">

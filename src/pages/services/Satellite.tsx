@@ -12,10 +12,10 @@ const Satellite = () => {
   useSEO({
     title: 'Спутниковый интернет в МО от 1890₽ | NetConnect',
     description: 'Покрытие 99% МО, скорость до 100 Мбит/с. Starlink и классические системы. Звоните: +7 (901) 500-00-78',
-    canonical: 'https://mosoblconnect.ru/services/satellite',
+    canonical: 'https://wiline.ru/services/satellite',
     ogTitle: 'Спутниковый интернет Starlink в МО от 1890₽',
     ogDescription: 'Starlink и классический спутниковый интернет. Скорость до 100 Мбит/с, покрытие 99%. Тарифы от 1890₽/мес.',
-    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
+    ogImage: 'https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
     ogImageAlt: 'Спутниковый интернет NetConnect в Московской области'
   });
 

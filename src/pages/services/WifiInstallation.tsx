@@ -10,10 +10,10 @@ const WifiInstallation = () => {
   useSEO({
     title: 'Установка Wi-Fi сетей в МО от 5000₽ | NetConnect',
     description: 'Профессиональная установка и настройка Wi-Fi сетей любой сложности. Выбор оборудования, настройка безопасности WPA3. Звоните: +7 (901) 500-00-78',
-    canonical: 'https://mosoblconnect.ru/services/wifi-installation',
+    canonical: 'https://wiline.ru/services/wifi-installation',
     ogTitle: 'Установка Wi-Fi сетей в Московской области от 5000₽',
     ogDescription: 'Профессиональная установка беспроводных сетей. Выбор оптимального оборудования, настройка безопасности, оптимизация покрытия.',
-    ogImage: 'https://cdn.mosoblconnect.ru/files/wifi-installation.jpg',
+    ogImage: 'https://cdn.wiline.ru/files/wifi-installation.jpg',
     ogImageAlt: 'Установка Wi-Fi сетей NetConnect',
     structuredData: {
       '@context': 'https://schema.org',
