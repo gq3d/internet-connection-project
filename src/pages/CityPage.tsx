@@ -46,6 +46,18 @@ const CityPage = () => {
     // Химки: 'х' can be 'h' or 'kh'
     'himki': 'khimki',
     
+    // Орехово-Зуево: 'х' can be 'h' or 'kh'
+    'oreho-zuevo': 'orekhovo-zuevo',
+    
+    // Москва: Russian transliteration
+    'moskva': 'moscow',
+    
+    // Люберцы: 'ю' can be 'u' or 'yu'
+    'lubertsy': 'lyubertsy',
+    
+    // Нахабино: typo in URL
+    'nkurino': 'nakhabino',
+    
     // Архангельское: 'х' can be 'h' or 'kh'
     'arhangelskoe': 'arkhangelskoe',
     
