@@ -41,7 +41,10 @@ const CityPage = () => {
     'shchyolkovo': 'shchelkovo',
     
     // Чехов: 'х' can be 'h' or 'kh'
-    'chehov': 'chekhov',
+    'chekhov': 'chehov',
+    
+    // Химки: 'х' can be 'h' or 'kh'
+    'himki': 'khimki',
     
     // Архангельское: 'х' can be 'h' or 'kh'
     'arhangelskoe': 'arkhangelskoe',
