@@ -3,12 +3,14 @@ import { getCitySEOGroup2 } from './seo/CitySEOGroup2';
 import { getCitySEOGroup3 } from './seo/CitySEOGroup3';
 import { getCitySEOGroup4 } from './seo/CitySEOGroup4';
 import { getCitySEOGroup5 } from './seo/CitySEOGroup5';
+import { getCitySEODynamic } from './seo/CitySEODynamic';
 
 interface CitySEOTextProps {
   cityName: string;
+  citySlug?: string;
 }
 
-const CitySEOText = ({ cityName }: CitySEOTextProps) => {
+const CitySEOText = ({ cityName, citySlug }: CitySEOTextProps) => {
   const getSEOContent = () => {
     return (
       getCitySEOGroup1(cityName) ||
@@ -16,6 +18,7 @@ const CitySEOText = ({ cityName }: CitySEOTextProps) => {
       getCitySEOGroup3(cityName) ||
       getCitySEOGroup4(cityName) ||
       getCitySEOGroup5(cityName) ||
+      (citySlug ? getCitySEODynamic(cityName, citySlug) : null) ||
       null
     );
   };

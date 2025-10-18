@@ -318,7 +318,7 @@ const CityPage = () => {
         </div>
       </section>
 
-      <CitySEOText cityName={city.nameInPrepositional} />
+      <CitySEOText cityName={city.nameInPrepositional} citySlug={correctSlug || ''} />
 
       <CityReviews cityName={city.nameInPrepositional} />
 
