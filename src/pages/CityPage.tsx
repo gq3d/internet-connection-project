@@ -1,4 +1,4 @@
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -19,6 +19,7 @@ import CitySettlementsList from '@/components/city/CitySettlementsList';
 const CityPage = () => {
   const { citySlug: paramSlug } = useParams<{ citySlug: string }>();
   const location = useLocation();
+  const navigate = useNavigate();
   
   const citySlug = paramSlug || location.pathname.replace(/^\//, '').replace(/\/$/, '');
   
@@ -101,16 +102,16 @@ const CityPage = () => {
   // Redirect Cyrillic URLs and old slugs to canonical Latin URLs AFTER setting canonical
   useEffect(() => {
     if (shouldRedirect && correctSlug) {
-      window.location.replace(`/city/${correctSlug}`);
+      navigate(`/city/${correctSlug}`, { replace: true });
     }
-  }, [shouldRedirect, correctSlug]);
+  }, [shouldRedirect, correctSlug, navigate]);
 
   // Redirect to 404 if city not found
   useEffect(() => {
     if (!city && citySlug) {
-      window.location.replace('/404');
+      navigate('/404', { replace: true });
     }
-  }, [city, citySlug]);
+  }, [city, citySlug, navigate]);
 
   useEffect(() => {
     if (city && normalizedSlug) {
