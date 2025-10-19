@@ -16,7 +16,7 @@ export default function CityHero({ cityName, district }: CityHeroProps) {
               <span className="text-sm font-medium text-primary">{district}</span>
             </div>
           )}
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-3xl md:text-5xl font-bold mb-6 break-words">
             Беспроводной интернет в {cityName}
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">

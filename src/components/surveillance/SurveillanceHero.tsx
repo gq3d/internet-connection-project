@@ -9,7 +9,7 @@ const SurveillanceHero = () => {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
             <Icon name="Video" size={32} className="text-primary" />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent break-words">
             Видеонаблюдение
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
