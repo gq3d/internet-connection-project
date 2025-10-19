@@ -241,7 +241,7 @@ export default function SearchBar() {
         <div className="absolute top-full mt-2 w-full md:w-max md:min-w-[300px] md:max-w-[400px] md:right-0 bg-white rounded-lg shadow-lg border border-border overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200">
           {suggestions.map((suggestion, index) => (
             <button
-              key={suggestion.url}
+              key={`${suggestion.type}-${suggestion.title}-${index}`}
               onClick={() => handleSelect(suggestion.url)}
               className={`w-full px-4 py-3 flex items-center gap-3 hover:bg-accent transition-colors text-left ${
                 index === selectedIndex ? 'bg-accent' : ''
