@@ -4808,16 +4808,4 @@ export const settlements: Settlement[] = [
   { name: 'Юрино', city: 'taldom', type: 'village' },
   { name: 'Юркино', city: 'taldom', type: 'village' },
   { name: 'Ябдино', city: 'taldom', type: 'village' },
-
-  // Черноголовка
-  { name: 'Черноголовка', city: 'chernogolovka', type: 'settlement' },
-  { name: 'Макарово', city: 'chernogolovka', type: 'village' },
-  { name: 'Ботово', city: 'chernogolovka', type: 'village' },
-  { name: 'Ивановское', city: 'chernogolovka', type: 'village' },
-  { name: 'Афанасово-3', city: 'chernogolovka', type: 'village' },
-  { name: 'Якимово', city: 'chernogolovka', type: 'village' },
-  { name: 'Стояново', city: 'chernogolovka', type: 'village' },
-  { name: 'Беседы', city: 'chernogolovka', type: 'village' },
-  { name: 'Горячевка', city: 'chernogolovka', type: 'village' },
-  { name: 'Старки', city: 'chernogolovka', type: 'village' },
 ];
