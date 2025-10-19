@@ -123,6 +123,11 @@ export default function SearchBar() {
           
           return titleLower.includes(lowerQuery) || descLower.includes(lowerQuery);
         })
+        .filter((item, index, self) => 
+          index === self.findIndex((t) => (
+            t.title === item.title && t.url === item.url && t.type === item.type
+          ))
+        )
         .sort((a, b) => {
           const aTitle = a.title.toLowerCase();
           const bTitle = b.title.toLowerCase();
