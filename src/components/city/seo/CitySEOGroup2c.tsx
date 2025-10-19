@@ -12,59 +12,6 @@ export const getCitySEOGroup2c = (cityName: string): CitySEOContent | null => {
           NetConnect обеспечивает беспроводным интернетом город Пушкино и все населённые пункты Пушкинского городского округа Московской области.
         </p>
         
-        <h3 class="text-xl font-semibold mb-3 mt-6">Населённые пункты с нашим покрытием:</h3>
-        <div class="grid md:grid-cols-2 gap-4 mb-4">
-          <div>
-            <p class="font-medium mb-2">Посёлки и деревни:</p>
-            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-              <li>Правдинский</li>
-              <li>Лесной</li>
-              <li>Софрино</li>
-              <li>Ашукино</li>
-              <li>Зеленоградский</li>
-              <li>Черкизово</li>
-              <li>Звягино</li>
-              <li>Клязьма</li>
-            </ul>
-          </div>
-          
-          <div>
-            <ul class="list-disc list-inside space-y-1 text-muted-foreground mt-7">
-              <li>Тарасовка</li>
-              <li>Лесные Поляны</li>
-              <li>Талицы</li>
-              <li>Барково</li>
-              <li>Царёво</li>
-              <li>Мамонтовка</li>
-              <li>Красноармейск</li>
-            </ul>
-          </div>
-        </div>
-
-        <h3 class="text-xl font-semibold mb-3 mt-6">Коттеджные посёлки Пушкино:</h3>
-        <div class="grid md:grid-cols-3 gap-3 mb-4">
-          <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Пушкино парк</li>
-            <li>Клязьма резиденс</li>
-            <li>Софрино парк</li>
-            <li>Ашукинский лес</li>
-            <li>Лесные дачи</li>
-          </ul>
-          <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Правдинский парк</li>
-            <li>Тарасовка парк</li>
-            <li>Черкизово парк</li>
-            <li>Звягино парк</li>
-            <li>Талицы парк</li>
-          </ul>
-          <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Барково парк</li>
-            <li>Царёво парк</li>
-            <li>Мамонтовка парк</li>
-            <li>Зеленоградский лес</li>
-          </ul>
-        </div>
-
         <h3 class="text-xl font-semibold mb-3 mt-6">Наши услуги в Пушкино:</h3>
         <ul class="space-y-2 mb-4">
           <li class="flex items-start">

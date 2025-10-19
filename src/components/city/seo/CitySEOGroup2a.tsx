@@ -12,55 +12,6 @@ export const getCitySEOGroup2a = (cityName: string): CitySEOContent | null => {
           NetConnect предоставляет услуги беспроводного интернета в городе Химки и всех населённых пунктах городского округа Химки Московской области.
         </p>
         
-        <h3 class="text-xl font-semibold mb-3 mt-6">Населённые пункты с нашим покрытием:</h3>
-        <div class="grid md:grid-cols-2 gap-4 mb-4">
-          <div>
-            <p class="font-medium mb-2">Микрорайоны Химок:</p>
-            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-              <li>Подрезково</li>
-              <li>Новогорск</li>
-              <li>Левобережный</li>
-              <li>Фирсановка</li>
-              <li>Клязьма-Старбеево</li>
-            </ul>
-          </div>
-          
-          <div>
-            <p class="font-medium mb-2">Деревни и посёлки:</p>
-            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-              <li>Кирилловка</li>
-              <li>Старбеево</li>
-              <li>Петровское</li>
-              <li>Козлово</li>
-              <li>Ивакино</li>
-            </ul>
-          </div>
-        </div>
-
-        <h3 class="text-xl font-semibold mb-3 mt-6">Коттеджные посёлки Химок:</h3>
-        <div class="grid md:grid-cols-3 gap-3 mb-4">
-          <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Новое Подрезково</li>
-            <li>Вишнёвый сад</li>
-            <li>Заповедное</li>
-            <li>Зелёная роща</li>
-            <li>Клязьминское водохранилище</li>
-          </ul>
-          <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Лесные дачи</li>
-            <li>Парк Фили</li>
-            <li>Покровские горки</li>
-            <li>Серебряный бор</li>
-            <li>Фирсановская усадьба</li>
-          </ul>
-          <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Химкинский лес</li>
-            <li>Левобережье</li>
-            <li>Эко-парк</li>
-            <li>Новогорск парк</li>
-          </ul>
-        </div>
-
         <h3 class="text-xl font-semibold mb-3 mt-6">Наши услуги в Химках:</h3>
         <ul class="space-y-2 mb-4">
           <li class="flex items-start">
@@ -100,59 +51,6 @@ export const getCitySEOGroup2a = (cityName: string): CitySEOContent | null => {
           NetConnect предоставляет услуги беспроводного интернета в Москве, особенно в районах Новой Москвы, где проводное подключение затруднено или недоступно.
         </p>
         
-        <h3 class="text-xl font-semibold mb-3 mt-6">Районы Новой Москвы с нашим покрытием:</h3>
-        <div class="grid md:grid-cols-2 gap-4 mb-4">
-          <div>
-            <p class="font-medium mb-2">Населённые пункты:</p>
-            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-              <li>Внуково</li>
-              <li>Московский</li>
-              <li>Щербинка</li>
-              <li>Троицк</li>
-              <li>Сосенское</li>
-              <li>Воскресенское</li>
-              <li>Десёновское</li>
-              <li>Кокошкино</li>
-            </ul>
-          </div>
-          
-          <div>
-            <ul class="list-disc list-inside space-y-1 text-muted-foreground mt-7">
-              <li>Марушкинское</li>
-              <li>Московский</li>
-              <li>Новофёдоровское</li>
-              <li>Первомайское</li>
-              <li>Рязановское</li>
-              <li>Филимонковское</li>
-              <li>Щаповское</li>
-            </ul>
-          </div>
-        </div>
-
-        <h3 class="text-xl font-semibold mb-3 mt-6">Коттеджные посёлки Москвы:</h3>
-        <div class="grid md:grid-cols-3 gap-3 mb-4">
-          <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Новая Москва</li>
-            <li>Московские водники</li>
-            <li>Троицкая слобода</li>
-            <li>Переделкино ближнее</li>
-            <li>Рассказовка</li>
-          </ul>
-          <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Саларьево парк</li>
-            <li>Внуково парк</li>
-            <li>Западное Кунцево</li>
-            <li>Южное Бутово парк</li>
-            <li>Николо-Хованское</li>
-          </ul>
-          <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Ватутинки</li>
-            <li>Мамыри</li>
-            <li>Бунинские луга</li>
-            <li>Марушкино</li>
-          </ul>
-        </div>
-
         <h3 class="text-xl font-semibold mb-3 mt-6">Наши услуги в Москве:</h3>
         <ul class="space-y-2 mb-4">
           <li class="flex items-start">
