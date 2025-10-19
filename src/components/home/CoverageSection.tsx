@@ -4,6 +4,7 @@ import SpeedTest from '@/components/SpeedTest';
 import YandexCoverageMap from '@/components/YandexCoverageMap';
 import UnblockedServicesBadge from '@/components/UnblockedServicesBadge';
 import { cities } from '@/data/cities';
+import { settlements } from '@/data/settlements';
 
 export default function CoverageSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,17 +32,27 @@ export default function CoverageSection() {
     };
   }, []);
 
-  const filteredCities = useMemo(() => {
+  const searchResults = useMemo(() => {
     if (!searchQuery.trim()) {
-      return cities;
+      return { cities, settlements: [] };
     }
-    return cities.filter(city => {
-      const query = searchQuery.toLowerCase();
-      return city.name.toLowerCase().includes(query) ||
-             city.region.toLowerCase().includes(query) ||
-             city.district.toLowerCase().includes(query);
-    });
+
+    const query = searchQuery.toLowerCase();
+
+    const filteredCities = cities.filter(city => 
+      city.name.toLowerCase().includes(query) ||
+      city.region.toLowerCase().includes(query) ||
+      city.district.toLowerCase().includes(query)
+    );
+
+    const matchedSettlements = settlements.filter(settlement =>
+      settlement.name.toLowerCase().includes(query)
+    );
+
+    return { cities: filteredCities, settlements: matchedSettlements };
   }, [searchQuery]);
+
+  const totalResults = searchResults.cities.length + searchResults.settlements.length;
 
   return (
     <section id="coverage" className="py-20" ref={sectionRef}>
@@ -117,26 +128,68 @@ export default function CoverageSection() {
 
               {searchQuery && (
                 <div className="text-sm text-muted-foreground text-center mt-3">
-                  Найдено: <span className="font-semibold text-foreground">{filteredCities.length}</span> {filteredCities.length === 1 ? 'город' : filteredCities.length < 5 ? 'города' : 'городов'}
+                  Найдено: <span className="font-semibold text-foreground">{totalResults}</span> {totalResults === 1 ? 'результат' : totalResults < 5 ? 'результата' : 'результатов'}
+                  {searchResults.cities.length > 0 && ` (${searchResults.cities.length} ${searchResults.cities.length === 1 ? 'город' : 'города'})`}
+                  {searchResults.settlements.length > 0 && ` (${searchResults.settlements.length} ${searchResults.settlements.length === 1 ? 'населённый пункт' : 'населённых пункта'})`}
                 </div>
               )}
             </div>
             
-            {filteredCities.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-                {filteredCities.map((city) => (
-                  <a
-                    key={city.name}
-                    href={`/city/${city.slug}`}
-                    className="bg-accent/30 rounded-lg p-4 border hover:bg-accent/50 transition-colors group"
-                  >
-                    <div className="flex items-center justify-start md:justify-center mb-1">
-                      <Icon name="MapPin" size={16} className="text-success mr-2 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                      <span className="font-medium group-hover:text-primary transition-colors text-left md:text-center">{city.name}</span>
+            {totalResults > 0 ? (
+              <div className="space-y-6">
+                {searchResults.cities.length > 0 && (
+                  <div>
+                    {searchQuery && <h4 className="text-lg font-semibold mb-4">Города и районы</h4>}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+                      {searchResults.cities.map((city) => (
+                        <a
+                          key={city.name}
+                          href={`/city/${city.slug}`}
+                          className="bg-accent/30 rounded-lg p-4 border hover:bg-accent/50 transition-colors group"
+                        >
+                          <div className="flex items-center justify-start md:justify-center mb-1">
+                            <Icon name="MapPin" size={16} className="text-success mr-2 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                            <span className="font-medium group-hover:text-primary transition-colors text-left md:text-center">{city.name}</span>
+                          </div>
+                          <div className="text-xs text-muted-foreground text-left md:text-center">{city.region}</div>
+                        </a>
+                      ))}
                     </div>
-                    <div className="text-xs text-muted-foreground text-left md:text-center">{city.region}</div>
-                  </a>
-                ))}
+                  </div>
+                )}
+
+                {searchResults.settlements.length > 0 && (
+                  <div>
+                    <h4 className="text-lg font-semibold mb-4">Населённые пункты</h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+                      {searchResults.settlements.map((settlement, index) => {
+                        const parentCity = cities.find(c => c.slug === settlement.city);
+                        const settlementTypeLabel = {
+                          village: 'Деревня',
+                          settlement: 'Посёлок',
+                          cottage: 'КП',
+                          snt: 'СНТ'
+                        }[settlement.type];
+
+                        return (
+                          <a
+                            key={`${settlement.name}-${settlement.city}-${index}`}
+                            href={`/city/${settlement.city}`}
+                            className="bg-accent/30 rounded-lg p-4 border hover:bg-accent/50 transition-colors group"
+                          >
+                            <div className="flex items-center justify-start md:justify-center mb-1">
+                              <Icon name="Home" size={16} className="text-primary mr-2 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                              <span className="font-medium group-hover:text-primary transition-colors text-left md:text-center">{settlement.name}</span>
+                            </div>
+                            <div className="text-xs text-muted-foreground text-left md:text-center">
+                              {settlementTypeLabel} • {parentCity?.name || settlement.city}
+                            </div>
+                          </a>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
               </div>
             ) : (
               <div className="text-center py-12">
