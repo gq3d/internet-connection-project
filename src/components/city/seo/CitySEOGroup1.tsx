@@ -89,58 +89,6 @@ export const getCitySEOGroup1 = (cityName: string) => {
           NetConnect обеспечивает беспроводным интернетом город Красногорск и все населённые пункты Красногорского городского округа Московской области.
         </p>
         
-        <h3 class="text-xl font-semibold mb-3 mt-6">Населённые пункты с нашим покрытием:</h3>
-        <div class="grid md:grid-cols-2 gap-4 mb-4">
-          <div>
-            <p class="font-medium mb-2">Города и посёлки:</p>
-            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-              <li>Красногорск</li>
-              <li>Нахабино</li>
-              <li>Опалиха</li>
-              <li>Архангельское</li>
-              <li>Ильинское</li>
-              <li>Отрадное</li>
-              <li>Николо-Урюпино</li>
-            </ul>
-          </div>
-          
-          <div>
-            <p class="font-medium mb-2">Деревни:</p>
-            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-              <li>Гольёво</li>
-              <li>Глухово</li>
-              <li>Знаменское</li>
-              <li>Петрово-Дальнее</li>
-              <li>Путилково</li>
-              <li>Ангелово</li>
-            </ul>
-          </div>
-        </div>
-
-        <h3 class="text-xl font-semibold mb-3 mt-6">Коттеджные посёлки Красногорска:</h3>
-        <div class="grid md:grid-cols-3 gap-3 mb-4">
-          <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Красногорские холмы</li>
-            <li>Нахабино парк</li>
-            <li>Опалиха парк</li>
-            <li>Архангельское парк</li>
-            <li>Ильинское парк</li>
-          </ul>
-          <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Отрадное парк</li>
-            <li>Николо-Урюпино парк</li>
-            <li>Гольёво парк</li>
-            <li>Глухово парк</li>
-            <li>Знаменское парк</li>
-          </ul>
-          <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Петрово-Дальнее парк</li>
-            <li>Путилково парк</li>
-            <li>Ангелово парк</li>
-            <li>Красногорские просторы</li>
-          </ul>
-        </div>
-
         <h3 class="text-xl font-semibold mb-3 mt-6">Наши услуги в Красногорске:</h3>
         <ul class="space-y-2 mb-4">
           <li class="flex items-start">
