@@ -44,7 +44,7 @@ export default function CitySettlementsList({ citySlug, cityNameGenitive }: City
     <div className="mt-16" itemScope itemType="https://schema.org/ItemList">
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Населённые пункты {cityNameGenitive}
+          Населённые пункты в {cityNameGenitive}
         </h2>
         <p className="text-muted-foreground text-lg">
           Полный список деревень, посёлков и СНТ с доступным подключением
