@@ -316,7 +316,7 @@ const CityPage = () => {
         <div className="container mx-auto px-4">
           <CityServicesSection cityName={city.nameInPrepositional} />
           <CityAdditionalServices cityName={city.nameInPrepositional} isVisible={isServicesVisible} />
-          <CitySettlementsList citySlug={correctSlug || ''} cityNameGenitive={city.nameInPrepositional} />
+          <CitySettlementsList citySlug={correctSlug || ''} cityNameGenitive={city.nameGenitive || city.nameInPrepositional} />
           <CityCTA cityName={city.nameInPrepositional} />
         </div>
       </section>

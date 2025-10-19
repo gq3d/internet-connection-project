@@ -1,6 +1,7 @@
 export interface CityData {
   name: string;
   nameInPrepositional: string;
+  nameGenitive?: string;
   seoTitle: string;
   description: string;
   slug: string;
@@ -298,7 +299,8 @@ const cityDataMap: { [key: string]: CityData } = {
   },
   'ramenskoe': {
     name: 'Раменское',
-    nameInPrepositional: 'Раменское',
+    nameInPrepositional: 'Раменском',
+    nameGenitive: 'Раменское',
     seoTitle: 'Беспроводной интернет в Раменском — подключение дач и коттеджей | NetConnect',
     description: 'Качественное подключение беспроводного интернета в Раменском, Раменский городской округ. Подключение дач, коттеджных поселков, СНТ, частных домов. Выезд инженера, установка оборудования, техподдержка 24/7.',
     slug: 'ramenskoe',
