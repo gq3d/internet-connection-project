@@ -25,7 +25,7 @@ export const cities: City[] = [
   { name: 'Щёлково', slug: 'shchelkovo', region: 'Московская область', nameInPrepositional: 'Щёлково', district: 'Щёлковский городской округ' },
   { name: 'Одинцово', slug: 'odintsovo', region: 'Московская область', nameInPrepositional: 'Одинцово', district: 'Одинцовский городской округ' },
   { name: 'Орехово-Зуево', slug: 'orekhovo-zuevo', region: 'Московская область', nameInPrepositional: 'Орехово-Зуево', district: 'Орехово-Зуево' },
-  { name: 'Раменское', slug: 'ramenskoye', region: 'Московская область', nameInPrepositional: 'Раменское', district: 'Раменский городской округ' },
+  { name: 'Раменское', slug: 'ramenskoye', region: 'Московская область', nameInPrepositional: 'Раменском', district: 'Раменский городской округ' },
   { name: 'Домодедово', slug: 'domodedovo', region: 'Московская область', nameInPrepositional: 'Домодедово', district: 'Домодедово' },
   { name: 'Егорьевск', slug: 'egoryevsk', region: 'Московская область', nameInPrepositional: 'Егорьевске', district: 'Егорьевский городской округ' },
   { name: 'Ступино', slug: 'stupino', region: 'Московская область', nameInPrepositional: 'Ступино', district: 'Ступинский городской округ' },
