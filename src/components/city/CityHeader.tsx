@@ -56,7 +56,7 @@ export default function CityHeader() {
           {isMobileMenuOpen && (
             <div className="md:hidden mt-4 py-4 border-t border-border">
               <div className="mb-4">
-                <SearchBar />
+                <SearchBar onNavigate={() => setIsMobileMenuOpen(false)} />
               </div>
               <div className="space-y-4">
                 <Link 

@@ -80,7 +80,11 @@ const searchData: SearchSuggestion[] = [
   { title: 'Отзывы', url: '/reviews', type: 'page' },
 ];
 
-export default function SearchBar() {
+interface SearchBarProps {
+  onNavigate?: () => void;
+}
+
+export default function SearchBar({ onNavigate }: SearchBarProps = {}) {
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -167,6 +171,7 @@ export default function SearchBar() {
     setQuery('');
     setIsOpen(false);
     inputRef.current?.blur();
+    onNavigate?.();
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
