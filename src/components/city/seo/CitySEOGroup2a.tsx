@@ -191,59 +191,6 @@ export const getCitySEOGroup2a = (cityName: string): CitySEOContent | null => {
         <p class="mb-4">
           NetConnect обеспечивает беспроводным интернетом город Мытищи и все населённые пункты Мытищинского городского округа Московской области.
         </p>
-        
-        <h3 class="text-xl font-semibold mb-3 mt-6">Населённые пункты с нашим покрытием:</h3>
-        <div class="grid md:grid-cols-2 gap-4 mb-4">
-          <div>
-            <p class="font-medium mb-2">Посёлки и деревни:</p>
-            <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-              <li>Пироговский</li>
-              <li>Нагорное</li>
-              <li>Дружба</li>
-              <li>Поведники</li>
-              <li>Подольниха</li>
-              <li>Троицкое</li>
-              <li>Челобитьево</li>
-              <li>Болтино</li>
-            </ul>
-          </div>
-          
-          <div>
-            <ul class="list-disc list-inside space-y-1 text-muted-foreground mt-7">
-              <li>Марфино</li>
-              <li>Высоково</li>
-              <li>Виноградово</li>
-              <li>Рупасово</li>
-              <li>Беляниново</li>
-              <li>Федоскино</li>
-              <li>Лупаново</li>
-            </ul>
-          </div>
-        </div>
-
-        <h3 class="text-xl font-semibold mb-3 mt-6">Коттеджные посёлки Мытищ:</h3>
-        <div class="grid md:grid-cols-3 gap-3 mb-4">
-          <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Пироговская ривьера</li>
-            <li>Клязьминский берег</li>
-            <li>Марфинский парк</li>
-            <li>Зелёные холмы</li>
-            <li>Виноградово парк</li>
-          </ul>
-          <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Лесная резиденция</li>
-            <li>Троицкие поляны</li>
-            <li>Мытищи парк</li>
-            <li>Дружба парк</li>
-            <li>Северный парк</li>
-          </ul>
-          <ul class="list-disc list-inside space-y-1 text-muted-foreground">
-            <li>Федоскинская усадьба</li>
-            <li>Пироговский лес</li>
-            <li>Лесное озеро</li>
-            <li>Загородный клуб</li>
-          </ul>
-        </div>
 
         <h3 class="text-xl font-semibold mb-3 mt-6">Наши услуги в Мытищах:</h3>
         <ul class="space-y-2 mb-4">
