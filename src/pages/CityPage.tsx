@@ -14,6 +14,7 @@ import CityWhatsAppButton from '@/components/city/CityWhatsAppButton';
 import CityFooter from '@/components/city/CityFooter';
 import CitySEOText from '@/components/city/CitySEOText';
 import CityReviews from '@/components/city/CityReviews';
+import CitySettlementsList from '@/components/city/CitySettlementsList';
 
 const CityPage = () => {
   const { citySlug: paramSlug } = useParams<{ citySlug: string }>();
@@ -314,6 +315,7 @@ const CityPage = () => {
         <div className="container mx-auto px-4">
           <CityServicesSection cityName={city.nameInPrepositional} />
           <CityAdditionalServices cityName={city.nameInPrepositional} isVisible={isServicesVisible} />
+          <CitySettlementsList citySlug={correctSlug || ''} cityNameGenitive={city.nameInPrepositional} />
           <CityCTA cityName={city.nameInPrepositional} />
         </div>
       </section>
