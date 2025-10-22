@@ -2,7 +2,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
-import { getOptimizedImageUrl } from '@/utils/imageOptimization';
 
 export const CellularSigns = () => (
   <section className="py-16">
@@ -70,11 +69,8 @@ export const CellularExamples = () => (
           <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
             <div className="relative">
               <img 
-                src={getOptimizedImageUrl("https://cdn.poehali.dev/files/706b1606-ed73-49b6-bd63-834abadc8eeb.png", 640)} 
+                src="https://cdn.poehali.dev/files/706b1606-ed73-49b6-bd63-834abadc8eeb.png" 
                 alt="Усиление связи в коттедже" 
-                loading="lazy"
-                width="640"
-                height="256"
                 className="w-full h-64 object-cover"
               />
               <div className="absolute top-4 right-4">
@@ -112,11 +108,8 @@ export const CellularExamples = () => (
           <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
             <div className="relative">
               <img 
-                src={getOptimizedImageUrl("https://cdn.poehali.dev/files/9fe4c1c3-d855-4aff-b72f-3371f7240d32.png", 640)} 
+                src="https://cdn.poehali.dev/files/9fe4c1c3-d855-4aff-b72f-3371f7240d32.png" 
                 alt="Репитер в доме" 
-                loading="lazy"
-                width="640"
-                height="256"
                 className="w-full h-64 object-cover"
               />
               <div className="absolute top-4 right-4">
@@ -154,11 +147,8 @@ export const CellularExamples = () => (
           <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
             <div className="relative">
               <img 
-                src={getOptimizedImageUrl("https://cdn.poehali.dev/files/1cecb8e5-4078-4ecf-8b44-2708423b7a79.png", 640)} 
+                src="https://cdn.poehali.dev/files/1cecb8e5-4078-4ecf-8b44-2708423b7a79.png" 
                 alt="Усилитель на даче" 
-                loading="lazy"
-                width="640"
-                height="256"
                 className="w-full h-64 object-cover"
               />
               <div className="absolute top-4 right-4">

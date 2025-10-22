@@ -7,7 +7,6 @@ import Icon from '@/components/ui/icon';
 import Footer from '@/components/home/Footer';
 import SurveillanceHeader from '@/components/surveillance/SurveillanceHeader';
 import { useSEO } from '@/hooks/useSEO';
-import { getOptimizedImageUrl } from '@/utils/imageOptimization';
 
 const Wifi = () => {
   const structuredData = [
@@ -274,7 +273,7 @@ const Wifi = () => {
               <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="relative">
                   <img 
-                    src={getOptimizedImageUrl("https://cdn.poehali.dev/files/bdc92972-868c-4116-8dc6-32712c0b3ebe.png", 640)} 
+                    src="https://cdn.poehali.dev/files/bdc92972-868c-4116-8dc6-32712c0b3ebe.png" 
                     alt="Уличная Wi-Fi точка доступа TP-Link" 
                     loading="lazy"
                     width="640"
@@ -311,7 +310,7 @@ const Wifi = () => {
               <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="relative">
                   <img 
-                    src={getOptimizedImageUrl("https://cdn.poehali.dev/files/c0e2520c-f57b-445e-9706-7781bf7b230e.png", 640)} 
+                    src="https://cdn.poehali.dev/files/c0e2520c-f57b-445e-9706-7781bf7b230e.png" 
                     alt="Настенная Wi-Fi точка доступа" 
                     loading="lazy"
                     width="640"
@@ -348,7 +347,7 @@ const Wifi = () => {
               <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="relative">
                   <img 
-                    src={getOptimizedImageUrl("https://cdn.poehali.dev/files/dc28b1d8-f743-43c6-be30-d7bcca2650db.png", 640)} 
+                    src="https://cdn.poehali.dev/files/dc28b1d8-f743-43c6-be30-d7bcca2650db.png" 
                     alt="Внутренняя установка Wi-Fi роутеров D-Link" 
                     loading="lazy"
                     width="640"

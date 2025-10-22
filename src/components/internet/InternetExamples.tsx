@@ -2,7 +2,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
-import { getOptimizedImageUrl } from '@/utils/imageOptimization';
 
 const InternetExamples = () => {
   return (
@@ -20,7 +19,7 @@ const InternetExamples = () => {
             <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
               <div className="relative">
                 <img 
-                  src={getOptimizedImageUrl("https://cdn.poehali.dev/files/648b0a23-c36e-412a-af45-8f16220c67e5.png", 640)} 
+                  src="https://cdn.poehali.dev/files/648b0a23-c36e-412a-af45-8f16220c67e5.png" 
                   alt="Установка MIMO антенны на частном доме" 
                   loading="lazy"
                   width="640"
@@ -62,7 +61,7 @@ const InternetExamples = () => {
             <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
               <div className="relative">
                 <img 
-                  src={getOptimizedImageUrl("https://cdn.poehali.dev/files/167a8eb4-3e8a-4755-a9a9-c85560b118f3.png", 640)} 
+                  src="https://cdn.poehali.dev/files/167a8eb4-3e8a-4755-a9a9-c85560b118f3.png" 
                   alt="Настройка роутера в частном доме" 
                   loading="lazy"
                   width="640"
@@ -104,7 +103,7 @@ const InternetExamples = () => {
             <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
               <div className="relative">
                 <img 
-                  src={getOptimizedImageUrl("https://cdn.poehali.dev/files/c2990d17-9e72-4ce6-8df4-fb7ee481d9b1.png", 640)} 
+                  src="https://cdn.poehali.dev/files/c2990d17-9e72-4ce6-8df4-fb7ee481d9b1.png" 
                   alt="Интернет на даче" 
                   loading="lazy"
                   width="640"
