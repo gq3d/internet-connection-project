@@ -23,6 +23,9 @@ const ArmedSecurity = () => {
               <img 
                 src="/img/95a782e0-6509-497c-baf4-462b23cc7fe2.jpg" 
                 alt="Профессиональный охранник" 
+                loading="lazy"
+                width="640"
+                height="256"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
@@ -33,6 +36,9 @@ const ArmedSecurity = () => {
               <img 
                 src="/img/4fe3dca8-ba1d-4984-a307-0d994a66e08b.jpg" 
                 alt="Центр мониторинга" 
+                loading="lazy"
+                width="640"
+                height="256"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
@@ -43,6 +49,9 @@ const ArmedSecurity = () => {
               <img 
                 src="/img/f7b0d163-1f30-4e6a-9a6c-1f67cb6ff35b.jpg" 
                 alt="Охрана объектов" 
+                loading="lazy"
+                width="640"
+                height="256"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">

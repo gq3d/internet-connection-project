@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import { getOptimizedImageUrl } from '@/utils/imageOptimization';
 
 const SecurityLicense = () => {
   return (
@@ -23,8 +24,11 @@ const SecurityLicense = () => {
             <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 border-2 border-primary/20">
               <CardContent className="p-0">
                 <img 
-                  src="https://cdn.poehali.dev/files/70ef45ba-7179-4d37-ae04-17c04f362309.png" 
+                  src={getOptimizedImageUrl("https://cdn.poehali.dev/files/70ef45ba-7179-4d37-ae04-17c04f362309.png", 800)} 
                   alt="Лицензия МВД РФ на осуществление частной охранной деятельности" 
+                  loading="lazy"
+                  width="800"
+                  height="1131"
                   className="w-full h-auto pointer-events-none select-none"
                   draggable="false"
                 />

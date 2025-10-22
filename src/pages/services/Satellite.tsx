@@ -6,6 +6,7 @@ import Icon from '@/components/ui/icon';
 import { useSEO } from '@/hooks/useSEO';
 import Header from '@/components/home/Header';
 import Footer from '@/components/home/Footer';
+import { getOptimizedImageUrl } from '@/utils/imageOptimization';
 
 const Satellite = () => {
 
@@ -230,9 +231,12 @@ const Satellite = () => {
               <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="relative">
                   <img 
-                    src="https://cdn.poehali.dev/files/28745a89-08ff-47fb-bc74-ce917505fc77.png" 
+                    src={getOptimizedImageUrl("https://cdn.poehali.dev/files/28745a89-08ff-47fb-bc74-ce917505fc77.png", 400)} 
                     alt="Установка спутникового интернета Газпром" 
                     className="w-full h-64 object-cover"
+                    loading="lazy"
+                    width="400"
+                    height="256"
                   />
                   <Badge className="absolute top-4 right-4 bg-success/90 text-white">
                     Профессиональная установка
@@ -264,9 +268,12 @@ const Satellite = () => {
               <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="relative">
                   <img 
-                    src="https://cdn.poehali.dev/files/83a1b0e9-db7d-452a-8c86-d23a6aab4f87.png" 
+                    src={getOptimizedImageUrl("https://cdn.poehali.dev/files/83a1b0e9-db7d-452a-8c86-d23a6aab4f87.png", 400)} 
                     alt="Установка спутникового интернета на коттедже" 
                     className="w-full h-64 object-cover"
+                    loading="lazy"
+                    width="400"
+                    height="256"
                   />
                   <Badge className="absolute top-4 right-4 bg-primary/90 text-white">
                     Фасадный монтаж
@@ -298,9 +305,12 @@ const Satellite = () => {
               <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="relative">
                   <img 
-                    src="https://cdn.poehali.dev/files/0fca8872-0b4f-4613-ae6c-f9c2727b5a67.png" 
+                    src={getOptimizedImageUrl("https://cdn.poehali.dev/files/0fca8872-0b4f-4613-ae6c-f9c2727b5a67.png", 400)} 
                     alt="Установка спутникового интернета на крыше" 
                     className="w-full h-64 object-cover"
+                    loading="lazy"
+                    width="400"
+                    height="256"
                   />
                   <Badge className="absolute top-4 right-4 bg-secondary/90 text-white">
                     Кровельная установка

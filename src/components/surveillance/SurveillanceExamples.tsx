@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import { getOptimizedImageUrl } from '@/utils/imageOptimization';
 
 const SurveillanceExamples = () => {
   return (
@@ -18,7 +19,7 @@ const SurveillanceExamples = () => {
             <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
               <div className="relative">
                 <img 
-                  src="https://cdn.poehali.dev/files/0b448bcd-e51b-47eb-92ad-a7d51be237a6.png" 
+                  src={getOptimizedImageUrl("https://cdn.poehali.dev/files/0b448bcd-e51b-47eb-92ad-a7d51be237a6.png", 640)} 
                   alt="Видеонаблюдение в коттедже" 
                   loading="lazy"
                   width="640"
@@ -60,7 +61,7 @@ const SurveillanceExamples = () => {
             <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
               <div className="relative">
                 <img 
-                  src="https://cdn.poehali.dev/files/c0507610-bf80-4943-a2cd-f4b2fd8e2294.png" 
+                  src={getOptimizedImageUrl("https://cdn.poehali.dev/files/c0507610-bf80-4943-a2cd-f4b2fd8e2294.png", 640)} 
                   alt="Камеры на даче" 
                   loading="lazy"
                   width="640"
@@ -102,7 +103,7 @@ const SurveillanceExamples = () => {
             <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
               <div className="relative">
                 <img 
-                  src="https://cdn.poehali.dev/files/5acc45ef-cca8-4d38-bd8b-c51a3d147548.png" 
+                  src={getOptimizedImageUrl("https://cdn.poehali.dev/files/5acc45ef-cca8-4d38-bd8b-c51a3d147548.png", 640)} 
                   alt="Система мониторинга дома" 
                   loading="lazy"
                   width="640"
