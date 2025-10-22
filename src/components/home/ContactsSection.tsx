@@ -103,7 +103,7 @@ export default function ContactsSection() {
           <div className="bg-white rounded-xl shadow-md border border-blue-100 p-6 hover:shadow-lg transition-shadow text-center">
             <Icon name="Mail" size={32} className="text-blue-600 mx-auto mb-4" />
             <h3 className="text-lg font-semibold mb-4 text-gray-900">Email</h3>
-            <p className="text-muted-foreground break-words">info@wiline.ru</p>
+            <p className="text-muted-foreground break-words">info@mosoblconnect.ru</p>
           </div>
           
           <div className="bg-white rounded-xl shadow-md border border-blue-100 p-6 hover:shadow-lg transition-shadow">

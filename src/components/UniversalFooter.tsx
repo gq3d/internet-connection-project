@@ -92,11 +92,11 @@ export default function UniversalFooter({ customCopyright }: UniversalFooterProp
                 WhatsApp
               </a>
               <a 
-                href="mailto:info@wiline.ru"
+                href="mailto:info@mosoblconnect.ru"
                 className="flex items-center text-muted-foreground hover:text-primary transition-colors"
               >
                 <Icon name="Mail" size={16} className="mr-2" />
-                info@wiline.ru
+                info@mosoblconnect.ru
               </a>
             </div>
           </div>
