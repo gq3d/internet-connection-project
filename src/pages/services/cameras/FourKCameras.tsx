@@ -35,32 +35,38 @@ const FourKCameras = () => {
     {
       icon: 'Maximize2',
       title: '8 мегапикселей',
-      description: 'Разрешение 3840x2160 пикселей — в 4 раза больше деталей чем Full HD'
+      description: 'Разрешение 3840x2160 пикселей — в 4 раза больше деталей чем Full HD',
+      link: null
     },
     {
       icon: 'UserSearch',
       title: 'Распознавание лиц',
-      description: 'Четкая идентификация людей даже на большом расстоянии'
+      description: 'Четкая идентификация людей даже на большом расстоянии',
+      link: null
     },
     {
       icon: 'Hash',
       title: 'Чтение номеров',
-      description: 'Распознавание автомобильных номеров с расстояния до 25 метров'
+      description: 'Распознавание автомобильных номеров с расстояния до 25 метров',
+      link: null
     },
     {
       icon: 'Sparkles',
       title: 'Smart детекция',
-      description: 'ИИ аналитика: распознавание людей, транспорта, пересечение линий'
+      description: 'ИИ аналитика: распознавание людей, транспорта, пересечение линий',
+      link: '/services/surveillance/smart-analytics'
     },
     {
       icon: 'Moon',
       title: 'Ночная съемка',
-      description: 'ИК подсветка до 50 метров, режим Starlight для цветной съемки ночью'
+      description: 'ИК подсветка до 50 метров, режим Starlight для цветной съемки ночью',
+      link: null
     },
     {
       icon: 'Maximize',
       title: 'Цифровой зум',
-      description: 'Увеличение фрагментов без потери качества благодаря высокому разрешению'
+      description: 'Увеличение фрагментов без потери качества благодаря высокому разрешению',
+      link: null
     }
   ];
 
@@ -167,17 +173,29 @@ const FourKCameras = () => {
             В 4 раза больше деталей чем Full HD камеры
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {advantages.map((adv, index) => (
-              <Card key={index}>
-                <CardContent className="p-6">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-4">
-                    <Icon name={adv.icon} size={24} className="text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{adv.title}</h3>
-                  <p className="text-muted-foreground">{adv.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+            {advantages.map((adv, index) => {
+              const CardWrapper = adv.link ? Link : 'div';
+              const cardProps = adv.link ? { to: adv.link } : {};
+              
+              return (
+                <CardWrapper key={index} {...cardProps} className={adv.link ? 'block' : ''}>
+                  <Card className={adv.link ? 'hover:shadow-xl hover:scale-105 transition-all cursor-pointer' : ''}>
+                    <CardContent className="p-6">
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mb-4">
+                        <Icon name={adv.icon} size={24} className="text-primary" />
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2">{adv.title}</h3>
+                      <p className="text-muted-foreground">{adv.description}</p>
+                      {adv.link && (
+                        <div className="mt-3 text-primary text-sm font-medium flex items-center gap-1">
+                          Подробнее <Icon name="ArrowRight" size={16} />
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                </CardWrapper>
+              );
+            })}
           </div>
         </div>
       </section>

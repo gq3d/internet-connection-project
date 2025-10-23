@@ -68,22 +68,26 @@ const PtzCameras = () => {
     {
       title: 'Контроль больших территорий',
       description: 'Одна PTZ камера заменяет 4-6 обычных камер благодаря поворотному механизму и зуму',
-      icon: 'Maximize2'
+      icon: 'Maximize2',
+      link: null
     },
     {
       title: 'Активная охрана',
       description: 'Оператор может управлять камерой в реальном времени для детального осмотра подозрительных объектов',
-      icon: 'Gamepad2'
+      icon: 'Gamepad2',
+      link: null
     },
     {
       title: 'Экономия на установке',
       description: 'Меньше камер = меньше кабелей, коммутаторов и точек монтажа',
-      icon: 'DollarSign'
+      icon: 'DollarSign',
+      link: null
     },
     {
       title: 'Умная аналитика',
       description: 'Распознавание лиц, номеров, пересечение линий, подсчет людей',
-      icon: 'Brain'
+      icon: 'Brain',
+      link: '/services/surveillance/smart-analytics'
     }
   ];
 
@@ -196,21 +200,33 @@ const PtzCameras = () => {
             Почему выбирают поворотные камеры
           </p>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {advantages.map((adv, index) => (
-              <Card key={index}>
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full flex-shrink-0">
-                      <Icon name={adv.icon} size={24} className="text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2">{adv.title}</h3>
-                      <p className="text-muted-foreground">{adv.description}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            {advantages.map((adv, index) => {
+              const CardWrapper = adv.link ? Link : 'div';
+              const cardProps = adv.link ? { to: adv.link } : {};
+              
+              return (
+                <CardWrapper key={index} {...cardProps} className={adv.link ? 'block' : ''}>
+                  <Card className={adv.link ? 'hover:shadow-xl hover:scale-105 transition-all cursor-pointer' : ''}>
+                    <CardContent className="p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full flex-shrink-0">
+                          <Icon name={adv.icon} size={24} className="text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-semibold mb-2">{adv.title}</h3>
+                          <p className="text-muted-foreground">{adv.description}</p>
+                          {adv.link && (
+                            <div className="mt-3 text-primary text-sm font-medium flex items-center gap-1">
+                              Подробнее <Icon name="ArrowRight" size={16} />
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CardWrapper>
+              );
+            })}
           </div>
         </div>
       </section>
