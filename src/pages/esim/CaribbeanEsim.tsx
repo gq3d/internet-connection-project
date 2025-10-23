@@ -76,10 +76,10 @@ export default function CaribbeanEsim() {
       <Helmet>
         <title>eSIM для Карибского бассейна - Интернет в 18 странах | NetConnect</title>
         <meta name="description" content="Купить eSIM для Карибского бассейна. Тарифы от 6286₽, безлимитный интернет в 18 странах. Активация за 5 минут." />
-        <link rel="canonical" href="https://wiline.ru/esim/caribbean" />
+        <link rel="canonical" href="https://mosoblconnect.ru/esim/caribbean" />
         <meta property="og:title" content="eSIM для Карибского бассейна - Интернет в 18 странах | NetConnect" />
         <meta property="og:description" content="Купить eSIM для Карибского бассейна. Тарифы от 6286₽, безлимитный интернет." />
-        <meta property="og:url" content="https://wiline.ru/esim/caribbean" />
+        <meta property="og:url" content="https://mosoblconnect.ru/esim/caribbean" />
       </Helmet>
       
       <div className="min-h-screen bg-background">

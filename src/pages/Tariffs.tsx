@@ -17,12 +17,12 @@ export default function Tariffs() {
         <title>Тарифы NetConnect - от 1490₽ за 100 Мбит/с | Безлимитный интернет МО</title>
         <meta name="description" content="Тарифы NetConnect: Старт 100 Мбит/с - 1490₽, Продвинутый 150 Мбит/с - 1990₽, Премиум 240 Мбит/с - 2590₽. Безлимитный беспроводной интернет для дома и дачи в Московской области. Спутниковый интернет для удалённых объектов. ☎️ +7 (901) 500-00-78" />
         <meta name="keywords" content="тарифы интернет московская область, цены на интернет мо, безлимитный интернет подмосковье, спутниковый интернет тарифы, беспроводной интернет цена, интернет на даче тарифы, интернет в частный дом цена, 4g lte интернет тарифы, интернет 100 мбит цена, интернет 240 мбит цена" />
-        <link rel="canonical" href="https://wiline.ru/tariffs" />
+        <link rel="canonical" href="https://mosoblconnect.ru/tariffs" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Тарифы NetConnect - от 1490₽ за 100 Мбит/с" />
         <meta property="og:description" content="Безлимитный интернет для дома и дачи. 3 тарифа: 100, 150, 240 Мбит/с. Спутниковый интернет для удалённых объектов" />
-        <meta property="og:url" content="https://wiline.ru/tariffs" />
-        <meta property="og:image" content="https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg" />
+        <meta property="og:url" content="https://mosoblconnect.ru/tariffs" />
+        <meta property="og:image" content="https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

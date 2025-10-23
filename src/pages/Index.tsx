@@ -18,19 +18,19 @@ const Index = () => {
     keywords: 'интернет московская область, беспроводной интернет мо, спутниковый интернет подмосковье, интернет в деревне мо, интернет в коттеджном посёлке, интернет на даче, интернет в снт, быстрый интернет мо, подключить интернет деревня',
     ogTitle: 'NetConnect - Беспроводной интернет в МО | Города, деревни, посёлки',
     ogDescription: 'Высокоскоростной интернет до 250 Мбит/с в 169+ населённых пунктах Московской области. Города, деревни, КП, СНТ.',
-    ogImage: 'https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
-    canonical: 'https://wiline.ru/',
+    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
+    canonical: 'https://mosoblconnect.ru/',
     structuredData: {
       "@context": "https://schema.org",
       "@graph": [
         {
           "@type": "Organization",
-          "@id": "https://wiline.ru/#organization",
+          "@id": "https://mosoblconnect.ru/#organization",
           "name": "NetConnect",
-          "url": "https://wiline.ru/",
+          "url": "https://mosoblconnect.ru/",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg"
+            "url": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg"
           },
           "contactPoint": {
             "@type": "ContactPoint",
@@ -45,26 +45,26 @@ const Index = () => {
         },
         {
           "@type": "WebSite",
-          "@id": "https://wiline.ru/#website",
-          "url": "https://wiline.ru/",
+          "@id": "https://mosoblconnect.ru/#website",
+          "url": "https://mosoblconnect.ru/",
           "name": "NetConnect - Беспроводной интернет в Московской области",
           "publisher": {
-            "@id": "https://wiline.ru/#organization"
+            "@id": "https://mosoblconnect.ru/#organization"
           },
           "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://wiline.ru/?search={search_term_string}",
+            "target": "https://mosoblconnect.ru/?search={search_term_string}",
             "query-input": "required name=search_term_string"
           }
         },
         {
           "@type": "Service",
-          "@id": "https://wiline.ru/#service",
+          "@id": "https://mosoblconnect.ru/#service",
           "serviceType": "Internet Service Provider",
           "name": "Беспроводной и спутниковый интернет",
           "description": "Высокоскоростной интернет до 250 Мбит/с в 169+ населённых пунктах Московской области",
           "provider": {
-            "@id": "https://wiline.ru/#organization"
+            "@id": "https://mosoblconnect.ru/#organization"
           },
           "areaServed": {
             "@type": "State",
@@ -84,13 +84,13 @@ const Index = () => {
         },
         {
           "@type": "BreadcrumbList",
-          "@id": "https://wiline.ru/#breadcrumb",
+          "@id": "https://mosoblconnect.ru/#breadcrumb",
           "itemListElement": [
             {
               "@type": "ListItem",
               "position": 1,
               "name": "Главная",
-              "item": "https://wiline.ru/"
+              "item": "https://mosoblconnect.ru/"
             }
           ]
         }

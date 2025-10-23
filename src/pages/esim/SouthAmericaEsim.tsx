@@ -130,10 +130,10 @@ export default function SouthAmericaEsim() {
       <Helmet>
         <title>eSIM для Южной Америки - Интернет в 11 странах | NetConnect</title>
         <meta name="description" content="Купить eSIM для Южной Америки. Тарифы от 1074₽, безлимитный интернет в 11 странах. Активация за 5 минут." />
-        <link rel="canonical" href="https://wiline.ru/esim/south-america" />
+        <link rel="canonical" href="https://mosoblconnect.ru/esim/south-america" />
         <meta property="og:title" content="eSIM для Южной Америки - Интернет в 11 странах | NetConnect" />
         <meta property="og:description" content="Купить eSIM для Южной Америки. Тарифы от 1074₽, безлимитный интернет." />
-        <meta property="og:url" content="https://wiline.ru/esim/south-america" />
+        <meta property="og:url" content="https://mosoblconnect.ru/esim/south-america" />
       </Helmet>
       
       <div className="min-h-screen bg-background">

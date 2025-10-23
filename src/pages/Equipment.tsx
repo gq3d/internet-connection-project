@@ -16,7 +16,7 @@ export default function Equipment() {
         keywords="оборудование беспроводного интернета, антенны mimo, 4g lte роутер, антенны mikrotik, ubiquiti lte, tp-link archer, huawei роутер, оборудование для дачи интернет, антенна для приема 4g, направленная антенна lte, yagi mimo антенна"
         ogTitle="Примеры оборудования для беспроводного интернета — антенны и роутеры | NetConnect"
         ogDescription="Профессиональные MIMO антенны (2x18-24 dBi) и 4G/LTE роутеры для стабильного интернета. Подбираем оптимальное оборудование для вашего объекта индивидуально."
-        canonical="https://wiline.ru/equipment"
+        canonical="https://mosoblconnect.ru/equipment"
       />
       
       <Header />
@@ -292,7 +292,7 @@ export default function Equipment() {
             "@type": "Brand",
             "name": "NetConnect"
           },
-          "image": "https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
+          "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
           "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "RUB",
@@ -321,13 +321,13 @@ export default function Equipment() {
               "@type": "ListItem",
               "position": 1,
               "name": "Главная",
-              "item": "https://wiline.ru/"
+              "item": "https://mosoblconnect.ru/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Оборудование",
-              "item": "https://wiline.ru/equipment"
+              "item": "https://mosoblconnect.ru/equipment"
             }
           ]
         })}

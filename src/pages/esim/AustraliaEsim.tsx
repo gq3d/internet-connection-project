@@ -148,10 +148,10 @@ export default function AustraliaEsim() {
       <Helmet>
         <title>eSIM для Австралии и Океании - Интернет в 15 странах | NetConnect</title>
         <meta name="description" content="Купить eSIM для Австралии и Океании. Тарифы от 1056₽, безлимитный интернет в 15 странах. Активация за 5 минут." />
-        <link rel="canonical" href="https://wiline.ru/esim/australia" />
+        <link rel="canonical" href="https://mosoblconnect.ru/esim/australia" />
         <meta property="og:title" content="eSIM для Австралии и Океании - Интернет в 15 странах | NetConnect" />
         <meta property="og:description" content="Купить eSIM для Австралии и Океании. Тарифы от 1056₽, безлимитный интернет." />
-        <meta property="og:url" content="https://wiline.ru/esim/australia" />
+        <meta property="og:url" content="https://mosoblconnect.ru/esim/australia" />
       </Helmet>
       
       <div className="min-h-screen bg-background">

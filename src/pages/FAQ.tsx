@@ -162,7 +162,7 @@ export default function FAQ() {
       <Helmet>
         <title>Часто задаваемые вопросы - NetConnect</title>
         <meta name="description" content="Ответы на популярные вопросы о подключении интернета, тарифах и работе оборудования. Всё о беспроводном интернете в Московской области." />
-        <link rel="canonical" href="https://wiline.ru/faq" />
+        <link rel="canonical" href="https://mosoblconnect.ru/faq" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

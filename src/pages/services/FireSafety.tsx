@@ -10,10 +10,10 @@ const FireSafety = () => {
   useSEO({
     title: 'Пожарная безопасность и сигнализация в МО от 30000₽ | NetConnect',
     description: 'Установка пожарной сигнализации и систем оповещения. Датчики дыма, температуры, интеграция с МЧС. Звоните: +7 (901) 500-00-78',
-    canonical: 'https://wiline.ru/services/fire-safety',
+    canonical: 'https://mosoblconnect.ru/services/fire-safety',
     ogTitle: 'Пожарная сигнализация в МО от 30000₽',
     ogDescription: 'Профессиональная установка систем пожарной безопасности. Датчики дыма и температуры, звуковое оповещение, подключение к МЧС.',
-    ogImage: 'https://cdn.wiline.ru/files/fire-safety.jpg',
+    ogImage: 'https://cdn.mosoblconnect.ru/files/fire-safety.jpg',
     ogImageAlt: 'Пожарная безопасность NetConnect',
     structuredData: {
       '@context': 'https://schema.org',

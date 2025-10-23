@@ -130,10 +130,10 @@ export default function AfricaEsim() {
       <Helmet>
         <title>eSIM для Африки - Интернет в 12 странах | NetConnect</title>
         <meta name="description" content="Купить eSIM для Африки. Тарифы от 2394₽, безлимитный интернет в 12 странах Африки. Активация за 5 минут." />
-        <link rel="canonical" href="https://wiline.ru/esim/africa" />
+        <link rel="canonical" href="https://mosoblconnect.ru/esim/africa" />
         <meta property="og:title" content="eSIM для Африки - Интернет в 12 странах | NetConnect" />
         <meta property="og:description" content="Купить eSIM для Африки. Тарифы от 2394₽, безлимитный интернет." />
-        <meta property="og:url" content="https://wiline.ru/esim/africa" />
+        <meta property="og:url" content="https://mosoblconnect.ru/esim/africa" />
       </Helmet>
       
       <div className="min-h-screen bg-background">

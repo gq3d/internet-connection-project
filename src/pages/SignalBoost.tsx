@@ -20,7 +20,7 @@ export default function SignalBoost() {
         <meta property="og:title" content="Усиление 4G/LTE интернета для дачи и дома - от 16800₽" />
         <meta property="og:description" content="Решения для усиления 4G/LTE интернета: антенны с роутерами, уличные 4G роутеры. Стабильный мобильный интернет даже при слабом сигнале. Установка в МО" />
         <meta property="og:url" content="https://mosoblconnect.ru/signal-boost" />
-        <meta property="og:image" content="https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg" />
+        <meta property="og:image" content="https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

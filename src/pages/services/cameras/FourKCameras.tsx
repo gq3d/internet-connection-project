@@ -13,7 +13,7 @@ const FourKCameras = () => {
     title: '4K камеры Ultra HD в МО от 15000₽ | NetConnect',
     description: 'Установка камер 4K Ultra HD 3840x2160. Максимальная детализация, Smart детекция, ночное видение до 50м. Звоните: +7 (901) 500-00-78',
     keywords: '4k камеры, камеры ultra hd, камеры 4к установка, видеонаблюдение 4k, камеры высокого разрешения, камеры 8 мп, smart детекция',
-    canonical: 'https://wiline.ru/services/cameras/4k-cameras',
+    canonical: 'https://mosoblconnect.ru/services/cameras/4k-cameras',
     ogTitle: '4K камеры видеонаблюдения в Московской области',
     ogDescription: 'Камеры сверхвысокого разрешения 4K UHD. Детализация лиц и номеров, Smart аналитика, запись 8 Мп.',
     ogImage: 'https://cdn.poehali.dev/projects/d4f2c7e9-a091-4f1c-9e82-47f687864218/files/b435c19e-b35a-463b-9c15-5b429ceeada0.jpg',
