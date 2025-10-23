@@ -130,32 +130,38 @@ const AccessControl = () => {
     {
       icon: 'Shield',
       title: 'Безопасность',
-      description: 'Только авторизованные лица получают доступ на территорию'
+      description: 'Только авторизованные лица получают доступ на территорию',
+      link: null
     },
     {
       icon: 'Clock',
       title: 'Учет рабочего времени',
-      description: 'Автоматическая фиксация прихода и ухода сотрудников'
+      description: 'Автоматическая фиксация прихода и ухода сотрудников',
+      link: null
     },
     {
       icon: 'Users',
       title: 'Управление доступом',
-      description: 'Гибкое назначение прав доступа для разных групп пользователей'
+      description: 'Гибкое назначение прав доступа для разных групп пользователей',
+      link: null
     },
     {
       icon: 'BarChart',
       title: 'Аналитика',
-      description: 'Отчеты по посещаемости, опозданиям и нарушениям'
+      description: 'Отчеты по посещаемости, опозданиям и нарушениям',
+      link: '/services/surveillance/smart-analytics'
     },
     {
       icon: 'Wifi',
       title: 'Удаленный доступ',
-      description: 'Управление системой из любой точки мира через интернет'
+      description: 'Управление системой из любой точки мира через интернет',
+      link: null
     },
     {
       icon: 'History',
       title: 'История событий',
-      description: 'Полный журнал всех проходов с возможностью поиска'
+      description: 'Полный журнал всех проходов с возможностью поиска',
+      link: null
     }
   ];
 
@@ -225,17 +231,29 @@ const AccessControl = () => {
             Контроль доступа обеспечивает безопасность и помогает в управлении персоналом
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {benefits.map((benefit, index) => (
-              <Card key={index}>
-                <CardContent className="p-6 text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-                    <Icon name={benefit.icon} size={32} className="text-primary" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
-                  <p className="text-muted-foreground text-sm">{benefit.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+            {benefits.map((benefit, index) => {
+              const CardWrapper = benefit.link ? Link : 'div';
+              const cardProps = benefit.link ? { to: benefit.link } : {};
+              
+              return (
+                <CardWrapper key={index} {...cardProps} className={benefit.link ? 'block' : ''}>
+                  <Card className={benefit.link ? 'hover:shadow-xl hover:scale-105 transition-all cursor-pointer' : ''}>
+                    <CardContent className="p-6 text-center">
+                      <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+                        <Icon name={benefit.icon} size={32} className="text-primary" />
+                      </div>
+                      <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
+                      <p className="text-muted-foreground text-sm">{benefit.description}</p>
+                      {benefit.link && (
+                        <div className="mt-4 text-primary text-sm font-medium flex items-center justify-center gap-1">
+                          Подробнее <Icon name="ArrowRight" size={16} />
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                </CardWrapper>
+              );
+            })}
           </div>
         </div>
       </section>
