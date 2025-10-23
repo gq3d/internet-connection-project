@@ -27,6 +27,7 @@ const IpCameras = lazy(() => import("./pages/services/cameras/IpCameras"));
 const FourKCameras = lazy(() => import("./pages/services/cameras/FourKCameras"));
 const PtzCameras = lazy(() => import("./pages/services/cameras/PtzCameras"));
 const ThermalCameras = lazy(() => import("./pages/services/cameras/ThermalCameras"));
+const SmartAnalytics = lazy(() => import("./pages/services/surveillance/SmartAnalytics"));
 const AlarmSecurity = lazy(() => import("./pages/services/AlarmSecurity"));
 const AccessControl = lazy(() => import("./pages/services/AccessControl"));
 const FireSafety = lazy(() => import("./pages/services/FireSafety"));
@@ -98,6 +99,7 @@ const App = () => (
               <Route path="/services/cameras/4k-cameras" element={<FourKCameras />} />
               <Route path="/services/cameras/ptz-cameras" element={<PtzCameras />} />
               <Route path="/services/cameras/thermal-cameras" element={<ThermalCameras />} />
+              <Route path="/services/surveillance/smart-analytics" element={<SmartAnalytics />} />
               <Route path="/services/alarm-security" element={<AlarmSecurity />} />
               <Route path="/services/access-control" element={<AccessControl />} />
               <Route path="/services/fire-safety" element={<FireSafety />} />
