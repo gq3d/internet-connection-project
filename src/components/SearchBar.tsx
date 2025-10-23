@@ -50,6 +50,7 @@ const searchData: SearchSuggestion[] = [
   { title: 'Диагностика Wi-Fi', url: '/services/wifi-diagnostics', type: 'service' },
   { title: 'Безопасность', url: '/services/security', type: 'service' },
   { title: 'Видеонаблюдение', url: '/services/surveillance', type: 'service' },
+  { title: 'Умная аналитика', url: '/services/surveillance/smart-analytics', type: 'service', description: 'Распознавание лиц, детекция движения, система свой-чужой' },
   { title: 'IP камеры', url: '/services/cameras/ip-cameras', type: 'service' },
   { title: '4K камеры', url: '/services/cameras/4k-cameras', type: 'service' },
   { title: 'PTZ камеры', url: '/services/cameras/ptz-cameras', type: 'service' },
