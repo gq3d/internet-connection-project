@@ -166,6 +166,64 @@ const IpCameras = () => {
         </div>
       </section>
 
+      <section className="py-16 bg-gradient-to-br from-purple-50 via-indigo-50 to-transparent">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl mb-6 shadow-xl">
+                <Icon name="Brain" size={32} className="text-white" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                IP камеры с умной аналитикой
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Современные IP камеры оснащены ИИ-процессорами для распознавания лиц, 
+                автоматического отслеживания движения и интеллектуального анализа событий
+              </p>
+            </div>
+
+            <Link to="/services/surveillance/smart-analytics" className="block">
+              <Card className="hover:shadow-2xl transition-all hover:scale-[1.02] cursor-pointer border-2 border-purple-200">
+                <CardContent className="p-8">
+                  <div className="flex flex-col md:flex-row items-center gap-8">
+                    <div className="flex-shrink-0">
+                      <div className="w-24 h-24 bg-gradient-to-br from-purple-100 to-indigo-100 rounded-2xl flex items-center justify-center">
+                        <Icon name="ScanFace" size={48} className="text-purple-600" />
+                      </div>
+                    </div>
+                    <div className="flex-1 text-center md:text-left">
+                      <h3 className="text-2xl font-bold mb-3">Возможности умной аналитики</h3>
+                      <div className="grid md:grid-cols-2 gap-3 mb-4">
+                        <div className="flex items-center gap-2">
+                          <Icon name="Check" size={18} className="text-purple-600 flex-shrink-0" />
+                          <span className="text-sm">Распознавание лиц</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Icon name="Check" size={18} className="text-purple-600 flex-shrink-0" />
+                          <span className="text-sm">Детекция движения</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Icon name="Check" size={18} className="text-purple-600 flex-shrink-0" />
+                          <span className="text-sm">Система «свой-чужой»</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Icon name="Check" size={18} className="text-purple-600 flex-shrink-0" />
+                          <span className="text-sm">Электронный глазок</span>
+                        </div>
+                      </div>
+                      <div className="text-primary font-semibold flex items-center justify-center md:justify-start gap-2">
+                        Узнать больше об умной аналитике
+                        <Icon name="ArrowRight" size={20} />
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-4">Популярные модели</h2>

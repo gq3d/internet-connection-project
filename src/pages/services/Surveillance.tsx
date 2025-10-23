@@ -78,6 +78,74 @@ const Surveillance = () => {
       <SurveillanceProcess />
       <SurveillanceExamples />
       
+      {/* Smart Analytics Section */}
+      <section className="py-16 bg-gradient-to-br from-purple-50 via-indigo-50 to-transparent">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl mb-6 shadow-xl">
+                <Icon name="Brain" size={32} className="text-white" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Умная аналитика видеонаблюдения
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
+                Современные камеры умеют не просто записывать видео — они анализируют происходящее, 
+                распознают лица, отслеживают движение и помогают предотвращать инциденты
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <Card className="hover:shadow-lg transition-all">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                    <Icon name="ScanFace" size={24} className="text-purple-600" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Распознавание лиц</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Автоматическая идентификация людей, система «свой-чужой», уведомления о посторонних
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-all">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                    <Icon name="Activity" size={24} className="text-indigo-600" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Детекция движения</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Запись только при движении, контроль присутствия, интеграция с системой доступа
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-all">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <Icon name="Eye" size={24} className="text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Электронный глазок</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Видеоглазок с трансляцией на смартфон, двусторонняя связь, запись посетителей
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="text-center">
+              <Link 
+                to="/services/surveillance/smart-analytics"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transition-all hover:scale-105"
+              >
+                Узнать больше об умной аналитике
+                <Icon name="ArrowRight" size={24} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* Reviews Link Section */}
       <section className="py-8 bg-background">
         <div className="container mx-auto px-4">
