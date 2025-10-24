@@ -19,14 +19,14 @@ export default function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
           '@type': 'ListItem',
           position: 1,
           name: 'Главная',
-          item: 'https://mosoblconnect.ru/'
+          item: 'https://wiline.ru/'
         },
         ...items.map((item, index) => ({
           '@type': 'ListItem',
           position: index + 2,
           name: item.label,
           ...(item.href && item.href !== '/' && {
-            item: `https://mosoblconnect.ru${item.href}`
+            item: `https://wiline.ru${item.href}`
           })
         }))
       ]

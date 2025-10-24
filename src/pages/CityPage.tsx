@@ -91,10 +91,10 @@ const CityPage = () => {
     title: city?.seoTitle || '',
     description: city?.description || '',
     keywords: city ? `интернет ${city.name}, беспроводной интернет ${city.name}, подключение интернета ${city.name}, интернет на даче ${city.name}, интернет в коттедже ${city.name}, провайдер ${city.name}, ${city.district} интернет, wifi ${city.name}` : '',
-    canonical: correctSlug ? `https://mosoblconnect.ru/city/${correctSlug}` : '',
+    canonical: correctSlug ? `https://wiline.ru/city/${correctSlug}` : '',
     ogTitle: city ? `Беспроводной интернет в ${city.name} от 1490₽/мес` : '',
     ogDescription: city ? `Подключаем интернет до 250 Мбит/с за 1-3 дня в ${city.name}. Покрытие частных домов, дач, коттеджных посёлков и СНТ. Бесплатная установка оборудования.` : '',
-    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
+    ogImage: 'https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
     ogImageAlt: city ? `Подключение беспроводного интернета NetConnect в ${city.name}` : '',
     noindex: shouldRedirect // Tell search engines: don't index Cyrillic URLs
   });
@@ -159,8 +159,8 @@ const CityPage = () => {
             "name": `NetConnect`,
             "alternateName": `NetConnect - Беспроводной интернет в ${city.nameInPrepositional}`,
             "description": `Подключение беспроводного интернета в ${city.nameInPrepositional}, ${city.district}. Обслуживаем частные дома, дачи, коттеджные посёлки и СНТ. Скорость до 250 Мбит/с, установка за 1-3 дня.`,
-            "image": "https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
-            "url": `https://mosoblconnect.ru/city/${normalizedSlug}`,
+            "image": "https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg",
+            "url": `https://wiline.ru/city/${normalizedSlug}`,
             "telephone": ["+7 (901) 500-00-78", "+7 (901) 500-00-87"],
             "priceRange": "1490₽ - 2590₽",
             "address": {
@@ -243,19 +243,19 @@ const CityPage = () => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Главная",
-                "item": "https://mosoblconnect.ru"
+                "item": "https://wiline.ru"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Покрытие",
-                "item": "https://mosoblconnect.ru/coverage"
+                "item": "https://wiline.ru/coverage"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": city.name,
-                "item": `https://mosoblconnect.ru/city/${normalizedSlug}`
+                "item": `https://wiline.ru/city/${normalizedSlug}`
               }
             ]
           })}

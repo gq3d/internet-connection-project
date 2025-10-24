@@ -181,10 +181,10 @@ export default function EuropeEsim() {
       <Helmet>
         <title>eSIM для Европы - Интернет в 45+ странах | NetConnect</title>
         <meta name="description" content="Купить eSIM для Европы. Тарифы от 572₽, безлимитный интернет, звонки и SMS в 45+ странах Европы. Активация за 5 минут." />
-        <link rel="canonical" href="https://mosoblconnect.ru/esim/europe" />
+        <link rel="canonical" href="https://wiline.ru/esim/europe" />
         <meta property="og:title" content="eSIM для Европы - Интернет в 45+ странах | NetConnect" />
         <meta property="og:description" content="Купить eSIM для Европы. Тарифы от 572₽, безлимитный интернет в 45+ странах." />
-        <meta property="og:url" content="https://mosoblconnect.ru/esim/europe" />
+        <meta property="og:url" content="https://wiline.ru/esim/europe" />
       </Helmet>
       
       <div className="min-h-screen bg-background">

@@ -14,10 +14,10 @@ const SmartAnalytics = () => {
     title: 'Умная аналитика видеонаблюдения в МО | NetConnect',
     description: 'Распознавание лиц, детекция движения, система свой-чужой, электронный глазок. Видеоаналитика для максимальной безопасности. Звоните: +7 (901) 500-00-78',
     keywords: 'умная аналитика видеонаблюдение, распознавание лиц, детекция движения, электронный глазок, система свой чужой, видеоаналитика',
-    canonical: 'https://mosoblconnect.ru/services/surveillance/smart-analytics',
+    canonical: 'https://wiline.ru/services/surveillance/smart-analytics',
     ogTitle: 'Умная аналитика и дополнительные функции видеонаблюдения',
     ogDescription: 'Современные системы видеонаблюдения с распознаванием лиц, детекцией движения и интеллектуальной аналитикой. Установка под ключ в Московской области.',
-    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
+    ogImage: 'https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
     ogImageAlt: 'Умная аналитика видеонаблюдения NetConnect'
   });
 

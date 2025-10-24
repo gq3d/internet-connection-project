@@ -10,10 +10,10 @@ const WifiSignalBoost = () => {
   useSEO({
     title: 'Усиление сигнала Wi-Fi в МО от 8000₽ | NetConnect',
     description: 'Расширение зоны покрытия Wi-Fi с помощью репитеров и mesh-систем. Устранение мертвых зон. Звоните: +7 (901) 500-00-78',
-    canonical: 'https://mosoblconnect.ru/services/wifi-signal-boost',
+    canonical: 'https://wiline.ru/services/wifi-signal-boost',
     ogTitle: 'Усиление Wi-Fi сигнала в Московской области от 8000₽',
     ogDescription: 'Установка усилителей сигнала, mesh-систем. Анализ покрытия, устранение мертвых зон, бесшовный роуминг.',
-    ogImage: 'https://cdn.mosoblconnect.ru/files/wifi-boost.jpg',
+    ogImage: 'https://cdn.wiline.ru/files/wifi-boost.jpg',
     ogImageAlt: 'Усиление Wi-Fi сигнала NetConnect',
     structuredData: {
       '@context': 'https://schema.org',

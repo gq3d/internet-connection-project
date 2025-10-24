@@ -13,7 +13,7 @@ const ThermalCameras = () => {
     title: 'Тепловизионные камеры в МО от 85000₽ | NetConnect',
     description: 'Установка тепловизионных камер для периметровой охраны. Детекция в полной темноте, дальность до 500м. Звоните: +7 (901) 500-00-78',
     keywords: 'тепловизионные камеры, камеры тепловидения, периметровая охрана, thermal камеры, тепловизоры, ночное видение, системы охраны',
-    canonical: 'https://mosoblconnect.ru/services/cameras/thermal-cameras',
+    canonical: 'https://wiline.ru/services/cameras/thermal-cameras',
     ogTitle: 'Тепловизионные камеры в Московской области',
     ogDescription: 'Камеры тепловидения для максимальной безопасности. Обнаружение в темноте, тумане, дыме. Дальность до 500 метров.',
     ogImage: 'https://cdn.poehali.dev/projects/d4f2c7e9-a091-4f1c-9e82-47f687864218/files/80ad8e27-16e2-4c66-855c-ef66ff4ee42f.jpg',

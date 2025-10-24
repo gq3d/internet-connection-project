@@ -10,10 +10,10 @@ const AccessControl = () => {
   useSEO({
     title: 'Контроль доступа и СКУД в МО от 40000₽ | NetConnect',
     description: 'Установка систем контроля и управления доступом. Электронные замки, карты доступа, биометрия. Звоните: +7 (901) 500-00-78',
-    canonical: 'https://mosoblconnect.ru/services/access-control',
+    canonical: 'https://wiline.ru/services/access-control',
     ogTitle: 'СКУД и контроль доступа в МО от 40000₽',
     ogDescription: 'Профессиональная установка систем контроля доступа. Электронные замки, домофоны, биометрические сканеры, журнал событий.',
-    ogImage: 'https://cdn.mosoblconnect.ru/files/access-control.jpg',
+    ogImage: 'https://cdn.wiline.ru/files/access-control.jpg',
     ogImageAlt: 'Контроль доступа NetConnect',
     structuredData: {
       '@context': 'https://schema.org',

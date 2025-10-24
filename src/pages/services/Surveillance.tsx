@@ -17,10 +17,10 @@ const Surveillance = () => {
     title: 'Видеонаблюдение в МО от 45000₽ | NetConnect',
     description: 'IP-камеры 4K, облачное хранение, мобильный доступ. Установка под ключ. Звоните: +7 (901) 500-00-78',
     keywords: 'видеонаблюдение московская область, установка видеонаблюдения, ip камеры, камеры 4k, системы видеонаблюдения, видеонаблюдение для дома, видеонаблюдение офис',
-    canonical: 'https://mosoblconnect.ru/services/surveillance',
+    canonical: 'https://wiline.ru/services/surveillance',
     ogTitle: 'Видеонаблюдение 4K в МО от 45000₽',
     ogDescription: 'Профессиональная установка систем видеонаблюдения. IP камеры 4K, облачное хранение, удаленный доступ. Готовые комплекты от 45 000₽.',
-    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
+    ogImage: 'https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
     ogImageAlt: 'Видеонаблюдение NetConnect в Московской области',
     structuredData: {
       '@context': 'https://schema.org',

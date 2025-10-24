@@ -19,7 +19,7 @@ const Wifi = () => {
         "@type": "Organization",
         "name": "NetConnect",
         "telephone": "+7-901-500-00-78",
-        "url": "https://mosoblconnect.ru"
+        "url": "https://wiline.ru"
       },
       "areaServed": {
         "@type": "State",
@@ -46,19 +46,19 @@ const Wifi = () => {
           "@type": "ListItem",
           "position": 1,
           "name": "Главная",
-          "item": "https://mosoblconnect.ru"
+          "item": "https://wiline.ru"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Услуги",
-          "item": "https://mosoblconnect.ru/services"
+          "item": "https://wiline.ru/services"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Wi-Fi оборудование",
-          "item": "https://mosoblconnect.ru/services/wifi"
+          "item": "https://wiline.ru/services/wifi"
         }
       ]
     }
@@ -68,10 +68,10 @@ const Wifi = () => {
     title: 'Wi-Fi оборудование для дома в МО от 8000₽ | NetConnect',
     description: 'Продажа и установка Wi-Fi оборудования в Московской области: роутеры, mesh-системы, точки доступа. Профессиональная настройка для полного покрытия дома без мертвых зон. Цены от 8000 рублей. ☎ +7 (901) 500-00-78',
     keywords: 'wi-fi оборудование, установка wifi, mesh системы, роутеры для дома, точки доступа, wifi московская область, усиление wifi сигнала, беспроводная сеть',
-    canonical: 'https://mosoblconnect.ru/services/wifi',
+    canonical: 'https://wiline.ru/services/wifi',
     ogTitle: 'Wi-Fi оборудование для дома в МО от 8000₽',
     ogDescription: 'Профессиональное Wi-Fi оборудование: роутеры, mesh-системы, точки доступа. Покрытие всего дома без мертвых зон',
-    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
+    ogImage: 'https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
     ogImageAlt: 'Wi-Fi оборудование NetConnect для дома в Московской области'
   });
 

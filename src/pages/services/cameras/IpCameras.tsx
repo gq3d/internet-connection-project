@@ -13,7 +13,7 @@ const IpCameras = () => {
     title: 'IP камеры Full HD в МО от 8000₽ | NetConnect',
     description: 'Установка IP камер Full HD 1920x1080. PoE питание, ночное видение до 30м, удаленный доступ. Звоните: +7 (901) 500-00-78',
     keywords: 'ip камеры, ip камеры установка, видеонаблюдение московская область, камеры full hd, poe камеры, цифровые камеры, камеры видеонаблюдения цена',
-    canonical: 'https://mosoblconnect.ru/services/cameras/ip-cameras',
+    canonical: 'https://wiline.ru/services/cameras/ip-cameras',
     ogTitle: 'IP камеры Full HD в Московской области от 8000₽',
     ogDescription: 'Цифровые IP камеры высокого разрешения. PoE питание, детекция движения, мобильное приложение, облачное хранение.',
     ogImage: 'https://cdn.poehali.dev/projects/d4f2c7e9-a091-4f1c-9e82-47f687864218/files/7bf1427f-7dfd-4c77-a162-8c3203ad7d1b.jpg',

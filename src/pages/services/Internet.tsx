@@ -16,10 +16,10 @@ const Internet = () => {
     title: 'Беспроводной интернет в МО от 1490₽ | NetConnect',
     description: 'Подключение беспроводного интернета для частного дома и дачи в Московской области. Скорость до 250 Мбит/с, установка за 1-3 дня без закапывания кабеля. Тарифы от 1490 рублей в месяц.',
     keywords: 'беспроводной интернет, интернет московская область, радиоканал интернет, подключить интернет мо, провайдер подмосковье, интернет без проводов, быстрый интернет',
-    canonical: 'https://mosoblconnect.ru/services/internet',
+    canonical: 'https://wiline.ru/services/internet',
     ogTitle: 'Беспроводной интернет в Московской области от 1490₽',
     ogDescription: 'Быстрое подключение беспроводного интернета. Скорость до 250 Мбит/с, без проводов. Тарифы от 1490₽/мес.',
-    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
+    ogImage: 'https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
     ogImageAlt: 'Беспроводной интернет NetConnect в Московской области'
   });
 
@@ -33,7 +33,7 @@ const Internet = () => {
         "@type": "Organization",
         "name": "NetConnect",
         "telephone": "+7-901-500-00-78",
-        "url": "https://mosoblconnect.ru"
+        "url": "https://wiline.ru"
       },
       "areaServed": {
         "@type": "State",
@@ -66,19 +66,19 @@ const Internet = () => {
           "@type": "ListItem",
           "position": 1,
           "name": "Главная",
-          "item": "https://mosoblconnect.ru"
+          "item": "https://wiline.ru"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Услуги",
-          "item": "https://mosoblconnect.ru/services"
+          "item": "https://wiline.ru/services"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Беспроводной интернет",
-          "item": "https://mosoblconnect.ru/services/internet"
+          "item": "https://wiline.ru/services/internet"
         }
       ]
     }
