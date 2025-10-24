@@ -10,10 +10,10 @@ const WifiDiagnostics = () => {
   useSEO({
     title: 'Диагностика и настройка Wi-Fi в МО от 3000₽ | NetConnect',
     description: 'Профессиональная диагностика проблем Wi-Fi, настройка параметров, оптимизация каналов, настройка QoS. Звоните: +7 (901) 500-00-78',
-    canonical: 'https://wiline.ru/services/wifi-diagnostics',
+    canonical: 'https://mosoblconnect.ru/services/wifi-diagnostics',
     ogTitle: 'Диагностика и настройка Wi-Fi в Московской области',
     ogDescription: 'Диагностика проблем с Wi-Fi сетью, оптимизация каналов, настройка QoS, устранение помех, мониторинг сети.',
-    ogImage: 'https://cdn.wiline.ru/files/wifi-diagnostics.jpg',
+    ogImage: 'https://cdn.mosoblconnect.ru/files/wifi-diagnostics.jpg',
     ogImageAlt: 'Диагностика Wi-Fi NetConnect',
     structuredData: {
       '@context': 'https://schema.org',

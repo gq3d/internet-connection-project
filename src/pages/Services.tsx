@@ -61,7 +61,7 @@ export default function Services() {
       <Helmet>
         <title>Подключение интернета и услуги связи в Московской области - быстро и надежно</title>
         <meta name="description" content="Подключение беспроводного интернета, видеонаблюдение, Wi-Fi оборудование, системы охраны в Подмосковье. Скорость до 250 Мбит/с. Поддержка 24/7. Профессиональный монтаж." />
-        <link rel="canonical" href="https://wiline.ru/services" />
+        <link rel="canonical" href="https://mosoblconnect.ru/services" />
         <meta name="keywords" content="подключить интернет московская область, беспроводной интернет подмосковье, видеонаблюдение дача, wifi оборудование частный дом, охранные системы мо" />
       </Helmet>
       

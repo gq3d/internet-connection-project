@@ -13,7 +13,7 @@ const PtzCameras = () => {
     title: 'PTZ камеры с зумом в МО от 35000₽ | NetConnect',
     description: 'Установка PTZ камер с поворотом 360° и 20x зумом. Автоследование объектов, патрулирование. Звоните: +7 (901) 500-00-78',
     keywords: 'ptz камеры, поворотные камеры, камеры с зумом, камеры с поворотом, автослежение, ptz установка, камеры 360 градусов',
-    canonical: 'https://wiline.ru/services/cameras/ptz-cameras',
+    canonical: 'https://mosoblconnect.ru/services/cameras/ptz-cameras',
     ogTitle: 'PTZ камеры видеонаблюдения в Московской области',
     ogDescription: 'Поворотные камеры с зумом для контроля больших территорий. Поворот 360°, оптический зум, автотрекинг.',
     ogImage: 'https://cdn.poehali.dev/projects/d4f2c7e9-a091-4f1c-9e82-47f687864218/files/3027c2a4-0771-41a8-a6aa-ae281f79aacc.jpg',

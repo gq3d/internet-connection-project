@@ -164,7 +164,7 @@ export const siteUrls: SitemapUrl[] = [
   }))
 ];
 
-export const generateSitemap = (baseUrl: string = 'https://wiline.ru'): string => {
+export const generateSitemap = (baseUrl: string = 'https://mosoblconnect.ru'): string => {
   const urlElements = siteUrls.map(url => `
   <url>
     <loc>${baseUrl}${url.loc}</loc>
@@ -179,8 +179,8 @@ ${urlElements}
 </urlset>`;
 };
 
-export const generateRobotsTxt = (baseUrl: string = 'https://wiline.ru'): string => {
-  return `# wiline.ru robots.txt
+export const generateRobotsTxt = (baseUrl: string = 'https://mosoblconnect.ru'): string => {
+  return `# mosoblconnect.ru robots.txt
 
 User-agent: *
 Allow: /

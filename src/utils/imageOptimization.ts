@@ -1,7 +1,7 @@
 export const getOptimizedImageUrl = (url: string, width?: number): string => {
   if (!url || typeof url !== 'string') return url;
   
-  if (url.includes('cdn.poehali.dev') || url.includes('cdn.wiline.ru')) {
+  if (url.includes('cdn.poehali.dev') || url.includes('cdn.mosoblconnect.ru')) {
     const separator = url.includes('?') ? '&' : '?';
     const params = [];
     

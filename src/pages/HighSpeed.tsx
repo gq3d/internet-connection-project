@@ -10,10 +10,10 @@ const HighSpeed = () => {
   useSEO({
     title: 'Высокоскоростной интернет до 250 Мбит/с в МО | NetConnect',
     description: 'Беспроводной интернет со скоростью до 250 Мбит/с для дома и бизнеса. Стриминг 4K, онлайн-игры, видеозвонки без задержек. Звоните: +7 (901) 500-00-78',
-    canonical: 'https://wiline.ru/high-speed',
+    canonical: 'https://mosoblconnect.ru/high-speed',
     ogTitle: 'Высокоскоростной интернет 250 Мбит/с в Московской области',
     ogDescription: 'Беспроводной интернет со скоростью до 250 Мбит/с. Без проводов, быстрое подключение за 1-3 дня.',
-    ogImage: 'https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
+    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
     ogImageAlt: 'Высокоскоростной интернет NetConnect'
   });
 

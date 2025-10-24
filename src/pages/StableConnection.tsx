@@ -10,10 +10,10 @@ const StableConnection = () => {
   useSEO({
     title: 'Стабильное интернет-соединение 99.9% uptime в МО | NetConnect',
     description: 'Надёжный беспроводной интернет с гарантией работы 99.9%. Круглосуточный мониторинг, резервные каналы, быстрое реагирование. SLA гарантии. Звоните: +7 (901) 500-00-78',
-    canonical: 'https://wiline.ru/stable-connection',
+    canonical: 'https://mosoblconnect.ru/stable-connection',
     ogTitle: 'Стабильный интернет 99.9% uptime в Московской области',
     ogDescription: 'Беспроводной интернет с гарантией стабильности 99.9%. Мониторинг 24/7, резервирование оборудования.',
-    ogImage: 'https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
+    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
     ogImageAlt: 'Стабильное интернет-соединение NetConnect'
   });
 

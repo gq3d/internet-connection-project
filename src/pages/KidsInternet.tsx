@@ -10,10 +10,10 @@ const KidsInternet = () => {
   useSEO({
     title: 'Детский интернет с родительским контролем в МО | NetConnect',
     description: 'Безопасный интернет для детей с родительским контролем, блокировкой опасных сайтов, контролем времени. Отчёты об активности, возрастные фильтры. Звоните: +7 (901) 500-00-78',
-    canonical: 'https://wiline.ru/kids-internet',
+    canonical: 'https://mosoblconnect.ru/kids-internet',
     ogTitle: 'Детский интернет с родительским контролем в Московской области',
     ogDescription: 'Безопасный интернет для детей. Блокировка опасных сайтов, лимиты времени, статистика посещений.',
-    ogImage: 'https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
+    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
     ogImageAlt: 'Детский интернет с родительским контролем NetConnect'
   });
 

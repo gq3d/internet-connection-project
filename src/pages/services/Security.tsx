@@ -24,7 +24,7 @@ const Security = () => {
         "@type": "Organization",
         "name": "NetConnect",
         "telephone": "+7-901-500-00-78",
-        "url": "https://wiline.ru"
+        "url": "https://mosoblconnect.ru"
       },
       "areaServed": {
         "@type": "State",
@@ -51,19 +51,19 @@ const Security = () => {
           "@type": "ListItem",
           "position": 1,
           "name": "Главная",
-          "item": "https://wiline.ru"
+          "item": "https://mosoblconnect.ru"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Услуги",
-          "item": "https://wiline.ru/services"
+          "item": "https://mosoblconnect.ru/services"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Охранная сигнализация",
-          "item": "https://wiline.ru/services/security"
+          "item": "https://mosoblconnect.ru/services/security"
         }
       ]
     }
@@ -72,10 +72,10 @@ const Security = () => {
   useSEO({
     title: 'Охранные системы и сигнализация в Московской области | NetConnect',
     description: 'Установка охранной сигнализации и систем безопасности в Московской области. Проводные и беспроводные системы, GSM мониторинг, пультовая охрана. Комплекты от 25 000₽. ☎ +7 (901) 500-00-78',
-    canonical: 'https://wiline.ru/services/security',
+    canonical: 'https://mosoblconnect.ru/services/security',
     ogTitle: 'Охранные системы в МО от 25000₽',
     ogDescription: 'Профессиональная установка охранных систем. Беспроводная сигнализация, GSM мониторинг, пультовая охрана. Комплекты от 25 000₽.',
-    ogImage: 'https://cdn.wiline.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
+    ogImage: 'https://cdn.mosoblconnect.ru/files/0b95440d-0b84-41b8-8404-418760cb07a4.jpg',
     ogImageAlt: 'Охранная сигнализация NetConnect в Московской области',
     keywords: 'охранная сигнализация московская область, установка сигнализации мо, gsm сигнализация, беспроводная сигнализация, пультовая охрана, охрана дачи'
   });
