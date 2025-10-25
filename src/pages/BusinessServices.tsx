@@ -107,10 +107,35 @@ const BusinessServices = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               IT-решения для вашего бизнеса
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
-              Комплексные услуги связи и безопасности для юридических лиц. 
-              Индивидуальный подход, прозрачные условия, гарантированное качество.
-            </p>
+            <div className="relative max-w-3xl mx-auto mb-8">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl blur-xl"></div>
+              <div className="relative bg-background/95 backdrop-blur-sm rounded-2xl p-6 border border-primary/20">
+                <p className="text-lg leading-relaxed">
+                  <span className="font-semibold text-foreground">Комплексные услуги связи и безопасности</span>
+                  <span className="text-muted-foreground"> для юридических лиц. </span>
+                  <span className="inline-flex items-center gap-1.5 text-primary font-medium">
+                    <Icon name="LineChart" size={18} className="inline" />
+                    Аналитика
+                  </span>
+                  <span className="text-muted-foreground">, </span>
+                  <span className="inline-flex items-center gap-1.5 text-primary font-medium">
+                    <Icon name="Lightbulb" size={18} className="inline" />
+                    разработка
+                  </span>
+                  <span className="text-muted-foreground"> и </span>
+                  <span className="inline-flex items-center gap-1.5 text-primary font-medium">
+                    <Icon name="Settings" size={18} className="inline" />
+                    реализация
+                  </span>
+                  <span className="text-muted-foreground"> специализированных решений. </span>
+                  <span className="inline-flex items-center gap-1.5 text-secondary font-medium">
+                    <Icon name="TrendingUp" size={18} className="inline" />
+                    Оптимизация бизнес-процессов
+                  </span>
+                  <span className="text-muted-foreground">.</span>
+                </p>
+              </div>
+            </div>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button size="lg" asChild>
                 <a href="tel:+79015000078">
