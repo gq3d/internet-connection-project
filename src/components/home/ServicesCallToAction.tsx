@@ -147,6 +147,30 @@ export default function ServicesCallToAction() {
               </div>
             </div>
           </div>
+
+          {/* Баннер для бизнеса */}
+          <Link 
+            to="/business" 
+            className={`block mt-6 transition-all duration-1000 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+            style={{ transitionDelay: isVisible ? '1000ms' : '0ms' }}
+          >
+            <div className="bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-2xl p-6 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer">
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="hidden sm:flex w-14 h-14 bg-white/20 rounded-full items-center justify-center flex-shrink-0">
+                    <Icon name="Briefcase" size={28} className="text-white" />
+                  </div>
+                  <div className="text-left">
+                    <p className="text-lg md:text-xl font-bold mb-1">Услуги для бизнеса</p>
+                    <p className="text-sm md:text-base text-white/90">Специальные условия для юридических лиц</p>
+                  </div>
+                </div>
+                <Icon name="ArrowRight" size={24} className="text-white flex-shrink-0" />
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
     </section>

@@ -33,22 +33,6 @@ export default function HeroSection() {
   return (
     <section ref={sectionRef} className="py-12 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10">
       <div className="container mx-auto px-4">
-        <Link to="/business" className="block max-w-4xl mx-auto mb-8">
-          <div className="bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-2xl p-6 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer">
-            <div className="flex items-center justify-between gap-4">
-              <div className="flex items-center gap-4">
-                <div className="hidden sm:flex w-14 h-14 bg-white/20 rounded-full items-center justify-center flex-shrink-0">
-                  <Icon name="Briefcase" size={28} className="text-white" />
-                </div>
-                <div className="text-left">
-                  <p className="text-lg md:text-xl font-bold mb-1">Услуги для бизнеса</p>
-                  <p className="text-sm md:text-base text-white/90">Специальные условия для юридических лиц</p>
-                </div>
-              </div>
-              <Icon name="ArrowRight" size={24} className="text-white flex-shrink-0" />
-            </div>
-          </div>
-        </Link>
         <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
