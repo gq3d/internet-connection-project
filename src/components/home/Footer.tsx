@@ -97,6 +97,15 @@ export default function Footer() {
           </div>
           <div className="border-t mt-8 pt-8 text-center text-muted-foreground text-sm">
             <p>© 2015 NetConnect. Все права защищены.</p>
+            <p className="mt-2 text-xs">
+              Разработка сайта:{' '}
+              <a 
+                href="mailto:konovaltsev.dev@yandex.com" 
+                className="text-primary hover:underline transition-all"
+              >
+                konovaltsev.dev@yandex.com
+              </a>
+            </p>
           </div>
         </div>
       </footer>
