@@ -213,7 +213,7 @@ const BusinessServices = () => {
             <Icon name="FileText" size={48} className="mx-auto text-primary mb-6" />
             <h2 className="text-3xl font-bold mb-4">Готовы обсудить проект?</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Оставьте заявку, и наш менеджер свяжется с вами для обсуждения деталей 
+              Просто позвоните или напишите в мессенджер для обсуждения деталей 
               и подготовки коммерческого предложения
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
