@@ -136,17 +136,11 @@ const BusinessServices = () => {
                 </p>
               </div>
             </div>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex justify-center">
               <Button size="lg" asChild>
                 <a href="tel:+79015000078">
                   <Icon name="Phone" size={20} className="mr-2" />
                   +7 (901) 500-00-78
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="mailto:info@mosoblconnect.ru">
-                  <Icon name="Mail" size={20} className="mr-2" />
-                  Отправить заявку
                 </a>
               </Button>
             </div>
