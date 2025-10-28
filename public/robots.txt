@@ -1,4 +1,4 @@
-# wiline.ru robots.txt
+# mosoblconnect.ru robots.txt
 # Обновлено: 2025-10-17
 
 User-agent: *
@@ -31,10 +31,10 @@ User-agent: facebookexternalhit
 Allow: /
 
 # Sitemap
-Sitemap: https://wiline.ru/sitemap.xml
+Sitemap: https://mosoblconnect.ru/sitemap.xml
 
 # Яндекс.Турбо (ускоренные мобильные страницы)
-Sitemap: https://wiline.ru/yandex_turbo.xml
+Sitemap: https://mosoblconnect.ru/yandex_turbo.xml
 
 # Host (для Яндекса - указание главного зеркала)
-Host: wiline.ru
+Host: mosoblconnect.ru
