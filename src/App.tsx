@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import ScrollToTop from "./components/ScrollToTop";
+import PageViewTracker from "./components/PageViewTracker";
 import Index from "./pages/Index";
 
 const FAQ = lazy(() => import("./pages/FAQ"));
@@ -80,6 +81,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
+          <PageViewTracker />
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Index />} />
