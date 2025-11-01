@@ -37,16 +37,26 @@ export const useSEO = ({
       keywords: keywords || '',
       robots: robotsContent,
       'og:type': 'website',
+      'og:site_name': 'NetConnect',
+      'og:url': canonical || window.location.href,
       'og:title': ogTitle || title || '',
       'og:description': ogDescription || description || '',
       'og:image': ogImage || '',
+      'og:image:width': '1200',
+      'og:image:height': '630',
       'og:image:alt': ogImageAlt || title || '',
       'og:locale': 'ru_RU',
       'twitter:card': 'summary_large_image',
+      'twitter:site': '@netconnect',
       'twitter:title': ogTitle || title || '',
       'twitter:description': ogDescription || description || '',
       'twitter:image': ogImage || '',
-      'twitter:image:alt': ogImageAlt || title || ''
+      'twitter:image:alt': ogImageAlt || title || '',
+      'vk:image': ogImage || '',
+      'telegram:card': 'summary_large_image',
+      'telegram:title': ogTitle || title || '',
+      'telegram:description': ogDescription || description || '',
+      'telegram:image': ogImage || ''
     };
 
     Object.entries(metaTags).forEach(([name, content]) => {
