@@ -64,7 +64,13 @@ const CityPage = () => {
     'arhangelskoe': 'arkhangelskoe',
     
     // Нахабино: 'х' can be 'h' or 'kh'
-    'nahabino': 'nakhabino'
+    'nahabino': 'nakhabino',
+    
+    // Жуковский: 'ий' can be 'iy' or 'y'
+    'zhukovskiy': 'zhukovsky',
+    
+    // Егорьевск: 'ь' variants
+    'egor-evsk': 'egoryevsk'
   };
   
   const normalizedSlug = citySlug ? citySlug.toLowerCase()
