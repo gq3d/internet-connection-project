@@ -55,12 +55,42 @@ export default function ServicesCallToAction() {
               </p>
               
               <div className="flex flex-col gap-6 items-center">
+                {/* Баннер для бизнеса - ПЕРВЫМ */}
+                <Link 
+                  to="/business" 
+                  className={`w-full max-w-3xl bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 text-white rounded-2xl p-6 md:p-8 shadow-2xl hover:shadow-3xl hover:scale-[1.02] transition-all duration-500 cursor-pointer ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                  }`}
+                  style={{ transitionDelay: isVisible ? '200ms' : '0ms' }}
+                >
+                  <div className="flex items-center justify-between gap-4">
+                    <div className="flex items-center gap-4 md:gap-6">
+                      <div className="flex w-16 h-16 md:w-20 md:h-20 bg-white/20 backdrop-blur-sm rounded-2xl items-center justify-center flex-shrink-0 border-2 border-white/30">
+                        <Icon name="Briefcase" size={36} className="text-white" />
+                      </div>
+                      <div className="text-left">
+                        <p className="text-xl md:text-3xl font-bold mb-2 flex items-center gap-2">
+                          💼 Для бизнеса
+                        </p>
+                        <p className="text-sm md:text-lg text-white/95 font-medium leading-relaxed">
+                          Полная цифровизация: CRM, сайты, IT-консалтинг + связь и безопасность
+                        </p>
+                      </div>
+                    </div>
+                    <div className="hidden md:flex items-center gap-2 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-xl border-2 border-white/30">
+                      <span className="text-white font-bold">Подробнее</span>
+                      <Icon name="ArrowRight" size={24} className="text-white" />
+                    </div>
+                    <Icon name="ArrowRight" size={28} className="text-white flex-shrink-0 md:hidden" />
+                  </div>
+                </Link>
+                
                 <Link 
                   to="/services"
                   className={`inline-flex items-center justify-center px-10 py-4 bg-white text-primary rounded-2xl font-bold text-lg hover:shadow-2xl transform hover:scale-105 transition-all hover:-translate-y-1 duration-500 ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                   }`}
-                  style={{ transitionDelay: isVisible ? '200ms' : '0ms' }}
+                  style={{ transitionDelay: isVisible ? '400ms' : '0ms' }}
                 >
                   Все наши услуги
                   <Icon name="ArrowRight" size={20} className="ml-2" />
@@ -72,7 +102,7 @@ export default function ServicesCallToAction() {
                     className={`group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-500 hover:scale-105 hover:shadow-xl ${
                       isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                     }`}
-                    style={{ transitionDelay: isVisible ? '400ms' : '0ms' }}
+                    style={{ transitionDelay: isVisible ? '600ms' : '0ms' }}
                   >
                     <div className="w-10 h-10 mb-2 bg-white/20 group-hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors">
                       <Icon name="DollarSign" size={20} className="group-hover:text-primary transition-colors" />
@@ -85,7 +115,7 @@ export default function ServicesCallToAction() {
                     className={`group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-500 hover:scale-105 hover:shadow-xl ${
                       isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                     }`}
-                    style={{ transitionDelay: isVisible ? '500ms' : '0ms' }}
+                    style={{ transitionDelay: isVisible ? '700ms' : '0ms' }}
                   >
                     <div className="w-10 h-10 mb-2 bg-white/20 group-hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors">
                       <Icon name="Calculator" size={20} className="group-hover:text-primary transition-colors" />
@@ -98,7 +128,7 @@ export default function ServicesCallToAction() {
                     className={`group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-500 hover:scale-105 hover:shadow-xl ${
                       isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                     }`}
-                    style={{ transitionDelay: isVisible ? '600ms' : '0ms' }}
+                    style={{ transitionDelay: isVisible ? '800ms' : '0ms' }}
                   >
                     <div className="w-10 h-10 mb-2 bg-white/20 group-hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors">
                       <Icon name="MapPin" size={20} className="group-hover:text-primary transition-colors" />
@@ -111,7 +141,7 @@ export default function ServicesCallToAction() {
                     className={`group flex flex-col items-center justify-center p-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-xl font-medium text-sm hover:bg-white hover:text-primary transition-all duration-500 hover:scale-105 hover:shadow-xl ${
                       isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                     }`}
-                    style={{ transitionDelay: isVisible ? '700ms' : '0ms' }}
+                    style={{ transitionDelay: isVisible ? '900ms' : '0ms' }}
                   >
                     <div className="w-10 h-10 mb-2 bg-white/20 group-hover:bg-primary/10 rounded-full flex items-center justify-center transition-colors">
                       <Icon name="Smartphone" size={20} className="group-hover:text-primary transition-colors" />
@@ -125,7 +155,7 @@ export default function ServicesCallToAction() {
                   className={`inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-white/25 to-white/15 backdrop-blur-md text-white border-2 border-white/60 rounded-2xl font-bold text-lg hover:bg-white hover:text-primary transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-1 ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                   }`}
-                  style={{ transitionDelay: isVisible ? '800ms' : '0ms' }}
+                  style={{ transitionDelay: isVisible ? '1000ms' : '0ms' }}
                 >
                   <Icon name="Phone" size={20} className="mr-2" />
                   Связаться с нами
@@ -137,7 +167,7 @@ export default function ServicesCallToAction() {
           {/* Анимированная карточка с описанием */}
           <div className={`mt-6 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`} style={{ transitionDelay: isVisible ? '900ms' : '0ms' }}>
+          }`} style={{ transitionDelay: isVisible ? '1100ms' : '0ms' }}>
             <div className="relative group">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-secondary to-success rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-500 animate-pulse"></div>
               <div className="relative bg-white rounded-2xl p-6 md:p-8 shadow-xl text-center">
@@ -147,30 +177,6 @@ export default function ServicesCallToAction() {
               </div>
             </div>
           </div>
-
-          {/* Баннер для бизнеса */}
-          <Link 
-            to="/business" 
-            className={`block mt-6 transition-all duration-1000 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
-            style={{ transitionDelay: isVisible ? '1000ms' : '0ms' }}
-          >
-            <div className="bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-2xl p-6 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer">
-              <div className="flex items-center justify-between gap-4">
-                <div className="flex items-center gap-4">
-                  <div className="hidden sm:flex w-14 h-14 bg-white/20 rounded-full items-center justify-center flex-shrink-0">
-                    <Icon name="Briefcase" size={28} className="text-white" />
-                  </div>
-                  <div className="text-left">
-                    <p className="text-lg md:text-xl font-bold mb-1">Услуги для бизнеса</p>
-                    <p className="text-sm md:text-base text-white/90">Специальные условия для юридических лиц</p>
-                  </div>
-                </div>
-                <Icon name="ArrowRight" size={24} className="text-white flex-shrink-0" />
-              </div>
-            </div>
-          </Link>
         </div>
       </div>
     </section>
