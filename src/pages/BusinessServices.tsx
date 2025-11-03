@@ -109,18 +109,25 @@ const BusinessServices = () => {
             </h1>
             <div className="max-w-3xl mx-auto mb-8">
               <div className="bg-gradient-to-br from-slate-50 to-blue-50/30 border-2 border-primary/10 rounded-2xl p-6 md:p-8">
-                <p className="text-center text-lg md:text-xl leading-relaxed">
-                  <span className="font-bold text-foreground">От разработки CRM-систем до телекоммуникаций</span>
-                  <span className="text-muted-foreground"> — полный цикл IT-услуг для юридических лиц. </span>
-                  <span className="font-semibold text-primary">Разработка</span>
-                  <span className="text-muted-foreground">, </span>
-                  <span className="font-semibold text-primary">интеграция</span>
-                  <span className="text-muted-foreground"> и </span>
-                  <span className="font-semibold text-secondary">оптимизация</span>
-                  <span className="text-muted-foreground"> бизнес-процессов. </span>
-                  <span className="font-semibold text-secondary">Инфраструктура и безопасность</span>
-                  <span className="text-muted-foreground">.</span>
-                </p>
+                <div className="text-center text-lg md:text-xl leading-relaxed space-y-2">
+                  <p className="font-bold text-foreground">
+                    От разработки CRM-систем до телекоммуникаций
+                  </p>
+                  <p className="text-muted-foreground">
+                    полный цикл IT-услуг для юридических лиц.
+                  </p>
+                  <p>
+                    <span className="font-semibold text-primary">Разработка</span>
+                    <span className="text-muted-foreground">, </span>
+                    <span className="font-semibold text-primary">интеграция</span>
+                    <span className="text-muted-foreground"> и </span>
+                    <span className="font-semibold text-secondary">оптимизация</span>
+                    <span className="text-muted-foreground"> бизнес-процессов.</span>
+                  </p>
+                  <p className="font-semibold text-secondary">
+                    Инфраструктура и безопасность.
+                  </p>
+                </div>
               </div>
             </div>
             <div className="flex justify-center">
