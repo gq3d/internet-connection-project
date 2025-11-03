@@ -108,32 +108,57 @@ const BusinessServices = () => {
               Полная цифровизация вашего бизнеса
             </h1>
             <div className="relative max-w-3xl mx-auto mb-8">
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl blur-xl"></div>
-              <div className="relative bg-background/95 backdrop-blur-sm rounded-2xl p-6 border border-primary/20">
-                <p className="text-lg leading-relaxed">
-                  <span className="font-semibold text-foreground">От разработки CRM-систем до телекоммуникаций</span>
-                  <span className="text-muted-foreground"> — полный цикл IT-услуг для юридических лиц. </span>
-                  <span className="inline-flex items-center gap-1.5 text-primary font-medium">
-                    <Icon name="Code" size={18} className="inline" />
-                    Разработка
-                  </span>
-                  <span className="text-muted-foreground">, </span>
-                  <span className="inline-flex items-center gap-1.5 text-primary font-medium">
-                    <Icon name="Database" size={18} className="inline" />
-                    интеграция
-                  </span>
-                  <span className="text-muted-foreground"> и </span>
-                  <span className="inline-flex items-center gap-1.5 text-primary font-medium">
-                    <Icon name="TrendingUp" size={18} className="inline" />
-                    оптимизация
-                  </span>
-                  <span className="text-muted-foreground"> бизнес-процессов. </span>
-                  <span className="inline-flex items-center gap-1.5 text-secondary font-medium">
-                    <Icon name="Network" size={18} className="inline" />
-                    Инфраструктура и безопасность
-                  </span>
-                  <span className="text-muted-foreground">.</span>
-                </p>
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 via-secondary/30 to-success/30 rounded-3xl blur-2xl opacity-60"></div>
+              <div className="relative overflow-hidden rounded-3xl border border-primary/20 shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-white to-secondary/5"></div>
+                <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-secondary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3"></div>
+                
+                <div className="relative backdrop-blur-sm p-8">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-lg">
+                      <Icon name="Sparkles" size={24} className="text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
+                        От разработки CRM-систем до телекоммуникаций
+                      </h3>
+                      <p className="text-base text-muted-foreground">
+                        — полный цикл IT-услуг для юридических лиц
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-3 mt-6">
+                    <div className="group flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-xl border border-primary/20 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300">
+                      <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                        <Icon name="Code" size={16} className="text-primary" />
+                      </div>
+                      <span className="text-sm font-semibold text-foreground">Разработка</span>
+                    </div>
+                    
+                    <div className="group flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-xl border border-primary/20 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300">
+                      <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                        <Icon name="Database" size={16} className="text-primary" />
+                      </div>
+                      <span className="text-sm font-semibold text-foreground">Интеграция</span>
+                    </div>
+                    
+                    <div className="group flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-xl border border-primary/20 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300">
+                      <div className="w-8 h-8 bg-secondary/10 rounded-lg flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
+                        <Icon name="TrendingUp" size={16} className="text-secondary" />
+                      </div>
+                      <span className="text-sm font-semibold text-foreground">Оптимизация</span>
+                    </div>
+                    
+                    <div className="group flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-xl border border-secondary/20 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300">
+                      <div className="w-8 h-8 bg-secondary/10 rounded-lg flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
+                        <Icon name="Network" size={16} className="text-secondary" />
+                      </div>
+                      <span className="text-sm font-semibold text-foreground">Инфраструктура и безопасность</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="flex justify-center">
