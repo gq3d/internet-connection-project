@@ -142,54 +142,6 @@ const BusinessServices = () => {
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-4">
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-              <Icon name="Network" size={16} />
-              Телекоммуникации
-            </div>
-          </div>
-          <h2 className="text-3xl font-bold text-center mb-4">Связь и безопасность</h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Профессиональная инфраструктура для вашего бизнеса
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {businessServices.map((service, index) => (
-              <div 
-                key={index}
-                className="bg-card border rounded-xl p-6 hover:shadow-lg transition-all group"
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                    <Icon name={service.icon} size={28} className="text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                  </div>
-                </div>
-                <p className="text-muted-foreground mb-4">{service.description}</p>
-                <ul className="space-y-2 mb-4">
-                  {service.features.map((feature, fIndex) => (
-                    <li key={fIndex} className="flex items-center text-sm">
-                      <Icon name="CheckCircle2" size={16} className="text-green-500 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link 
-                  to={service.link}
-                  className="text-primary hover:underline text-sm font-medium inline-flex items-center"
-                >
-                  Подробнее
-                  <Icon name="ArrowRight" size={16} className="ml-1" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-16 bg-gradient-to-br from-secondary/5 via-primary/5 to-success/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-4">
@@ -394,6 +346,54 @@ const BusinessServices = () => {
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-4">
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+              <Icon name="Network" size={16} />
+              Телекоммуникации
+            </div>
+          </div>
+          <h2 className="text-3xl font-bold text-center mb-4">Связь и безопасность</h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Профессиональная инфраструктура для вашего бизнеса
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {businessServices.map((service, index) => (
+              <div 
+                key={index}
+                className="bg-card border rounded-xl p-6 hover:shadow-lg transition-all group"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                    <Icon name={service.icon} size={28} className="text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4">{service.description}</p>
+                <ul className="space-y-2 mb-4">
+                  {service.features.map((feature, fIndex) => (
+                    <li key={fIndex} className="flex items-center text-sm">
+                      <Icon name="CheckCircle2" size={16} className="text-green-500 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Link 
+                  to={service.link}
+                  className="text-primary hover:underline text-sm font-medium inline-flex items-center"
+                >
+                  Подробнее
+                  <Icon name="ArrowRight" size={16} className="ml-1" />
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
