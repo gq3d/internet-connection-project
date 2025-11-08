@@ -116,6 +116,26 @@ export default function HeroSection() {
                 </div>
               </a>
             </div>
+
+            {/* Bonding card - full width under main services */}
+            <div className="mt-4">
+              <Link to="/business/bonding">
+                <div className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 backdrop-blur-sm rounded-xl p-4 border-2 border-amber-500/30 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 cursor-pointer">
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                        <Icon name="Network" size={24} className="text-amber-600" />
+                      </div>
+                      <div className="text-left">
+                        <p className="text-sm md:text-base font-bold text-foreground">Сумматор каналов связи</p>
+                        <p className="text-xs text-muted-foreground">Bonding до 1 Гбит/с для бизнеса</p>
+                      </div>
+                    </div>
+                    <Icon name="ArrowRight" size={20} className="text-amber-600 flex-shrink-0" />
+                  </div>
+                </div>
+              </Link>
+            </div>
           </div>
           
           <div className="flex flex-wrap justify-center gap-4">
