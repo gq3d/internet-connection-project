@@ -36,18 +36,25 @@ const services = [
     url: '/services/security'
   },
   {
-    icon: 'Satellite',
-    title: 'Спутниковый интернет',
-    description: 'Надежное покрытие в отдаленных районах Московской области',
-    features: ['Покрытие 99%', 'Низкая задержка', 'Защита от помех'],
-    url: '/services/satellite'
-  },
-  {
     icon: 'Signal',
     title: 'Усиление сотовой связи',
     description: 'Репитеры и усилители сигнала для стабильной мобильной связи',
     features: ['Все операторы', 'Увеличение зоны покрытия', 'Простая установка'],
     url: '/services/cellular-booster'
+  },
+  {
+    icon: 'Sparkles',
+    title: 'Усиление Wi-Fi',
+    description: 'Мощное усиление Wi-Fi сигнала для покрытия больших площадей',
+    features: ['Покрытие до 500м²', 'Mesh-системы', 'Бесшовный роуминг'],
+    url: '/services/wifi-signal-boost'
+  },
+  {
+    icon: 'Network',
+    title: 'Сумматор каналов связи',
+    description: 'Bonding технология для объединения нескольких интернет-каналов в один',
+    features: ['Скорость до 1 Гбит/с', 'Резервирование', 'Для бизнеса'],
+    url: '/business/bonding'
   }
 ];
 
