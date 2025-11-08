@@ -350,14 +350,14 @@ export default function Bonding() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="tel:+74956637374"
+                href="tel:+79015000078"
                 className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors font-medium"
               >
                 <Icon name="Phone" size={20} />
-                +7 (495) 663-73-74
+                +7 (901) 500-00-78
               </a>
               <a 
-                href="https://wa.me/79686373774"
+                href="https://wa.me/79015000078"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors font-medium"
