@@ -45,7 +45,24 @@ export default function Bonding() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Как это работает</h2>
+            <h2 className="text-3xl font-bold text-center mb-8">Как это работает</h2>
+            
+            <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-200 rounded-xl p-6 mb-12 max-w-4xl mx-auto">
+              <div className="flex items-start gap-4">
+                <div className="p-2 bg-amber-500/20 rounded-lg flex-shrink-0">
+                  <Icon name="AlertCircle" size={24} className="text-amber-600" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-2 text-amber-900">Сложные условия приёма?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Представьте: ваш объект находится в зоне со слабым радиосигналом, где качество связи критически низкое. 
+                    Каждый оператор даёт всего 5-20 Мбит/с из-за помех, удалённости от вышек или плотной застройки. 
+                    Bonding решает эту проблему — мы объединяем 3-4 слабых канала в один мощный, 
+                    <strong className="text-foreground"> увеличивая скорость в 2-3 раза и более</strong>, даже в самых неблагоприятных условиях.
+                  </p>
+                </div>
+              </div>
+            </div>
             
             <div className="bg-card border rounded-2xl p-8 mb-12">
               <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
