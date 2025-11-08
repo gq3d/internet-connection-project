@@ -17,27 +17,57 @@ export default function Bonding() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <section className="py-16 bg-gradient-to-br from-primary/10 to-primary/5">
+      <section className="py-16 bg-gradient-to-br from-primary/5 via-secondary/5 to-background">
         <div className="container mx-auto px-4">
           <Link 
             to="/business" 
-            className="inline-flex items-center text-primary hover:underline mb-6"
+            className="inline-flex items-center text-primary hover:underline mb-8"
           >
             <Icon name="ArrowLeft" size={20} className="mr-2" />
             Назад к услугам для бизнеса
           </Link>
           
-          <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-              <Icon name="Zap" size={16} />
-              Специальное предложение
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-primary/10 via-white to-secondary/10 dark:from-primary/20 dark:via-card dark:to-secondary/20 border-2 border-primary/20 rounded-3xl p-8 md:p-12 shadow-xl">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="p-4 bg-primary/10 rounded-2xl border-2 border-primary/20">
+                  <Icon name="Zap" size={32} className="text-primary" />
+                </div>
+                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
+                  <Icon name="Star" size={16} />
+                  Специальное предложение
+                </div>
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                Bonding и балансировка каналов
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                Объединяем несколько интернет-каналов в один мощный поток для максимальной скорости и надёжности
+              </p>
+              
+              <div className="mt-8 pt-8 border-t border-primary/20 flex flex-wrap gap-4">
+                <div className="flex items-center gap-2 text-sm font-medium">
+                  <div className="p-2 bg-green-500/10 rounded-lg">
+                    <Icon name="Zap" size={20} className="text-green-500" />
+                  </div>
+                  <span>До 300+ Мбит/с</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm font-medium">
+                  <div className="p-2 bg-blue-500/10 rounded-lg">
+                    <Icon name="ShieldCheck" size={20} className="text-blue-500" />
+                  </div>
+                  <span>Отказоустойчивость</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm font-medium">
+                  <div className="p-2 bg-purple-500/10 rounded-lg">
+                    <Icon name="TrendingUp" size={20} className="text-purple-500" />
+                  </div>
+                  <span>Белый статический IP</span>
+                </div>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Bonding и балансировка каналов
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              Объединяем несколько интернет-каналов в один мощный поток для максимальной скорости и надёжности
-            </p>
           </div>
         </div>
       </section>
