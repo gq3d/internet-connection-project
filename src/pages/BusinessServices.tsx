@@ -17,6 +17,14 @@ const BusinessServices = () => {
 
   const businessServices = [
     {
+      icon: 'Zap',
+      title: 'Bonding каналов',
+      description: 'Объединение нескольких интернет-каналов в один мощный поток. Суммарная скорость до 100+ Мбит/с и отказоустойчивость',
+      features: ['Балансировка нагрузки', 'Отказоустойчивость', 'Высокая скорость', 'Независимость от провайдера'],
+      link: '/business/bonding',
+      badge: 'Спец-предложение'
+    },
+    {
       icon: 'Network',
       title: 'Корпоративный интернет',
       description: 'Высокоскоростной интернет до 1 Гбит/с с выделенной линией и гарантированной скоростью для вашего офиса',
@@ -366,8 +374,13 @@ const BusinessServices = () => {
             {businessServices.map((service, index) => (
               <div 
                 key={index}
-                className="bg-card border rounded-xl p-6 hover:shadow-lg transition-all group"
+                className="bg-card border rounded-xl p-6 hover:shadow-lg transition-all group relative"
               >
+                {service.badge && (
+                  <div className="absolute -top-3 -right-3 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                    {service.badge}
+                  </div>
+                )}
                 <div className="flex items-start gap-4 mb-4">
                   <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
                     <Icon name={service.icon} size={28} className="text-primary" />

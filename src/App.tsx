@@ -55,6 +55,7 @@ const SecureConnection = lazy(() => import("./pages/SecureConnection"));
 const KidsInternet = lazy(() => import("./pages/KidsInternet"));
 const FastSetup = lazy(() => import("./pages/FastSetup"));
 const BusinessServices = lazy(() => import("./pages/BusinessServices"));
+const Bonding = lazy(() => import("./pages/Bonding"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -129,6 +130,7 @@ const App = () => (
               <Route path="/kids-internet" element={<KidsInternet />} />
               <Route path="/fast-setup" element={<FastSetup />} />
               <Route path="/business" element={<BusinessServices />} />
+              <Route path="/business/bonding" element={<Bonding />} />
               <Route path="/sitemap.xml" element={<SitemapGenerator type="sitemap" />} />
               <Route path="/robots.txt" element={<SitemapGenerator type="robots" />} />
               <Route path="*" element={<NotFoundPage />} />
