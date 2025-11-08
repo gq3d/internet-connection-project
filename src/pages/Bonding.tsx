@@ -48,68 +48,130 @@ export default function Bonding() {
             <h2 className="text-3xl font-bold text-center mb-12">Как это работает</h2>
             
             <div className="bg-card border rounded-2xl p-8 mb-12">
-              <div className="flex flex-col lg:flex-row items-center gap-4 justify-between">
-                <div className="flex flex-col items-center text-center min-w-[140px]">
-                  <div className="w-24 h-24 rounded-2xl bg-primary/10 flex items-center justify-center mb-3">
-                    <Icon name="Globe" size={40} className="text-primary" />
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
+                <div className="flex flex-col items-center text-center">
+                  <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-semibold mb-4 whitespace-nowrap">
+                    НА СТОРОНЕ КЛИЕНТА
                   </div>
-                  <p className="font-semibold text-sm">Быстрый, надёжный интернет</p>
-                </div>
-
-                <Icon name="ArrowRight" size={24} className="text-muted-foreground hidden lg:block" />
-                <Icon name="ArrowDown" size={24} className="text-muted-foreground lg:hidden" />
-
-                <div className="flex flex-col items-center text-center min-w-[140px]">
-                  <div className="w-24 h-24 rounded-2xl bg-secondary/10 flex items-center justify-center mb-3">
-                    <Icon name="Server" size={40} className="text-secondary" />
-                  </div>
-                  <p className="font-semibold text-sm">Наш суммирующий сервер</p>
-                </div>
-
-                <Icon name="ArrowRight" size={24} className="text-muted-foreground hidden lg:block" />
-                <Icon name="ArrowDown" size={24} className="text-muted-foreground lg:hidden" />
-
-                <div className="flex flex-col gap-3">
-                  {['МТС', 'Мегафон', 'Билайн', 'Tele2'].map((provider) => (
-                    <div key={provider} className="flex items-center gap-2 bg-muted/50 px-4 py-2 rounded-lg border border-dashed">
-                      <Icon name="Radio" size={20} className="text-primary" />
-                      <span className="text-sm font-medium">{provider}</span>
-                      <span className="text-xs text-muted-foreground ml-auto">25 Мб/с</span>
+                  <div className="space-y-4 w-full">
+                    <div className="flex flex-col items-center">
+                      <div className="w-20 h-20 rounded-xl bg-primary/10 flex items-center justify-center mb-2">
+                        <Icon name="Monitor" size={32} className="text-primary" />
+                      </div>
+                      <p className="text-sm font-medium">Клиентские устройства</p>
                     </div>
-                  ))}
+                    
+                    <div className="flex justify-center">
+                      <Icon name="ArrowDown" size={24} className="text-primary" />
+                    </div>
+                    
+                    <div className="flex flex-col items-center">
+                      <div className="w-20 h-20 rounded-xl bg-orange-500/20 flex items-center justify-center mb-2 border-2 border-orange-500">
+                        <Icon name="Wifi" size={32} className="text-orange-500" />
+                      </div>
+                      <p className="text-sm font-medium">mosoblconnect</p>
+                      <p className="text-xs text-muted-foreground">мультироутер</p>
+                    </div>
+                  </div>
                 </div>
 
-                <Icon name="ArrowRight" size={24} className="text-muted-foreground hidden lg:block" />
-                <Icon name="ArrowDown" size={24} className="text-muted-foreground lg:hidden" />
-
-                <div className="flex flex-col items-center text-center min-w-[140px] relative">
-                  <div className="w-24 h-24 rounded-2xl bg-green-500 flex items-center justify-center mb-3 shadow-lg">
-                    <Icon name="Zap" size={40} className="text-white" />
+                <div className="flex flex-col items-center text-center">
+                  <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-3 py-1 rounded-full text-xs font-semibold mb-4 whitespace-nowrap">
+                    SIM-КАРТЫ И ETHERNET
                   </div>
-                  <div className="absolute -top-2 -right-2 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
-                    100 Мб/с
+                  <div className="space-y-3 w-full">
+                    <div className="flex items-center gap-3 bg-muted/50 px-3 py-2 rounded-lg border">
+                      <Icon name="Smartphone" size={24} className="text-primary" />
+                      <div className="text-left flex-1">
+                        <p className="text-xs text-muted-foreground">мобильная сеть</p>
+                        <p className="text-sm font-semibold text-cyan-500">20 Мбит/с</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3 bg-muted/50 px-3 py-2 rounded-lg border">
+                      <Icon name="Smartphone" size={24} className="text-primary" />
+                      <div className="text-left flex-1">
+                        <p className="text-xs text-muted-foreground">мобильная сеть</p>
+                        <p className="text-sm font-semibold text-cyan-500">15 Мбит/с</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3 bg-muted/50 px-3 py-2 rounded-lg border">
+                      <Icon name="Smartphone" size={24} className="text-primary" />
+                      <div className="text-left flex-1">
+                        <p className="text-xs text-muted-foreground">мобильная сеть</p>
+                        <p className="text-sm font-semibold text-cyan-500">5 Мбит/с</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3 bg-muted/50 px-3 py-2 rounded-lg border">
+                      <Icon name="Cable" size={24} className="text-secondary" />
+                      <div className="text-left flex-1">
+                        <p className="text-xs text-muted-foreground">проводная сеть</p>
+                        <p className="text-sm font-semibold text-cyan-500">50 Мбит/с</p>
+                      </div>
+                    </div>
                   </div>
-                  <p className="font-semibold text-sm">Суммированный канал</p>
                 </div>
 
-                <Icon name="ArrowRight" size={24} className="text-muted-foreground hidden lg:block" />
-                <Icon name="ArrowDown" size={24} className="text-muted-foreground lg:hidden" />
-
-                <div className="flex flex-col items-center text-center min-w-[140px]">
-                  <div className="w-24 h-24 rounded-2xl bg-primary/10 flex items-center justify-center mb-3">
-                    <Icon name="Wifi" size={40} className="text-primary" />
+                <div className="flex flex-col items-center text-center">
+                  <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-semibold mb-4 whitespace-nowrap">
+                    РАЗНЫЕ ОПЕРАТОРЫ
                   </div>
-                  <p className="font-semibold text-sm">Ваш роутер</p>
+                  <div className="space-y-3 w-full">
+                    <div className="flex flex-col items-center py-2">
+                      <Icon name="Radio" size={32} className="text-primary mb-1" />
+                      <p className="text-xs text-muted-foreground">Оператор 1</p>
+                    </div>
+                    <div className="flex flex-col items-center py-2">
+                      <Icon name="Radio" size={32} className="text-primary mb-1" />
+                      <p className="text-xs text-muted-foreground">Оператор 2</p>
+                    </div>
+                    <div className="flex flex-col items-center py-2">
+                      <Icon name="Radio" size={32} className="text-primary mb-1" />
+                      <p className="text-xs text-muted-foreground">Оператор 3</p>
+                    </div>
+                    <div className="flex flex-col items-center py-2">
+                      <Icon name="Radio" size={32} className="text-primary mb-1" />
+                      <p className="text-xs text-muted-foreground">Оператор 4</p>
+                    </div>
+                  </div>
                 </div>
 
-                <Icon name="ArrowRight" size={24} className="text-muted-foreground hidden lg:block" />
-                <Icon name="ArrowDown" size={24} className="text-muted-foreground lg:hidden" />
-
-                <div className="flex flex-col items-center text-center min-w-[140px]">
-                  <div className="w-24 h-24 rounded-2xl bg-secondary/10 flex items-center justify-center mb-3">
-                    <Icon name="Monitor" size={40} className="text-secondary" />
+                <div className="flex flex-col items-center text-center">
+                  <div className="inline-flex items-center gap-2 bg-green-500/10 text-green-600 px-3 py-1 rounded-full text-xs font-semibold mb-4 whitespace-nowrap">
+                    СУММИРУЕМ СКОРОСТЬ
                   </div>
-                  <p className="font-semibold text-sm">Ваши устройства</p>
+                  <div className="space-y-4 w-full">
+                    <div className="bg-gradient-to-br from-cyan-500/20 to-cyan-500/10 rounded-xl p-4 border-2 border-cyan-500/30">
+                      <p className="text-lg font-bold text-cyan-500 mb-1">20 + 15 + 5 + 50</p>
+                      <p className="text-2xl font-bold text-cyan-500">= 90 Мбит/с</p>
+                    </div>
+                    
+                    <div className="flex justify-center">
+                      <Icon name="ArrowDown" size={24} className="text-green-500" />
+                    </div>
+                    
+                    <div className="flex flex-col items-center">
+                      <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center mb-2 border-2 border-purple-500 relative">
+                        <Icon name="Server" size={32} className="text-purple-500" />
+                        <div className="absolute -top-1 -right-1">
+                          <Icon name="Zap" size={16} className="text-yellow-500" />
+                        </div>
+                      </div>
+                      <p className="text-sm font-medium">mosoblconnect</p>
+                      <p className="text-xs text-muted-foreground">суммирующий сервер</p>
+                    </div>
+
+                    <div className="flex justify-center">
+                      <Icon name="ArrowDown" size={24} className="text-green-500" />
+                    </div>
+
+                    <div className="flex flex-col items-center">
+                      <div className="w-20 h-20 rounded-xl bg-primary/10 flex items-center justify-center mb-2">
+                        <Icon name="Globe" size={32} className="text-primary" />
+                      </div>
+                      <p className="text-sm font-medium">Статический IP</p>
+                      <p className="text-xs text-muted-foreground">интернет</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
