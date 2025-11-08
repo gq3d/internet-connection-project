@@ -98,62 +98,46 @@ const Internet = () => {
       <InternetTariffs />
       <InternetExamples />
       
-      {/* Signal Boost CTA */}
+      {/* CTAs Grid */}
       <div className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-br from-orange-50 via-yellow-50 to-transparent border border-orange-200 rounded-2xl p-8 md:p-12">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6">
-                  <Icon name="Radio" size={32} className="text-orange-600" />
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Слабый сигнал?</h2>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Мы поможем усилить интернет-сигнал с помощью профессионального оборудования. 
-                  Антенны, репитеры и роутеры для стабильного соединения.
-                </p>
-                <Link 
-                  to="/signal-boost"
-                  className="inline-flex items-center px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
-                >
-                  <Icon name="Signal" size={20} className="mr-2" />
-                  Решения для усиления
-                </Link>
-              </div>
-              <div className="hidden md:block">
-                <div className="bg-white rounded-xl p-6 shadow-lg">
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Icon name="Check" size={20} className="text-green-600" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold mb-1">Антенна + роутер</h3>
-                        <p className="text-sm text-muted-foreground">До 250 Мбит/с при слабом сигнале</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Icon name="Check" size={20} className="text-blue-600" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold mb-1">Репитер</h3>
-                        <p className="text-sm text-muted-foreground">Бюджетное решение для дома</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Icon name="Check" size={20} className="text-purple-600" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold mb-1">Уличный роутер</h3>
-                        <p className="text-sm text-muted-foreground">Максимальная стабильность</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          {/* Signal Boost CTA */}
+          <div className="bg-gradient-to-br from-orange-50 via-yellow-50 to-transparent border border-orange-200 rounded-2xl p-6 md:p-8">
+            <div className="inline-flex items-center justify-center w-14 h-14 bg-orange-100 rounded-full mb-4">
+              <Icon name="Radio" size={28} className="text-orange-600" />
             </div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">Слабый сигнал?</h2>
+            <p className="text-muted-foreground mb-5">
+              Антенны, репитеры и роутеры для стабильного соединения. Усиление до 250 Мбит/с.
+            </p>
+            <Link 
+              to="/signal-boost"
+              className="inline-flex items-center px-5 py-2.5 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg"
+            >
+              <Icon name="Signal" size={18} className="mr-2" />
+              Решения для усиления
+            </Link>
+          </div>
+
+          {/* Bonding CTA */}
+          <div className="bg-gradient-to-br from-amber-50 via-orange-50 to-transparent border-2 border-amber-400 rounded-2xl p-6 md:p-8">
+            <div className="inline-flex items-center justify-center w-14 h-14 bg-amber-100 rounded-full mb-4">
+              <Icon name="Network" size={28} className="text-amber-600" />
+            </div>
+            <div className="flex items-center gap-2 mb-3">
+              <h2 className="text-2xl md:text-3xl font-bold">Нужна сверхскорость?</h2>
+              <span className="px-2 py-1 bg-amber-500 text-white text-xs font-bold rounded">БИЗНЕС</span>
+            </div>
+            <p className="text-muted-foreground mb-5">
+              Bonding — объединение каналов до 1 Гбит/с. Отказоустойчивость и балансировка нагрузки.
+            </p>
+            <Link 
+              to="/business/bonding"
+              className="inline-flex items-center px-5 py-2.5 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-all duration-300 transform hover:scale-105 font-semibold shadow-lg"
+            >
+              <Icon name="Zap" size={18} className="mr-2" />
+              Узнать о Bonding
+            </Link>
           </div>
         </div>
       </div>

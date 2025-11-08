@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import Header from '@/components/home/Header';
 import Footer from '@/components/home/Footer';
 import TariffsSection from '@/components/home/TariffsSection';
 import UnblockedServicesBadge from '@/components/UnblockedServicesBadge';
+import Icon from '@/components/ui/icon';
 
 export default function Tariffs() {
   useEffect(() => {
@@ -134,6 +136,49 @@ export default function Tariffs() {
           </div>
 
           <TariffsSection />
+          
+          {/* Bonding CTA */}
+          <div className="container mx-auto px-4 py-16">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-amber-500/10 border-2 border-amber-400 rounded-2xl p-8 md:p-12 shadow-xl">
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-500/20 rounded-full mb-6">
+                    <Icon name="Network" size={32} className="text-amber-600" />
+                  </div>
+                  <div className="flex items-center justify-center gap-3 mb-4">
+                    <h2 className="text-3xl md:text-4xl font-bold">Бизнес-решения</h2>
+                    <span className="px-3 py-1 bg-amber-500 text-white text-sm font-bold rounded-full">PREMIUM</span>
+                  </div>
+                  <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
+                    Необходим интернет со скоростью выше 250 Мбит/с? Технология <strong>Bonding</strong> объединяет 
+                    несколько каналов в один поток до 1 Гбит/с с отказоустойчивостью и балансировкой нагрузки.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                    <div className="flex items-center gap-2 text-amber-700">
+                      <Icon name="Zap" size={20} />
+                      <span className="font-semibold">До 1 Гбит/с</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-amber-700">
+                      <Icon name="ShieldCheck" size={20} />
+                      <span className="font-semibold">Резервирование</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-amber-700">
+                      <Icon name="Briefcase" size={20} />
+                      <span className="font-semibold">Для бизнеса</span>
+                    </div>
+                  </div>
+                  <Link 
+                    to="/business/bonding"
+                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-xl hover:from-amber-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 font-bold text-lg shadow-xl"
+                  >
+                    <Icon name="Network" size={22} className="mr-2" />
+                    Узнать о технологии Bonding
+                    <Icon name="ArrowRight" size={22} className="ml-2" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <Footer />

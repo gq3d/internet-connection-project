@@ -176,18 +176,25 @@ const HighSpeed = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-2 border-amber-500/30 bg-gradient-to-br from-amber-50/50 to-orange-50/50">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon name="Zap" size={24} className="text-primary" />
+                    <div className="w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Icon name="Network" size={24} className="text-amber-600" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold mb-2">Агрегация каналов</h3>
-                      <p className="text-muted-foreground">
-                        При необходимости объединяем несколько модемов в один канал с помощью технологии сумматора. 
-                        Это удваивает или утраивает скорость в местах с сильной загруженностью сети.
+                      <div className="flex items-center gap-2 mb-2">
+                        <h3 className="text-xl font-bold">Bonding - Сумматор каналов</h3>
+                        <Badge className="bg-amber-500 text-white">ДЛЯ БИЗНЕСА</Badge>
+                      </div>
+                      <p className="text-muted-foreground mb-3">
+                        Объединяем несколько интернет-каналов в один мощный поток до 1 Гбит/с. 
+                        Балансировка нагрузки и отказоустойчивость для критически важных задач.
                       </p>
+                      <a href="/business/bonding" className="inline-flex items-center text-amber-600 font-semibold hover:text-amber-700">
+                        Подробнее о Bonding
+                        <Icon name="ArrowRight" size={16} className="ml-1" />
+                      </a>
                     </div>
                   </div>
                 </CardContent>
