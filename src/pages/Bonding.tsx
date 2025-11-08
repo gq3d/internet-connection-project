@@ -20,7 +20,7 @@ export default function Bonding() {
       <section className="py-16 bg-gradient-to-br from-primary/10 to-primary/5">
         <div className="container mx-auto px-4">
           <Link 
-            to="/business-services" 
+            to="/business" 
             className="inline-flex items-center text-primary hover:underline mb-6"
           >
             <Icon name="ArrowLeft" size={20} className="mr-2" />
