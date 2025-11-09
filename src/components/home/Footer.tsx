@@ -92,6 +92,16 @@ export default function Footer() {
                   <Icon name="Mail" size={16} className="mr-2" />
                   info@mosoblconnect.ru
                 </a>
+                <a 
+                  href="https://t.me/mosoblconnect"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-muted-foreground hover:text-blue-500 transition-colors"
+                >
+                  <Icon name="Send" size={16} className="mr-2" />
+                  Telegram канал
+                </a>
+                <p className="text-xs text-muted-foreground/70 ml-6">Наши проекты и выдающиеся подключения</p>
               </div>
             </div>
           </div>
