@@ -202,12 +202,37 @@ export const settlements: Settlement[] = [
   { name: 'Чкаловский', city: 'shchelkovo', type: 'settlement' },
   { name: 'Медвежьи Озёра', city: 'shchelkovo', type: 'settlement' },
   
+  // Пушкино
+  { name: 'Ашукино', city: 'pushkino', type: 'settlement' },
+  { name: 'Зеленоградский', city: 'pushkino', type: 'settlement' },
+  { name: 'Правдинский', city: 'pushkino', type: 'settlement' },
+  { name: 'Софрино', city: 'pushkino', type: 'settlement' },
+  { name: 'Красноармейск', city: 'pushkino', type: 'settlement' },
+  { name: 'Звягино', city: 'pushkino', type: 'settlement' },
+  { name: 'Лесной', city: 'pushkino', type: 'settlement' },
+  { name: 'Черкизово', city: 'pushkino', type: 'village' },
+  { name: 'Жостово', city: 'pushkino', type: 'village' },
+  { name: 'Братовщина', city: 'pushkino', type: 'village' },
+  { name: 'Мураново', city: 'pushkino', type: 'village' },
+  { name: 'Тарасовка', city: 'pushkino', type: 'village' },
+  { name: 'Клязьма', city: 'pushkino', type: 'village' },
+  { name: 'Лесные Поляны', city: 'pushkino', type: 'cottage' },
+  { name: 'Пушкинские Дачи', city: 'pushkino', type: 'cottage' },
+  { name: 'СНТ Восход', city: 'pushkino', type: 'snt' },
+  { name: 'СНТ Удача-Пушкино', city: 'pushkino', type: 'snt' },
+
   // Жуковский
   { name: 'Отдых', city: 'zhukovsky', type: 'settlement' },
   { name: 'Быково', city: 'zhukovsky', type: 'settlement' },
   { name: 'Кратово', city: 'zhukovsky', type: 'settlement' },
   { name: 'Планерная', city: 'zhukovsky', type: 'settlement' },
   { name: 'Полёт', city: 'zhukovsky', type: 'settlement' },
+  { name: 'Раменское', city: 'zhukovsky', type: 'settlement' },
+  { name: 'Островцы', city: 'zhukovsky', type: 'village' },
+  { name: 'Верея', city: 'zhukovsky', type: 'village' },
+  { name: 'Боровое', city: 'zhukovsky', type: 'cottage' },
+  { name: 'Авиатор', city: 'zhukovsky', type: 'cottage' },
+  { name: 'СНТ Союз-Жуковский', city: 'zhukovsky', type: 'snt' },
   
   // Королёв
   { name: 'Болшево', city: 'korolev', type: 'settlement' },
